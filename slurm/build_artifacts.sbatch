@@ -31,6 +31,10 @@ else
     --output-root "$DOPS_OUTPUT_ROOT" \
     --artifact-dir "$ARTIFACT_DIR"
 fi
+run_python -m dops_serve.cli anchor-comparisons \
+  --output-root "$DOPS_OUTPUT_ROOT" \
+  --inventory "$ARTIFACT_DIR/inventory.csv" \
+  --output "$ARTIFACT_DIR/anchor_comparisons.csv"
 if [[ "$REUSE_PLAN_BANK" != "1" ]]; then
   run_python -m dops_serve.cli plan-bank \
     --inventory "$ARTIFACT_DIR/inventory.csv" \

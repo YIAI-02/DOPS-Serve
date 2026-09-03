@@ -33,6 +33,11 @@ python -m dops_serve.cli inventory \
   --output-root /path/to/DOPS/output \
   --artifact-dir artifacts
 
+python -m dops_serve.cli anchor-comparisons \
+  --output-root /path/to/DOPS/output \
+  --inventory artifacts/inventory.csv \
+  --output artifacts/anchor_comparisons.csv
+
 python -m dops_serve.cli plan-bank \
   --inventory artifacts/inventory.csv \
   --artifact-dir artifacts \
@@ -72,10 +77,9 @@ The 2026-09-03 re-audit found 4,673 summaries and 711
 outcomes; 579 files compare 2--8 policies under the same regular shape. They
 are useful supervised labels for anchor-workload plan ranking.
 
-The current implementation does not consume those comparison files yet: the
-inventory scans `best_summary` files and the full-build script selects only
-`hefthint`/`bifocal`. Seven comparison outcomes also lack their corresponding
-summary and must be excluded. The paired anchor labels do not replace replaying
-complete fixed plans under the same irregular serving state. Incomplete-plan
-training therefore remains smoke-only until that serving-side requirement is
-met.
+The `anchor-comparisons` stage links those outcomes to the summary inventory,
+checks timing agreement, and excludes unpaired records. Seven comparison
+outcomes lack their corresponding summary. The paired anchor labels do not
+replace replaying complete fixed plans under the same irregular serving state.
+Incomplete-plan training therefore remains smoke-only until that serving-side
+requirement is met.

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 
+from .comparisons import build_anchor_comparisons
 from .inventory import build_inventory
 from .dataset import build_dataset
 from .plan_bank import build_plan_bank
@@ -28,6 +29,16 @@ def _plan_bank(args: argparse.Namespace) -> None:
         max_plans_per_group=args.max_plans_per_group,
         max_summaries_per_group=args.max_summaries_per_group,
         max_decode_steps=args.max_decode_steps,
+    )
+    print(json.dumps(result, sort_keys=True))
+
+
+def _anchor_comparisons(args: argparse.Namespace) -> None:
+    result = build_anchor_comparisons(
+        output_root=args.output_root,
+        inventory_path=args.inventory,
+        output_path=args.output,
+        path_prefix=args.path_prefix,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -133,6 +144,15 @@ def build_parser() -> argparse.ArgumentParser:
     inventory.add_argument("--max-summaries", type=int, default=0)
     inventory.add_argument("--path-prefix", action="append")
     inventory.set_defaults(handler=_inventory)
+
+    comparisons = commands.add_parser(
+        "anchor-comparisons", help="Build paired labels from DOPS baseline comparisons"
+    )
+    comparisons.add_argument("--output-root", required=True)
+    comparisons.add_argument("--inventory", required=True)
+    comparisons.add_argument("--output", required=True)
+    comparisons.add_argument("--path-prefix", action="append")
+    comparisons.set_defaults(handler=_anchor_comparisons)
 
     plan_bank = commands.add_parser("plan-bank", help="Extract and deduplicate plans")
     plan_bank.add_argument("--inventory", required=True)
