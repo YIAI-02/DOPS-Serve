@@ -10,6 +10,8 @@ set -euo pipefail
 REPO_ROOT=${REPO_ROOT:-/lustre/home/2501111916/workspace/DOPS-Serve}
 DOPS_OUTPUT_ROOT=${DOPS_OUTPUT_ROOT:-/lustre/home/2501111916/workspace/DOPS_0330_merge/TriForm/algorithms/output}
 ARTIFACT_DIR=${ARTIFACT_DIR:-$REPO_ROOT/artifacts/full}
+INVENTORY_SOURCE=${INVENTORY_SOURCE:-}
+REUSE_PLAN_BANK=${REUSE_PLAN_BANK:-0}
 
 module load pytorch/24.12-py3
 
@@ -21,16 +23,23 @@ cd "$REPO_ROOT"
 mkdir -p "$ARTIFACT_DIR"
 export PYTHONPATH="$REPO_ROOT/src"
 
-run_python -m dops_serve.cli inventory \
-  --output-root "$DOPS_OUTPUT_ROOT" \
-  --artifact-dir "$ARTIFACT_DIR"
-run_python -m dops_serve.cli plan-bank \
-  --inventory "$ARTIFACT_DIR/inventory.csv" \
-  --artifact-dir "$ARTIFACT_DIR" \
-  --policy hefthint \
-  --policy bifocal \
-  --max-plans-per-group 32 \
-  --max-decode-steps 128
+if [[ -n "$INVENTORY_SOURCE" ]]; then
+  cp "$INVENTORY_SOURCE/inventory.csv" "$ARTIFACT_DIR/inventory.csv"
+  cp "$INVENTORY_SOURCE/excluded.csv" "$ARTIFACT_DIR/excluded.csv"
+else
+  run_python -m dops_serve.cli inventory \
+    --output-root "$DOPS_OUTPUT_ROOT" \
+    --artifact-dir "$ARTIFACT_DIR"
+fi
+if [[ "$REUSE_PLAN_BANK" != "1" ]]; then
+  run_python -m dops_serve.cli plan-bank \
+    --inventory "$ARTIFACT_DIR/inventory.csv" \
+    --artifact-dir "$ARTIFACT_DIR" \
+    --policy hefthint \
+    --policy bifocal \
+    --max-plans-per-group 32 \
+    --max-decode-steps 128
+fi
 run_python -m dops_serve.cli profiles \
   --inventory "$ARTIFACT_DIR/inventory.csv" \
   --plan-sources "$ARTIFACT_DIR/plan_sources.csv" \

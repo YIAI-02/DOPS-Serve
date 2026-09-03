@@ -6,6 +6,7 @@ import json
 import math
 import random
 import statistics
+import time
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -247,14 +248,21 @@ def _prediction_values(
     ]
 
 
-def _select_by_state(
-    rows: list[dict[str, str]],
-    score: Any,
-) -> list[dict[str, str]]:
-    grouped: dict[str, list[dict[str, str]]] = defaultdict(list)
-    for row in rows:
-        grouped[row["state_id"]].append(row)
-    return [max(candidates, key=score) for _, candidates in sorted(grouped.items())]
+def _action_switches(rows: list[dict[str, str]]) -> int:
+    switches = 0
+    previous: tuple[str, str, str] | None = None
+    for row in sorted(
+        rows, key=lambda item: (item["trace_id"], int(item["decision_index"]))
+    ):
+        current = (row["trace_id"], row["plan_id"], row["horizon"])
+        if (
+            previous is not None
+            and current[0] == previous[0]
+            and current[1:] != previous[1:]
+        ):
+            switches += 1
+        previous = current
+    return switches
 
 
 def _aggregate_policy(name: str, rows: list[dict[str, str]]) -> dict[str, Any]:
@@ -269,6 +277,7 @@ def _aggregate_policy(name: str, rows: list[dict[str, str]]) -> dict[str, Any]:
         if latencies
         else 0.0,
         "mean_window_p95_queue_wait_s": statistics.fmean(waits) if waits else 0.0,
+        "action_switches": _action_switches(rows),
     }
 
 
@@ -280,19 +289,6 @@ def evaluate_rows(
     preprocessor: dict[str, Any],
     result_dir: Path,
 ) -> dict[str, Any]:
-    predictions = _prediction_values(torch, model, test_rows, preprocessor)
-    prediction_by_identity = {
-        (row["state_id"], row["plan_id"], row["horizon"]): predictions[index]
-        for index, row in enumerate(test_rows)
-    }
-    mlp_rows = _select_by_state(
-        test_rows,
-        lambda row: prediction_by_identity[
-            (row["state_id"], row["plan_id"], row["horizon"])
-        ],
-    )
-    oracle_rows = _select_by_state(test_rows, lambda row: float(row[TARGET]))
-
     train_plan_scores: dict[tuple[str, str, str], list[float]] = defaultdict(list)
     for row in train_rows:
         if int(row["horizon"]) == 64:
@@ -317,6 +313,8 @@ def evaluate_rows(
         grouped_test[row["state_id"]].append(row)
     static_rows = []
     nearest_rows = []
+    paired_groups: list[list[dict[str, str]]] = []
+    excluded_unpaired_states = 0
     for _, candidates in sorted(grouped_test.items()):
         fixed_horizon = [row for row in candidates if int(row["horizon"]) == 64]
         horizon_candidates = fixed_horizon or candidates
@@ -330,11 +328,38 @@ def evaluate_rows(
         static_candidates = [
             row for row in horizon_candidates if row["plan_id"] == static_plan
         ]
-        if static_candidates:
-            static_rows.append(static_candidates[0])
+        if not static_candidates:
+            excluded_unpaired_states += 1
+            continue
+        paired_groups.append(candidates)
+        static_rows.append(static_candidates[0])
         nearest_rows.append(
             min(horizon_candidates, key=lambda row: float(row["plan_shape_distance"]))
         )
+
+    paired_test_rows = [row for candidates in paired_groups for row in candidates]
+    if not paired_test_rows:
+        raise ValueError("No test states support the robust static baseline")
+    inference_start = time.perf_counter()
+    predictions = _prediction_values(torch, model, paired_test_rows, preprocessor)
+    inference_seconds = time.perf_counter() - inference_start
+    prediction_by_identity = {
+        (row["state_id"], row["plan_id"], row["horizon"]): predictions[index]
+        for index, row in enumerate(paired_test_rows)
+    }
+    mlp_rows = [
+        max(
+            candidates,
+            key=lambda row: prediction_by_identity[
+                (row["state_id"], row["plan_id"], row["horizon"])
+            ],
+        )
+        for candidates in paired_groups
+    ]
+    oracle_rows = [
+        max(candidates, key=lambda row: float(row[TARGET]))
+        for candidates in paired_groups
+    ]
 
     policy_rows = [
         _aggregate_policy("robust_static", static_rows),
@@ -364,7 +389,7 @@ def evaluate_rows(
         fields = ["state_id", "trace_id", "plan_id", "horizon", "actual", "predicted"]
         writer = csv.DictWriter(handle, fieldnames=fields)
         writer.writeheader()
-        for index, row in enumerate(test_rows):
+        for index, row in enumerate(paired_test_rows):
             writer.writerow(
                 {
                     "state_id": row["state_id"],
@@ -376,6 +401,14 @@ def evaluate_rows(
                 }
             )
     result = {
+        "evaluation_scope": {
+            "paired_states": len(paired_groups),
+            "excluded_unpaired_states": excluded_unpaired_states,
+            "candidate_rows": len(paired_test_rows),
+        },
+        "mlp_batched_inference_us_per_state": inference_seconds
+        * 1_000_000.0
+        / len(paired_groups),
         "static_plans": {
             f"{model_id}|{hardware_key}": plan_id
             for (model_id, hardware_key), plan_id in sorted(static_plans.items())
@@ -388,15 +421,24 @@ def evaluate_rows(
         "All policies are evaluated on the same request-state rows. Values are",
         "profile-driven replay results, not physical hardware measurements.",
         "",
-        "| Policy | States | Mean token throughput | vs. oracle | Mean window p95 latency | Mean window p95 wait |",
-        "|---|---:|---:|---:|---:|---:|",
+        "| Policy | States | Mean token throughput | vs. oracle | Mean window p95 latency | Mean window p95 wait | Switches |",
+        "|---|---:|---:|---:|---:|---:|---:|",
     ]
     for row in policy_rows:
         report_lines.append(
             "| {policy} | {states} | {mean_token_throughput:.6f} | "
             "{throughput_vs_oracle:.4f} | {mean_window_p95_request_latency_s:.6f} | "
-            "{mean_window_p95_queue_wait_s:.6f} |".format(**row)
+            "{mean_window_p95_queue_wait_s:.6f} | {action_switches} |".format(**row)
         )
+    report_lines.extend(
+        (
+            "",
+            f"Paired states: {len(paired_groups)}; excluded unpaired states: {excluded_unpaired_states}.",
+            "Batched CPU scorer timing: "
+            f"{result['mlp_batched_inference_us_per_state']:.3f} us/state; "
+            "this is not production online latency.",
+        )
+    )
     report_lines.extend(("", "Static plans:", ""))
     for group, plan_id in result["static_plans"].items():
         report_lines.append(f"- `{group}`: `{plan_id}`")

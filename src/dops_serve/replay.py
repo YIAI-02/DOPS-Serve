@@ -43,6 +43,7 @@ class ProfileEstimator:
         profiles_path: str | Path,
         signatures_path: str | Path,
         allow_extrapolation: bool = False,
+        allow_incomplete_plans: bool = False,
         neighbors: int = 4,
     ) -> None:
         with Path(profiles_path).open("r", encoding="utf-8", newline="") as handle:
@@ -64,6 +65,7 @@ class ProfileEstimator:
             self.profiles.setdefault(row["plan_id"], []).append(converted)
         self.signatures = {row["plan_id"]: row for row in signature_rows}
         self.allow_extrapolation = allow_extrapolation
+        self.allow_incomplete_plans = allow_incomplete_plans
         self.neighbors = neighbors
 
     def plan_ids(self, model_id: str, hardware_key: str) -> list[str]:
@@ -72,6 +74,10 @@ class ProfileEstimator:
             for plan_id, signature in self.signatures.items()
             if signature["model_id"] == model_id
             and signature["hardware_key"] == hardware_key
+            and (
+                self.allow_incomplete_plans
+                or signature["placement_complete"].casefold() == "true"
+            )
         )
 
     def signature(self, plan_id: str) -> dict[str, float]:

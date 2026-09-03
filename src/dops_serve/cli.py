@@ -83,6 +83,7 @@ def _dataset(args: argparse.Namespace) -> None:
         max_batch=args.max_batch,
         max_decisions_per_trace=args.max_decisions_per_trace,
         allow_extrapolation=args.allow_extrapolation,
+        allow_incomplete_plans=args.allow_incomplete_plans,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -183,6 +184,7 @@ def build_parser() -> argparse.ArgumentParser:
     dataset.add_argument("--max-batch", type=int, default=16)
     dataset.add_argument("--max-decisions-per-trace", type=int, default=1000)
     dataset.add_argument("--allow-extrapolation", action="store_true")
+    dataset.add_argument("--allow-incomplete-plans", action="store_true")
     dataset.set_defaults(handler=_dataset)
 
     train = commands.add_parser("train", help="Train the MLP plan scorer")

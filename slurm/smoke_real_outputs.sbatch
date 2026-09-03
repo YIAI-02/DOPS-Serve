@@ -56,6 +56,7 @@ run_python -m dops_serve.cli dataset \
   --output "$ARTIFACT_DIR/dataset.csv" \
   --hardware-key "$HARDWARE_KEY" \
   --allow-extrapolation \
+  --allow-incomplete-plans \
   --max-decisions-per-trace 64
 run_python -m dops_serve.cli train \
   --dataset "$ARTIFACT_DIR/dataset.csv" \

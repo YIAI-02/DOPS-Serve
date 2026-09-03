@@ -5,9 +5,36 @@ import unittest
 from pathlib import Path
 
 from dops_serve.dataset import DATASET_FIELDS, build_dataset
+from dops_serve.replay import ProfileEstimator
 
 
 class DatasetTest(unittest.TestCase):
+    def test_incomplete_plan_requires_explicit_opt_in(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profiles = root / "profiles.csv"
+            profiles.write_text(
+                "plan_id,model_id,hardware_key,batch,prefill_len,decode_len,"
+                "context_mid,prefill_time_s,decode_s_per_iteration\n"
+                "p1,llama_7b,hw,1,128,128,192,1.0,0.1\n",
+                encoding="utf-8",
+            )
+            signatures = root / "plan_signatures.csv"
+            signatures.write_text(
+                "plan_id,model_id,hardware_key,placement_complete,"
+                "incomplete_source_count,profile_count,"
+                "mean_prefill_s_per_input_token,mean_decode_s_per_iteration,"
+                "mean_output_token_throughput,mean_total_time_s\n"
+                "p1,llama_7b,hw,False,1,1,0.01,0.1,10.0,2.0\n",
+                encoding="utf-8",
+            )
+
+            self.assertEqual(ProfileEstimator(profiles, signatures).plan_ids("llama_7b", "hw"), [])
+            opted_in = ProfileEstimator(
+                profiles, signatures, allow_incomplete_plans=True
+            )
+            self.assertEqual(opted_in.plan_ids("llama_7b", "hw"), ["p1"])
+
     def test_counterfactual_rows_exclude_future_output_length(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -47,6 +74,8 @@ class DatasetTest(unittest.TestCase):
                 "plan_id",
                 "model_id",
                 "hardware_key",
+                "placement_complete",
+                "incomplete_source_count",
                 "profile_count",
                 "mean_prefill_s_per_input_token",
                 "mean_decode_s_per_iteration",
@@ -61,6 +90,8 @@ class DatasetTest(unittest.TestCase):
                         "plan_id": "plan_fast",
                         "model_id": "llama_7b",
                         "hardware_key": "exp1/hw/sst2",
+                        "placement_complete": True,
+                        "incomplete_source_count": 0,
                         "profile_count": 2,
                         "mean_prefill_s_per_input_token": 0.001,
                         "mean_decode_s_per_iteration": 0.01,
@@ -73,6 +104,8 @@ class DatasetTest(unittest.TestCase):
                         "plan_id": "plan_slow",
                         "model_id": "llama_7b",
                         "hardware_key": "exp1/hw/sst2",
+                        "placement_complete": True,
+                        "incomplete_source_count": 0,
                         "profile_count": 2,
                         "mean_prefill_s_per_input_token": 0.002,
                         "mean_decode_s_per_iteration": 0.02,

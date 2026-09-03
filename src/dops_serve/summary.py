@@ -13,18 +13,24 @@ def read_summary_metadata(path: str | Path) -> dict[str, Any]:
     """Read only the metadata prefix before the large schedule arrays."""
     summary_path = Path(path)
     lines: list[str] = []
-    schedule_key_found = False
+    plan_label_seen = False
+    metadata_complete = False
     with summary_path.open("r", encoding="utf-8", newline=None) as handle:
         for line in handle:
             match = _TOP_LEVEL_KEY.match(line)
-            if match and match.group("key") in {"prefill_schedule", "decode_steps"}:
-                schedule_key_found = True
-                break
+            if match:
+                key = match.group("key")
+                if plan_label_seen and key != "plan_label":
+                    metadata_complete = True
+                    break
+                if key == "plan_label":
+                    plan_label_seen = True
             lines.append(line)
 
-    if not schedule_key_found:
-        with summary_path.open("r", encoding="utf-8") as handle:
-            return json.load(handle)
+    if not plan_label_seen:
+        raise ValueError(f"Top-level plan_label not found in {summary_path}")
+    if not metadata_complete:
+        return json.loads("".join(lines))
 
     prefix = "".join(lines).rstrip()
     if prefix.endswith(","):
@@ -137,7 +143,7 @@ def extract_plan(path: str | Path, max_decode_steps: int = 128) -> dict[str, Any
     finally:
         decode_iterator.close()
 
-    if not prefill or not decode_segments:
+    if not prefill or not decode_segments or observed_steps == 0:
         raise ValueError(f"Incomplete placement in {path}")
     return {
         "prefill": prefill,
@@ -150,16 +156,17 @@ def extract_plan(path: str | Path, max_decode_steps: int = 128) -> dict[str, Any
 
 
 def canonical_plan_text(plan: dict[str, Any]) -> str:
-    """Deterministic exact-comparison text; it is not a content hash."""
+    """Compare known placement semantics without treating sampling as an action."""
+    observed_decode_transitions: list[list[list[str]]] = []
+    for segment in plan["decode_segments"]:
+        placement = segment["placement"]
+        if placement is None:
+            continue
+        mapping = sorted(placement)
+        if not observed_decode_transitions or observed_decode_transitions[-1] != mapping:
+            observed_decode_transitions.append(mapping)
     core = {
-        "prefill": plan["prefill"],
-        "decode_segments": [
-            {
-                "count": segment["count"],
-                "estimated": segment["estimated"],
-                "placement": segment["placement"],
-            }
-            for segment in plan["decode_segments"]
-        ],
+        "prefill_mapping": sorted(plan["prefill"]),
+        "observed_decode_transitions": observed_decode_transitions,
     }
     return json.dumps(core, ensure_ascii=False, separators=(",", ":"))

@@ -10,6 +10,10 @@ schedules. It never imports or invokes the DOPS scheduler.
 - Derived artifacts: inventory, plan bank, performance profiles, serving
   episodes, model checkpoints, and paired evaluation results.
 - V1 action: `(plan_id, horizon)` with horizons 32, 64, and 128.
+- Plan identity uses node-to-device mappings and observed decode transitions;
+  JSON record order and `schedule: null` sampling gaps do not create actions.
+- Missing decode placements remain missing. Dataset generation rejects incomplete
+  plans unless a smoke run explicitly uses `--allow-incomplete-plans`.
 - Offline `output_len` may terminate replay, but it is never an online feature.
 - Replay results are simulation artifacts, not physical NPU/PIM measurements.
 
@@ -60,3 +64,17 @@ training are split into `slurm/build_artifacts.sbatch` and
 `slurm/train_selector.sbatch`. Training requires PyTorch and all three scripts
 must be submitted from a login node; compilation and execution stay on Slurm
 compute nodes.
+
+## Current output audit
+
+The 2026-09-03 HPC audit found 4,669 valid summaries and 4 exclusions. The
+`hefthint`/`bifocal` candidate set produced 297 placement classes and 423
+profiles. All retained classes contain missing sampled decode schedules; 295
+heterogeneous classes have only one profile each. Therefore the current data
+supports pipeline smoke tests, but not a formal heterogeneous selector claim.
+The 256-point IDW validation covers only the two multi-point NPU-only classes;
+its p95 absolute percentage error is 6.53%.
+
+A formal run requires at least two complete plans for the same model/hardware,
+with each fixed plan evaluated across multiple anchor shapes. DOPS-Serve remains
+output-only and can consume those additional outputs when they are available.

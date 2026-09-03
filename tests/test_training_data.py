@@ -1,7 +1,12 @@
 import unittest
 
 from dops_serve.dataset import PLAN_FEATURES, STATE_FEATURES
-from dops_serve.training import _encode_rows, _fit_preprocessor, _ranking_pairs
+from dops_serve.training import (
+    _action_switches,
+    _encode_rows,
+    _fit_preprocessor,
+    _ranking_pairs,
+)
 
 
 def training_row(state_id: str, plan_id: str, throughput: float) -> dict[str, str]:
@@ -33,6 +38,29 @@ class TrainingDataTest(unittest.TestCase):
         self.assertEqual(len(features[0]), len(features[1]))
         self.assertAlmostEqual(sum(targets), 0.0)
         self.assertEqual(_ranking_pairs(rows), [(0, 1), (2, 3)])
+
+    def test_action_switches_reset_at_trace_boundary(self) -> None:
+        rows = [
+            {
+                "trace_id": "trace-a",
+                "decision_index": "0",
+                "plan_id": "p1",
+                "horizon": "64",
+            },
+            {
+                "trace_id": "trace-a",
+                "decision_index": "1",
+                "plan_id": "p2",
+                "horizon": "64",
+            },
+            {
+                "trace_id": "trace-b",
+                "decision_index": "0",
+                "plan_id": "p1",
+                "horizon": "64",
+            },
+        ]
+        self.assertEqual(_action_switches(rows), 1)
 
 
 if __name__ == "__main__":

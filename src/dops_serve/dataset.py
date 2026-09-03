@@ -105,6 +105,7 @@ def build_dataset(
     max_batch: int = 16,
     max_decisions_per_trace: int = 1000,
     allow_extrapolation: bool = False,
+    allow_incomplete_plans: bool = False,
 ) -> dict[str, int]:
     actions = horizons or [32, 64, 128]
     workload_rows = _read_jsonl(Path(workload_path))
@@ -116,6 +117,7 @@ def build_dataset(
         profiles_path,
         signatures_path,
         allow_extrapolation=allow_extrapolation,
+        allow_incomplete_plans=allow_incomplete_plans,
     )
 
     destination = Path(output_path)

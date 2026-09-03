@@ -212,6 +212,11 @@ def build_profiles(
     source_rows = _read_csv(Path(plan_sources_path))
     destination = Path(artifact_dir).resolve()
     destination.mkdir(parents=True, exist_ok=True)
+    with (destination / "plan_bank.jsonl").open("r", encoding="utf-8") as handle:
+        plan_metadata = {
+            row["plan_id"]: row
+            for row in (json.loads(line) for line in handle if line.strip())
+        }
 
     inventory_by_summary = {row["summary_path"]: row for row in inventory_rows}
     profiles: list[dict[str, object]] = []
@@ -271,6 +276,10 @@ def build_profiles(
                 "plan_id": plan_id,
                 "model_id": plan_rows[0]["model_id"],
                 "hardware_key": plan_rows[0]["hardware_key"],
+                "placement_complete": plan_metadata[plan_id]["placement_complete"],
+                "incomplete_source_count": plan_metadata[plan_id][
+                    "incomplete_source_count"
+                ],
                 "profile_count": len(plan_rows),
                 "mean_prefill_s_per_input_token": statistics.fmean(
                     float(row["prefill_s_per_input_token"]) for row in plan_rows
@@ -290,6 +299,8 @@ def build_profiles(
         "plan_id",
         "model_id",
         "hardware_key",
+        "placement_complete",
+        "incomplete_source_count",
         "profile_count",
         "mean_prefill_s_per_input_token",
         "mean_decode_s_per_iteration",
