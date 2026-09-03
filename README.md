@@ -67,14 +67,15 @@ compute nodes.
 
 ## Current output audit
 
-The 2026-09-03 HPC audit found 4,669 valid summaries and 4 exclusions. The
-`hefthint`/`bifocal` candidate set produced 297 placement classes and 423
-profiles. All retained classes contain missing sampled decode schedules; 295
-heterogeneous classes have only one profile each. Therefore the current data
-supports pipeline smoke tests, but not a formal heterogeneous selector claim.
-The 256-point IDW validation covers only the two multi-point NPU-only classes;
-its p95 absolute percentage error is 6.53%.
+The 2026-09-03 re-audit found 4,673 summaries and 711
+`baseline_compare_*.json` files. Those comparison files contain 4,639 policy
+outcomes; 579 files compare 2--8 policies under the same regular shape. They
+are useful supervised labels for anchor-workload plan ranking.
 
-A formal run requires at least two complete plans for the same model/hardware,
-with each fixed plan evaluated across multiple anchor shapes. DOPS-Serve remains
-output-only and can consume those additional outputs when they are available.
+The current implementation does not consume those comparison files yet: the
+inventory scans `best_summary` files and the full-build script selects only
+`hefthint`/`bifocal`. Seven comparison outcomes also lack their corresponding
+summary and must be excluded. The paired anchor labels do not replace replaying
+complete fixed plans under the same irregular serving state. Incomplete-plan
+training therefore remains smoke-only until that serving-side requirement is
+met.
