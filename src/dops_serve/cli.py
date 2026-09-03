@@ -30,6 +30,7 @@ def _plan_bank(args: argparse.Namespace) -> None:
         max_plans_per_group=args.max_plans_per_group,
         max_summaries_per_group=args.max_summaries_per_group,
         max_decode_steps=args.max_decode_steps,
+        workers=args.workers,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -54,6 +55,7 @@ def _anchor_dataset(args: argparse.Namespace) -> None:
         decode_lengths=args.decode_len,
         horizons=args.horizon,
         window_stride=args.window_stride,
+        workers=args.workers,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -180,6 +182,7 @@ def build_parser() -> argparse.ArgumentParser:
     anchor_dataset.add_argument("--decode-len", action="append", type=int)
     anchor_dataset.add_argument("--horizon", action="append", type=int)
     anchor_dataset.add_argument("--window-stride", type=int, default=32)
+    anchor_dataset.add_argument("--workers", type=int, default=1)
     anchor_dataset.set_defaults(handler=_anchor_dataset)
 
     plan_bank = commands.add_parser("plan-bank", help="Extract and deduplicate plans")
@@ -189,6 +192,7 @@ def build_parser() -> argparse.ArgumentParser:
     plan_bank.add_argument("--max-plans-per-group", type=int, default=32)
     plan_bank.add_argument("--max-summaries-per-group", type=int, default=0)
     plan_bank.add_argument("--max-decode-steps", type=int, default=1024)
+    plan_bank.add_argument("--workers", type=int, default=1)
     plan_bank.set_defaults(handler=_plan_bank)
 
     profiles = commands.add_parser("profiles", help="Build and validate profiles")

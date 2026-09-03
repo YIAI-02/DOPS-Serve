@@ -10,6 +10,7 @@ set -euo pipefail
 
 REPO_ROOT=${REPO_ROOT:-/lustre/home/2501111916/workspace/DOPS-Serve}
 ARTIFACT_DIR=${ARTIFACT_DIR:-$REPO_ROOT/artifacts/full}
+ANCHOR_WORKERS=${ANCHOR_WORKERS:-8}
 
 module load pytorch/24.12-py3
 
@@ -33,7 +34,8 @@ run_python -m dops_serve.cli anchor-dataset \
   --horizon 32 \
   --horizon 64 \
   --horizon 128 \
-  --window-stride 32
+  --window-stride 32 \
+  --workers "$ANCHOR_WORKERS"
 run_python -m dops_serve.cli train \
   --dataset "$ARTIFACT_DIR/anchor_dataset_windows.csv" \
   --output-dir "$ARTIFACT_DIR/model_anchor_windows" \

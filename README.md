@@ -43,7 +43,8 @@ python -m dops_serve.cli plan-bank \
   --inventory artifacts/inventory.csv \
   --artifact-dir artifacts \
   --policy attacc --policy attn_on_pim --policy facil --policy heft \
-  --policy hefthint --policy ianus --policy pd --policy weights_on_pim
+  --policy hefthint --policy ianus --policy pd --policy weights_on_pim \
+  --workers 6
 
 python -m dops_serve.cli profiles \
   --inventory artifacts/inventory.csv \
@@ -55,7 +56,8 @@ python -m dops_serve.cli anchor-dataset \
   --plan-sources artifacts/plan_sources.csv \
   --profiles artifacts/profiles.csv \
   --signatures artifacts/plan_signatures.csv \
-  --output artifacts/anchor_dataset_windows.csv
+  --output artifacts/anchor_dataset_windows.csv \
+  --workers 8
 
 python -m dops_serve.cli generate-workloads \
   --output artifacts/workloads.jsonl \
@@ -73,11 +75,11 @@ python -m dops_serve.cli train \
   --output-dir artifacts/model_llama_7b
 ```
 
-Use `slurm/smoke_real_outputs.sbatch` first. The full profile build and model
-training are split into `slurm/build_artifacts.sbatch` and
-`slurm/train_selector.sbatch`. Training requires PyTorch and all three scripts
-must be submitted from a login node; compilation and execution stay on Slurm
-compute nodes.
+Use `slurm/smoke_real_outputs.sbatch` first. The full anchor pipeline is split
+into `slurm/build_artifacts.sbatch` and `slurm/train_anchor.sbatch`. The build
+script requests one 64-core node because this cluster allocates memory per CPU,
+then runs six independent model/hardware groups concurrently. All scripts must
+be submitted from a login node; execution stays on Slurm compute nodes.
 
 ## Current output audit
 

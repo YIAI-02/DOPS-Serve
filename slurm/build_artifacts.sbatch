@@ -3,7 +3,7 @@
 #SBATCH --partition=C064M0256G
 #SBATCH --qos=high
 #SBATCH --time=12:00:00
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=64
 #SBATCH --output=/lustre/home/2501111916/workspace/DOPS-Serve/logs/%x-%j.out
 
 set -euo pipefail
@@ -13,6 +13,7 @@ DOPS_OUTPUT_ROOT=${DOPS_OUTPUT_ROOT:-/lustre/home/2501111916/workspace/DOPS_0330
 ARTIFACT_DIR=${ARTIFACT_DIR:-$REPO_ROOT/artifacts/full}
 INVENTORY_SOURCE=${INVENTORY_SOURCE:-}
 REUSE_PLAN_BANK=${REUSE_PLAN_BANK:-0}
+PLAN_BANK_WORKERS=${PLAN_BANK_WORKERS:-6}
 
 module load pytorch/24.12-py3
 
@@ -49,7 +50,8 @@ if [[ "$REUSE_PLAN_BANK" != "1" ]]; then
     --policy pd \
     --policy weights_on_pim \
     --max-plans-per-group 32 \
-    --max-decode-steps 1024
+    --max-decode-steps 1024 \
+    --workers "$PLAN_BANK_WORKERS"
 fi
 run_python -m dops_serve.cli profiles \
   --inventory "$ARTIFACT_DIR/inventory.csv" \

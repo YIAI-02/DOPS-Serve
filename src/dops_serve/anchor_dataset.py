@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import math
 from collections import defaultdict
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 from .dataset import DATASET_FIELDS
@@ -17,6 +18,30 @@ DEFAULT_HORIZONS = [32, 64, 128]
 def _read_csv(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def _read_candidate_timing(
+    task: tuple[dict[str, str], str]
+) -> tuple[list[float] | None, str | None]:
+    row, _ = task
+    source_decode_len = int(row["decode_len"])
+    try:
+        step_times = read_decode_step_times(
+            row["summary_path"], max_decode_steps=source_decode_len
+        )
+    except (KeyError, OSError, ValueError) as error:
+        return None, f"decode step timing unavailable: {error}"
+    if len(step_times) != source_decode_len or not math.isclose(
+        sum(step_times),
+        float(row["decode_time_s"]),
+        rel_tol=1e-8,
+        abs_tol=1e-10,
+    ):
+        return None, "decode step timings do not match the source decode total"
+    prefix_times = [0.0]
+    for step_time in step_times:
+        prefix_times.append(prefix_times[-1] + step_time)
+    return prefix_times, None
 
 
 def _regular_state(
@@ -88,6 +113,7 @@ def build_anchor_dataset(
     decode_lengths: list[int] | None = None,
     horizons: list[int] | None = None,
     window_stride: int = 32,
+    workers: int = 1,
 ) -> dict[str, int]:
     if decode_len is not None and decode_lengths is not None:
         raise ValueError("use decode_len or decode_lengths, not both")
@@ -111,9 +137,8 @@ def build_anchor_dataset(
         by_comparison[row["comparison_id"]].append(row)
 
     exclusions: list[dict[str, str]] = []
-    accepted: dict[str, list[tuple[dict[str, str], str, list[float]]]] = {}
+    timing_inputs: list[tuple[str, dict[str, str], str]] = []
     for comparison_id, rows in sorted(by_comparison.items()):
-        candidates: list[tuple[dict[str, str], str, list[float]]] = []
         for row in rows:
             plan_id = source_to_plan.get(row["summary_path"])
             if plan_id is None:
@@ -135,40 +160,35 @@ def build_anchor_dataset(
                     }
                 )
                 continue
+            timing_inputs.append((comparison_id, row, plan_id))
 
-            source_decode_len = int(row["decode_len"])
-            try:
-                step_times = read_decode_step_times(
-                    row["summary_path"], max_decode_steps=source_decode_len
-                )
-            except (KeyError, OSError, ValueError) as error:
-                exclusions.append(
-                    {
-                        "comparison_id": comparison_id,
-                        "summary_path": row["summary_path"],
-                        "reason": f"decode step timing unavailable: {error}",
-                    }
-                )
-                continue
-            if len(step_times) != source_decode_len or not math.isclose(
-                sum(step_times),
-                float(row["decode_time_s"]),
-                rel_tol=1e-8,
-                abs_tol=1e-10,
-            ):
-                exclusions.append(
-                    {
-                        "comparison_id": comparison_id,
-                        "summary_path": row["summary_path"],
-                        "reason": "decode step timings do not match the source decode total",
-                    }
-                )
-                continue
-            prefix_times = [0.0]
-            for step_time in step_times:
-                prefix_times.append(prefix_times[-1] + step_time)
-            candidates.append((row, plan_id, prefix_times))
+    tasks = [(row, plan_id) for _, row, plan_id in timing_inputs]
+    if workers > 1:
+        with ProcessPoolExecutor(max_workers=workers) as executor:
+            timing_results = list(executor.map(_read_candidate_timing, tasks))
+    else:
+        timing_results = [_read_candidate_timing(task) for task in tasks]
 
+    timed_candidates: dict[
+        str, list[tuple[dict[str, str], str, list[float]]]
+    ] = defaultdict(list)
+    for (comparison_id, row, plan_id), (prefix_times, reason) in zip(
+        timing_inputs, timing_results
+    ):
+        if prefix_times is None:
+            exclusions.append(
+                {
+                    "comparison_id": comparison_id,
+                    "summary_path": row["summary_path"],
+                    "reason": str(reason),
+                }
+            )
+            continue
+        timed_candidates[comparison_id].append((row, plan_id, prefix_times))
+
+    accepted: dict[str, list[tuple[dict[str, str], str, list[float]]]] = {}
+    for comparison_id in sorted(by_comparison):
+        candidates = timed_candidates[comparison_id]
         plan_ids = [plan_id for _, plan_id, _ in candidates]
         if len(candidates) < 2 or len(set(plan_ids)) != len(plan_ids):
             for row, _, _ in candidates:

@@ -104,6 +104,26 @@ class AnchorDatasetTest(unittest.TestCase):
                 signatures,
                 output,
             )
+            parallel_output = root / "anchor_dataset_parallel.csv"
+            parallel_result = build_anchor_dataset(
+                comparisons,
+                root / "plan_sources.csv",
+                profiles,
+                signatures,
+                parallel_output,
+                workers=2,
+            )
+            self.assertEqual(result, parallel_result)
+            self.assertEqual(
+                output.read_text(encoding="utf-8"),
+                parallel_output.read_text(encoding="utf-8"),
+            )
+            self.assertEqual(
+                (root / "anchor_dataset_excluded.csv").read_text(encoding="utf-8"),
+                (root / "anchor_dataset_parallel_excluded.csv").read_text(
+                    encoding="utf-8"
+                ),
+            )
             self.assertEqual(result["comparisons"], 4)
             self.assertEqual(result["states"], 60)
             self.assertEqual(result["rows"], 360)

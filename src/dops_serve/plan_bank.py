@@ -4,6 +4,7 @@ import csv
 import json
 import re
 from collections import defaultdict
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 from typing import Any
 
@@ -42,6 +43,154 @@ def _spread_limit(rows: list[dict[str, str]], limit: int) -> list[dict[str, str]
     return [ordered[index] for index in indices]
 
 
+def _process_group(
+    task: tuple[
+        str,
+        str,
+        list[dict[str, str]],
+        str,
+        int,
+        int,
+        int,
+    ]
+) -> tuple[
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, str]],
+    int,
+]:
+    (
+        model_id,
+        hardware_key,
+        rows,
+        plan_dir_value,
+        max_plans_per_group,
+        max_summaries_per_group,
+        max_decode_steps,
+    ) = task
+    selected_rows = _spread_limit(rows, max_summaries_per_group)
+    unique: dict[str, dict[str, Any]] = {}
+    excluded_rows: list[dict[str, str]] = []
+    parsed_count = 0
+
+    for row in selected_rows:
+        try:
+            plan = extract_plan(
+                row["summary_path"],
+                max_decode_steps=max_decode_steps,
+                ops_trace_path=row["ops_trace_path"],
+            )
+        except (KeyError, TypeError, ValueError, OSError, json.JSONDecodeError) as error:
+            excluded_rows.append(
+                {"summary_path": row["summary_path"], "reason": str(error)}
+            )
+            continue
+        parsed_count += 1
+        exact_text = canonical_plan_text(plan)
+        if exact_text not in unique:
+            unique[exact_text] = {
+                "plan": plan,
+                "representative_source": row,
+                "sources": [],
+                "incomplete_sources": 0,
+            }
+        elif (
+            plan["decode_steps_covered"],
+            plan["decode_steps_observed"],
+        ) > (
+            unique[exact_text]["plan"]["decode_steps_covered"],
+            unique[exact_text]["plan"]["decode_steps_observed"],
+        ):
+            unique[exact_text]["plan"] = plan
+            unique[exact_text]["representative_source"] = row
+        unique[exact_text]["sources"].append(row)
+        if not plan["placement_complete"]:
+            unique[exact_text]["incomplete_sources"] += 1
+
+    ranked = sorted(
+        unique.values(),
+        key=lambda item: (
+            -len(item["sources"]),
+            sum(float(row["total_time_s"]) for row in item["sources"])
+            / len(item["sources"]),
+            item["sources"][0]["summary_path"],
+        ),
+    )
+    retained = ranked[:max_plans_per_group]
+    dropped = ranked[max_plans_per_group:]
+    for item in dropped:
+        for source in item["sources"]:
+            excluded_rows.append(
+                {
+                    "summary_path": source["summary_path"],
+                    "reason": "unique placement omitted by max_plans_per_group",
+                }
+            )
+
+    source_rows: list[dict[str, Any]] = []
+    manifest_rows: list[dict[str, Any]] = []
+    plan_dir = Path(plan_dir_value)
+    group_name = f"{_safe_name(model_id)}__{_safe_name(hardware_key)}"
+    for plan_index, item in enumerate(retained, start=1):
+        plan_id = f"{group_name}__p{plan_index:02d}"
+        plan_path = plan_dir / f"{plan_id}.json"
+        source_shapes = sorted(
+            {
+                (
+                    int(row["batch"]),
+                    int(row["prefill_len"]),
+                    int(row["decode_len"]),
+                )
+                for row in item["sources"]
+            }
+        )
+        plan_payload = {
+            "plan_id": plan_id,
+            "model_id": model_id,
+            "hardware_key": hardware_key,
+            "source_policy": item["representative_source"]["policy"],
+            "source_summary": item["representative_source"]["summary_path"],
+            "source_shapes": [list(shape) for shape in source_shapes],
+            "placement_equivalence": "prefill mapping and decode placement transitions",
+            "incomplete_source_count": item["incomplete_sources"],
+            **item["plan"],
+        }
+        with plan_path.open("w", encoding="utf-8") as handle:
+            json.dump(plan_payload, handle, ensure_ascii=False, separators=(",", ":"))
+            handle.write("\n")
+
+        manifest_rows.append(
+            {
+                "plan_id": plan_id,
+                "model_id": model_id,
+                "hardware_key": hardware_key,
+                "source_policy": item["representative_source"]["policy"],
+                "plan_path": str(plan_path),
+                "profile_count": len(item["sources"]),
+                "decode_steps_covered": item["plan"]["decode_steps_covered"],
+                "decode_steps_observed": item["plan"]["decode_steps_observed"],
+                "decode_steps_estimated": item["plan"]["decode_steps_estimated"],
+                "decode_steps_recovered": item["plan"]["decode_steps_recovered"],
+                "decode_steps_missing": item["plan"]["decode_steps_missing"],
+                "placement_complete": item["plan"]["placement_complete"],
+                "placement_equivalence": "prefill mapping and decode placement transitions",
+                "incomplete_source_count": item["incomplete_sources"],
+                "source_shapes": [list(shape) for shape in source_shapes],
+            }
+        )
+        for source in item["sources"]:
+            source_rows.append(
+                {
+                    "summary_path": source["summary_path"],
+                    "plan_id": plan_id,
+                    "model_id": model_id,
+                    "hardware_key": hardware_key,
+                }
+            )
+
+    return source_rows, manifest_rows, excluded_rows, parsed_count
+
+
 def build_plan_bank(
     inventory_path: str | Path,
     artifact_dir: str | Path,
@@ -49,6 +198,7 @@ def build_plan_bank(
     max_plans_per_group: int = 32,
     max_summaries_per_group: int = 0,
     max_decode_steps: int = 1024,
+    workers: int = 1,
 ) -> dict[str, int]:
     inventory = Path(inventory_path).resolve()
     destination = Path(artifact_dir).resolve()
@@ -67,122 +217,29 @@ def build_plan_bank(
     excluded_rows: list[dict[str, str]] = []
     parsed_count = 0
 
-    for model_id, hardware_key in sorted(groups):
-        selected_rows = _spread_limit(
-            groups[(model_id, hardware_key)], max_summaries_per_group
+    tasks = [
+        (
+            model_id,
+            hardware_key,
+            groups[(model_id, hardware_key)],
+            str(plan_dir),
+            max_plans_per_group,
+            max_summaries_per_group,
+            max_decode_steps,
         )
-        unique: dict[str, dict[str, Any]] = {}
-        for row in selected_rows:
-            try:
-                plan = extract_plan(
-                    row["summary_path"],
-                    max_decode_steps=max_decode_steps,
-                    ops_trace_path=row["ops_trace_path"],
-                )
-            except (KeyError, TypeError, ValueError, OSError, json.JSONDecodeError) as error:
-                excluded_rows.append(
-                    {"summary_path": row["summary_path"], "reason": str(error)}
-                )
-                continue
-            parsed_count += 1
-            exact_text = canonical_plan_text(plan)
-            if exact_text not in unique:
-                unique[exact_text] = {
-                    "plan": plan,
-                    "representative_source": row,
-                    "sources": [],
-                    "incomplete_sources": 0,
-                }
-            elif (
-                plan["decode_steps_covered"],
-                plan["decode_steps_observed"],
-            ) > (
-                unique[exact_text]["plan"]["decode_steps_covered"],
-                unique[exact_text]["plan"]["decode_steps_observed"],
-            ):
-                unique[exact_text]["plan"] = plan
-                unique[exact_text]["representative_source"] = row
-            unique[exact_text]["sources"].append(row)
-            if not plan["placement_complete"]:
-                unique[exact_text]["incomplete_sources"] += 1
+        for model_id, hardware_key in sorted(groups)
+    ]
+    if workers > 1:
+        with ProcessPoolExecutor(max_workers=workers) as executor:
+            results = list(executor.map(_process_group, tasks))
+    else:
+        results = [_process_group(task) for task in tasks]
 
-        ranked = sorted(
-            unique.values(),
-            key=lambda item: (
-                -len(item["sources"]),
-                sum(float(row["total_time_s"]) for row in item["sources"])
-                / len(item["sources"]),
-                item["sources"][0]["summary_path"],
-            ),
-        )
-        retained = ranked[:max_plans_per_group]
-        dropped = ranked[max_plans_per_group:]
-        for item in dropped:
-            for source in item["sources"]:
-                excluded_rows.append(
-                    {
-                        "summary_path": source["summary_path"],
-                        "reason": "unique placement omitted by max_plans_per_group",
-                    }
-                )
-
-        group_name = f"{_safe_name(model_id)}__{_safe_name(hardware_key)}"
-        for plan_index, item in enumerate(retained, start=1):
-            plan_id = f"{group_name}__p{plan_index:02d}"
-            plan_path = plan_dir / f"{plan_id}.json"
-            source_shapes = sorted(
-                {
-                    (
-                        int(row["batch"]),
-                        int(row["prefill_len"]),
-                        int(row["decode_len"]),
-                    )
-                    for row in item["sources"]
-                }
-            )
-            plan_payload = {
-                "plan_id": plan_id,
-                "model_id": model_id,
-                "hardware_key": hardware_key,
-                "source_policy": item["representative_source"]["policy"],
-                "source_summary": item["representative_source"]["summary_path"],
-                "source_shapes": [list(shape) for shape in source_shapes],
-                "placement_equivalence": "prefill mapping and decode placement transitions",
-                "incomplete_source_count": item["incomplete_sources"],
-                **item["plan"],
-            }
-            with plan_path.open("w", encoding="utf-8") as handle:
-                json.dump(plan_payload, handle, ensure_ascii=False, separators=(",", ":"))
-                handle.write("\n")
-
-            manifest_rows.append(
-                {
-                    "plan_id": plan_id,
-                    "model_id": model_id,
-                    "hardware_key": hardware_key,
-                    "source_policy": item["representative_source"]["policy"],
-                    "plan_path": str(plan_path),
-                    "profile_count": len(item["sources"]),
-                    "decode_steps_covered": item["plan"]["decode_steps_covered"],
-                    "decode_steps_observed": item["plan"]["decode_steps_observed"],
-                    "decode_steps_estimated": item["plan"]["decode_steps_estimated"],
-                    "decode_steps_recovered": item["plan"]["decode_steps_recovered"],
-                    "decode_steps_missing": item["plan"]["decode_steps_missing"],
-                    "placement_complete": item["plan"]["placement_complete"],
-                    "placement_equivalence": "prefill mapping and decode placement transitions",
-                    "incomplete_source_count": item["incomplete_sources"],
-                    "source_shapes": [list(shape) for shape in source_shapes],
-                }
-            )
-            for source in item["sources"]:
-                source_rows.append(
-                    {
-                        "summary_path": source["summary_path"],
-                        "plan_id": plan_id,
-                        "model_id": model_id,
-                        "hardware_key": hardware_key,
-                    }
-                )
+    for group_sources, group_manifest, group_excluded, group_parsed in results:
+        source_rows.extend(group_sources)
+        manifest_rows.extend(group_manifest)
+        excluded_rows.extend(group_excluded)
+        parsed_count += group_parsed
 
     with (destination / "plan_bank.jsonl").open("w", encoding="utf-8") as handle:
         for row in manifest_rows:
