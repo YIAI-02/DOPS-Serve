@@ -9,6 +9,31 @@ from dops_serve.replay import ProfileEstimator
 
 
 class DatasetTest(unittest.TestCase):
+    def test_robust_plan_prioritizes_profile_coverage(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profiles = root / "profiles.csv"
+            profiles.write_text(
+                "plan_id,model_id,hardware_key,batch,prefill_len,decode_len,"
+                "context_mid,prefill_time_s,decode_s_per_iteration\n"
+                "covered,llama_7b,hw,1,128,128,192,1.0,0.1\n"
+                "sparse,llama_7b,hw,1,128,128,192,0.5,0.05\n",
+                encoding="utf-8",
+            )
+            signatures = root / "plan_signatures.csv"
+            signatures.write_text(
+                "plan_id,model_id,hardware_key,placement_complete,"
+                "incomplete_source_count,profile_count,"
+                "mean_prefill_s_per_input_token,mean_decode_s_per_iteration,"
+                "mean_output_token_throughput,mean_total_time_s\n"
+                "covered,llama_7b,hw,True,0,64,0.01,0.1,10.0,2.0\n"
+                "sparse,llama_7b,hw,True,0,2,0.005,0.05,20.0,1.0\n",
+                encoding="utf-8",
+            )
+
+            estimator = ProfileEstimator(profiles, signatures)
+            self.assertEqual(estimator.robust_plan("llama_7b", "hw"), "covered")
+
     def test_incomplete_plan_requires_explicit_opt_in(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

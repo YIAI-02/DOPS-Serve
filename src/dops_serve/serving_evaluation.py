@@ -210,19 +210,12 @@ def _select_mlp(
 def _robust_static_plan(
     estimator: ProfileEstimator, model_id: str, hardware_key: str
 ) -> str:
-    plan_ids = estimator.plan_ids(model_id, hardware_key)
-    if not plan_ids:
+    try:
+        return estimator.robust_plan(model_id, hardware_key)
+    except UnsupportedProfile as error:
         raise ServingReplayUnsupported(
             f"no complete plans for model={model_id}, hardware={hardware_key}"
-        )
-    return sorted(
-        plan_ids,
-        key=lambda plan_id: (
-            -estimator.signature(plan_id)["plan_profile_count"],
-            -estimator.signature(plan_id)["plan_mean_output_token_throughput"],
-            plan_id,
-        ),
-    )[0]
+        ) from error
 
 
 def _run_policy(

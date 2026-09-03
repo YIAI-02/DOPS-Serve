@@ -102,11 +102,13 @@ class ProfileEstimator:
             raise UnsupportedProfile(
                 f"No plans for model={model_id}, hardware={hardware_key}"
             )
-        return max(
+        return min(
             candidates,
-            key=lambda plan_id: self.signature(plan_id)[
-                "plan_mean_output_token_throughput"
-            ],
+            key=lambda plan_id: (
+                -self.signature(plan_id)["plan_profile_count"],
+                -self.signature(plan_id)["plan_mean_output_token_throughput"],
+                plan_id,
+            ),
         )
 
     def _check_envelope(
