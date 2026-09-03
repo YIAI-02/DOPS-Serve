@@ -114,3 +114,20 @@ candidate rows (703/123/179 train/validation/test). Its MLP reached 95.9% of the
 offline oracle's mean throughput on 27 paired test states. This remains a
 regular-anchor scorer diagnostic; serving claims still require counterfactual
 replay on the same irregular request states.
+
+The 64-core, six-worker v7 build (`14733834`) completed in 2:22:29. It parsed
+all 4,669 summaries and retained 299 plans; all 299 have complete placement,
+including 215 plans covered through 1,024 decode steps. It mapped 3,993
+profiles and excluded 676 source mappings only because of the 32-plan cap.
+Leave-one-profile-out validation has 7,916 rows and 14.9% p95 absolute
+percentage error.
+
+The dependent eight-worker anchor run (`14733838`) completed in 17:38. It
+retained 576 paired comparisons across source decode lengths 128, 256, 512,
+and 1024, producing 8,600 states and 168,876 candidate-action rows
+(117,432/27,240/24,204 train/validation/test). Every state compares 2--8 plans
+and every plan has horizons 32, 64, and 128. On the same 1,284 paired test
+states, the MLP reached 99.1% of the offline oracle's mean window throughput.
+Its 358 action switches and 5.81 s mean window p95 latency are not evidence that
+serving stability or latency guardrails are satisfied. These remain offline
+regular-anchor timing labels, not tensor execution or irregular serving replay.
