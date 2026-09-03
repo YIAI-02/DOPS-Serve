@@ -79,6 +79,9 @@ def _generate_workloads(args: argparse.Namespace) -> None:
         requests_per_trace=args.requests_per_trace,
         base_rate=args.base_rate,
         seed=args.seed,
+        prompt_min=args.prompt_min,
+        prompt_max=args.prompt_max,
+        max_token_choices=args.max_tokens,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -151,6 +154,28 @@ def _evaluate(args: argparse.Namespace) -> None:
     print(json.dumps(result, sort_keys=True))
 
 
+def _serving_evaluate(args: argparse.Namespace) -> None:
+    from .serving_evaluation import evaluate_serving
+
+    result = evaluate_serving(
+        workload_path=args.workload,
+        profiles_path=args.profiles,
+        signatures_path=args.signatures,
+        checkpoint_path=args.checkpoint,
+        output_dir=args.output_dir,
+        hardware_key=args.hardware_key,
+        split=args.split,
+        horizons=args.horizon,
+        fixed_horizon=args.fixed_horizon,
+        max_batch=args.max_batch,
+        max_decisions=args.max_decisions,
+        latency_slo_s=args.latency_slo_s,
+        plan_switch_margin=args.plan_switch_margin,
+        allow_extrapolation=args.allow_extrapolation,
+    )
+    print(json.dumps(result, sort_keys=True))
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="dops-serve")
     commands = parser.add_subparsers(dest="command", required=True)
@@ -210,6 +235,9 @@ def build_parser() -> argparse.ArgumentParser:
     workloads.add_argument("--requests-per-trace", type=int, default=200)
     workloads.add_argument("--base-rate", type=float, default=2.0)
     workloads.add_argument("--seed", type=int, default=7)
+    workloads.add_argument("--prompt-min", type=int, default=128)
+    workloads.add_argument("--prompt-max", type=int, default=4096)
+    workloads.add_argument("--max-tokens", action="append", type=int)
     workloads.set_defaults(handler=_generate_workloads)
 
     importer = commands.add_parser("import-workload", help="Import one real trace CSV")
@@ -256,6 +284,25 @@ def build_parser() -> argparse.ArgumentParser:
     evaluate.add_argument("--checkpoint", required=True)
     evaluate.add_argument("--output-dir", required=True)
     evaluate.set_defaults(handler=_evaluate)
+
+    serving = commands.add_parser(
+        "serving-evaluate", help="Run paired closed-loop workload replay"
+    )
+    serving.add_argument("--workload", required=True)
+    serving.add_argument("--profiles", required=True)
+    serving.add_argument("--signatures", required=True)
+    serving.add_argument("--checkpoint", required=True)
+    serving.add_argument("--output-dir", required=True)
+    serving.add_argument("--hardware-key", required=True)
+    serving.add_argument("--split", choices=("train", "val", "test", "all"), default="test")
+    serving.add_argument("--horizon", action="append", type=int)
+    serving.add_argument("--fixed-horizon", type=int, default=64)
+    serving.add_argument("--max-batch", type=int, default=16)
+    serving.add_argument("--max-decisions", type=int, default=10000)
+    serving.add_argument("--latency-slo-s", type=float, default=0.0)
+    serving.add_argument("--plan-switch-margin", type=float, default=0.0)
+    serving.add_argument("--allow-extrapolation", action="store_true")
+    serving.set_defaults(handler=_serving_evaluate)
     return parser
 
 

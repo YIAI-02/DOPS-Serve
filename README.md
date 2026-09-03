@@ -16,6 +16,12 @@ schedules. It never imports or invokes the DOPS scheduler.
 - Dataset generation rejects plans that remain incomplete after trace recovery,
   unless a smoke run explicitly uses `--allow-incomplete-plans`.
 - Offline `output_len` may terminate replay, but it is never an online feature.
+- Closed-loop evaluation gives each policy the same request trace and an
+  independent runtime state. Its latency metric is the global p95 over all
+  completed requests, not the earlier mean of anchor-window labels.
+- The MLP latency guardrail projects only already-arrived requests using their
+  declared `max_tokens`; only the explicitly named myopic oracle may use
+  simulator completion truth for one-step action selection.
 - Replay results are simulation artifacts, not physical NPU/PIM measurements.
 
 The first target input tree is:
@@ -73,6 +79,16 @@ python -m dops_serve.cli dataset \
 python -m dops_serve.cli train \
   --dataset artifacts/dataset.csv \
   --output-dir artifacts/model_llama_7b
+
+python -m dops_serve.cli serving-evaluate \
+  --workload artifacts/workloads.jsonl \
+  --profiles artifacts/profiles.csv \
+  --signatures artifacts/plan_signatures.csv \
+  --checkpoint artifacts/model_llama_7b/checkpoints/best.pt \
+  --output-dir artifacts/serving_eval_llama_7b \
+  --hardware-key exp1/hw_hardware_1npu_2aim/sst2_rst2 \
+  --latency-slo-s 30 \
+  --plan-switch-margin 0.02
 ```
 
 Use `slurm/smoke_real_outputs.sbatch` first. The full anchor pipeline is split

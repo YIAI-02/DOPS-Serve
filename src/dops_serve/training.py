@@ -48,11 +48,10 @@ def _fit_preprocessor(rows: list[dict[str, str]]) -> dict[str, Any]:
     }
 
 
-def _encode_rows(
-    rows: list[dict[str, str]], preprocessor: dict[str, Any]
-) -> tuple[list[list[float]], list[float]]:
+def _encode_features(
+    rows: list[dict[str, Any]], preprocessor: dict[str, Any]
+) -> list[list[float]]:
     encoded: list[list[float]] = []
-    targets: list[float] = []
     for row in rows:
         vector = [
             (float(row[name]) - float(preprocessor["means"][name]))
@@ -65,6 +64,15 @@ def _encode_rows(
                 for category in preprocessor["vocabularies"][name]
             )
         encoded.append(vector)
+    return encoded
+
+
+def _encode_rows(
+    rows: list[dict[str, str]], preprocessor: dict[str, Any]
+) -> tuple[list[list[float]], list[float]]:
+    encoded = _encode_features(rows, preprocessor)
+    targets: list[float] = []
+    for row in rows:
         targets.append(
             (float(row[TARGET]) - float(preprocessor["target_mean"]))
             / float(preprocessor["target_scale"])

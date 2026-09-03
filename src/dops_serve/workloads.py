@@ -39,12 +39,22 @@ def _next_arrival(
     raise ValueError(f"Unknown workload family: {family}")
 
 
-def _request_lengths(family: str, rng: random.Random) -> tuple[int, int, int]:
+def _request_lengths(
+    family: str,
+    rng: random.Random,
+    prompt_min: int,
+    prompt_max: int,
+    max_token_choices: list[int],
+) -> tuple[int, int, int]:
     if family == "heavy_tailed":
-        prompt_len = _bounded_int(96.0 * rng.paretovariate(1.35), 128, 4096)
+        prompt_len = _bounded_int(
+            96.0 * rng.paretovariate(1.35), prompt_min, prompt_max
+        )
     else:
-        prompt_len = _bounded_int(math.exp(rng.gauss(math.log(512), 0.8)), 128, 4096)
-    max_tokens = rng.choice((128, 256, 512, 1024))
+        prompt_len = _bounded_int(
+            math.exp(rng.gauss(math.log(512), 0.8)), prompt_min, prompt_max
+        )
+    max_tokens = rng.choice(max_token_choices)
     output_len = _bounded_int(
         math.exp(rng.gauss(math.log(max_tokens / 3.0), 0.65)), 1, max_tokens
     )
@@ -59,11 +69,19 @@ def generate_synthetic_workloads(
     requests_per_trace: int = 200,
     base_rate: float = 2.0,
     seed: int = 7,
+    prompt_min: int = 128,
+    prompt_max: int = 4096,
+    max_token_choices: list[int] | None = None,
 ) -> dict[str, int]:
     selected_families = families or list(FAMILIES)
     unknown = sorted(set(selected_families) - set(FAMILIES))
     if unknown:
         raise ValueError(f"Unknown workload families: {', '.join(unknown)}")
+    if prompt_min <= 0 or prompt_max < prompt_min:
+        raise ValueError("prompt bounds must satisfy 0 < prompt_min <= prompt_max")
+    token_choices = sorted(set(max_token_choices or [128, 256, 512, 1024]))
+    if not token_choices or token_choices[0] <= 0:
+        raise ValueError("max token choices must be positive")
     destination = Path(output_path)
     destination.parent.mkdir(parents=True, exist_ok=True)
     rng = random.Random(seed)
@@ -77,7 +95,13 @@ def generate_synthetic_workloads(
                     current_time = _next_arrival(
                         family, request_index, current_time, base_rate, rng
                     )
-                    prompt_len, max_tokens, output_len = _request_lengths(family, rng)
+                    prompt_len, max_tokens, output_len = _request_lengths(
+                        family,
+                        rng,
+                        prompt_min,
+                        prompt_max,
+                        token_choices,
+                    )
                     records.append(
                         {
                             "trace_id": trace_id,

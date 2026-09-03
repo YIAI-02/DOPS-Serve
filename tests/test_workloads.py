@@ -17,11 +17,16 @@ class WorkloadsTest(unittest.TestCase):
                 traces_per_family=1,
                 requests_per_trace=40,
                 seed=3,
+                prompt_min=256,
+                prompt_max=512,
+                max_token_choices=[64, 128],
             )
             rows = [json.loads(line) for line in output.read_text().splitlines()]
             self.assertEqual(result["requests"], 40)
             self.assertTrue(all(row["output_len"] <= row["max_tokens"] for row in rows))
             self.assertTrue(any(row["output_len"] != row["max_tokens"] for row in rows))
+            self.assertTrue(all(256 <= row["prompt_len"] <= 512 for row in rows))
+            self.assertEqual({row["max_tokens"] for row in rows}, {64, 128})
 
     def test_import_rejects_output_as_max_tokens(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
