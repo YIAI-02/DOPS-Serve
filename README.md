@@ -78,8 +78,9 @@ outcomes; 579 files compare 2--8 policies under the same regular shape. They
 are useful supervised labels for anchor-workload plan ranking.
 
 The `anchor-comparisons` stage links those outcomes to the summary inventory,
-checks timing agreement, and excludes unpaired records. Seven comparison
-outcomes lack their corresponding summary. The paired anchor labels do not
-replace replaying complete fixed plans under the same irregular serving state.
-Incomplete-plan training therefore remains smoke-only until that serving-side
-requirement is met.
+checks timing agreement, and excludes unpaired records. The full run retained
+577 paired groups and 4,495 ranking rows. It excluded 10 outcomes without a
+valid inventory summary and two whose comparison and summary timings disagree.
+The paired anchor labels do not replace replaying complete fixed plans under
+the same irregular serving state. Incomplete-plan training therefore remains
+smoke-only until that serving-side requirement is met.
