@@ -6,6 +6,7 @@ from dops_serve.training import (
     _encode_rows,
     _fit_preprocessor,
     _ranking_pairs,
+    _robust_static_plans,
 )
 
 
@@ -61,6 +62,17 @@ class TrainingDataTest(unittest.TestCase):
             },
         ]
         self.assertEqual(_action_switches(rows), 1)
+
+    def test_robust_static_prioritizes_state_coverage(self) -> None:
+        rows = [
+            training_row("s0", "single_fast", 100.0),
+            training_row("s0", "covered", 10.0),
+            training_row("s1", "covered", 12.0),
+        ]
+        self.assertEqual(
+            _robust_static_plans(rows)[("llama_7b", "exp1/hw/sst2")],
+            "covered",
+        )
 
 
 if __name__ == "__main__":

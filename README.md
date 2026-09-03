@@ -50,6 +50,13 @@ python -m dops_serve.cli profiles \
   --plan-sources artifacts/plan_sources.csv \
   --artifact-dir artifacts
 
+python -m dops_serve.cli anchor-dataset \
+  --comparisons artifacts/anchor_comparisons.csv \
+  --plan-sources artifacts/plan_sources.csv \
+  --profiles artifacts/profiles.csv \
+  --signatures artifacts/plan_signatures.csv \
+  --output artifacts/anchor_dataset_128.csv
+
 python -m dops_serve.cli generate-workloads \
   --output artifacts/workloads.jsonl \
   --model llama_7b
@@ -87,3 +94,10 @@ The paired anchor labels do not replace replaying complete fixed plans under
 the same irregular serving state. In a representative 128-summary group, trace
 recovery reproduced all 4,664 observed decode placements with zero mismatch and
 made all 28 deduplicated plans complete for the first 128 decode steps.
+
+`anchor-dataset` maps only paired rows whose summaries belong to distinct,
+complete retained plans. Its default keeps `decode_len=128`, matching the
+largest V1 horizon. The regular anchor adapter leaves all `max_tokens` features
+at zero instead of leaking DOPS's offline decode length. An anchor-trained model
+is a scorer diagnostic; serving claims still require counterfactual replay on
+the same irregular request states.

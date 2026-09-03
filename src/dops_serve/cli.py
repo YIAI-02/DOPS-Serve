@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 
+from .anchor_dataset import build_anchor_dataset
 from .comparisons import build_anchor_comparisons
 from .inventory import build_inventory
 from .dataset import build_dataset
@@ -39,6 +40,18 @@ def _anchor_comparisons(args: argparse.Namespace) -> None:
         inventory_path=args.inventory,
         output_path=args.output,
         path_prefix=args.path_prefix,
+    )
+    print(json.dumps(result, sort_keys=True))
+
+
+def _anchor_dataset(args: argparse.Namespace) -> None:
+    result = build_anchor_dataset(
+        comparisons_path=args.comparisons,
+        plan_sources_path=args.plan_sources,
+        profiles_path=args.profiles,
+        signatures_path=args.signatures,
+        output_path=args.output,
+        decode_len=args.decode_len,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -153,6 +166,17 @@ def build_parser() -> argparse.ArgumentParser:
     comparisons.add_argument("--output", required=True)
     comparisons.add_argument("--path-prefix", action="append")
     comparisons.set_defaults(handler=_anchor_comparisons)
+
+    anchor_dataset = commands.add_parser(
+        "anchor-dataset", help="Map paired DOPS anchors to complete retained plans"
+    )
+    anchor_dataset.add_argument("--comparisons", required=True)
+    anchor_dataset.add_argument("--plan-sources", required=True)
+    anchor_dataset.add_argument("--profiles", required=True)
+    anchor_dataset.add_argument("--signatures", required=True)
+    anchor_dataset.add_argument("--output", required=True)
+    anchor_dataset.add_argument("--decode-len", type=int, default=128)
+    anchor_dataset.set_defaults(handler=_anchor_dataset)
 
     plan_bank = commands.add_parser("plan-bank", help="Extract and deduplicate plans")
     plan_bank.add_argument("--inventory", required=True)

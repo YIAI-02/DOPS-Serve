@@ -281,6 +281,28 @@ def _aggregate_policy(name: str, rows: list[dict[str, str]]) -> dict[str, Any]:
     }
 
 
+def _robust_static_plans(rows: list[dict[str, str]]) -> dict[tuple[str, str], str]:
+    grouped: dict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        grouped[(row["model_id"], row["hardware_key"])].append(row)
+
+    selected: dict[tuple[str, str], str] = {}
+    for group, group_rows in grouped.items():
+        fixed_horizon = [row for row in group_rows if int(row["horizon"]) == 64]
+        candidates = fixed_horizon or group_rows
+        by_plan: dict[str, list[dict[str, str]]] = defaultdict(list)
+        for row in candidates:
+            by_plan[row["plan_id"]].append(row)
+        selected[group] = max(
+            by_plan,
+            key=lambda plan_id: (
+                len({row["state_id"] for row in by_plan[plan_id]}),
+                statistics.fmean(float(row[TARGET]) for row in by_plan[plan_id]),
+            ),
+        )
+    return selected
+
+
 def evaluate_rows(
     torch: Any,
     model: Any,
@@ -289,24 +311,7 @@ def evaluate_rows(
     preprocessor: dict[str, Any],
     result_dir: Path,
 ) -> dict[str, Any]:
-    train_plan_scores: dict[tuple[str, str, str], list[float]] = defaultdict(list)
-    for row in train_rows:
-        if int(row["horizon"]) == 64:
-            key = (row["model_id"], row["hardware_key"], row["plan_id"])
-            train_plan_scores[key].append(float(row[TARGET]))
-    if not train_plan_scores:
-        for row in train_rows:
-            key = (row["model_id"], row["hardware_key"], row["plan_id"])
-            train_plan_scores[key].append(float(row[TARGET]))
-    static_plans: dict[tuple[str, str], str] = {}
-    groups = {(key[0], key[1]) for key in train_plan_scores}
-    for group in groups:
-        candidates = [key for key in train_plan_scores if key[:2] == group]
-        winner = max(
-            candidates,
-            key=lambda key: statistics.fmean(train_plan_scores[key]),
-        )
-        static_plans[group] = winner[2]
+    static_plans = _robust_static_plans(train_rows)
 
     grouped_test: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in test_rows:
