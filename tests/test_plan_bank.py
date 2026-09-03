@@ -42,7 +42,7 @@ class PlanBankTest(unittest.TestCase):
             self.assertEqual(manifest["decode_steps_covered"], 2)
             self.assertEqual(
                 manifest["placement_equivalence"],
-                "node-device mapping and observed decode transitions",
+                "prefill mapping and decode placement transitions",
             )
             with (artifacts / "plan_sources.csv").open(encoding="utf-8") as handle:
                 sources = list(csv.DictReader(handle))

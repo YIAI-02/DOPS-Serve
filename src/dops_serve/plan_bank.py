@@ -74,7 +74,11 @@ def build_plan_bank(
         unique: dict[str, dict[str, Any]] = {}
         for row in selected_rows:
             try:
-                plan = extract_plan(row["summary_path"], max_decode_steps=max_decode_steps)
+                plan = extract_plan(
+                    row["summary_path"],
+                    max_decode_steps=max_decode_steps,
+                    ops_trace_path=row["ops_trace_path"],
+                )
             except (KeyError, TypeError, ValueError, OSError, json.JSONDecodeError) as error:
                 excluded_rows.append(
                     {"summary_path": row["summary_path"], "reason": str(error)}
@@ -139,7 +143,7 @@ def build_plan_bank(
                 "source_policy": item["representative_source"]["policy"],
                 "source_summary": item["representative_source"]["summary_path"],
                 "source_shapes": [list(shape) for shape in source_shapes],
-                "placement_equivalence": "node-device mapping and observed decode transitions",
+                "placement_equivalence": "prefill mapping and decode placement transitions",
                 "incomplete_source_count": item["incomplete_sources"],
                 **item["plan"],
             }
@@ -158,8 +162,10 @@ def build_plan_bank(
                     "decode_steps_covered": item["plan"]["decode_steps_covered"],
                     "decode_steps_observed": item["plan"]["decode_steps_observed"],
                     "decode_steps_estimated": item["plan"]["decode_steps_estimated"],
+                    "decode_steps_recovered": item["plan"]["decode_steps_recovered"],
+                    "decode_steps_missing": item["plan"]["decode_steps_missing"],
                     "placement_complete": item["plan"]["placement_complete"],
-                    "placement_equivalence": "node-device mapping and observed decode transitions",
+                    "placement_equivalence": "prefill mapping and decode placement transitions",
                     "incomplete_source_count": item["incomplete_sources"],
                     "source_shapes": [list(shape) for shape in source_shapes],
                 }

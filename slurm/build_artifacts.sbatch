@@ -39,8 +39,14 @@ if [[ "$REUSE_PLAN_BANK" != "1" ]]; then
   run_python -m dops_serve.cli plan-bank \
     --inventory "$ARTIFACT_DIR/inventory.csv" \
     --artifact-dir "$ARTIFACT_DIR" \
+    --policy attacc \
+    --policy attn_on_pim \
+    --policy facil \
+    --policy heft \
     --policy hefthint \
-    --policy bifocal \
+    --policy ianus \
+    --policy pd \
+    --policy weights_on_pim \
     --max-plans-per-group 32 \
     --max-decode-steps 128
 fi

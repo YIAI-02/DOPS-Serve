@@ -85,7 +85,54 @@ class SummaryTest(unittest.TestCase):
             self.assertFalse(plan["placement_complete"])
             self.assertEqual(plan["decode_steps_observed"], 1)
             self.assertEqual(plan["decode_steps_estimated"], 1)
+            self.assertEqual(plan["decode_steps_recovered"], 0)
+            self.assertEqual(plan["decode_steps_missing"], 1)
             self.assertIsNone(plan["decode_segments"][1]["placement"])
+
+    def test_ops_trace_recovers_sampled_decode_placement(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "sampled.json"
+            trace = Path(directory) / "ops.csv"
+            write_summary(path)
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            payload["decode_steps"][1]["estimated"] = True
+            payload["decode_steps"][1]["schedule"] = None
+            path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+            trace.write_text(
+                "phase,node_id,device\n"
+                "decode,A,NPU0\n"
+                "decode,B,PIM0\n"
+                "decode,A,NPU0\n"
+                "decode,B,PIM0\n",
+                encoding="utf-8",
+            )
+
+            plan = extract_plan(path, ops_trace_path=trace)
+            self.assertTrue(plan["placement_complete"])
+            self.assertEqual(plan["decode_steps_recovered"], 1)
+            self.assertEqual(plan["decode_steps_missing"], 0)
+            self.assertEqual(plan["decode_segments"][0]["count"], 2)
+
+    def test_ops_trace_must_match_observed_schedule(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "sampled.json"
+            trace = Path(directory) / "ops.csv"
+            write_summary(path)
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            payload["decode_steps"][1]["estimated"] = True
+            payload["decode_steps"][1]["schedule"] = None
+            path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+            trace.write_text(
+                "phase,node_id,device\n"
+                "decode,A,NPU1\n"
+                "decode,B,PIM0\n"
+                "decode,A,NPU0\n"
+                "decode,B,PIM0\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "disagree"):
+                extract_plan(path, ops_trace_path=trace)
 
     def test_sampling_pattern_does_not_change_plan_identity(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

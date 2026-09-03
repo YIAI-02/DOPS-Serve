@@ -10,10 +10,11 @@ schedules. It never imports or invokes the DOPS scheduler.
 - Derived artifacts: inventory, plan bank, performance profiles, serving
   episodes, model checkpoints, and paired evaluation results.
 - V1 action: `(plan_id, horizon)` with horizons 32, 64, and 128.
-- Plan identity uses node-to-device mappings and observed decode transitions;
-  JSON record order and `schedule: null` sampling gaps do not create actions.
-- Missing decode placements remain missing. Dataset generation rejects incomplete
-  plans unless a smoke run explicitly uses `--allow-incomplete-plans`.
+- Plan identity uses node-to-device mappings and decode transitions. Sampled
+  `schedule: null` steps are recovered only from the linked operation trace,
+  after every observed summary placement matches that trace exactly.
+- Dataset generation rejects plans that remain incomplete after trace recovery,
+  unless a smoke run explicitly uses `--allow-incomplete-plans`.
 - Offline `output_len` may terminate replay, but it is never an online feature.
 - Replay results are simulation artifacts, not physical NPU/PIM measurements.
 
@@ -41,7 +42,8 @@ python -m dops_serve.cli anchor-comparisons \
 python -m dops_serve.cli plan-bank \
   --inventory artifacts/inventory.csv \
   --artifact-dir artifacts \
-  --policy hefthint --policy bifocal
+  --policy attacc --policy attn_on_pim --policy facil --policy heft \
+  --policy hefthint --policy ianus --policy pd --policy weights_on_pim
 
 python -m dops_serve.cli profiles \
   --inventory artifacts/inventory.csv \
@@ -82,5 +84,6 @@ checks timing agreement, and excludes unpaired records. The full run retained
 577 paired groups and 4,495 ranking rows. It excluded 10 outcomes without a
 valid inventory summary and two whose comparison and summary timings disagree.
 The paired anchor labels do not replace replaying complete fixed plans under
-the same irregular serving state. Incomplete-plan training therefore remains
-smoke-only until that serving-side requirement is met.
+the same irregular serving state. In a representative 128-summary group, trace
+recovery reproduced all 4,664 observed decode placements with zero mismatch and
+made all 28 deduplicated plans complete for the first 128 decode steps.

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 import re
 from pathlib import Path
@@ -98,60 +99,125 @@ def iter_summary_array(path: str | Path, key: str) -> Iterator[Any]:
                 position = 0
 
 
-def extract_plan(path: str | Path, max_decode_steps: int = 128) -> dict[str, Any]:
+def _trace_decode_placements(
+    path: str | Path, expected_nodes: set[str], required_steps: int
+) -> list[list[list[str]]]:
+    counts = {node_id: 0 for node_id in expected_nodes}
+    placements: list[dict[str, str]] = [dict() for _ in range(required_steps)]
+    completed_nodes = 0
+    with Path(path).open("r", encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            if row["phase"] != "decode":
+                continue
+            node_id = str(row["node_id"])
+            if node_id not in expected_nodes:
+                raise ValueError(f"Trace contains unknown decode node {node_id!r} in {path}")
+            occurrence = counts[node_id]
+            if occurrence < required_steps:
+                placements[occurrence][node_id] = str(row["device"])
+            counts[node_id] += 1
+            if counts[node_id] == required_steps:
+                completed_nodes += 1
+                if completed_nodes == len(expected_nodes):
+                    break
+
+    incomplete = [
+        node_id for node_id, count in counts.items() if count < required_steps
+    ]
+    if incomplete:
+        raise ValueError(
+            f"Trace does not cover {required_steps} decode steps for {len(incomplete)} nodes in {path}"
+        )
+    return [
+        [[node_id, mapping[node_id]] for node_id in sorted(mapping)]
+        for mapping in placements
+    ]
+
+
+def extract_plan(
+    path: str | Path,
+    max_decode_steps: int = 128,
+    ops_trace_path: str | Path | None = None,
+) -> dict[str, Any]:
     """Extract ordered device assignments without copying timing records."""
     prefill = [
         [str(item["node_id"]), str(item["device"])]
         for item in iter_summary_array(path, "prefill_schedule")
     ]
 
-    decode_segments: list[dict[str, Any]] = []
-    observed_steps = 0
-    estimated_steps = 0
+    selected_steps: list[dict[str, Any]] = []
     decode_iterator = iter_summary_array(path, "decode_steps")
     try:
         for index, step in enumerate(decode_iterator):
             if index >= max_decode_steps:
                 break
-            schedule = step.get("schedule")
-            estimated = bool(step.get("estimated", False))
-            if schedule is None:
-                placement = None
-                estimated_steps += 1
-            else:
-                placement = [
-                    [str(item["node_id"]), str(item["device"])] for item in schedule
-                ]
-                observed_steps += 1
-            if (
-                decode_segments
-                and decode_segments[-1]["placement"] == placement
-                and decode_segments[-1]["estimated"] == estimated
-            ):
-                decode_segments[-1]["end_t"] = int(step["t"])
-                decode_segments[-1]["count"] += 1
-            else:
-                decode_segments.append(
-                    {
-                        "start_t": int(step["t"]),
-                        "end_t": int(step["t"]),
-                        "count": 1,
-                        "estimated": estimated,
-                        "placement": placement,
-                    }
-                )
+            selected_steps.append(step)
     finally:
         decode_iterator.close()
 
-    if not prefill or not decode_segments or observed_steps == 0:
+    observed_steps = sum(step.get("schedule") is not None for step in selected_steps)
+    estimated_steps = len(selected_steps) - observed_steps
+    if not prefill or not selected_steps or observed_steps == 0:
         raise ValueError(f"Incomplete placement in {path}")
+
+    recovered: dict[int, list[list[str]]] = {}
+    if estimated_steps and ops_trace_path is not None:
+        first_schedule = next(
+            step["schedule"] for step in selected_steps if step.get("schedule") is not None
+        )
+        expected_nodes = {str(item["node_id"]) for item in first_schedule}
+        required_steps = max(int(step["t"]) for step in selected_steps) + 1
+        trace_placements = _trace_decode_placements(
+            ops_trace_path, expected_nodes, required_steps
+        )
+        for step in selected_steps:
+            t = int(step["t"])
+            trace_placement = trace_placements[t]
+            schedule = step.get("schedule")
+            if schedule is None:
+                recovered[t] = trace_placement
+                continue
+            summary_placement = sorted(
+                [str(item["node_id"]), str(item["device"])] for item in schedule
+            )
+            if summary_placement != trace_placement:
+                raise ValueError(
+                    f"Summary and ops trace placement disagree at decode step {t} in {path}"
+                )
+
+    decode_segments: list[dict[str, Any]] = []
+    for step in selected_steps:
+        schedule = step.get("schedule")
+        if schedule is None:
+            placement = recovered.get(int(step["t"]))
+        else:
+            placement = sorted(
+                [str(item["node_id"]), str(item["device"])] for item in schedule
+            )
+        if decode_segments and decode_segments[-1]["placement"] == placement:
+            decode_segments[-1]["end_t"] = int(step["t"])
+            decode_segments[-1]["count"] += 1
+        else:
+            decode_segments.append(
+                {
+                    "start_t": int(step["t"]),
+                    "end_t": int(step["t"]),
+                    "count": 1,
+                    "placement": placement,
+                }
+            )
+
+    recovered_steps = len(recovered)
+    missing_steps = estimated_steps - recovered_steps
     return {
         "prefill": prefill,
         "decode_segments": decode_segments,
         "decode_steps_covered": sum(segment["count"] for segment in decode_segments),
         "decode_steps_observed": observed_steps,
         "decode_steps_estimated": estimated_steps,
-        "placement_complete": estimated_steps == 0,
+        "decode_steps_recovered": recovered_steps,
+        "decode_steps_missing": missing_steps,
+        "placement_complete": missing_steps == 0,
     }
 
 
