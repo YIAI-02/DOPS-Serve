@@ -1,0 +1,37 @@
+#!/bin/bash
+#SBATCH --job-name=dopsserve-build
+#SBATCH --partition=C064M0256G
+#SBATCH --time=12:00:00
+#SBATCH --cpus-per-task=8
+#SBATCH --output=/lustre/home/2501111916/workspace/DOPS-Serve/logs/%x-%j.out
+
+set -euo pipefail
+
+REPO_ROOT=${REPO_ROOT:-/lustre/home/2501111916/workspace/DOPS-Serve}
+DOPS_OUTPUT_ROOT=${DOPS_OUTPUT_ROOT:-/lustre/home/2501111916/workspace/DOPS_0330_merge/TriForm/algorithms/output}
+ARTIFACT_DIR=${ARTIFACT_DIR:-$REPO_ROOT/artifacts/full}
+
+module load pytorch/24.12-py3
+
+run_python() {
+  singularity exec "$PYTORCH_SIF" python3 "$@"
+}
+
+cd "$REPO_ROOT"
+mkdir -p "$ARTIFACT_DIR"
+export PYTHONPATH="$REPO_ROOT/src"
+
+run_python -m dops_serve.cli inventory \
+  --output-root "$DOPS_OUTPUT_ROOT" \
+  --artifact-dir "$ARTIFACT_DIR"
+run_python -m dops_serve.cli plan-bank \
+  --inventory "$ARTIFACT_DIR/inventory.csv" \
+  --artifact-dir "$ARTIFACT_DIR" \
+  --policy hefthint \
+  --policy bifocal \
+  --max-plans-per-group 32 \
+  --max-decode-steps 128
+run_python -m dops_serve.cli profiles \
+  --inventory "$ARTIFACT_DIR/inventory.csv" \
+  --plan-sources "$ARTIFACT_DIR/plan_sources.csv" \
+  --artifact-dir "$ARTIFACT_DIR"
