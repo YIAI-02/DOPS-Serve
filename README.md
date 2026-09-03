@@ -55,7 +55,7 @@ python -m dops_serve.cli anchor-dataset \
   --plan-sources artifacts/plan_sources.csv \
   --profiles artifacts/profiles.csv \
   --signatures artifacts/plan_signatures.csv \
-  --output artifacts/anchor_dataset_128.csv
+  --output artifacts/anchor_dataset_windows.csv
 
 python -m dops_serve.cli generate-workloads \
   --output artifacts/workloads.jsonl \
@@ -91,13 +91,24 @@ checks timing agreement, and excludes unpaired records. The full run retained
 577 paired groups and 4,495 ranking rows. It excluded 10 outcomes without a
 valid inventory summary and two whose comparison and summary timings disagree.
 The paired anchor labels do not replace replaying complete fixed plans under
-the same irregular serving state. In a representative 128-summary group, trace
-recovery reproduced all 4,664 observed decode placements with zero mismatch and
-made all 28 deduplicated plans complete for the first 128 decode steps.
+the same irregular serving state. The first full Plan Bank run parsed all 4,669
+valid summaries, retained 299 complete plans and 4,079 mapped profiles, and
+excluded 590 source mappings only because of the 32-plan-per-target cap. Its
+leave-one-profile-out validation produced 8,074 rows with 14.8% p95 absolute
+percentage error; this is an interpolation diagnostic, not a serving result.
 
 `anchor-dataset` maps only paired rows whose summaries belong to distinct,
-complete retained plans. Its default keeps `decode_len=128`, matching the
-largest V1 horizon. The regular anchor adapter leaves all `max_tokens` features
-at zero instead of leaking DOPS's offline decode length. An anchor-trained model
-is a scorer diagnostic; serving claims still require counterfactual replay on
-the same irregular request states.
+complete retained plans. It reads measured `step_time` values from source
+decode lengths 128, 256, 512, and 1024, creates a state every 32 generated
+tokens, and labels actions with horizons 32, 64, and 128. A horizon that reaches
+the end of an offline trace is truncated to the tokens actually generated.
+Online state features contain only the current generated-token count and active
+context; all `max_tokens` fields remain zero, and the final source decode length
+is not a model feature. Plan extraction now validates placement through at most
+1,024 decode steps and keeps the longest representative of an equivalent plan.
+
+The completed 128-only anchor diagnostic contained 146 paired states and 1,005
+candidate rows (703/123/179 train/validation/test). Its MLP reached 95.9% of the
+offline oracle's mean throughput on 27 paired test states. This remains a
+regular-anchor scorer diagnostic; serving claims still require counterfactual
+replay on the same irregular request states.

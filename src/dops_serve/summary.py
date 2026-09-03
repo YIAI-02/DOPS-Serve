@@ -8,6 +8,7 @@ from typing import Any, Iterator
 
 
 _TOP_LEVEL_KEY = re.compile(r'^  "(?P<key>[^"]+)"\s*:')
+_STEP_TIME = re.compile(r'^      "step_time"\s*:\s*(?P<value>[^,\s]+)')
 
 
 def read_summary_metadata(path: str | Path) -> dict[str, Any]:
@@ -99,6 +100,33 @@ def iter_summary_array(path: str | Path, key: str) -> Iterator[Any]:
                 position = 0
 
 
+def read_decode_step_times(
+    path: str | Path, max_decode_steps: int = 0
+) -> list[float]:
+    """Read per-step decode timings without parsing the large schedules."""
+    summary_path = Path(path)
+    in_decode_steps = False
+    times: list[float] = []
+    with summary_path.open("r", encoding="utf-8", newline=None) as handle:
+        for line in handle:
+            top_level = _TOP_LEVEL_KEY.match(line)
+            if top_level:
+                if in_decode_steps:
+                    break
+                in_decode_steps = top_level.group("key") == "decode_steps"
+                continue
+            if not in_decode_steps:
+                continue
+            match = _STEP_TIME.match(line)
+            if match:
+                times.append(float(match.group("value")))
+                if max_decode_steps > 0 and len(times) == max_decode_steps:
+                    break
+    if not in_decode_steps:
+        raise KeyError(f"Top-level array 'decode_steps' not found in {summary_path}")
+    return times
+
+
 def _trace_decode_placements(
     path: str | Path, expected_nodes: set[str], required_steps: int
 ) -> list[list[list[str]]]:
@@ -151,11 +179,22 @@ def extract_plan(
         for index, step in enumerate(decode_iterator):
             if index >= max_decode_steps:
                 break
-            selected_steps.append(step)
+            schedule = step.get("schedule")
+            selected_steps.append(
+                {
+                    "t": int(step["t"]),
+                    "placement": None
+                    if schedule is None
+                    else sorted(
+                        [str(item["node_id"]), str(item["device"])]
+                        for item in schedule
+                    ),
+                }
+            )
     finally:
         decode_iterator.close()
 
-    observed_steps = sum(step.get("schedule") is not None for step in selected_steps)
+    observed_steps = sum(step["placement"] is not None for step in selected_steps)
     estimated_steps = len(selected_steps) - observed_steps
     if not prefill or not selected_steps or observed_steps == 0:
         raise ValueError(f"Incomplete placement in {path}")
@@ -163,9 +202,11 @@ def extract_plan(
     recovered: dict[int, list[list[str]]] = {}
     if estimated_steps and ops_trace_path is not None:
         first_schedule = next(
-            step["schedule"] for step in selected_steps if step.get("schedule") is not None
+            step["placement"]
+            for step in selected_steps
+            if step["placement"] is not None
         )
-        expected_nodes = {str(item["node_id"]) for item in first_schedule}
+        expected_nodes = {item[0] for item in first_schedule}
         required_steps = max(int(step["t"]) for step in selected_steps) + 1
         trace_placements = _trace_decode_placements(
             ops_trace_path, expected_nodes, required_steps
@@ -173,27 +214,20 @@ def extract_plan(
         for step in selected_steps:
             t = int(step["t"])
             trace_placement = trace_placements[t]
-            schedule = step.get("schedule")
-            if schedule is None:
+            placement = step["placement"]
+            if placement is None:
                 recovered[t] = trace_placement
                 continue
-            summary_placement = sorted(
-                [str(item["node_id"]), str(item["device"])] for item in schedule
-            )
-            if summary_placement != trace_placement:
+            if placement != trace_placement:
                 raise ValueError(
                     f"Summary and ops trace placement disagree at decode step {t} in {path}"
                 )
 
     decode_segments: list[dict[str, Any]] = []
     for step in selected_steps:
-        schedule = step.get("schedule")
-        if schedule is None:
+        placement = step["placement"]
+        if placement is None:
             placement = recovered.get(int(step["t"]))
-        else:
-            placement = sorted(
-                [str(item["node_id"]), str(item["device"])] for item in schedule
-            )
         if decode_segments and decode_segments[-1]["placement"] == placement:
             decode_segments[-1]["end_t"] = int(step["t"])
             decode_segments[-1]["count"] += 1

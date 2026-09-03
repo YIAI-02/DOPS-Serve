@@ -1,12 +1,17 @@
 from __future__ import annotations
 
 import csv
+import math
 from collections import defaultdict
 from pathlib import Path
-from typing import Any
 
 from .dataset import DATASET_FIELDS
 from .replay import ProfileEstimator
+from .summary import read_decode_step_times
+
+
+DEFAULT_DECODE_LENGTHS = [128, 256, 512, 1024]
+DEFAULT_HORIZONS = [32, 64, 128]
 
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
@@ -14,35 +19,39 @@ def _read_csv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
-def _regular_state(batch: int, prefill_len: int) -> dict[str, float]:
+def _regular_state(
+    batch: int, prefill_len: int, generated_tokens: int
+) -> dict[str, float]:
+    at_arrival = generated_tokens == 0
+    context_len = prefill_len + generated_tokens
     return {
-        "waiting_count": float(batch),
-        "active_count": 0.0,
-        "total_waiting_prompt_tokens": float(batch * prefill_len),
-        "total_active_context_tokens": 0.0,
-        "arrival_rate_1s": float(batch),
-        "arrival_rate_10s": batch / 10.0,
-        "arrival_rate_60s": batch / 60.0,
-        "waiting_prompt_mean": float(prefill_len),
-        "waiting_prompt_p95": float(prefill_len),
-        "waiting_prompt_max": float(prefill_len),
-        "active_context_mean": 0.0,
-        "active_context_p95": 0.0,
-        "active_context_max": 0.0,
+        "waiting_count": float(batch if at_arrival else 0),
+        "active_count": float(0 if at_arrival else batch),
+        "total_waiting_prompt_tokens": float(batch * prefill_len if at_arrival else 0),
+        "total_active_context_tokens": float(0 if at_arrival else batch * context_len),
+        "arrival_rate_1s": float(batch if at_arrival else 0),
+        "arrival_rate_10s": batch / 10.0 if at_arrival else 0.0,
+        "arrival_rate_60s": batch / 60.0 if at_arrival else 0.0,
+        "waiting_prompt_mean": float(prefill_len if at_arrival else 0),
+        "waiting_prompt_p95": float(prefill_len if at_arrival else 0),
+        "waiting_prompt_max": float(prefill_len if at_arrival else 0),
+        "active_context_mean": float(0 if at_arrival else context_len),
+        "active_context_p95": float(0 if at_arrival else context_len),
+        "active_context_max": float(0 if at_arrival else context_len),
         "waiting_age_s_mean": 0.0,
         "waiting_age_s_p95": 0.0,
         "waiting_age_s_max": 0.0,
         "max_tokens_mean": 0.0,
         "max_tokens_p95": 0.0,
         "max_tokens_max": 0.0,
-        "generated_tokens_mean": 0.0,
-        "generated_tokens_p95": 0.0,
-        "generated_tokens_max": 0.0,
+        "generated_tokens_mean": float(generated_tokens),
+        "generated_tokens_p95": float(generated_tokens),
+        "generated_tokens_max": float(generated_tokens),
     }
 
 
 def _group_splits(
-    groups: dict[str, list[tuple[dict[str, str], str]]]
+    groups: dict[str, list[tuple[dict[str, str], str, list[float]]]]
 ) -> dict[str, str]:
     by_target: dict[tuple[str, str], list[str]] = defaultdict(list)
     for comparison_id, candidates in groups.items():
@@ -75,12 +84,22 @@ def build_anchor_dataset(
     profiles_path: str | Path,
     signatures_path: str | Path,
     output_path: str | Path,
-    decode_len: int = 128,
+    decode_len: int | None = None,
+    decode_lengths: list[int] | None = None,
+    horizons: list[int] | None = None,
+    window_stride: int = 32,
 ) -> dict[str, int]:
+    if decode_len is not None and decode_lengths is not None:
+        raise ValueError("use decode_len or decode_lengths, not both")
+    source_lengths = set(
+        decode_lengths
+        or ([decode_len] if decode_len is not None else DEFAULT_DECODE_LENGTHS)
+    )
+    actions = sorted(set(horizons or DEFAULT_HORIZONS))
     comparisons = [
         row
         for row in _read_csv(Path(comparisons_path))
-        if int(row["decode_len"]) == decode_len
+        if int(row["decode_len"]) in source_lengths
     ]
     source_to_plan = {
         row["summary_path"]: row["plan_id"]
@@ -92,9 +111,9 @@ def build_anchor_dataset(
         by_comparison[row["comparison_id"]].append(row)
 
     exclusions: list[dict[str, str]] = []
-    accepted: dict[str, list[tuple[dict[str, str], str]]] = {}
+    accepted: dict[str, list[tuple[dict[str, str], str, list[float]]]] = {}
     for comparison_id, rows in sorted(by_comparison.items()):
-        candidates: list[tuple[dict[str, str], str]] = []
+        candidates: list[tuple[dict[str, str], str, list[float]]] = []
         for row in rows:
             plan_id = source_to_plan.get(row["summary_path"])
             if plan_id is None:
@@ -116,11 +135,43 @@ def build_anchor_dataset(
                     }
                 )
                 continue
-            candidates.append((row, plan_id))
 
-        plan_ids = [plan_id for _, plan_id in candidates]
+            source_decode_len = int(row["decode_len"])
+            try:
+                step_times = read_decode_step_times(
+                    row["summary_path"], max_decode_steps=source_decode_len
+                )
+            except (KeyError, OSError, ValueError) as error:
+                exclusions.append(
+                    {
+                        "comparison_id": comparison_id,
+                        "summary_path": row["summary_path"],
+                        "reason": f"decode step timing unavailable: {error}",
+                    }
+                )
+                continue
+            if len(step_times) != source_decode_len or not math.isclose(
+                sum(step_times),
+                float(row["decode_time_s"]),
+                rel_tol=1e-8,
+                abs_tol=1e-10,
+            ):
+                exclusions.append(
+                    {
+                        "comparison_id": comparison_id,
+                        "summary_path": row["summary_path"],
+                        "reason": "decode step timings do not match the source decode total",
+                    }
+                )
+                continue
+            prefix_times = [0.0]
+            for step_time in step_times:
+                prefix_times.append(prefix_times[-1] + step_time)
+            candidates.append((row, plan_id, prefix_times))
+
+        plan_ids = [plan_id for _, plan_id, _ in candidates]
         if len(candidates) < 2 or len(set(plan_ids)) != len(plan_ids):
-            for row, _ in candidates:
+            for row, _, _ in candidates:
                 exclusions.append(
                     {
                         "comparison_id": comparison_id,
@@ -135,43 +186,60 @@ def build_anchor_dataset(
     destination = Path(output_path)
     destination.parent.mkdir(parents=True, exist_ok=True)
     rows_written = 0
+    states_written = 0
     with destination.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=DATASET_FIELDS)
         writer.writeheader()
         for comparison_id, candidates in sorted(accepted.items()):
-            for comparison, plan_id in candidates:
-                batch = int(comparison["batch"])
-                prefill_len = int(comparison["prefill_len"])
-                duration = float(comparison["total_time_s"])
-                signature = estimator.signature(plan_id)
-                writer.writerow(
-                    {
-                        "state_id": f"anchor:{comparison_id}",
-                        "trace_id": comparison_id,
-                        "family": "dops_anchor_regular",
-                        "split": splits[comparison_id],
-                        "model_id": comparison["model_id"],
-                        "hardware_key": comparison["hardware_key"],
-                        "decision_index": 0,
-                        "time_s": 0.0,
-                        "plan_id": plan_id,
-                        "horizon": decode_len,
-                        **_regular_state(batch, prefill_len),
-                        **signature,
-                        "plan_shape_distance": estimator.shape_distance(
-                            plan_id, batch, prefill_len + decode_len // 2
-                        ),
-                        "label_token_throughput": comparison[
-                            "output_token_throughput"
-                        ],
-                        "label_duration_s": duration,
-                        "label_generated_tokens": batch * decode_len,
-                        "label_completed_requests": batch,
-                        "label_p95_request_latency_s": duration,
-                        "label_p95_queue_wait_s": 0.0,
-                    }
-                )
-                rows_written += 1
+            source_decode_len = int(candidates[0][0]["decode_len"])
+            batch = int(candidates[0][0]["batch"])
+            prefill_len = int(candidates[0][0]["prefill_len"])
+            for start_t in range(0, source_decode_len, window_stride):
+                state_id = f"anchor:{comparison_id}:t{start_t:04d}"
+                state = _regular_state(batch, prefill_len, start_t)
+                states_written += 1
+                for comparison, plan_id, prefix_times in candidates:
+                    signature = estimator.signature(plan_id)
+                    prefill_time = float(comparison["prefill_time_s"])
+                    for horizon in actions:
+                        end_t = min(start_t + horizon, source_decode_len)
+                        generated_tokens = batch * (end_t - start_t)
+                        duration = prefix_times[end_t] - prefix_times[start_t]
+                        if start_t == 0:
+                            duration += prefill_time
+                        completed = end_t == source_decode_len
+                        writer.writerow(
+                            {
+                                "state_id": state_id,
+                                "trace_id": comparison_id,
+                                "family": "dops_anchor_window",
+                                "split": splits[comparison_id],
+                                "model_id": comparison["model_id"],
+                                "hardware_key": comparison["hardware_key"],
+                                "decision_index": start_t // window_stride,
+                                "time_s": 0.0,
+                                "plan_id": plan_id,
+                                "horizon": horizon,
+                                **state,
+                                **signature,
+                                "plan_shape_distance": estimator.shape_distance(
+                                    plan_id,
+                                    batch,
+                                    prefill_len + start_t + horizon // 2,
+                                ),
+                                "label_token_throughput": generated_tokens / duration,
+                                "label_duration_s": duration,
+                                "label_generated_tokens": generated_tokens,
+                                "label_completed_requests": batch if completed else 0,
+                                "label_p95_request_latency_s": (
+                                    prefill_time + prefix_times[end_t]
+                                    if completed
+                                    else 0.0
+                                ),
+                                "label_p95_queue_wait_s": 0.0,
+                            }
+                        )
+                        rows_written += 1
 
     excluded_path = destination.with_name(destination.stem + "_excluded.csv")
     with excluded_path.open("w", encoding="utf-8", newline="") as handle:
@@ -183,7 +251,8 @@ def build_anchor_dataset(
 
     return {
         "source_rows": len(comparisons),
-        "states": len(accepted),
+        "comparisons": len(accepted),
+        "states": states_written,
         "rows": rows_written,
         "excluded": len(exclusions),
     }

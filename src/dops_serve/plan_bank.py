@@ -48,7 +48,7 @@ def build_plan_bank(
     policies: list[str],
     max_plans_per_group: int = 32,
     max_summaries_per_group: int = 0,
-    max_decode_steps: int = 128,
+    max_decode_steps: int = 1024,
 ) -> dict[str, int]:
     inventory = Path(inventory_path).resolve()
     destination = Path(artifact_dir).resolve()
@@ -93,9 +93,13 @@ def build_plan_bank(
                     "sources": [],
                     "incomplete_sources": 0,
                 }
-            elif plan["decode_steps_observed"] > unique[exact_text]["plan"][
-                "decode_steps_observed"
-            ]:
+            elif (
+                plan["decode_steps_covered"],
+                plan["decode_steps_observed"],
+            ) > (
+                unique[exact_text]["plan"]["decode_steps_covered"],
+                unique[exact_text]["plan"]["decode_steps_observed"],
+            ):
                 unique[exact_text]["plan"] = plan
                 unique[exact_text]["representative_source"] = row
             unique[exact_text]["sources"].append(row)

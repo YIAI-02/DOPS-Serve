@@ -7,6 +7,7 @@ from dops_serve.summary import (
     canonical_plan_text,
     extract_plan,
     iter_summary_array,
+    read_decode_step_times,
     read_summary_metadata,
 )
 
@@ -33,21 +34,15 @@ def write_summary(
         ],
         "decode_steps": [
             {
-                "t": 0,
-                "seq_len": 128,
+                "t": t,
+                "seq_len": prefill_len + t,
+                "step_time": 2.0 / decode_len,
                 "schedule": [
                     {"node_id": "A", "device": "NPU0"},
                     {"node_id": "B", "device": "PIM0"},
                 ],
-            },
-            {
-                "t": 1,
-                "seq_len": 129,
-                "schedule": [
-                    {"node_id": "A", "device": "NPU0"},
-                    {"node_id": "B", "device": "PIM0"},
-                ],
-            },
+            }
+            for t in range(decode_len)
         ],
     }
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -62,6 +57,12 @@ class SummaryTest(unittest.TestCase):
             self.assertEqual(metadata["policy"], "algo:hefthint")
             self.assertNotIn("prefill_schedule", metadata)
             self.assertEqual(len(list(iter_summary_array(path, "prefill_schedule"))), 2)
+
+    def test_reads_decode_step_times_without_schedules(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "best_summary_128x2.json"
+            write_summary(path)
+            self.assertEqual(read_decode_step_times(path), [1.0, 1.0])
 
     def test_extract_plan_rle(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=dopsserve-build
 #SBATCH --partition=C064M0256G
+#SBATCH --qos=high
 #SBATCH --time=12:00:00
 #SBATCH --cpus-per-task=8
 #SBATCH --output=/lustre/home/2501111916/workspace/DOPS-Serve/logs/%x-%j.out
@@ -48,7 +49,7 @@ if [[ "$REUSE_PLAN_BANK" != "1" ]]; then
     --policy pd \
     --policy weights_on_pim \
     --max-plans-per-group 32 \
-    --max-decode-steps 128
+    --max-decode-steps 1024
 fi
 run_python -m dops_serve.cli profiles \
   --inventory "$ARTIFACT_DIR/inventory.csv" \
