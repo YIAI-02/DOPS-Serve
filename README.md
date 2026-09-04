@@ -152,3 +152,15 @@ states, the MLP reached 99.1% of the offline oracle's mean window throughput.
 Its 358 action switches and 5.81 s mean window p95 latency are not evidence that
 serving stability or latency guardrails are satisfied. These remain offline
 regular-anchor timing labels, not tensor execution or irregular serving replay.
+
+The first irregular synthetic run built 16 traces and 23,447 valid
+counterfactual rows, then trained a 53,674-byte checkpoint. After changing
+closed-loop horizons to stop and replan at an observed profile boundary,
+evaluation-only high-QoS job `14740006` completed all four held-out traces and
+400 requests with no exclusions. Against the paired robust-static baseline,
+the MLP increased output-token throughput from 176.19 to 194.18 token/s
+(+10.21%) and reduced global request p95 from 47.44 to 36.75 s (-22.53%). It
+reached 96.22% of the myopic oracle's throughput, but still had 31 requests over
+the 30 s SLO because 33 decisions had no projected action below that limit.
+These are profile-driven synthetic replay results; no real or BurstGPT trace
+has yet been evaluated, and no tensor execution is implied.
