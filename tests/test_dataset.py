@@ -4,11 +4,18 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dops_serve.dataset import DATASET_FIELDS, build_dataset
+from dops_serve.dataset import DATASET_FIELDS, _trace_splits, build_dataset
 from dops_serve.replay import ProfileEstimator
 
 
 class DatasetTest(unittest.TestCase):
+    def test_declared_trace_split_overrides_lexical_order(self) -> None:
+        traces = {
+            "early": [{"family": "real", "split": "test"}],
+            "late": [{"family": "real", "split": "train"}],
+        }
+        self.assertEqual(_trace_splits(traces), {"early": "test", "late": "train"})
+
     def test_robust_plan_prioritizes_profile_coverage(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

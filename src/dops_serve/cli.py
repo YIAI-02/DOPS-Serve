@@ -9,7 +9,11 @@ from .inventory import build_inventory
 from .dataset import build_dataset
 from .plan_bank import build_plan_bank
 from .profiles import build_profiles
-from .workloads import generate_synthetic_workloads, import_trace_csv
+from .workloads import (
+    generate_synthetic_workloads,
+    import_burstgpt_windows,
+    import_trace_csv,
+)
 
 
 def _inventory(args: argparse.Namespace) -> None:
@@ -98,6 +102,26 @@ def _import_workload(args: argparse.Namespace) -> None:
         max_tokens_column=args.max_tokens_column,
         max_tokens_default=args.max_tokens_default,
         family=args.family,
+    )
+    print(json.dumps(result, sort_keys=True))
+
+
+def _import_burstgpt(args: argparse.Namespace) -> None:
+    result = import_burstgpt_windows(
+        input_path=args.input,
+        output_path=args.output,
+        model_id=args.model,
+        traces=args.traces,
+        requests_per_trace=args.requests_per_trace,
+        target_median_rps=args.target_median_rps,
+        max_tokens_default=args.max_tokens_default,
+        prompt_min=args.prompt_min,
+        prompt_max=args.prompt_max,
+        output_max=args.output_max,
+        source_model=args.source_model,
+        log_type=args.log_type,
+        selection=args.selection,
+        split_seed=args.split_seed,
     )
     print(json.dumps(result, sort_keys=True))
 
@@ -252,6 +276,27 @@ def build_parser() -> argparse.ArgumentParser:
     importer.add_argument("--max-tokens-column")
     importer.add_argument("--max-tokens-default", type=int)
     importer.set_defaults(handler=_import_workload)
+
+    burstgpt = commands.add_parser(
+        "import-burstgpt", help="Build deterministic windows from a BurstGPT CSV"
+    )
+    burstgpt.add_argument("--input", required=True)
+    burstgpt.add_argument("--output", required=True)
+    burstgpt.add_argument("--model", required=True)
+    burstgpt.add_argument("--traces", type=int, default=16)
+    burstgpt.add_argument("--requests-per-trace", type=int, default=100)
+    burstgpt.add_argument("--target-median-rps", type=float, default=2.0)
+    burstgpt.add_argument("--max-tokens-default", type=int, default=1024)
+    burstgpt.add_argument("--prompt-min", type=int, default=128)
+    burstgpt.add_argument("--prompt-max", type=int, default=2048)
+    burstgpt.add_argument("--output-max", type=int, default=1024)
+    burstgpt.add_argument("--source-model")
+    burstgpt.add_argument("--log-type")
+    burstgpt.add_argument(
+        "--selection", choices=("representative", "peak", "mixed"), default="mixed"
+    )
+    burstgpt.add_argument("--split-seed", type=int, default=7)
+    burstgpt.set_defaults(handler=_import_burstgpt)
 
     dataset = commands.add_parser("dataset", help="Build counterfactual serving rows")
     dataset.add_argument("--workload", required=True)

@@ -71,10 +71,27 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def _trace_splits(traces: dict[str, list[dict[str, Any]]]) -> dict[str, str]:
+    if any(
+        row.get("split") not in (None, "")
+        for rows in traces.values()
+        for row in rows
+    ):
+        result: dict[str, str] = {}
+        for trace_id, rows in traces.items():
+            values = {row.get("split") for row in rows}
+            if len(values) != 1 or next(iter(values)) not in {
+                "train",
+                "val",
+                "test",
+            }:
+                raise ValueError(f"Trace {trace_id} has a missing or inconsistent split")
+            result[trace_id] = str(next(iter(values)))
+        return result
+
     by_family: dict[str, list[str]] = defaultdict(list)
     for trace_id, rows in traces.items():
         by_family[str(rows[0]["family"])].append(trace_id)
-    result: dict[str, str] = {}
+    result = {}
     for family, trace_ids in sorted(by_family.items()):
         ordered = sorted(trace_ids)
         if len(ordered) < 3:

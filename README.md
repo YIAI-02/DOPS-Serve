@@ -72,6 +72,19 @@ python -m dops_serve.cli generate-workloads \
   --output artifacts/workloads.jsonl \
   --model llama_7b
 
+python -m dops_serve.cli import-burstgpt \
+  --input data/BurstGPT_without_fails_1.csv \
+  --output artifacts/workloads_burstgpt.jsonl \
+  --model llama_7b \
+  --traces 16 \
+  --requests-per-trace 100 \
+  --target-median-rps 2.0 \
+  --max-tokens-default 1024 \
+  --source-model ChatGPT \
+  --log-type "API log" \
+  --selection mixed \
+  --split-seed 7
+
 python -m dops_serve.cli dataset \
   --workload artifacts/workloads.jsonl \
   --profiles artifacts/profiles.csv \
@@ -101,6 +114,13 @@ then runs six independent model/hardware groups concurrently. All scripts must
 be submitted from a login node; execution stays on Slurm compute nodes. Use
 `slurm/evaluate_serving.sbatch` to rerun only closed-loop evaluation from an
 existing irregular workload and checkpoint.
+`slurm/run_burstgpt_real.sbatch` builds temporally separated representative and
+peak windows from the official BurstGPT CSV, applies seeded trace-grouped
+splits within each window class, and evaluates both the synthetic checkpoint
+and the real-trace checkpoint on
+the same held-out requests. The importer filters to the supported profile
+envelope and assigns an independent constant `max_tokens`; `Response tokens`
+is used only to terminate offline replay.
 
 ## Current output audit
 
@@ -162,5 +182,24 @@ the MLP increased output-token throughput from 176.19 to 194.18 token/s
 (+10.21%) and reduced global request p95 from 47.44 to 36.75 s (-22.53%). It
 reached 96.22% of the myopic oracle's throughput, but still had 31 requests over
 the 30 s SLO because 33 decisions had no projected action below that limit.
-These are profile-driven synthetic replay results; no real or BurstGPT trace
-has yet been evaluated, and no tensor execution is implied.
+
+[The official BurstGPT v2.0 no-failure trace](https://github.com/HPMLL/BurstGPT/releases/tag/v2.0)
+contains 1,404,294 requests. The
+profile-compatible ChatGPT API subset has 706,125 requests; the v2 experiment
+uses 16 non-overlapping, time-stratified windows (eight representative and eight
+peak), with seeded grouped splits of 10/2/4 traces. Held-out replay covers 400
+requests and 34,751 output tokens. Against the same paired robust-static
+baseline, the real-trace MLP increased end-to-end output-token throughput from
+109.729 to 110.741 token/s (+0.92%), reduced mean request latency from 2.634 to
+2.253 s (-14.48%), and reduced global p95 latency from 9.330 to 9.247 s
+(-0.89%). Its p95 queue wait increased from 2.526 to 2.772 s (+9.76%); no
+request violated the 30 s SLO. It reached 99.20% of myopic-oracle throughput
+with five plan switches and 20 horizon switches. The synthetic checkpoint had
+nearly identical throughput and a lower 8.682 s p95, so this amount of real
+training data does not yet establish an adaptation benefit.
+Training loss continued down to 0.0050 at epoch 80, while validation MSE was
+best at epoch 18 (0.318) and ended at 0.411; the saved checkpoint correctly
+uses epoch 18 rather than the overfit final epoch.
+
+Both experiments are profile-driven timing replay. They do not execute model
+tensors or kernels and do not establish physical NPU/PIM serving performance.
