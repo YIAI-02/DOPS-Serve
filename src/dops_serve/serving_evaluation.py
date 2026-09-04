@@ -249,6 +249,7 @@ def _run_policy(
     guardrail_filtered_actions = 0
     guardrail_forced_decisions = 0
     hysteresis_blocked_switches = 0
+    profile_boundary_replans = 0
     decision_rows: list[dict[str, Any]] = []
 
     decision_index = 0
@@ -300,7 +301,10 @@ def _run_policy(
             for candidate in candidates:
                 probe = state.clone()
                 immediate = probe.apply_action(
-                    estimator, candidate["plan_id"], int(candidate["horizon"])
+                    estimator,
+                    candidate["plan_id"],
+                    int(candidate["horizon"]),
+                    stop_on_profile_boundary=True,
                 )
                 candidate["selection_score"] = immediate["token_throughput"]
             chosen = _best_by_score(candidates)
@@ -314,11 +318,15 @@ def _run_policy(
         if previous_horizon is not None and selected_horizon != previous_horizon:
             horizon_switches += 1
         metrics = state.apply_action(
-            estimator, selected_plan, selected_horizon
+            estimator,
+            selected_plan,
+            selected_horizon,
+            stop_on_profile_boundary=True,
         )
         guardrail_filtered_actions += diagnostics["guardrail_filtered_actions"]
         guardrail_forced_decisions += diagnostics["guardrail_forced_decisions"]
         hysteresis_blocked_switches += diagnostics["hysteresis_blocked_switches"]
+        profile_boundary_replans += int(metrics["profile_boundary_interrupted"])
         decision_rows.append(
             {
                 "trace_id": records[0]["trace_id"],
@@ -333,6 +341,9 @@ def _run_policy(
                 "duration_s": metrics["duration_s"],
                 "generated_tokens": metrics["generated_tokens"],
                 "completed_requests": metrics["completed_requests"],
+                "profile_boundary_interrupted": int(
+                    metrics["profile_boundary_interrupted"]
+                ),
             }
         )
         previous_plan = selected_plan
@@ -382,6 +393,7 @@ def _run_policy(
         "guardrail_filtered_actions": guardrail_filtered_actions,
         "guardrail_forced_decisions": guardrail_forced_decisions,
         "hysteresis_blocked_switches": hysteresis_blocked_switches,
+        "profile_boundary_replans": profile_boundary_replans,
         "_latencies": latencies,
         "_queue_waits": queue_waits,
     }
@@ -418,6 +430,9 @@ def _aggregate(policy: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
         ),
         "hysteresis_blocked_switches": sum(
             int(row["hysteresis_blocked_switches"]) for row in rows
+        ),
+        "profile_boundary_replans": sum(
+            int(row["profile_boundary_replans"]) for row in rows
         ),
     }
 
@@ -589,6 +604,7 @@ def evaluate_serving(
             "latency_slo_s": latency_slo_s,
             "plan_switch_margin": plan_switch_margin,
             "allow_extrapolation": allow_extrapolation,
+            "horizon_semantics": "maximum decode steps; replan on profile boundary",
             "oracle_scope": "one-step counterfactual throughput with simulator truth",
         },
         "policies": summary_rows,
@@ -605,8 +621,8 @@ def evaluate_serving(
         "runtime states. Results use DOPS profile timing, not tensor execution.",
         "The myopic oracle uses simulator truth for one-step action selection only.",
         "",
-        "| Policy | Traces | Requests | Throughput | vs. oracle | p95 E2E | p95 wait | SLO violations | Plan switches | Horizon switches | Forced |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Policy | Traces | Requests | Throughput | vs. oracle | p95 E2E | p95 wait | SLO violations | Plan switches | Horizon switches | Boundary replans | Forced |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in summary_rows:
         report.append(
@@ -614,7 +630,7 @@ def evaluate_serving(
             "{output_token_throughput:.6f} | {throughput_vs_myopic_oracle:.4f} | "
             "{p95_request_latency_s:.6f} | {p95_queue_wait_s:.6f} | "
             "{request_slo_violations} | {plan_switches} | {horizon_switches} | "
-            "{guardrail_forced_decisions} |".format(**row)
+            "{profile_boundary_replans} | {guardrail_forced_decisions} |".format(**row)
         )
     report.extend(
         (

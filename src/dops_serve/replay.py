@@ -270,11 +270,17 @@ class ReplayState:
         return features
 
     def apply_action(
-        self, estimator: ProfileEstimator, plan_id: str, horizon: int
+        self,
+        estimator: ProfileEstimator,
+        plan_id: str,
+        horizon: int,
+        stop_on_profile_boundary: bool = False,
     ) -> dict[str, float]:
         self.prepare_epoch()
         start_time = self.now
         generated_tokens = 0
+        executed_decode_steps = 0
+        profile_boundary_interrupted = 0
         completed_latencies: list[float] = []
         queue_waits: list[float] = []
 
@@ -298,12 +304,19 @@ class ReplayState:
         for _ in range(horizon):
             if not self.active:
                 break
-            step_time = estimator.decode_step_time(
-                plan_id,
-                batch=len(self.active),
-                context_len=max(request.context_len for request in self.active),
-            )
+            try:
+                step_time = estimator.decode_step_time(
+                    plan_id,
+                    batch=len(self.active),
+                    context_len=max(request.context_len for request in self.active),
+                )
+            except UnsupportedProfile:
+                if not stop_on_profile_boundary or executed_decode_steps == 0:
+                    raise
+                profile_boundary_interrupted = 1
+                break
             self.now += step_time
+            executed_decode_steps += 1
             finished: list[RequestState] = []
             for request in self.active:
                 request.generated += 1
@@ -321,10 +334,12 @@ class ReplayState:
         return {
             "duration_s": duration,
             "generated_tokens": float(generated_tokens),
+            "executed_decode_steps": float(executed_decode_steps),
             "completed_requests": float(len(completed_latencies)),
             "token_throughput": generated_tokens / duration if duration > 0 else 0.0,
             "p95_request_latency_s": _quantile(completed_latencies, 0.95),
             "p95_queue_wait_s": _quantile(queue_waits, 0.95),
+            "profile_boundary_interrupted": float(profile_boundary_interrupted),
         }
 
 

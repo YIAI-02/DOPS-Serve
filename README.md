@@ -22,6 +22,9 @@ schedules. It never imports or invokes the DOPS scheduler.
 - The MLP latency guardrail projects only already-arrived requests using their
   declared `max_tokens`; only the explicitly named myopic oracle may use
   simulator completion truth for one-step action selection.
+- A closed-loop horizon is a maximum. If an observed completion moves the
+  runtime state outside the selected plan's profile envelope, replay stops at
+  that token boundary and selects again without extrapolating the missing shape.
 - Replay results are simulation artifacts, not physical NPU/PIM measurements.
 
 The first target input tree is:
@@ -95,7 +98,9 @@ Use `slurm/smoke_real_outputs.sbatch` first. The full anchor pipeline is split
 into `slurm/build_artifacts.sbatch` and `slurm/train_anchor.sbatch`. The build
 script requests one 64-core node because this cluster allocates memory per CPU,
 then runs six independent model/hardware groups concurrently. All scripts must
-be submitted from a login node; execution stays on Slurm compute nodes.
+be submitted from a login node; execution stays on Slurm compute nodes. Use
+`slurm/evaluate_serving.sbatch` to rerun only closed-loop evaluation from an
+existing irregular workload and checkpoint.
 
 ## Current output audit
 

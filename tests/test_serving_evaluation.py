@@ -4,10 +4,16 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dops_serve.replay import ProfileEstimator, ReplayState, request_states
+from dops_serve.replay import (
+    ProfileEstimator,
+    ReplayState,
+    UnsupportedProfile,
+    request_states,
+)
 from dops_serve.serving_evaluation import (
     POLICIES,
     _project_action,
+    _run_policy,
     _select_mlp,
     evaluate_serving,
 )
@@ -99,6 +105,17 @@ def records(trace_id: str, output_len: int = 3) -> list[dict[str, object]]:
     ]
 
 
+def add_batch_limited_plan(profiles: Path, signatures: Path) -> None:
+    with profiles.open("a", encoding="utf-8", newline="") as handle:
+        csv.writer(handle).writerow(
+            ["plan_batch4", "llama_7b", "hw", 4, 128, 8, 132, 0.001, 0.001]
+        )
+    with signatures.open("a", encoding="utf-8", newline="") as handle:
+        csv.writer(handle).writerow(
+            ["plan_batch4", "llama_7b", "hw", True, 0, 1, 0.00001, 0.001, 1000, 0.1]
+        )
+
+
 class ServingEvaluationTest(unittest.TestCase):
     def test_projection_does_not_use_final_output_length(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -164,6 +181,48 @@ class ServingEvaluationTest(unittest.TestCase):
         )
         self.assertEqual(chosen["plan_id"], "p1")
         self.assertEqual(diagnostics["hysteresis_blocked_switches"], 1)
+
+    def test_oracle_replans_when_completion_leaves_profile_envelope(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            profiles, signatures = write_profiles(root)
+            add_batch_limited_plan(profiles, signatures)
+            estimator = ProfileEstimator(profiles, signatures)
+            workload = [
+                {
+                    "trace_id": "boundary",
+                    "family": "bursty",
+                    "request_id": f"boundary-r{index}",
+                    "model_id": "llama_7b",
+                    "arrival_time": 0.0,
+                    "prompt_len": 128,
+                    "max_tokens": 4,
+                    "output_len": 1 if index == 0 else 4,
+                }
+                for index in range(4)
+            ]
+
+            strict = ReplayState(request_states(workload), max_batch=4)
+            with self.assertRaises(UnsupportedProfile):
+                strict.apply_action(estimator, "plan_batch4", 2)
+
+            result, decisions = _run_policy(
+                workload,
+                estimator,
+                hardware_key="hw",
+                policy="myopic_oracle",
+                horizons=[2],
+                fixed_horizon=2,
+                max_batch=4,
+                max_decisions=20,
+                score_rows=lambda rows: [0.0 for _ in rows],
+                latency_slo_s=0.0,
+                plan_switch_margin=0.0,
+            )
+            self.assertEqual(result["requests"], 4)
+            self.assertEqual(result["profile_boundary_replans"], 1)
+            self.assertEqual(decisions[0]["plan_id"], "plan_batch4")
+            self.assertEqual(decisions[0]["profile_boundary_interrupted"], 1)
 
     def test_all_policies_complete_the_same_test_trace(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
