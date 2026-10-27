@@ -1,0 +1,9 @@
+.venv/
+.hpc-venv/
+wheelhouse/
+runs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mpl-cache/
+*.egg-info/
