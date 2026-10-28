@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="540" viewBox="0 0 1400 540">
+<rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,Helvetica,"DejaVu Sans",sans-serif;fill:#272727}</style>
+<text x="700" y="35" text-anchor="middle" font-size="24" font-weight="700">DOPS-Serve: BurstGPT real-trace training</text>
+<line x1="95" y1="92" x2="95" y2="455" stroke="#272727" stroke-width="2"/>
+<line x1="95" y1="455" x2="650" y2="455" stroke="#272727" stroke-width="2"/>
+<text x="372.5" y="72" text-anchor="middle" font-size="19" font-weight="600">Training objective</text>
+<text x="372.5" y="510" text-anchor="middle" font-size="17">Epoch</text>
+<line x1="95.00" y1="455" x2="95.00" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="95.00" y="482" text-anchor="middle" font-size="15">1</text>
+<line x1="228.48" y1="455" x2="228.48" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="228.48" y="482" text-anchor="middle" font-size="15">20</text>
+<line x1="368.99" y1="455" x2="368.99" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="368.99" y="482" text-anchor="middle" font-size="15">40</text>
+<line x1="509.49" y1="455" x2="509.49" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="509.49" y="482" text-anchor="middle" font-size="15">60</text>
+<line x1="650.00" y1="455" x2="650.00" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="650.00" y="482" text-anchor="middle" font-size="15">80</text>
+<line x1="790" y1="92" x2="790" y2="455" stroke="#272727" stroke-width="2"/>
+<line x1="790" y1="455" x2="1345" y2="455" stroke="#272727" stroke-width="2"/>
+<text x="1067.5" y="72" text-anchor="middle" font-size="19" font-weight="600">Validation checkpoint selection</text>
+<text x="1067.5" y="510" text-anchor="middle" font-size="17">Epoch</text>
+<line x1="790.00" y1="455" x2="790.00" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="790.00" y="482" text-anchor="middle" font-size="15">1</text>
+<line x1="923.48" y1="455" x2="923.48" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="923.48" y="482" text-anchor="middle" font-size="15">20</text>
+<line x1="1063.99" y1="455" x2="1063.99" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="1063.99" y="482" text-anchor="middle" font-size="15">40</text>
+<line x1="1204.49" y1="455" x2="1204.49" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="1204.49" y="482" text-anchor="middle" font-size="15">60</text>
+<line x1="1345.00" y1="455" x2="1345.00" y2="462" stroke="#272727" stroke-width="1.5"/>
+<text x="1345.00" y="482" text-anchor="middle" font-size="15">80</text>
+<line x1="95" y1="436.24" x2="650" y2="436.24" stroke="#CFCECE" stroke-width="1"/>
+<text x="82" y="441.24" text-anchor="end" font-size="14">0.005</text>
+<line x1="95" y1="377.96" x2="650" y2="377.96" stroke="#CFCECE" stroke-width="1"/>
+<text x="82" y="382.96" text-anchor="end" font-size="14">0.01</text>
+<line x1="95" y1="285.59" x2="650" y2="285.59" stroke="#CFCECE" stroke-width="1"/>
+<text x="82" y="290.59" text-anchor="end" font-size="14">0.03</text>
+<line x1="95" y1="184.37" x2="650" y2="184.37" stroke="#CFCECE" stroke-width="1"/>
+<text x="82" y="189.37" text-anchor="end" font-size="14">0.1</text>
+<line x1="95" y1="92.00" x2="650" y2="92.00" stroke="#CFCECE" stroke-width="1"/>
+<text x="82" y="97.00" text-anchor="end" font-size="14">0.3</text>
+<line x1="790" y1="446.15" x2="1345" y2="446.15" stroke="#CFCECE" stroke-width="1"/>
+<text x="777" y="451.15" text-anchor="end" font-size="14">0.3</text>
+<line x1="790" y1="357.61" x2="1345" y2="357.61" stroke="#CFCECE" stroke-width="1"/>
+<text x="777" y="362.61" text-anchor="end" font-size="14">0.5</text>
+<line x1="790" y1="269.07" x2="1345" y2="269.07" stroke="#CFCECE" stroke-width="1"/>
+<text x="777" y="274.07" text-anchor="end" font-size="14">0.7</text>
+<line x1="790" y1="180.54" x2="1345" y2="180.54" stroke="#CFCECE" stroke-width="1"/>
+<text x="777" y="185.54" text-anchor="end" font-size="14">0.9</text>
+<line x1="790" y1="92.00" x2="1345" y2="92.00" stroke="#CFCECE" stroke-width="1"/>
+<text x="777" y="97.00" text-anchor="end" font-size="14">1.1</text>
+<text x="25" y="273.5" text-anchor="middle" font-size="17" transform="rotate(-90 25 273.5)">Smooth L1 + ranking loss</text>
+<text x="715" y="273.5" text-anchor="middle" font-size="17" transform="rotate(-90 715 273.5)">Standardized MSE</text>
+<polyline points="95.00,111.69 102.03,165.89 109.05,208.23 116.08,231.37 123.10,250.36 130.13,259.29 137.15,271.06 144.18,280.13 151.20,289.59 158.23,299.13 165.25,305.49 172.28,315.19 179.30,321.50 186.33,327.77 193.35,329.14 200.38,337.18 207.41,338.59 214.43,345.34 221.46,344.38 228.48,353.28 235.51,358.52 242.53,359.65 249.56,362.13 256.58,366.02 263.61,371.79 270.63,371.61 277.66,368.77 284.68,375.74 291.71,380.00 298.73,382.09 305.76,384.43 312.78,385.53 319.81,384.63 326.84,387.55 333.86,390.04 340.89,391.92 347.91,391.86 354.94,395.32 361.96,395.17 368.99,396.40 376.01,401.44 383.04,401.80 390.06,401.61 397.09,406.58 404.11,403.34 411.14,407.29 418.16,405.57 425.19,399.08 432.22,401.56 439.24,413.84 446.27,411.90 453.29,413.68 460.32,414.82 467.34,415.64 474.37,418.65 481.39,414.88 488.42,417.67 495.44,420.07 502.47,422.88 509.49,417.89 516.52,419.51 523.54,424.25 530.57,424.65 537.59,417.86 544.62,422.25 551.65,411.42 558.67,422.55 565.70,427.52 572.72,425.77 579.75,432.28 586.77,431.07 593.80,424.55 600.82,432.33 607.85,433.16 614.87,433.90 621.90,428.23 628.92,428.66 635.95,433.53 642.97,434.50 650.00,436.11" fill="none" stroke="#0F4D92" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="790.00,110.03 797.03,293.87 804.05,327.52 811.08,350.91 818.10,345.87 825.13,378.67 832.15,350.93 839.18,400.01 846.20,376.60 853.23,401.52 860.25,406.16 867.28,404.32 874.30,399.67 881.33,401.75 888.35,419.39 895.38,400.75 902.41,426.78 909.43,438.11 916.46,397.32 923.48,397.18 930.51,419.20 937.53,380.18 944.56,422.62 951.58,431.03 958.61,414.02 965.63,400.02 972.66,418.72 979.68,411.42 986.71,413.58 993.73,428.38 1000.76,423.66 1007.78,420.44 1014.81,429.70 1021.84,422.17 1028.86,422.38 1035.89,422.02 1042.91,429.58 1049.94,421.23 1056.96,416.38 1063.99,435.94 1071.01,420.98 1078.04,414.30 1085.06,431.48 1092.09,434.83 1099.11,418.46 1106.14,401.44 1113.16,427.16 1120.19,385.33 1127.22,428.35 1134.24,428.52 1141.27,392.36 1148.29,417.95 1155.32,393.68 1162.34,415.82 1169.37,391.31 1176.39,425.70 1183.42,422.71 1190.44,426.62 1197.47,427.77 1204.49,423.01 1211.52,413.83 1218.54,430.38 1225.57,399.32 1232.59,436.59 1239.62,386.54 1246.65,418.01 1253.67,422.52 1260.70,389.21 1267.72,421.23 1274.75,427.69 1281.77,407.52 1288.80,402.33 1295.82,414.62 1302.85,416.21 1309.87,399.96 1316.90,402.60 1323.92,413.03 1330.95,406.49 1337.97,412.64 1345.00,396.82" fill="none" stroke="#B64342" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="909.43" y1="92" x2="909.43" y2="455" stroke="#767676" stroke-width="1.5" stroke-dasharray="7 6"/>
+<circle cx="909.43" cy="438.11" r="7" fill="#FFD700" stroke="#272727" stroke-width="1.5"/>
+<rect x="922.43" y="407.11" width="184" height="31" rx="5" fill="white" stroke="#CFCECE"/>
+<text x="933.43" y="428.11" font-size="14">Best epoch 18: 0.318</text>
+<line x1="455" y1="112" x2="492" y2="112" stroke="#0F4D92" stroke-width="3"/>
+<text x="504" y="117" font-size="14">Training loss</text>
+<line x1="1120" y1="112" x2="1157" y2="112" stroke="#B64342" stroke-width="3"/>
+<text x="1169" y="117" font-size="14">Validation MSE</text>
+</svg>
