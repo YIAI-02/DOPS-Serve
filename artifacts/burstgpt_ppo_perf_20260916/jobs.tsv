@@ -1,0 +1,3 @@
+stage	job_id	partition	cpus	gpus	dependency
+cpu	14928568	C064M0256G	64	0	
+gpu	14928570	GPU80G	64	1	afterok:14928568

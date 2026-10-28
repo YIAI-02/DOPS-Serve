@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-16",
+  "source": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915",
+  "remote_output": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_ppo_perf_20260916",
+  "file_content_comparison": {
+    "method": "cmp against complete file read back through data node",
+    "files": ["experiment.py", "run.sh"],
+    "passed_before_submission": true
+  },
+  "cpu_job": "14928568",
+  "gpu_job": "14928570",
+  "dependency": "afterok:14928568",
+  "max_concurrent_experiment_cpus": 64,
+  "production_code_modified": false,
+  "formal_ppo_started": false
+}

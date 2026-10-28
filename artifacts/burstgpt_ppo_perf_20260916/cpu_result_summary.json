@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-09-16 21:14 CST",
+  "source": "live login-node inspection of sacct and cpu/complete.json; raw artifacts not yet fully synced",
+  "job_id": "14928568",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "slurm_elapsed": "00:23:46",
+  "node": "l01c03n4",
+  "tasks_per_configuration": 96,
+  "measured_plans_per_configuration": 6144,
+  "rounds": 2,
+  "all_configurations_task_parity": true,
+  "mean_wall_seconds": {
+    "12": 323.1111667396035,
+    "24": 176.1495573075954,
+    "48": 97.0020135929808,
+    "60": 93.2555902369786
+  },
+  "sampler": "temporary per-task uniform inverse-CDF sampler",
+  "gpu_job_id": "14928570",
+  "gpu_state": "CANCELLED by 70856",
+  "gpu_reason": "user chose to stop extra GPU sampling benchmark",
+  "gpu_dependency": null,
+  "gpu_estimated_start": null,
+  "gpu_job_changed": true,
+  "temporary_helpers_removed_local_and_hpc": ["experiment.py", "run.sh"],
+  "production_code_modified": false,
+  "formal_ppo_started": false
+}
