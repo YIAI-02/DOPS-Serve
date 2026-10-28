@@ -1,0 +1,43 @@
+         53988624 function calls (53985936 primitive calls) in 28.298 seconds
+
+   Ordered by: cumulative time
+   List reduced from 232 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       32    0.001    0.000   28.383    0.887 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/replay.py:332(step)
+       32    0.001    0.000   28.380    0.887 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/replay.py:302(_execute)
+       32    0.008    0.000   28.376    0.887 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_evaluator.py:164(evaluate)
+       32    0.317    0.010   28.324    0.885 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:151(schedule_with_plan)
+    28672    0.415    0.000   26.359    0.001 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:1036(_earliest_finish_on_device)
+   155000    0.704    0.000   11.976    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_cost.py:46(estimate_activation_bytes)
+237688/235000    0.222    0.000   10.265    0.000 {built-in method builtins.sum}
+    10752    0.029    0.000   10.040    0.001 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_cost.py:60(node_device_cost)
+    63672    0.103    0.000    9.940    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_cost.py:64(<genexpr>)
+    52920    0.808    0.000    9.336    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py:485(node_device_cost)
+   281504    3.029    0.000    9.225    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py:356(estimate_activation_bytes)
+    26880    0.293    0.000    8.437    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:1862(_ready_time_for_device)
+    49730    0.196    0.000    5.455    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/pim_backends.py:70(estimate_s)
+    12544    0.084    0.000    3.554    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:1948(_weight_load_time)
+    12522    0.133    0.000    3.005    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:880(_weight_service_profile_no_contention)
+    12544    0.035    0.000    2.631    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:794(_weight_compute_stage_profile)
+    12544    0.043    0.000    2.595    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_cost.py:66(weighted_compute_stage)
+   281504    0.322    0.000    2.497    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py:19(_act_dtype_bytes)
+ 16364209    2.480    0.000    2.480    0.000 {method 'get' of 'dict' objects}
+    12544    0.151    0.000    2.465    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/compute_mixin.py:119(weighted_compute_stage)
+   381792    0.371    0.000    2.005    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_cost.py:28(primitive_groups)
+    65464    0.062    0.000    1.967    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/compute_mixin.py:353(flop_time)
+    65464    0.110    0.000    1.905    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/compute_mixin.py:341(effective_tflops)
+   290464    0.179    0.000    1.847    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/dtype_utils.py:89(dtype_bytes)
+    65464    0.660    0.000    1.771    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/compute_mixin.py:232(_compute_utilization)
+   290464    0.307    0.000    1.668    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/dtype_utils.py:67(normalize_dtype_token)
+   388244    0.937    0.000    1.660    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py:84(_attention_pairs)
+    65464    0.087    0.000    1.551    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/code/src/dops_serve/placement_cost.py:40(estimate_flops)
+    14302    0.060    0.000    1.488    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:1768(_reserve_activation_transfer_best_path)
+    65464    0.701    0.000    1.463    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py:209(estimate_flops)
+    28300    0.163    0.000    1.345    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py:1806(_direct)
+   190176    0.494    0.000    1.300    0.000 /usr/lib/python3.12/copy.py:61(copy)
+  1215800    0.785    0.000    1.260    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py:10(_node_opt)
+   290464    0.735    0.000    1.249    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/dtype_utils.py:45(_collapse_dtype_token)
+    73412    0.373    0.000    1.199    0.000 /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/compute_mixin.py:573(pim_mem_time)
+
+
