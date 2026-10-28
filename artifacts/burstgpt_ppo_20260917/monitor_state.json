@@ -1,0 +1,120 @@
+{
+  "last_checked_at": "2026-09-22T17:56:20+08:00",
+  "launch_phase": "training",
+  "cpu_check_job": 14939542,
+  "cpu_check_state": "COMPLETED",
+  "formal_start_reported": true,
+  "reported_epochs": {
+    "qwen_1.8b/seed_4": [],
+    "qwen_1.8b/seed_15": [],
+    "qwen_1.8b/seed_26": [],
+    "qwen_7b/seed_4": [],
+    "qwen_7b/seed_15": [],
+    "qwen_7b/seed_26": [],
+    "qwen_14b/seed_4": [],
+    "qwen_14b/seed_15": [],
+    "qwen_14b/seed_26": []
+  },
+  "connection_failure_notified": false,
+  "automation_status": "DELETED",
+  "old_training_array_job": 14935360,
+  "old_training_cancelled": true,
+  "test_locked": true,
+  "cpu_check_node": "l05c39n2",
+  "hpc_preflight_passed": true,
+  "cpu_check_started_reported": true,
+  "old_training_cancelled_by": "user",
+  "old_training_cancellation_verified_at": "2026-09-17T10:53:48+08:00",
+  "old_cleanup_pending": null,
+  "cpu_completed_pairs": 36,
+  "cpu_total_pairs": 36,
+  "hpc_orchestration_passed": true,
+  "cpu_completed_pair_speedup_range": [
+    1.1529771961222646,
+    1.2088348587241726
+  ],
+  "local_old_root_deleted": true,
+  "remote_old_results_deleted": true,
+  "cpu_completed_pairs_exact_parity": true,
+  "cpu_check_elapsed": "02:14:12",
+  "last_check_attempt_at": "2026-09-18T14:32:42+08:00",
+  "live_state_unverified": false,
+  "connection_failure": null,
+  "hpc_metadata_sync_pending": false,
+  "reconnected_at": "2026-09-18T14:38:45.917349+08:00",
+  "hpc_cpu_check_passed": true,
+  "exact_cache_check_passed": true,
+  "cpu_result_reported": true,
+  "cuda_check_job": 14943196,
+  "cuda_check_state": "COMPLETED",
+  "remote_old_root_deleted": true,
+  "cpu_rounds": [
+    {
+      "repeat": 0,
+      "original_wall_s": 21078.674071173053,
+      "cached_wall_s": 17718.32994507986,
+      "speedup": 1.1896535472874132
+    },
+    {
+      "repeat": 1,
+      "original_wall_s": 21088.987550006837,
+      "cached_wall_s": 17660.627980631136,
+      "speedup": 1.1941244429776603
+    }
+  ],
+  "automation_restore_question_pending": true,
+  "cuda_pending_reason": null,
+  "cuda_check_elapsed": "00:00:51",
+  "hpc_cuda_check_passed": true,
+  "training_array_job": null,
+  "training_array_state": null,
+  "training_submitted_at": "2026-09-22T17:55:51+08:00",
+  "training_tasks": [
+    {
+      "seed": 4,
+      "job_id": 15111540,
+      "state": "RUNNING",
+      "node": "l12gpu02",
+      "stage": "ppo_update",
+      "epoch": 7,
+      "update": 13539,
+      "status_at": "2026-09-22T18:04:28+08:00"
+    },
+    {
+      "seed": 15,
+      "job_id": 15111541,
+      "state": "PENDING",
+      "reason": "Priority"
+    },
+    {
+      "seed": 26,
+      "job_id": 15111542,
+      "state": "PENDING",
+      "reason": "Priority"
+    }
+  ],
+  "formal_submission_reported": true,
+  "active_training_stages": [
+    {
+      "seed": 4,
+      "stage": "ppo_update",
+      "epoch": 7,
+      "update": 13539,
+      "status_at": "2026-09-22T18:04:28+08:00"
+    }
+  ],
+  "previous_training_array_job": 15111469,
+  "resume_record": "independent_resume_20260922.json",
+  "training_scope_models": [
+    "qwen_1.8b"
+  ],
+  "non_1p8b_ppo_cancelled": true,
+  "independent_jobs_submission_pending": false,
+  "launcher_local_changes_pending_upload": false,
+  "submission_mode": "independent_jobs",
+  "training_job_ids": [
+    15111540,
+    15111541,
+    15111542
+  ]
+}

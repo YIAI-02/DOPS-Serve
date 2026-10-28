@@ -1,0 +1,111 @@
+{
+  "checked_at": "2026-09-22T07:03:55+08:00",
+  "source": "live login read of squeue, sacct, status.json, completed and validation JSON",
+  "array": 14943278,
+  "running_model": "qwen_1.8b",
+  "completed_epochs": 5,
+  "current_epoch": 6,
+  "current_cohort": 2,
+  "pending_jobs": [
+    "14943278_3",
+    "14943278_4",
+    "14943278_5",
+    "14943278_6",
+    "14943278_7",
+    "14943278_8"
+  ],
+  "pending_reason": "JobArrayTaskLimit",
+  "e0_throughput": [
+    567.273251218975,
+    914.1891214995433,
+    1111.9688185800046
+  ],
+  "runs": [
+    {
+      "seed": 4,
+      "job": "14943278_0",
+      "update": 12081,
+      "active": 6,
+      "score": 0.6533306527220479,
+      "throughput": [
+        484.79033423029904,
+        576.3252661179988,
+        575.5704065851776
+      ],
+      "remaining": "7小时30分",
+      "deadline": "2026-09-22 14:34",
+      "checkpoint": "2026-09-22 03:06:18",
+      "e5_updates": 11158,
+      "steps": 334872,
+      "sampling": 95071.0279215835,
+      "update_s": 237710.44958087616,
+      "throughput_change_pct": [
+        -14.540244372784016,
+        -36.957763709476964,
+        -48.238619917401394
+      ],
+      "score_change_pct": -34.66693472779521,
+      "sampling_h": 26.40861886710653,
+      "update_h": 66.03068043913227,
+      "update_fraction": 0.7143139436873231
+    },
+    {
+      "seed": 15,
+      "job": "14943278_1",
+      "update": 11059,
+      "active": 9,
+      "score": 0.48975308356934855,
+      "throughput": [
+        396.4851066069287,
+        413.03909323311456,
+        413.6513671726787
+      ],
+      "remaining": "8小时31分",
+      "deadline": "2026-09-22 15:34",
+      "checkpoint": "2026-09-22 01:15:29",
+      "e5_updates": 10090,
+      "steps": 317821,
+      "sampling": 88241.10991157126,
+      "update_s": 233761.5059982119,
+      "throughput_change_pct": [
+        -30.106856659476055,
+        -54.81907588709796,
+        -62.80009292878233
+      ],
+      "score_change_pct": -51.02469164306515,
+      "sampling_h": 24.511419419880905,
+      "update_h": 64.93375166616998,
+      "update_fraction": 0.72596151226208
+    },
+    {
+      "seed": 26,
+      "job": "14943278_2",
+      "update": 11205,
+      "active": 12,
+      "score": 0.51958513693571,
+      "throughput": [
+        417.7261913933704,
+        440.43299041156973,
+        439.6626500186851
+      ],
+      "remaining": "8小时58分",
+      "deadline": "2026-09-22 16:02",
+      "checkpoint": "2026-09-22 05:40:04",
+      "e5_updates": 9927,
+      "steps": 314636,
+      "sampling": 90643.52843332337,
+      "update_s": 230201.37810284272,
+      "throughput_change_pct": [
+        -26.36243812029795,
+        -51.822551805349846,
+        -60.46088319453609
+      ],
+      "score_change_pct": -48.04148630642901,
+      "sampling_h": 25.17875789814538,
+      "update_h": 63.94482725078964,
+      "update_fraction": 0.7174849075464257
+    }
+  ],
+  "checkpoint_contents_checked": false,
+  "full_logs_synced": false
+}

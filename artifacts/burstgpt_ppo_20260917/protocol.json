@@ -1,0 +1,112 @@
+{
+  "parameters": {
+    "SCHED_DECODE_AMORT_ALPHA": 1.0,
+    "SCHED_DECODE_AMORT_ENABLE": true,
+    "SCHED_DECODE_AMORT_REUSE_PROB": 1.0,
+    "SCHED_DECODE_AMORT_RMIN": 1.0,
+    "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5,
+    "SCHED_JOINT_LK_ENABLE": true,
+    "SCHED_JOINT_LK_GAMMA": 0.4,
+    "SCHED_JOINT_LK_H": 2,
+    "SCHED_JOINT_LK_PLAN_HINT_MAX": 3,
+    "SCHED_WEIGHT_BIAS_ETA": 0.5
+  },
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "loads": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "source_checkpoints": {
+    "qwen_1.8b": {
+      "epoch": 57,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_1.8b/epoch_057.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/qwen_1.8b_E57.pt"
+    },
+    "qwen_7b": {
+      "epoch": 77,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_7b/epoch_077.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/qwen_7b_E77.pt"
+    },
+    "qwen_14b": {
+      "epoch": 42,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_14b/epoch_042.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/qwen_14b_E42.pt"
+    }
+  },
+  "decode_features": {
+    "qwen_1.8b": 0.5895403056500043,
+    "qwen_7b": 0.5895403056500043,
+    "qwen_14b": 0.5895403056500043
+  },
+  "state_dim": 56,
+  "node_dim": 35,
+  "max_tokens": 7315,
+  "max_batch": 16,
+  "kv_headroom_bytes": 1073741824,
+  "kv_headroom_status": "one GiB per PIM; gated by preflight extreme-length replay",
+  "objective": "sum output tokens / sum complete trace simulated seconds; decision CPU time reported separately",
+  "source_data": "/lustre/home/2501111916/workspace/DOPS-Serve/data/BurstGPT_without_fails_1.csv",
+  "test_locked": true,
+  "stage": "ppo",
+  "ppo": {
+    "actor_lr": 3e-05,
+    "critic_lr": 0.0001,
+    "clip": 0.1,
+    "ppo_epochs": 4,
+    "target_kl": 0.01,
+    "entropy": 0.001,
+    "max_grad_norm": 0.5,
+    "rollout_plans": 16,
+    "mini_plans": 4,
+    "gamma": 1.0,
+    "gae_lambda": 1.0
+  },
+  "epochs": 50,
+  "seeds": [
+    4,
+    15,
+    26
+  ],
+  "cohort_traces": 4,
+  "validation_every_epochs": 5,
+  "train_indices": [
+    130,
+    835,
+    932,
+    756,
+    371,
+    161,
+    646,
+    467
+  ],
+  "quick_val_indices": [
+    177,
+    1,
+    131,
+    153
+  ],
+  "critic_epochs": {
+    "qwen_1.8b": 2,
+    "qwen_7b": 1,
+    "qwen_14b": 5
+  },
+  "resources": {
+    "cpus_per_job": 16,
+    "gpus_per_job": 1,
+    "workers_per_job": 12,
+    "max_parallel_jobs": 3
+  },
+  "advantage_normalization": "each contiguous environment fragment before merging by load",
+  "load_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "precision": "strict_fp32",
+  "calibration_label": "pilot"
+}

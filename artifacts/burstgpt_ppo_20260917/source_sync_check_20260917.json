@@ -1,0 +1,574 @@
+{
+  "checked_at": "2026-09-17T21:47:48+08:00",
+  "remote_root": "/lustre/home/2501111916/workspace/DOPS-Serve",
+  "job_array": 14943278,
+  "comparison": "direct byte comparison; no digest",
+  "result": "already synchronized; no source overwrite needed",
+  "identical_files": 112,
+  "changed_files": [],
+  "local_only_code_files": [],
+  "source_modified_after_first_job_start": false,
+  "excluded": "backend ancillary docs, figures, measurements, demos, submodules; .git and __pycache__; training checkpoints and full dataset not compared",
+  "files": [
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/llama_13b_shape.json",
+      "bytes": 136,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/llama_405b_shape.json",
+      "bytes": 142,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/llama_70b_shape.json",
+      "bytes": 135,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/llama_7b_shape.json",
+      "bytes": 135,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/mixtral_8x7b_shape.json",
+      "bytes": 283,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/qwen_1.8b_shape.json",
+      "bytes": 225,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/qwen_14b_shape.json",
+      "bytes": 224,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/configs/qwen_7b_shape.json",
+      "bytes": 224,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/aim_simulator/PIM_AiM.json",
+      "bytes": 129,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/aim_simulator/example.yaml",
+      "bytes": 451,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/buffer_manager.py",
+      "bytes": 21683,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/comm_primitives.py",
+      "bytes": 7274,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/config.py",
+      "bytes": 9872,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/config.py.bifocal_all_sweep_bak",
+      "bytes": 9984,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/cost_model.py",
+      "bytes": 1841,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/__init__.py",
+      "bytes": 49,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/compute_mixin.py",
+      "bytes": 31862,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/cost_model_npu_ascend_backend.py",
+      "bytes": 32277,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/cost_model_npu_llmcompass_backend.py",
+      "bytes": 13534,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/cost_model_pim_backend.py",
+      "bytes": 44012,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/estimate_mixin.py",
+      "bytes": 26035,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/npu_backends.py",
+      "bytes": 15654,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/pim_backends.py",
+      "bytes": 9074,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/runtime_mixin.py",
+      "bytes": 24355,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/costmodel_impl/shared.py",
+      "bytes": 14276,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/dtype_utils.py",
+      "bytes": 2344,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/burstgpt_eval_config.json",
+      "bytes": 894,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/evaluate_len_sweep_config_npu.json",
+      "bytes": 338,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/evaluate_len_sweep_config_npu_4.json",
+      "bytes": 416,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/evaluate_len_sweep_config_npu_8.json",
+      "bytes": 416,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/evaluate_len_sweep_config_npu_baseline.json",
+      "bytes": 348,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/evaluate_quant_sparse_config.json",
+      "bytes": 2348,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/evaluate_test_config.json",
+      "bytes": 1073,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json",
+      "bytes": 1697,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim_star.json",
+      "bytes": 1941,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_4aim.json",
+      "bytes": 2703,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_8aim.json",
+      "bytes": 4715,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/weight_suggest_sweep.json",
+      "bytes": 848,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/examples/weight_suggest_test_config.json",
+      "bytes": 1022,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/hardware.py",
+      "bytes": 17175,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/main.py",
+      "bytes": 4096,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/__init__.py",
+      "bytes": 80,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/app.py",
+      "bytes": 8367,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/baselines.py",
+      "bytes": 9078,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/burstgpt_serving_eval.py",
+      "bytes": 31246,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/cli.py",
+      "bytes": 14039,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/evaluate.py",
+      "bytes": 21276,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/graph_utils.py",
+      "bytes": 3925,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/kv_policy.py",
+      "bytes": 20839,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/log_utils.py",
+      "bytes": 4006,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/runner.py",
+      "bytes": 39062,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/shared.py",
+      "bytes": 2636,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/simulator.py",
+      "bytes": 7671,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/storage.py",
+      "bytes": 4096,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/mainlib/weight_formats.py",
+      "bytes": 7897,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/model_definition.py",
+      "bytes": 48659,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/model_parser.py",
+      "bytes": 17494,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/optimizations.py",
+      "bytes": 26980,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/pkl/pim_latency_cache.pkl",
+      "bytes": 5183809,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/plan_label.py",
+      "bytes": 1484,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/run_bifocal.py",
+      "bytes": 9705,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/runtime_models/format_conv_fit.json",
+      "bytes": 800,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/runtime_models/gelu_lut.csv",
+      "bytes": 704,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/runtime_models/mmad_lut.csv",
+      "bytes": 1167,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/runtime_models/rmsnorm_lut.csv",
+      "bytes": 1562,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/runtime_models/softmax_lut.csv",
+      "bytes": 3355,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/__init__.py",
+      "bytes": 476,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_base.py",
+      "bytes": 97954,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_bifocal.py",
+      "bytes": 46314,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_comm.py",
+      "bytes": 2017,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_common.py",
+      "bytes": 3651,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_heft.py",
+      "bytes": 24750,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_naive.py",
+      "bytes": 6725,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/scheduler/scheduler_types.py",
+      "bytes": 498,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/stats_recorder.py",
+      "bytes": 19367,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/sweep_bifocal.py",
+      "bytes": 15326,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/sweep_weight_suggest_params.py",
+      "bytes": 48596,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/backend/DOPS/src/task_graph.py",
+      "bytes": 11523,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_1.8b/000000.json",
+      "bytes": 808,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_1.8b/000983.json",
+      "bytes": 785,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_1.8b.json",
+      "bytes": 2153,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_14b/000000.json",
+      "bytes": 814,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_14b/000983.json",
+      "bytes": 777,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_14b.json",
+      "bytes": 2151,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_7b/000000.json",
+      "bytes": 817,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_7b/000983.json",
+      "bytes": 782,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_critic_20260915/calibration/pilot/qwen_7b.json",
+      "bytes": 2157,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/pyproject.toml",
+      "bytes": 443,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/slurm/run_ppo.sh",
+      "bytes": 3157,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/slurm/submit_ppo.sh",
+      "bytes": 753,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/__init__.py",
+      "bytes": 70,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_ppo.py",
+      "bytes": 23321,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_preflight.py",
+      "bytes": 10383,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/cache_check.py",
+      "bytes": 7660,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/io.py",
+      "bytes": 305,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/placement_compiler.py",
+      "bytes": 3550,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/placement_cost.py",
+      "bytes": 6456,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/placement_dataset.py",
+      "bytes": 4976,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/placement_evaluator.py",
+      "bytes": 9531,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/placement_policy.py",
+      "bytes": 5455,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/placement_training.py",
+      "bytes": 13231,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/replay.py",
+      "bytes": 9028,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/src/dops_serve/workloads.py",
+      "bytes": 2777,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/tests/test_burstgpt_ppo.py",
+      "bytes": 10238,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/code/tests/test_cost_cache.py",
+      "bytes": 2951,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/configs/qwen_1.8b.json",
+      "bytes": 748,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/configs/qwen_14b.json",
+      "bytes": 747,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/configs/qwen_7b.json",
+      "bytes": 746,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/formal_budget.json",
+      "bytes": 746,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/protocol.json",
+      "bytes": 3027,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/submission.json",
+      "bytes": 1844,
+      "identical": true
+    },
+    {
+      "path": "burstgpt_ppo_20260917/trace_selection.json",
+      "bytes": 1705,
+      "identical": true
+    }
+  ]
+}

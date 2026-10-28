@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-09-18T06:49:22+08:00",
+  "array_job": 14943278,
+  "running": 3,
+  "pending": 6,
+  "runs": [
+    {
+      "seed": 4,
+      "stage": "ppo_update",
+      "epoch": 1,
+      "update": 1486,
+      "completed_cohorts": 1,
+      "active_environments": 12,
+      "status_mtime": "2026-09-18T06:48:29+08:00",
+      "logged_updates": 1486,
+      "all_logged_diagnostics_finite": true,
+      "last_50": {
+        "sample_wall_s": 10.011111113736407,
+        "update_wall_s": 74.36215277328157,
+        "mean_kl": 0.00040209841721457353,
+        "value_loss": 0.0003050523331570076,
+        "entropy": 0.13228669894936806,
+        "clip_fraction": 0.014758099977831686
+      },
+      "latest": {
+        "sample_wall_s": 11.381212316919118,
+        "update_wall_s": 74.32829608814791,
+        "mean_kl": 0.000804325288516425,
+        "value_loss": 5.553382765318323e-05,
+        "entropy": 0.11479970335494727,
+        "clip_fraction": 0.014111539477047094
+      },
+      "validation_files": [
+        "epoch_000.json"
+      ]
+    },
+    {
+      "seed": 15,
+      "stage": "ppo_update",
+      "epoch": 1,
+      "update": 810,
+      "completed_cohorts": 1,
+      "active_environments": 9,
+      "status_mtime": "2026-09-18T06:48:36+08:00",
+      "logged_updates": 810,
+      "all_logged_diagnostics_finite": true,
+      "last_50": {
+        "sample_wall_s": 9.758155569108203,
+        "update_wall_s": 50.81400785516948,
+        "mean_kl": 0.00024427608471305393,
+        "value_loss": 8.779432941054944e-05,
+        "entropy": 0.026428222802600692,
+        "clip_fraction": 0.003651127832685782
+      },
+      "latest": {
+        "sample_wall_s": 10.721960448659956,
+        "update_wall_s": 44.49541550781578,
+        "mean_kl": 0.00016828326116656025,
+        "value_loss": 1.0032518230692252e-05,
+        "entropy": 0.023458275905189414,
+        "clip_fraction": 0.0035398629364256826
+      },
+      "validation_files": [
+        "epoch_000.json"
+      ]
+    },
+    {
+      "seed": 26,
+      "stage": "ppo_update",
+      "epoch": 1,
+      "update": 1568,
+      "completed_cohorts": 0,
+      "active_environments": 1,
+      "status_mtime": "2026-09-18T06:49:18+08:00",
+      "logged_updates": 1568,
+      "all_logged_diagnostics_finite": true,
+      "last_50": {
+        "sample_wall_s": 7.743333127032965,
+        "update_wall_s": 2.475508652254939,
+        "mean_kl": 0.0002457183297497757,
+        "value_loss": 6.927195422517703e-06,
+        "entropy": 0.054080119617283345,
+        "clip_fraction": 0.006598687772930134
+      },
+      "latest": {
+        "sample_wall_s": 6.54009773908183,
+        "update_wall_s": 2.4851696169935167,
+        "mean_kl": 0.00018204791769707874,
+        "value_loss": 5.993137677980561e-07,
+        "entropy": 0.05280008353292942,
+        "clip_fraction": 0.006307494673213417
+      },
+      "validation_files": [
+        "epoch_000.json"
+      ]
+    }
+  ],
+  "matching_fatal_log_lines": []
+}

@@ -1,0 +1,80 @@
+{
+  "submitted_at": "2026-09-17T10:34:08.300952+08:00",
+  "cpu_check_job": 14939542,
+  "cuda_check_job": 14943196,
+  "training_array_job": 14943278,
+  "old_training_array_job": 14935360,
+  "old_training_cancelled": true,
+  "launch_phase": "training",
+  "cpu_partition": "C064M0256G",
+  "cpu_validation_walltime": "12:00:00",
+  "partition": "GPU40G",
+  "cpus_per_task": 16,
+  "gpus_per_training_task": 1,
+  "array": "0-8%3",
+  "walltime": "5-00:00:00",
+  "epochs": 50,
+  "train_traces": 8,
+  "val_traces": 4,
+  "tasks": [
+    {
+      "task": 0,
+      "model": "qwen_1.8b",
+      "seed": 4
+    },
+    {
+      "task": 1,
+      "model": "qwen_1.8b",
+      "seed": 15
+    },
+    {
+      "task": 2,
+      "model": "qwen_1.8b",
+      "seed": 26
+    },
+    {
+      "task": 3,
+      "model": "qwen_7b",
+      "seed": 4
+    },
+    {
+      "task": 4,
+      "model": "qwen_7b",
+      "seed": 15
+    },
+    {
+      "task": 5,
+      "model": "qwen_7b",
+      "seed": 26
+    },
+    {
+      "task": 6,
+      "model": "qwen_14b",
+      "seed": 4
+    },
+    {
+      "task": 7,
+      "model": "qwen_14b",
+      "seed": 15
+    },
+    {
+      "task": 8,
+      "model": "qwen_14b",
+      "seed": 26
+    }
+  ],
+  "login_control": "/private/tmp/dops-ppo-launch-login-20260916.sock",
+  "data_control": "/private/tmp/dops-ppo-launch-data-20260916.sock",
+  "report_every_epochs": 5,
+  "test_locked": true,
+  "old_training_cancelled_by": "user",
+  "old_training_cancellation_verified_at": "2026-09-17T10:53:48+08:00",
+  "old_cleanup_pending": null,
+  "cuda_submitted_at": "2026-09-17T13:03:24.593110+08:00",
+  "old_root_deleted": true,
+  "cpu_check_completed_at": "2026-09-17T12:47:19+08:00",
+  "cpu_check_passed": true,
+  "training_submitted_at": "2026-09-17T13:59:17.475734+08:00",
+  "cuda_check_passed": true,
+  "cuda_check_completed_at": "2026-09-17T13:18:50+08:00"
+}

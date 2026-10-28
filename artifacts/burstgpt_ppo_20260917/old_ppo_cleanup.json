@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-09-17T13:03:24.593110+08:00",
+  "old_training_array_job": 14935360,
+  "old_training_cancelled_by": "user",
+  "local_old_root_deleted": true,
+  "remote_old_training_results_logs_scripts_deleted": true,
+  "remote_old_root_deleted": true,
+  "pending_remote_reference": null,
+  "pending_reference_bytes": 5922,
+  "pending_until_job_terminates": null,
+  "new_reference": "validation_reference/code/src/dops_serve/placement_cost.py",
+  "initial_checkpoints": "initial_weights",
+  "initial_checkpoint_files": 6,
+  "checkpoint_verification": "byte-for-byte local/new HPC/former HPC comparison",
+  "dependency_links": {
+    "backend": "../burstgpt_critic_20260915/backend",
+    "calibration": "../burstgpt_critic_20260915/calibration",
+    "data": "../burstgpt_critic_20260915/data",
+    "initial": "initial_weights"
+  },
+  "preserved": "BC and critic assets, source datasets and calibration, independent performance experiment evidence, historical md reports",
+  "completed_at": "2026-09-17T13:03:24.593110+08:00"
+}

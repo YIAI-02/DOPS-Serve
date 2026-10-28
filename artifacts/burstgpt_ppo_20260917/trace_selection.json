@@ -1,0 +1,87 @@
+{
+  "train": {
+    "indices": [
+      130,
+      835,
+      932,
+      756,
+      371,
+      161,
+      646,
+      467
+    ],
+    "original": {
+      "requests": 32000,
+      "output_tokens": 4252260,
+      "prompt_len": {
+        "min": 8,
+        "p50": 265,
+        "p95": 3016,
+        "max": 4403
+      },
+      "output_len": {
+        "min": 1,
+        "p50": 76,
+        "p95": 434,
+        "max": 3963
+      }
+    },
+    "selected": {
+      "requests": 8000,
+      "output_tokens": 989948,
+      "prompt_len": {
+        "min": 9,
+        "p50": 363,
+        "p95": 3009,
+        "max": 4403
+      },
+      "output_len": {
+        "min": 1,
+        "p50": 44,
+        "p95": 516,
+        "max": 3206
+      }
+    }
+  },
+  "val": {
+    "indices": [
+      177,
+      1,
+      131,
+      153
+    ],
+    "original": {
+      "requests": 16000,
+      "output_tokens": 1434933,
+      "prompt_len": {
+        "min": 9,
+        "p50": 399,
+        "p95": 1555,
+        "max": 10401
+      },
+      "output_len": {
+        "min": 1,
+        "p50": 23,
+        "p95": 423,
+        "max": 2304
+      }
+    },
+    "selected": {
+      "requests": 4000,
+      "output_tokens": 311275,
+      "prompt_len": {
+        "min": 11,
+        "p50": 401,
+        "p95": 1398,
+        "max": 10401
+      },
+      "output_len": {
+        "min": 1,
+        "p50": 20,
+        "p95": 368,
+        "max": 2304
+      }
+    }
+  },
+  "selection_rule": "Sort original selected traces by total output tokens and split into groups of four; select one per group using only input/output length statistics. Adjust representatives to retain long-prompt coverage; never use policy performance. Fixed list shared by all models and seeds."
+}

@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-09-22T17:45:58+08:00",
+  "submitted_at": "2026-09-22T17:45:28+08:00",
+  "old_array": 14943278,
+  "new_array": 15111469,
+  "cancelled_jobs": [
+    "14943278_3",
+    "14943278_4",
+    "14943278_5",
+    "14943278_6",
+    "14943278_7",
+    "14943278_8"
+  ],
+  "cancelled_at": "2026-09-22T17:44:54+08:00",
+  "cancelled_models": [
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "runs": [
+    {
+      "seed": 4,
+      "array_task": 0,
+      "old_job": "14943278_0",
+      "old_state": "TIMEOUT",
+      "old_end": "2026-09-22T14:34:45+08:00",
+      "saved_updates": 13533,
+      "last_recorded_updates_before_timeout": 13654,
+      "checkpoint_saved_at": "2026-09-22T11:58:06+08:00",
+      "new_job": "15111469_0",
+      "state": "PENDING",
+      "reason": "Priority",
+      "model": "qwen_1.8b",
+      "completed_epochs": 6,
+      "resume_epoch": 7
+    },
+    {
+      "seed": 15,
+      "array_task": 1,
+      "old_job": "14943278_1",
+      "old_state": "TIMEOUT",
+      "old_end": "2026-09-22T15:34:46+08:00",
+      "saved_updates": 11948,
+      "last_recorded_updates_before_timeout": 12183,
+      "checkpoint_saved_at": "2026-09-22T11:44:35+08:00",
+      "new_job": "15111469_1",
+      "state": "PENDING",
+      "reason": "Priority",
+      "model": "qwen_1.8b",
+      "completed_epochs": 6,
+      "resume_epoch": 7
+    },
+    {
+      "seed": 26,
+      "array_task": 2,
+      "old_job": "14943278_2",
+      "old_state": "TIMEOUT",
+      "old_end": "2026-09-22T16:02:21+08:00",
+      "saved_updates": 11586,
+      "last_recorded_updates_before_timeout": 11862,
+      "checkpoint_saved_at": "2026-09-22T11:02:16+08:00",
+      "new_job": "15111469_2",
+      "state": "PENDING",
+      "reason": "Priority",
+      "model": "qwen_1.8b",
+      "completed_epochs": 6,
+      "resume_epoch": 7
+    }
+  ],
+  "code_changed": false,
+  "target_total_epochs": 50,
+  "checkpoint_contents_loaded_this_turn": false,
+  "resume_entrypoint": "code/slurm/run_ppo.sh train, existing last.pt enables --resume",
+  "automatic_timeout_resubmission_configured": false
+}
