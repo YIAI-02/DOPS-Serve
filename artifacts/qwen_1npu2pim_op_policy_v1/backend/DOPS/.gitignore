@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and OS
+.DS_Store
+.vscode/
+*.bak
+*~
+
+# Generated outputs and logs
+output/
+dist/
+job.*
+*.out
+*.log
+**/build/
+**/out/
+**/profile/
+**/kernel_meta/
+**/*_ops_trace.csv
+**/*_comms_trace.csv
+**/best_summary_*.json
+**/baseline_compare_*.json
+**/debug_*.txt
+**/pim_sim_*.txt
+**/sim_stdout.txt
+**/summary.json
+
+# Generated caches
+src/pkl/pim_latency_cache.pkl
+
+# Locally supplied datasets
+data/realworld/BurstGPT_without_fails_1.csv
+
+# Generated Ascend-C profiling and benchmark outputs
+measurements/ascendc/**/*.csv
+measurements/ascendc/**/profile_*_log*.toml
+measurements/ascendc/**/fusion_result.json
+measurements/ascendc/**/op_runner
+measurements/ascendc/**/ascendc_kernels_bbit
+measurements/**/batch_summary.json
