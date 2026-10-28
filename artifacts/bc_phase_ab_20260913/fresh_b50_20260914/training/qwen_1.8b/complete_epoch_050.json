@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "fresh_initialization": true,
+  "epochs": 50,
+  "final_epoch": 50,
+  "test_executed": false,
+  "awaiting_user_before_continuation": true
+}

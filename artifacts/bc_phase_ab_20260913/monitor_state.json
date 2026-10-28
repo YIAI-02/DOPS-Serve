@@ -1,0 +1,23 @@
+{
+  "automation_id": "dops",
+  "automation_status": "PAUSED",
+  "interval_minutes": 60,
+  "configured_at": "2026-09-13T14:52:22Z",
+  "reported_epochs": {
+    "A": 18,
+    "B": 18
+  },
+  "connection_failure_notified": false,
+  "connection_status": "connected",
+  "reason": "both_branches_completed",
+  "last_checked_at": "2026-09-13T23:28:38Z",
+  "remote_job_state_verified": true,
+  "job_ids": {
+    "A": "14875670",
+    "B": "14875671"
+  },
+  "job_states": {
+    "A": "COMPLETED",
+    "B": "COMPLETED"
+  }
+}

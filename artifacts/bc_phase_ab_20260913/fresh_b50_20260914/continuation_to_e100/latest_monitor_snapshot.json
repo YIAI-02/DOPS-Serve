@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-09-14T05:51:50.760844+00:00",
+  "access": {
+    "login": "reused successfully",
+    "data": "control socket missing",
+    "auto_reconnect": false
+  },
+  "complete_epochs": {
+    "qwen_1.8b": 92,
+    "qwen_7b": 92,
+    "qwen_14b": 50,
+    "shared": 50
+  },
+  "stages": {
+    "qwen_1.8b": {
+      "epoch": 93,
+      "stage": "validation"
+    },
+    "qwen_7b": {
+      "epoch": 93,
+      "stage": "validation"
+    },
+    "qwen_14b": {
+      "epoch": 50,
+      "stage": "epoch_complete"
+    },
+    "shared": {
+      "epoch": 50,
+      "stage": "epoch_complete"
+    }
+  },
+  "job_states": {
+    "14878513": "RUNNING",
+    "14878514": "RUNNING",
+    "14878059": "COMPLETED 0:0",
+    "14878060": "COMPLETED 0:0"
+  },
+  "automation_status": "PAUSED",
+  "sync_completed": false,
+  "completed_final_results": {
+    "qwen_14b": {
+      "epoch": 50,
+      "train_loss": 0.012536931003225409,
+      "val_loss": 0.5510639242371093,
+      "bc_throughput": 350.62501443349953,
+      "bc_over_pd": 1.0112628154836434,
+      "bc_over_teacher": 0.9326916929331217
+    },
+    "shared": {
+      "epoch": 50,
+      "qwen_1.8b": {
+        "train_loss": 0.008928900289820577,
+        "val_loss": 0.645092622164262,
+        "bc_throughput": 2554.14681217571,
+        "bc_over_pd": 1.0884527034232352,
+        "bc_over_teacher": 0.9322591186317046
+      },
+      "qwen_7b": {
+        "train_loss": 0.0023570009322804717,
+        "val_loss": 0.5604798122522083,
+        "bc_throughput": 629.852564837821,
+        "bc_over_pd": 1.0863682106776729,
+        "bc_over_teacher": 0.9809189645426142
+      },
+      "qwen_14b": {
+        "train_loss": 0.003284176169417542,
+        "val_loss": 0.5632673517975582,
+        "bc_throughput": 369.6059425568238,
+        "bc_over_pd": 1.066007075089588,
+        "bc_over_teacher": 0.9831825400091305
+      }
+    }
+  }
+}

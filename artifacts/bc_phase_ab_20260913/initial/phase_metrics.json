@@ -1,0 +1,22 @@
+{
+  "train": {
+    "nll": 0.007622919819472646,
+    "prefill_nll": 0.08612370845609497,
+    "prefill_teacher_forced_match": 0.9678368506332244,
+    "startup_decode_nll": 0.26095042835267024,
+    "startup_decode_teacher_forced_match": 0.9157873400383527,
+    "steady_decode_nll": 0.0016553873213102275,
+    "steady_decode_teacher_forced_match": 0.9996752776345752,
+    "phase_balanced_nll": 0.11624317471002515
+  },
+  "val": {
+    "nll": 0.01930261528497381,
+    "prefill_nll": 0.9161023962369654,
+    "prefill_teacher_forced_match": 0.8628246784210205,
+    "startup_decode_nll": 0.4262238526716828,
+    "startup_decode_teacher_forced_match": 0.897997836271922,
+    "steady_decode_nll": 0.0037600113016950853,
+    "steady_decode_teacher_forced_match": 0.9995396977292949,
+    "phase_balanced_nll": 0.4486954200701145
+  }
+}

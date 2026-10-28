@@ -1,0 +1,31 @@
+{
+  "route": "shared",
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "fresh_initialization": true,
+  "source_checkpoint": null,
+  "start_epoch": 0,
+  "epochs": 50,
+  "seed": 7,
+  "scheme": "mean learned-node conditional NLL; equal thirds for prefill, decode t=0/1/2, decode t>=4; mean plans within group, mean tasks; equal model task counts",
+  "optimizer_initial_steps": 0,
+  "learning_rate": 0.0001,
+  "parameter_count": 945411,
+  "dimensions": {
+    "state_dim": 47,
+    "node_dim": 35,
+    "hidden": 256,
+    "depth": 4
+  },
+  "train_tasks": 144,
+  "val_tasks": 24,
+  "train_plans": 34848,
+  "val_plans": 5808,
+  "host": "l12gpu23",
+  "gpu": "NVIDIA A800 80GB PCIe",
+  "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+  "workers": 24
+}

@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "source_epoch": 8,
+  "all_eight_validation_times_reproduced": true,
+  "original_nll_reproduced": true,
+  "task_and_phase_weights_checked": true,
+  "train_tasks": 48,
+  "val_tasks": 8,
+  "train_plans": 11616,
+  "val_plans": 1936,
+  "optimizer_steps": [
+    5808
+  ],
+  "gpu": "NVIDIA A800 80GB PCIe"
+}

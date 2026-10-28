@@ -1,0 +1,39 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+NLL_REPRODUCED E8 0.01930261528497381
+NLL_REPRODUCED A18 0.018797927598120722
+NLL_REPRODUCED B18 0.019132243419368415
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "E8", "case_id": 68, "mode": "auto", "simulated_s": 0.8211757057822219, "output_tokens": 128, "throughput": 155.87407067537623}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "B18", "case_id": 68, "mode": "auto", "simulated_s": 1.005819511395576, "output_tokens": 128, "throughput": 127.2594123993477}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "B18", "case_id": 108, "mode": "auto", "simulated_s": 2.6204750737235143, "output_tokens": 1024, "throughput": 390.7688381652746}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "A18", "case_id": 108, "mode": "auto", "simulated_s": 2.7881378243233934, "output_tokens": 1024, "throughput": 367.2702228228253}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "A18", "case_id": 68, "mode": "auto", "simulated_s": 1.0161372308469234, "output_tokens": 128, "throughput": 125.96723760757727}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "E8", "case_id": 108, "mode": "auto", "simulated_s": 2.626020526251036, "output_tokens": 1024, "throughput": 389.9436389638144}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "E8", "case_id": 68, "mode": "teacher_P", "simulated_s": 0.7792321829305067, "output_tokens": 128, "throughput": 164.2642626984713}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "E8", "case_id": 68, "mode": "teacher_P_D0", "simulated_s": 0.7870461737798115, "output_tokens": 128, "throughput": 162.6334061002754}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "A18", "case_id": 68, "mode": "teacher_P_D0", "simulated_s": 0.7849339335052131, "output_tokens": 128, "throughput": 163.07104908613292}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "A18", "case_id": 68, "mode": "teacher_P", "simulated_s": 1.3849474823018493, "output_tokens": 128, "throughput": 92.42227711570538}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "B18", "case_id": 68, "mode": "teacher_P_D0", "simulated_s": 0.7376154411811869, "output_tokens": 128, "throughput": 173.53215897300913}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "B18", "case_id": 68, "mode": "teacher_P", "simulated_s": 0.9139749557695758, "output_tokens": 128, "throughput": 140.04760107701503}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+REPLAY {"checkpoint": "E8", "case_id": 68, "mode": "teacher_all", "simulated_s": 0.712729258555411, "output_tokens": 128, "throughput": 179.59133635040558}

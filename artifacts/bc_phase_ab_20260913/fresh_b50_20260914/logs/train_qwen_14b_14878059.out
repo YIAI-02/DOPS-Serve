@@ -1,0 +1,19 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+[{"route": "qwen_14b", "model": "qwen_14b", "epoch": 1, "train_loss": 0.2071595015343158, "val_loss": 0.4377081303483707, "train_common_nll": 0.0228361364214315, "val_common_nll": 0.030941288053914814, "output_tokens": 17280, "bc_execution_s": 1395.3108535028623, "teacher_execution_s": 45.96623683545294, "pd_execution_s": 49.83849050185677, "bc_throughput": 12.38433712216842, "teacher_throughput": 375.9280983095889, "pd_throughput": 346.71997137144876, "teacher_gap_pct": -96.70566334949257, "bc_over_teacher": 0.03294336650507438, "bc_over_pd": 0.0357185571779504, "decision_s": 193.17049149656668, "epoch_wall_s": 312.6362651903182, "update_batches": 726, "train_prefill_nll": 0.19572610470277133, "train_prefill_teacher_forced_match": 0.9404356063654031, "train_startup_decode_nll": 0.4124126222903013, "train_startup_decode_teacher_forced_match": 0.8552872488896051, "train_steady_decode_nll": 0.013339777609874755, "train_steady_decode_teacher_forced_match": 0.9995266084821139, "val_prefill_nll": 0.7798475565068657, "val_prefill_teacher_forced_match": 0.8630681931972504, "val_startup_decode_nll": 0.5184422725190719, "val_startup_decode_teacher_forced_match": 0.8300189524888992, "val_steady_decode_nll": 0.014834562019174425, "val_steady_decode_teacher_forced_match": 0.9994001121851689, "prefill_autonomous_match": 0.8630681818181818, "prefill_exact_plan_fraction": 0.5, "prefill_pim_to_npu_fraction": 0.13693181818181818, "startup_decode_autonomous_match": 0.6322443181818181, "startup_decode_exact_plan_fraction": 0.0, "startup_decode_pim_to_npu_fraction": 0.19199810606060608, "steady_decode_autonomous_match": 0.705585065027639, "steady_decode_exact_plan_fraction": 0.0, "steady_decode_pim_to_npu_fraction": 0.15959463411637545}]

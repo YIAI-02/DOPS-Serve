@@ -1,0 +1,32 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes (test_static_bc.StaticBCContract.test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes) ... ok
+test_generate_matches_conditionals_and_fixed_rules (test_static_bc.StaticBCContract.test_generate_matches_conditionals_and_fixed_rules) ... ok
+test_gradient_update_reduces_fixed_teacher_nll (test_static_bc.StaticBCContract.test_gradient_update_reduces_fixed_teacher_nll) ... ok
+test_prefill_and_previous_decode_features_affect_predictions (test_static_bc.StaticBCContract.test_prefill_and_previous_decode_features_affect_predictions) ... ok
+test_split_and_refresh_and_equal_task_weight (test_static_bc.StaticBCContract.test_split_and_refresh_and_equal_task_weight) ... ok
+test_new_route_discards_all_previous_network_optimizer_and_rng_state (test_static_bc_ab.FreshPhaseBCContract.test_new_route_discards_all_previous_network_optimizer_and_rng_state) ... ok
+test_phase_balance_preserves_equal_tasks_at_every_decode_length (test_static_bc_ab.FreshPhaseBCContract.test_phase_balance_preserves_equal_tasks_at_every_decode_length) ... ok
+test_resume_reproduces_next_batch_update_optimizer_and_rng (test_static_bc_ab.FreshPhaseBCContract.test_resume_reproduces_next_batch_update_optimizer_and_rng) ... ok
+test_shared_metrics_keep_models_separate_and_report_actual_B_loss (test_static_bc_ab.FreshPhaseBCContract.test_shared_metrics_keep_models_separate_and_report_actual_B_loss) ... ok
+test_update_uses_group_means_instead_of_plan_mean (test_static_bc_ab.FreshPhaseBCContract.test_update_uses_group_means_instead_of_plan_mean) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.164s
+
+OK
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"complete": true, "source_epoch": 50, "target_epoch": 100, "checks": [{"route": "qwen_1.8b", "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_1.8b/epoch_050.pt", "epoch": 50, "optimizer_steps": [36300], "learning_rate": 0.0001, "val_loss": 0.4686893480957248, "expected_val_loss": 0.4686893480957248, "replay_case_id": 4, "replay_execution_s": 0.17271306398213, "expected_execution_s": 0.17271306398213}, {"route": "qwen_7b", "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_7b/epoch_050.pt", "epoch": 50, "optimizer_steps": [36300], "learning_rate": 0.0001, "val_loss": 0.756912879026672, "expected_val_loss": 0.756912879026672, "replay_case_id": 68, "replay_execution_s": 0.8245600720468805, "expected_execution_s": 0.8245600720468805}], "gpu": "NVIDIA A800 80GB PCIe", "test_executed": false}

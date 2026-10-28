@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-09-14T03:52:02.917249+00:00",
+  "preflight_job": 14878508,
+  "jobs": {
+    "qwen_1.8b": 14878513,
+    "qwen_7b": 14878514
+  },
+  "checks": [
+    {
+      "route": "qwen_1.8b",
+      "source_epoch": 50,
+      "target_epoch": 100,
+      "optimizer_steps": 36300,
+      "prior_50_epochs_preserved": true,
+      "complete_epochs": 51,
+      "epoch_51_train_loss": 0.019334767596875992,
+      "epoch_51_val_loss": 0.6411545688915842,
+      "epoch_51_throughput": 2690.874696152875,
+      "epoch_51_over_pd": 1.1467194538852075,
+      "cumulative_csv_and_figures_present": true
+    },
+    {
+      "route": "qwen_7b",
+      "source_epoch": 50,
+      "target_epoch": 100,
+      "optimizer_steps": 36300,
+      "prior_50_epochs_preserved": true,
+      "complete_epochs": 51,
+      "epoch_51_train_loss": 0.010191123017437345,
+      "epoch_51_val_loss": 0.6926592685345373,
+      "epoch_51_throughput": 537.1041503881501,
+      "epoch_51_over_pd": 0.9263959653081169,
+      "cumulative_csv_and_figures_present": true
+    }
+  ]
+}

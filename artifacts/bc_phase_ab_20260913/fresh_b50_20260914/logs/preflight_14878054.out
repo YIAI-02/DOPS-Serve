@@ -1,0 +1,53 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes (test_static_bc.StaticBCContract.test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes) ... ok
+test_generate_matches_conditionals_and_fixed_rules (test_static_bc.StaticBCContract.test_generate_matches_conditionals_and_fixed_rules) ... ok
+test_gradient_update_reduces_fixed_teacher_nll (test_static_bc.StaticBCContract.test_gradient_update_reduces_fixed_teacher_nll) ... ok
+test_prefill_and_previous_decode_features_affect_predictions (test_static_bc.StaticBCContract.test_prefill_and_previous_decode_features_affect_predictions) ... ok
+test_split_and_refresh_and_equal_task_weight (test_static_bc.StaticBCContract.test_split_and_refresh_and_equal_task_weight) ... ok
+test_new_route_discards_all_previous_network_optimizer_and_rng_state (test_static_bc_ab.FreshPhaseBCContract.test_new_route_discards_all_previous_network_optimizer_and_rng_state) ... ok
+test_phase_balance_preserves_equal_tasks_at_every_decode_length (test_static_bc_ab.FreshPhaseBCContract.test_phase_balance_preserves_equal_tasks_at_every_decode_length) ... ok
+test_shared_metrics_keep_models_separate_and_report_actual_B_loss (test_static_bc_ab.FreshPhaseBCContract.test_shared_metrics_keep_models_separate_and_report_actual_B_loss) ... ok
+test_update_uses_group_means_instead_of_plan_mean (test_static_bc_ab.FreshPhaseBCContract.test_update_uses_group_means_instead_of_plan_mean) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 3.097s
+
+OK
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+{"parameters": {"SCHED_DECODE_AMORT_ALPHA": 1.0, "SCHED_DECODE_AMORT_ENABLE": true, "SCHED_DECODE_AMORT_REUSE_PROB": 1.0, "SCHED_DECODE_AMORT_RMIN": 1.0, "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5, "SCHED_JOINT_LK_ENABLE": true, "SCHED_JOINT_LK_GAMMA": 0.4, "SCHED_JOINT_LK_H": 2, "SCHED_JOINT_LK_PLAN_HINT_MAX": 3, "SCHED_WEIGHT_BIAS_ETA": 0.5}, "methods": ["Bifocal", "Naive", "PD", "AF", "PD+Linear", "PD+Attn", "PD+FFN", "weights_on_pim", "NeuPIMs"], "models": ["qwen_1.8b", "qwen_7b", "qwen_14b"], "c026_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026", "other_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908", "decode_plan_refresh_stride": 2, "pim_weight_load_overlap_ratio": 0.5, "weight_load_compute_overlap_ratio": 1.0, "epochs": 50, "seed": 7, "learning_rate": 0.0001, "batch_plans": 16, "max_grad_norm": 1.0, "hidden": 256, "depth": 4, "state_dim": 47, "node_dim": 35, "test_locked": true, "val_groups": [[1, 512], [8, 2048]], "test_groups": [[4, 128], [16, 1024]], "objective": "single whole-task throughput winner", "loss": "mean learned-node conditional NLL; equal thirds for prefill, decode t=0/1/2, decode t>=4; mean plans within group, mean tasks; equal model task counts", "decision_runtime": "CPU, one torch thread; JIT warmed before timing; includes features/tensors/compile", "counts": {"train": 144, "val": 24}, "source_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913", "routes": ["qwen_1.8b", "qwen_7b", "qwen_14b", "shared"], "fresh_initialization": true, "primary_metric": "sum output tokens / sum simulated execution seconds; all decision overhead excluded"}
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/code/src/dops_serve/static_bc_ab.py", line 300, in <module>
+    main()
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/code/src/dops_serve/static_bc_ab.py", line 295, in main
+    result = prepare(args.root, args.backend, args.source_root) if args.stage == "prepare" else preflight(args.root, args.backend, args.workers) if args.stage == "preflight" else train(args.root, args.backend, args.route, args.workers)
+                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/code/src/dops_serve/static_bc_ab.py", line 219, in preflight
+    update_batch(actor, optimizer, rows, "cuda", len(samples), len(train_cases), protocol["max_grad_norm"])
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/code/src/dops_serve/static_bc_ab.py", line 48, in update_batch
+    loss.backward()
+  File "/usr/local/lib/python3.12/dist-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cudnn RNN backward can only be called in training mode

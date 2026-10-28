@@ -1,0 +1,80 @@
+{
+  "complete": true,
+  "fresh_optimizer_empty": true,
+  "smoke_checkpoint_excluded_from_training": true,
+  "test_executed": false,
+  "initial_metrics": {
+    "qwen_1.8b": {
+      "common_nll": 0.950650205214818,
+      "prefill_nll": 0.9518343210220337,
+      "prefill_teacher_forced_match": 0.40909090638160706,
+      "startup_decode_nll": 0.9505332112312317,
+      "startup_decode_teacher_forced_match": 0.4464285771052042,
+      "steady_decode_nll": 0.9506367675719721,
+      "steady_decode_teacher_forced_match": 0.4545454680919651,
+      "loss": 0.9510014332750791
+    },
+    "qwen_14b": {
+      "common_nll": 0.9506725271542867,
+      "prefill_nll": 0.9518844485282898,
+      "prefill_teacher_forced_match": 0.40909090638160706,
+      "startup_decode_nll": 0.9505648215611775,
+      "startup_decode_teacher_forced_match": 0.4424242476622263,
+      "steady_decode_nll": 0.950658191596308,
+      "steady_decode_teacher_forced_match": 0.4545454680919651,
+      "loss": 0.9510358205619251
+    },
+    "qwen_7b": {
+      "common_nll": 0.9506680116508951,
+      "prefill_nll": 0.9518728852272034,
+      "prefill_teacher_forced_match": 0.40909090638160706,
+      "startup_decode_nll": 0.9505582451820374,
+      "startup_decode_teacher_forced_match": 0.44209957122802734,
+      "steady_decode_nll": 0.9506538894868665,
+      "steady_decode_teacher_forced_match": 0.4545454680919651,
+      "loss": 0.9510283399653691
+    }
+  },
+  "after_update_metrics": {
+    "qwen_1.8b": {
+      "common_nll": 0.8172748874534262,
+      "prefill_nll": 0.9195082187652588,
+      "prefill_teacher_forced_match": 0.5633116960525513,
+      "startup_decode_nll": 0.8264072736104329,
+      "startup_decode_teacher_forced_match": 0.850649336973826,
+      "steady_decode_nll": 0.8151840731020895,
+      "steady_decode_teacher_forced_match": 0.9350649118423467,
+      "loss": 0.8536998551592604
+    },
+    "qwen_14b": {
+      "common_nll": 0.817174069809191,
+      "prefill_nll": 0.9191616177558899,
+      "prefill_teacher_forced_match": 0.5704545378684998,
+      "startup_decode_nll": 0.8262832760810852,
+      "startup_decode_teacher_forced_match": 0.8462121287981669,
+      "steady_decode_nll": 0.8150883413130239,
+      "steady_decode_teacher_forced_match": 0.9284090995788582,
+      "loss": 0.853511078383333
+    },
+    "qwen_7b": {
+      "common_nll": 0.8172077653986032,
+      "prefill_nll": 0.9191960096359253,
+      "prefill_teacher_forced_match": 0.5665584206581116,
+      "startup_decode_nll": 0.8263203104337056,
+      "startup_decode_teacher_forced_match": 0.8457792202631631,
+      "steady_decode_nll": 0.8151218641188837,
+      "steady_decode_teacher_forced_match": 0.9276550056472896,
+      "loss": 0.8535460613961715
+    }
+  },
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "train_tasks": 144,
+  "val_tasks": 24,
+  "smoke_plans": 198,
+  "parameter_count": 945411,
+  "gpu": "NVIDIA A100 80GB PCIe"
+}

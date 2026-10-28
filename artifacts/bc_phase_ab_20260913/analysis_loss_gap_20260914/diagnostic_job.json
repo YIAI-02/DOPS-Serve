@@ -1,0 +1,14 @@
+{
+  "job_id": "14878036",
+  "name": "bc26-loss-probe",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:01:30",
+  "node": "l12gpu27",
+  "start": "2026-09-14T07:42:04+08:00",
+  "end": "2026-09-14T07:43:34+08:00",
+  "val_plan_rows": 5808,
+  "conditioned_rows": 192,
+  "prefill_wrong_nodes_same_across_checkpoints": 169,
+  "generator_forward_disagreements": 0
+}

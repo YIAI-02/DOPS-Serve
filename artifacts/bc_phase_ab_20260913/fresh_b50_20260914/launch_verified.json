@@ -1,0 +1,15 @@
+{
+  "all_four_fresh_initializations_verified": true,
+  "epoch_loss_and_throughput_checked": [
+    {
+      "route": "qwen_1.8b",
+      "epoch": 1,
+      "throughput": 1015.5538398911369
+    },
+    {
+      "route": "qwen_7b",
+      "epoch": 1,
+      "throughput": 235.7034877070266
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes (test_static_bc.StaticBCContract.test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes) ... ok
+test_generate_matches_conditionals_and_fixed_rules (test_static_bc.StaticBCContract.test_generate_matches_conditionals_and_fixed_rules) ... ok
+test_gradient_update_reduces_fixed_teacher_nll (test_static_bc.StaticBCContract.test_gradient_update_reduces_fixed_teacher_nll) ... ok
+test_prefill_and_previous_decode_features_affect_predictions (test_static_bc.StaticBCContract.test_prefill_and_previous_decode_features_affect_predictions) ... ok
+test_split_and_refresh_and_equal_task_weight (test_static_bc.StaticBCContract.test_split_and_refresh_and_equal_task_weight) ... ok
+test_new_route_discards_all_previous_network_optimizer_and_rng_state (test_static_bc_ab.FreshPhaseBCContract.test_new_route_discards_all_previous_network_optimizer_and_rng_state) ... ok
+test_phase_balance_preserves_equal_tasks_at_every_decode_length (test_static_bc_ab.FreshPhaseBCContract.test_phase_balance_preserves_equal_tasks_at_every_decode_length) ... ok
+test_shared_metrics_keep_models_separate_and_report_actual_B_loss (test_static_bc_ab.FreshPhaseBCContract.test_shared_metrics_keep_models_separate_and_report_actual_B_loss) ... ok
+test_update_uses_group_means_instead_of_plan_mean (test_static_bc_ab.FreshPhaseBCContract.test_update_uses_group_means_instead_of_plan_mean) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.983s
+
+OK
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+{"parameters": {"SCHED_DECODE_AMORT_ALPHA": 1.0, "SCHED_DECODE_AMORT_ENABLE": true, "SCHED_DECODE_AMORT_REUSE_PROB": 1.0, "SCHED_DECODE_AMORT_RMIN": 1.0, "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5, "SCHED_JOINT_LK_ENABLE": true, "SCHED_JOINT_LK_GAMMA": 0.4, "SCHED_JOINT_LK_H": 2, "SCHED_JOINT_LK_PLAN_HINT_MAX": 3, "SCHED_WEIGHT_BIAS_ETA": 0.5}, "methods": ["Bifocal", "Naive", "PD", "AF", "PD+Linear", "PD+Attn", "PD+FFN", "weights_on_pim", "NeuPIMs"], "models": ["qwen_1.8b", "qwen_7b", "qwen_14b"], "c026_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026", "other_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908", "decode_plan_refresh_stride": 2, "pim_weight_load_overlap_ratio": 0.5, "weight_load_compute_overlap_ratio": 1.0, "epochs": 50, "seed": 7, "learning_rate": 0.0001, "batch_plans": 16, "max_grad_norm": 1.0, "hidden": 256, "depth": 4, "state_dim": 47, "node_dim": 35, "test_locked": true, "val_groups": [[1, 512], [8, 2048]], "test_groups": [[4, 128], [16, 1024]], "objective": "single whole-task throughput winner", "loss": "mean learned-node conditional NLL; equal thirds for prefill, decode t=0/1/2, decode t>=4; mean plans within group, mean tasks; equal model task counts", "decision_runtime": "CPU, one torch thread; JIT warmed before timing; includes features/tensors/compile", "counts": {"train": 144, "val": 24}, "source_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913", "routes": ["qwen_1.8b", "qwen_7b", "qwen_14b", "shared"], "fresh_initialization": true, "primary_metric": "sum output tokens / sum simulated execution seconds; all decision overhead excluded"}
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"complete": true, "fresh_optimizer_empty": true, "smoke_checkpoint_excluded_from_training": true, "test_executed": false, "initial_metrics": {"qwen_1.8b": {"common_nll": 0.950650205214818, "prefill_nll": 0.9518343210220337, "prefill_teacher_forced_match": 0.40909090638160706, "startup_decode_nll": 0.9505332112312317, "startup_decode_teacher_forced_match": 0.4464285771052042, "steady_decode_nll": 0.9506367675719721, "steady_decode_teacher_forced_match": 0.4545454680919651, "loss": 0.9510014332750791}, "qwen_14b": {"common_nll": 0.9506725271542867, "prefill_nll": 0.9518844485282898, "prefill_teacher_forced_match": 0.40909090638160706, "startup_decode_nll": 0.9505648215611775, "startup_decode_teacher_forced_match": 0.4424242476622263, "steady_decode_nll": 0.950658191596308, "steady_decode_teacher_forced_match": 0.4545454680919651, "loss": 0.9510358205619251}, "qwen_7b": {"common_nll": 0.9506680116508951, "prefill_nll": 0.9518728852272034, "prefill_teacher_forced_match": 0.40909090638160706, "startup_decode_nll": 0.9505582451820374, "startup_decode_teacher_forced_match": 0.44209957122802734, "steady_decode_nll": 0.9506538894868665, "steady_decode_teacher_forced_match": 0.4545454680919651, "loss": 0.9510283399653691}}, "after_update_metrics": {"qwen_1.8b": {"common_nll": 0.8172748874534262, "prefill_nll": 0.9195082187652588, "prefill_teacher_forced_match": 0.5633116960525513, "startup_decode_nll": 0.8264072736104329, "startup_decode_teacher_forced_match": 0.850649336973826, "steady_decode_nll": 0.8151840731020895, "steady_decode_teacher_forced_match": 0.9350649118423467, "loss": 0.8536998551592604}, "qwen_14b": {"common_nll": 0.817174069809191, "prefill_nll": 0.9191616177558899, "prefill_teacher_forced_match": 0.5704545378684998, "startup_decode_nll": 0.8262832760810852, "startup_decode_teacher_forced_match": 0.8462121287981669, "steady_decode_nll": 0.8150883413130239, "steady_decode_teacher_forced_match": 0.9284090995788582, "loss": 0.853511078383333}, "qwen_7b": {"common_nll": 0.8172077653986032, "prefill_nll": 0.9191960096359253, "prefill_teacher_forced_match": 0.5665584206581116, "startup_decode_nll": 0.8263203104337056, "startup_decode_teacher_forced_match": 0.8457792202631631, "steady_decode_nll": 0.8151218641188837, "steady_decode_teacher_forced_match": 0.9276550056472896, "loss": 0.8535460613961715}}, "models": ["qwen_1.8b", "qwen_7b", "qwen_14b"], "train_tasks": 144, "val_tasks": 24, "smoke_plans": 198, "parameter_count": 945411, "gpu": "NVIDIA A100 80GB PCIe"}

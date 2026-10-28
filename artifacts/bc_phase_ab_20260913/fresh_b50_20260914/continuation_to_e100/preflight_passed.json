@@ -1,0 +1,97 @@
+{
+  "complete": true,
+  "source_epoch": 50,
+  "target_epoch": 100,
+  "checks": [
+    {
+      "route": "qwen_1.8b",
+      "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_1.8b/epoch_050.pt",
+      "epoch": 50,
+      "optimizer_steps": [
+        36300
+      ],
+      "learning_rate": 0.0001,
+      "val_loss": 0.4686893480957248,
+      "expected_val_loss": 0.4686893480957248,
+      "replay_case_id": 4,
+      "replay_execution_s": 0.17271306398213,
+      "expected_execution_s": 0.17271306398213
+    },
+    {
+      "route": "qwen_7b",
+      "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_7b/epoch_050.pt",
+      "epoch": 50,
+      "optimizer_steps": [
+        36300
+      ],
+      "learning_rate": 0.0001,
+      "val_loss": 0.756912879026672,
+      "expected_val_loss": 0.756912879026672,
+      "replay_case_id": 68,
+      "replay_execution_s": 0.8245600720468805,
+      "expected_execution_s": 0.8245600720468805
+    },
+    {
+      "route": "qwen_14b",
+      "model": "qwen_14b",
+      "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_14b/epoch_050.pt",
+      "epoch": 50,
+      "optimizer_steps": [
+        36300
+      ],
+      "learning_rate": 0.0001,
+      "val_loss": 0.5510639242371093,
+      "expected_val_loss": 0.5510639242371093,
+      "replay_case_id": 132,
+      "replay_execution_s": 1.3660807923119065,
+      "expected_execution_s": 1.3660807923119065
+    },
+    {
+      "route": "shared",
+      "model": "qwen_1.8b",
+      "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/epoch_050.pt",
+      "epoch": 50,
+      "optimizer_steps": [
+        108900
+      ],
+      "learning_rate": 0.0001,
+      "val_loss": 0.645092622164262,
+      "expected_val_loss": 0.645092622164262,
+      "replay_case_id": 4,
+      "replay_execution_s": 0.1736278275313487,
+      "expected_execution_s": 0.1736278275313487
+    },
+    {
+      "route": "shared",
+      "model": "qwen_7b",
+      "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/epoch_050.pt",
+      "epoch": 50,
+      "optimizer_steps": [
+        108900
+      ],
+      "learning_rate": 0.0001,
+      "val_loss": 0.5604798122522083,
+      "expected_val_loss": 0.5604798122522083,
+      "replay_case_id": 68,
+      "replay_execution_s": 0.8315039518230245,
+      "expected_execution_s": 0.8315039518230245
+    },
+    {
+      "route": "shared",
+      "model": "qwen_14b",
+      "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/epoch_050.pt",
+      "epoch": 50,
+      "optimizer_steps": [
+        108900
+      ],
+      "learning_rate": 0.0001,
+      "val_loss": 0.5632673517975582,
+      "expected_val_loss": 0.5632673517975582,
+      "replay_case_id": 132,
+      "replay_execution_s": 1.3745099151077749,
+      "expected_execution_s": 1.3745099151077749
+    }
+  ],
+  "gpu": "NVIDIA A800 80GB PCIe",
+  "test_executed": false
+}

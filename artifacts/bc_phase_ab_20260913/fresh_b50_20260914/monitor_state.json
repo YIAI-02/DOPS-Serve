@@ -1,0 +1,64 @@
+{
+  "experiment": "fresh_b50_20260914",
+  "last_reported_epochs": {
+    "qwen_1.8b": 100,
+    "qwen_7b": 100,
+    "qwen_14b": 100,
+    "shared": 100
+  },
+  "status": "completed_monitoring_cancelled",
+  "auto_reconnect": false,
+  "last_check_at": "2026-09-14T06:23:45.398523+00:00",
+  "connection_failure_notified": false,
+  "check_every_hours": 2,
+  "notify_on": "completion_failure_or_required_action",
+  "target_epochs": {
+    "qwen_1.8b": 100,
+    "qwen_7b": 100,
+    "qwen_14b": 100,
+    "shared": 100
+  },
+  "jobs": {
+    "qwen_1.8b": 14878513,
+    "qwen_7b": 14878514,
+    "qwen_14b": 14880554,
+    "shared": 14880555
+  },
+  "last_observed_complete_epochs": {
+    "qwen_1.8b": 100,
+    "qwen_7b": 100,
+    "qwen_14b": 100,
+    "shared": 100
+  },
+  "continuation_preflight_job": 14878508,
+  "last_observed_stages": {
+    "qwen_1.8b": {
+      "epoch": 100,
+      "stage": "epoch_complete"
+    },
+    "qwen_7b": {
+      "epoch": 100,
+      "stage": "epoch_complete"
+    },
+    "qwen_14b": {
+      "epoch": 100,
+      "stage": "epoch_complete"
+    },
+    "shared": {
+      "epoch": 100,
+      "stage": "epoch_complete"
+    }
+  },
+  "last_observed_job_states": {
+    "14878513": "COMPLETED 0:0",
+    "14878514": "COMPLETED 0:0",
+    "14880554": "COMPLETED 0:0",
+    "14880555": "COMPLETED 0:0"
+  },
+  "result_sync_pending": false,
+  "continuation_14b_shared_preflight_job": 14880550,
+  "first_two_e100_report": "continuation_to_e100/first_two_e100_report.md",
+  "last_report_artifact": "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/reports/final_e100_20260914/report.md",
+  "last_report_snapshot_at": "2026-09-14T19:53:11.420773+08:00",
+  "monitoring_enabled": false
+}

@@ -1,0 +1,23 @@
+{
+  "route": "shared",
+  "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/epoch_050.pt",
+  "start_epoch": 50,
+  "target_epoch": 100,
+  "additional_epochs": 50,
+  "network_restored": true,
+  "optimizer_restored": true,
+  "random_states_restored": true,
+  "optimizer_steps": [
+    108900
+  ],
+  "learning_rate": 0.0001,
+  "seed": 7,
+  "scheme": "mean learned-node conditional NLL; equal thirds for prefill, decode t=0/1/2, decode t>=4; mean plans within group, mean tasks; equal model task counts",
+  "train_tasks": 144,
+  "val_tasks": 24,
+  "train_plans": 34848,
+  "val_plans": 5808,
+  "host": "l12gpu07",
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "workers": 24
+}

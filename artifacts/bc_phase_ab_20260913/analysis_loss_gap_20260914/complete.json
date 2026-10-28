@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "val_tasks": 8,
+  "checkpoints": [
+    "E8",
+    "A18",
+    "B18"
+  ],
+  "replays": 13,
+  "training_performed": false
+}

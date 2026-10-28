@@ -1,0 +1,40 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes (test_static_bc.StaticBCContract.test_current_answer_does_not_leak_but_previous_answer_conditions_later_nodes) ... ok
+test_generate_matches_conditionals_and_fixed_rules (test_static_bc.StaticBCContract.test_generate_matches_conditionals_and_fixed_rules) ... ok
+test_gradient_update_reduces_fixed_teacher_nll (test_static_bc.StaticBCContract.test_gradient_update_reduces_fixed_teacher_nll) ... ok
+test_prefill_and_previous_decode_features_affect_predictions (test_static_bc.StaticBCContract.test_prefill_and_previous_decode_features_affect_predictions) ... ok
+test_split_and_refresh_and_equal_task_weight (test_static_bc.StaticBCContract.test_split_and_refresh_and_equal_task_weight) ... ok
+test_phase_balance_preserves_equal_tasks_at_every_decode_length (test_static_bc_ab.BCContinuationContract.test_phase_balance_preserves_equal_tasks_at_every_decode_length) ... ok
+test_resume_restores_optimizer_rng_and_exact_original_A_update (test_static_bc_ab.BCContinuationContract.test_resume_restores_optimizer_rng_and_exact_original_A_update) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.181s
+
+OK
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+{"parameters": {"SCHED_DECODE_AMORT_ALPHA": 1.0, "SCHED_DECODE_AMORT_ENABLE": true, "SCHED_DECODE_AMORT_REUSE_PROB": 1.0, "SCHED_DECODE_AMORT_RMIN": 1.0, "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5, "SCHED_JOINT_LK_ENABLE": true, "SCHED_JOINT_LK_GAMMA": 0.4, "SCHED_JOINT_LK_H": 2, "SCHED_JOINT_LK_PLAN_HINT_MAX": 3, "SCHED_WEIGHT_BIAS_ETA": 0.5}, "methods": ["Bifocal", "Naive", "PD", "AF", "PD+Linear", "PD+Attn", "PD+FFN", "weights_on_pim", "NeuPIMs"], "models": ["qwen_7b"], "c026_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026", "other_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908", "decode_plan_refresh_stride": 2, "pim_weight_load_overlap_ratio": 0.5, "weight_load_compute_overlap_ratio": 1.0, "epochs": 10, "seed": 7, "learning_rate": 0.0001, "batch_plans": 16, "max_grad_norm": 1.0, "hidden": 256, "depth": 4, "state_dim": 47, "node_dim": 35, "test_locked": true, "val_groups": [[1, 512], [8, 2048]], "test_groups": [[4, 128], [16, 1024]], "objective": "single whole-task throughput winner", "loss": "mean learned-node conditional NLL, then mean plans per task, then mean tasks", "decision_runtime": "CPU, one torch thread; JIT warmed before timing; includes features/tensors/compile", "counts": {"train": 48, "val": 8}, "source_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913", "resume_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/initial/epoch_008.pt", "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/training/qwen_7b/epoch_008.pt", "resume_epoch": 8, "branches": {"A": "mean plans per task", "B": "equal thirds: prefill, decode t=0/1/2, decode t>=4"}, "primary_metric": "sum output tokens / sum simulated execution seconds; all decision overhead excluded"}
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"complete": true, "source_epoch": 8, "all_eight_validation_times_reproduced": true, "original_nll_reproduced": true, "task_and_phase_weights_checked": true, "train_tasks": 48, "val_tasks": 8, "train_plans": 11616, "val_plans": 1936, "optimizer_steps": [5808], "gpu": "NVIDIA A800 80GB PCIe"}

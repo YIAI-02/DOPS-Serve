@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-09-13T23:28:38Z",
+  "jobs": {
+    "A": {
+      "job_id": "14875670",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:30:17",
+      "end": "2026-09-13T23:01:39+08:00"
+    },
+    "B": {
+      "job_id": "14875671",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:30:21",
+      "end": "2026-09-13T23:01:43+08:00"
+    }
+  },
+  "completed_additional_epochs": 10,
+  "final_epoch": 18,
+  "evidence": [
+    "sacct",
+    "training/A/complete.json",
+    "training/B/complete.json",
+    "training/A/training_progress.csv",
+    "training/B/training_progress.csv",
+    "logs/train_A_14875670.out",
+    "logs/train_B_14875671.out"
+  ]
+}

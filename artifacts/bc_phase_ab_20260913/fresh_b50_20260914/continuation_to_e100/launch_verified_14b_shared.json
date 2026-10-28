@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-09-14T06:23:45.398523+00:00",
+  "preflight_job": 14880550,
+  "jobs": {
+    "qwen_14b": 14880554,
+    "shared": 14880555
+  },
+  "checks": [
+    {
+      "route": "qwen_14b",
+      "source_epoch": 50,
+      "target_epoch": 100,
+      "optimizer_steps": 36300,
+      "history_rows_preserved": 50,
+      "models": [
+        "qwen_14b"
+      ],
+      "complete_epochs": 51,
+      "status_epoch": 52,
+      "stage": "validation",
+      "gpu": "NVIDIA A800 80GB PCIe"
+    },
+    {
+      "route": "shared",
+      "source_epoch": 50,
+      "target_epoch": 100,
+      "optimizer_steps": 108900,
+      "history_rows_preserved": 150,
+      "models": [
+        "qwen_1.8b",
+        "qwen_14b",
+        "qwen_7b"
+      ],
+      "complete_epochs": 50,
+      "status_epoch": 51,
+      "stage": "validation",
+      "gpu": "NVIDIA A100 80GB PCIe"
+    }
+  ]
+}

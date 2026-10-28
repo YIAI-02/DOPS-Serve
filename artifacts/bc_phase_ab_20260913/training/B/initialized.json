@@ -1,0 +1,16 @@
+{
+  "branch": "B",
+  "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/training/qwen_7b/epoch_008.pt",
+  "start_epoch": 8,
+  "additional_epochs": 10,
+  "scheme": "equal thirds: prefill, decode t=0/1/2, decode t>=4",
+  "network_restored": true,
+  "optimizer_restored": true,
+  "random_states_restored": true,
+  "optimizer_steps": [
+    5808
+  ],
+  "learning_rate": 0.0001,
+  "host": "l12gpu27",
+  "gpu": "NVIDIA A800 80GB PCIe"
+}

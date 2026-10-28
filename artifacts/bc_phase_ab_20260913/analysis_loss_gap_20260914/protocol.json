@@ -1,0 +1,79 @@
+{
+  "parameters": {
+    "SCHED_DECODE_AMORT_ALPHA": 1.0,
+    "SCHED_DECODE_AMORT_ENABLE": true,
+    "SCHED_DECODE_AMORT_REUSE_PROB": 1.0,
+    "SCHED_DECODE_AMORT_RMIN": 1.0,
+    "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5,
+    "SCHED_JOINT_LK_ENABLE": true,
+    "SCHED_JOINT_LK_GAMMA": 0.4,
+    "SCHED_JOINT_LK_H": 2,
+    "SCHED_JOINT_LK_PLAN_HINT_MAX": 3,
+    "SCHED_WEIGHT_BIAS_ETA": 0.5
+  },
+  "methods": [
+    "Bifocal",
+    "Naive",
+    "PD",
+    "AF",
+    "PD+Linear",
+    "PD+Attn",
+    "PD+FFN",
+    "weights_on_pim",
+    "NeuPIMs"
+  ],
+  "models": [
+    "qwen_7b"
+  ],
+  "c026_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026",
+  "other_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908",
+  "decode_plan_refresh_stride": 2,
+  "pim_weight_load_overlap_ratio": 0.5,
+  "weight_load_compute_overlap_ratio": 1.0,
+  "epochs": 10,
+  "seed": 7,
+  "learning_rate": 0.0001,
+  "batch_plans": 16,
+  "max_grad_norm": 1.0,
+  "hidden": 256,
+  "depth": 4,
+  "state_dim": 47,
+  "node_dim": 35,
+  "test_locked": true,
+  "val_groups": [
+    [
+      1,
+      512
+    ],
+    [
+      8,
+      2048
+    ]
+  ],
+  "test_groups": [
+    [
+      4,
+      128
+    ],
+    [
+      16,
+      1024
+    ]
+  ],
+  "objective": "single whole-task throughput winner",
+  "loss": "mean learned-node conditional NLL, then mean plans per task, then mean tasks",
+  "decision_runtime": "CPU, one torch thread; JIT warmed before timing; includes features/tensors/compile",
+  "counts": {
+    "train": 48,
+    "val": 8
+  },
+  "source_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913",
+  "resume_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/initial/epoch_008.pt",
+  "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/training/qwen_7b/epoch_008.pt",
+  "resume_epoch": 8,
+  "branches": {
+    "A": "mean plans per task",
+    "B": "equal thirds: prefill, decode t=0/1/2, decode t>=4"
+  },
+  "primary_metric": "sum output tokens / sum simulated execution seconds; all decision overhead excluded"
+}

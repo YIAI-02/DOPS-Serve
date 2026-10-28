@@ -1,0 +1,42 @@
+{
+  "snapshot_at": "2026-09-14T14:48:00.598196+08:00",
+  "available_epochs": {
+    "qwen_1.8b": 100,
+    "qwen_7b": 100,
+    "qwen_14b": 56,
+    "shared": 54
+  },
+  "epoch_0_available": false,
+  "epoch_0_reason": "No formal pre-training full validation; preflight E0 uses smoke data after updates and is excluded.",
+  "primary_loss": "Post-epoch full fixed train/validation phase-balanced conditional NLL: prefill/startup decode/steady decode each 1/3.",
+  "throughput": "Total output tokens / total fast simulated execution seconds; all decision overhead excluded.",
+  "no_smoothing": true,
+  "e50_resume_boundary": true,
+  "sources": {
+    "qwen_1.8b": "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_1.8b/training_progress.csv",
+    "qwen_7b": "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_7b/training_progress.csv",
+    "qwen_14b": "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_14b/training_progress.csv",
+    "shared": "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/training_progress.csv"
+  },
+  "validated_latest_case_totals": true,
+  "rows": 418,
+  "job_states": {
+    "14878513": "COMPLETED 0:0",
+    "14878514": "COMPLETED 0:0",
+    "14880554": "RUNNING",
+    "14880555": "RUNNING"
+  },
+  "source_modified_at": {
+    "qwen_7b": "2026-09-14T14:12:18+08:00",
+    "qwen_14b": "2026-09-14T14:42:28+08:00",
+    "qwen_1.8b": "2026-09-14T14:12:13+08:00",
+    "shared": "2026-09-14T14:41:24+08:00"
+  },
+  "verification": {
+    "series_contiguous_from_e1": true,
+    "latest_throughput_matches_eight_case_totals": true,
+    "svg_parse_passed": true,
+    "png_visual_review_passed": true,
+    "temporary_plot_environment_removed_after_export": true
+  }
+}

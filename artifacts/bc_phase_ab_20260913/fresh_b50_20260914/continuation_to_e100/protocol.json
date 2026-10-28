@@ -1,0 +1,24 @@
+{
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "routes": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b",
+    "shared"
+  ],
+  "source_epoch": 50,
+  "target_epoch": 100,
+  "additional_epochs": 50,
+  "loss": "mean learned-node conditional NLL; equal thirds for prefill, decode t=0/1/2, decode t>=4; mean plans within group, mean tasks; equal model task counts",
+  "learning_rate": 0.0001,
+  "batch_plans": 16,
+  "max_grad_norm": 1.0,
+  "same_teacher_and_validation_data": true,
+  "restore_network_optimizer_and_rng": true,
+  "test_locked": true,
+  "primary_metric": "sum output tokens / sum simulated execution seconds; all decision overhead excluded"
+}

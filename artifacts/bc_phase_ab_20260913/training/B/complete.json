@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "source_epoch": 8,
+  "additional_epochs": 10,
+  "final_epoch": 18,
+  "awaiting_user_before_continuation": true
+}
