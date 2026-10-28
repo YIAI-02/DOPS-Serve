@@ -1,0 +1,113 @@
+{
+  "stage": "ppo_update",
+  "route": "qwen_1.8b",
+  "seed": 15,
+  "pilot": false,
+  "epoch": 2,
+  "traces": [
+    161,
+    467,
+    756,
+    130
+  ],
+  "update": 2239,
+  "plans_per_environment": [
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "plans_per_load": [
+    64,
+    64,
+    64
+  ],
+  "environment_done": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "fragment_diagnostics": [
+    {
+      "raw_advantage_mean": -0.0012782769044861197,
+      "raw_advantage_std": 0.005351534113287926
+    },
+    {
+      "raw_advantage_mean": 0.0013587088324129581,
+      "raw_advantage_std": 0.006142829544842243
+    },
+    {
+      "raw_advantage_mean": 0.00015315388736780733,
+      "raw_advantage_std": 0.004964930936694145
+    },
+    {
+      "raw_advantage_mean": -0.010188792832195759,
+      "raw_advantage_std": 0.008135990239679813
+    },
+    {
+      "raw_advantage_mean": -0.014818397350609303,
+      "raw_advantage_std": 0.008435143157839775
+    },
+    {
+      "raw_advantage_mean": -0.013255294412374496,
+      "raw_advantage_std": 0.007891686633229256
+    },
+    {
+      "raw_advantage_mean": -0.0023868558928370476,
+      "raw_advantage_std": 0.009281786158680916
+    },
+    {
+      "raw_advantage_mean": -0.029429974034428596,
+      "raw_advantage_std": 0.012909535318613052
+    },
+    {
+      "raw_advantage_mean": -0.019353624433279037,
+      "raw_advantage_std": 0.008576985448598862
+    },
+    {
+      "raw_advantage_mean": -0.007372337393462658,
+      "raw_advantage_std": 0.0025548767298460007
+    },
+    {
+      "raw_advantage_mean": -0.0008880965178832412,
+      "raw_advantage_std": 0.002600408624857664
+    },
+    {
+      "raw_advantage_mean": -0.0003064554766751826,
+      "raw_advantage_std": 0.0027077386621385813
+    }
+  ],
+  "reward": -0.12076234101558014,
+  "sample_wall_s": 9.499422415159643,
+  "update_wall_s": 74.35073770489544,
+  "gpu_peak_allocated_bytes": 129189376,
+  "simulator_s": 58.86957903811708,
+  "initial_kl": 1.1449103122993866e-09,
+  "mean_kl": 0.0003125497298234533,
+  "epochs": 4,
+  "optimizer_steps": 64,
+  "kl_stopped": false,
+  "actor_loss": -0.000759666058002037,
+  "value_loss": 0.00014354579504782805,
+  "entropy": 0.1251498298564305,
+  "clip_fraction": 0.012987013008569193,
+  "actor_grad_norm": 0.14515019953250885,
+  "critic_grad_norm": 0.1180429916275898
+}

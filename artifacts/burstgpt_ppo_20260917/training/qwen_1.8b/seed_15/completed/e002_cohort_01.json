@@ -1,0 +1,397 @@
+{
+  "epoch": 2,
+  "traces": [
+    161,
+    467,
+    756,
+    130
+  ],
+  "groups": [
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 158585,
+      "simulated_s": 127.4145237634527,
+      "throughput": 1244.6383294138102,
+      "plans": 7040,
+      "phase_steps": {
+        "prefill": 943,
+        "decode": 9984
+      },
+      "decision_s": 1248.437084034551,
+      "simulator_s": 2534.3626856277697,
+      "peak_runtime_bytes": {
+        "PIM0": 4306143744,
+        "PIM1": 4109928960,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2841259656
+      },
+      "peak_activation_bytes": {
+        "PIM0": 225146880,
+        "PIM1": 164021760,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 250877952
+      },
+      "ttft_mean_s": 58.12932117087053,
+      "ttft_p95_s": 112.32073412066384,
+      "e2e_mean_s": 60.08177129008171,
+      "e2e_p95_s": 114.15960734587294,
+      "queue_mean_s": 58.05440264667431,
+      "tbt_p95_s": 0.02447134102882842
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 158585,
+      "simulated_s": 128.99622721376406,
+      "throughput": 1229.3770401300449,
+      "plans": 7037,
+      "phase_steps": {
+        "prefill": 945,
+        "decode": 9984
+      },
+      "decision_s": 1227.422513616737,
+      "simulator_s": 2531.75801094668,
+      "peak_runtime_bytes": {
+        "PIM0": 4328986760,
+        "PIM1": 4095911424,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2841259656
+      },
+      "peak_activation_bytes": {
+        "PIM0": 375457280,
+        "PIM1": 269765304,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 441492480
+      },
+      "ttft_mean_s": 60.7935267209721,
+      "ttft_p95_s": 117.72454048288196,
+      "e2e_mean_s": 62.76773065162968,
+      "e2e_p95_s": 119.51132986434745,
+      "queue_mean_s": 60.71345116637605,
+      "tbt_p95_s": 0.024664725133401788
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 158585,
+      "simulated_s": 127.741754973573,
+      "throughput": 1241.4499865984135,
+      "plans": 7037,
+      "phase_steps": {
+        "prefill": 945,
+        "decode": 9984
+      },
+      "decision_s": 1231.1762495632283,
+      "simulator_s": 2539.663322985638,
+      "peak_runtime_bytes": {
+        "PIM0": 4362605568,
+        "PIM1": 4088437248,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2833454112
+      },
+      "peak_activation_bytes": {
+        "PIM0": 375457280,
+        "PIM1": 243386880,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 441492480
+      },
+      "ttft_mean_s": 61.189404336810384,
+      "ttft_p95_s": 117.6615530785293,
+      "e2e_mean_s": 63.1422002330484,
+      "e2e_p95_s": 119.43380704854124,
+      "queue_mean_s": 61.10803541584808,
+      "tbt_p95_s": 0.02444157852836426
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 282376,
+      "simulated_s": 505.61633856467336,
+      "throughput": 558.4787880897984,
+      "plans": 10837,
+      "phase_steps": {
+        "prefill": 947,
+        "decode": 18212
+      },
+      "decision_s": 1923.9076469009742,
+      "simulator_s": 4572.661660961807,
+      "peak_runtime_bytes": {
+        "PIM0": 4796976024,
+        "PIM1": 4592915480,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 3158529024
+      },
+      "peak_activation_bytes": {
+        "PIM0": 765632000,
+        "PIM1": 612505600,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1023759360
+      },
+      "ttft_mean_s": 207.60067517965825,
+      "ttft_p95_s": 437.8392135493732,
+      "e2e_mean_s": 215.38900734573366,
+      "e2e_p95_s": 452.7222550085043,
+      "queue_mean_s": 207.36559444807975,
+      "tbt_p95_s": 0.04373190683348582
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 282376,
+      "simulated_s": 505.8591008434341,
+      "throughput": 558.2107735715064,
+      "plans": 10846,
+      "phase_steps": {
+        "prefill": 950,
+        "decode": 18212
+      },
+      "decision_s": 1890.006185181439,
+      "simulator_s": 4574.7219771118835,
+      "peak_runtime_bytes": {
+        "PIM0": 4866445824,
+        "PIM1": 4642376192,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 3084476928
+      },
+      "peak_activation_bytes": {
+        "PIM0": 505670144,
+        "PIM1": 493624320,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 825057792
+      },
+      "ttft_mean_s": 213.99941000623164,
+      "ttft_p95_s": 450.40112059958625,
+      "e2e_mean_s": 221.79392785336256,
+      "e2e_p95_s": 464.49604375831785,
+      "queue_mean_s": 213.7669461451227,
+      "tbt_p95_s": 0.04698485941175434
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 282376,
+      "simulated_s": 506.2496031966061,
+      "throughput": 557.7801902796496,
+      "plans": 10839,
+      "phase_steps": {
+        "prefill": 949,
+        "decode": 18211
+      },
+      "decision_s": 1881.3824200853705,
+      "simulator_s": 4586.677660367452,
+      "peak_runtime_bytes": {
+        "PIM0": 4849273752,
+        "PIM1": 4679228704,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 3268187868
+      },
+      "peak_activation_bytes": {
+        "PIM0": 1034297600,
+        "PIM1": 915568104,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1383003648
+      },
+      "ttft_mean_s": 216.7894598262884,
+      "ttft_p95_s": 455.47117211478866,
+      "e2e_mean_s": 224.58639594363856,
+      "e2e_p95_s": 469.3669684358122,
+      "queue_mean_s": 216.53693438810032,
+      "tbt_p95_s": 0.047809239501020784
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 95709,
+      "simulated_s": 109.46920827423428,
+      "throughput": 874.3006504645288,
+      "plans": 4807,
+      "phase_steps": {
+        "prefill": 888,
+        "decode": 6039
+      },
+      "decision_s": 856.6195930340327,
+      "simulator_s": 1598.9491890133359,
+      "peak_runtime_bytes": {
+        "PIM0": 4215393792,
+        "PIM1": 3952322048,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2752419840
+      },
+      "peak_activation_bytes": {
+        "PIM0": 225223424,
+        "PIM1": 198060800,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 264835584
+      },
+      "ttft_mean_s": 46.234371478340904,
+      "ttft_p95_s": 85.52356474294864,
+      "e2e_mean_s": 47.88036506155533,
+      "e2e_p95_s": 86.85008685763005,
+      "queue_mean_s": 46.14118401568296,
+      "tbt_p95_s": 0.09070138847377507
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 95709,
+      "simulated_s": 109.21366469419165,
+      "throughput": 876.3463827351096,
+      "plans": 4807,
+      "phase_steps": {
+        "prefill": 888,
+        "decode": 6039
+      },
+      "decision_s": 837.2949071065523,
+      "simulator_s": 1609.5242141331546,
+      "peak_runtime_bytes": {
+        "PIM0": 4206460416,
+        "PIM1": 3925538816,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2740319232
+      },
+      "peak_activation_bytes": {
+        "PIM0": 225223424,
+        "PIM1": 198060800,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 264835584
+      },
+      "ttft_mean_s": 51.154787054857415,
+      "ttft_p95_s": 94.79812141577605,
+      "e2e_mean_s": 52.79564544068755,
+      "e2e_p95_s": 96.04178168235318,
+      "queue_mean_s": 51.06118933851191,
+      "tbt_p95_s": 0.09031374442128026
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 95709,
+      "simulated_s": 109.15250828274131,
+      "throughput": 876.837385652026,
+      "plans": 4807,
+      "phase_steps": {
+        "prefill": 888,
+        "decode": 6039
+      },
+      "decision_s": 854.3766465876251,
+      "simulator_s": 1605.0395705634728,
+      "peak_runtime_bytes": {
+        "PIM0": 4249253632,
+        "PIM1": 3949828096,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2740319232
+      },
+      "peak_activation_bytes": {
+        "PIM0": 230091264,
+        "PIM1": 137661440,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 264835584
+      },
+      "ttft_mean_s": 52.813323485889676,
+      "ttft_p95_s": 97.89789415642534,
+      "e2e_mean_s": 54.45582818507527,
+      "e2e_p95_s": 99.12395118300559,
+      "queue_mean_s": 52.721426754417706,
+      "tbt_p95_s": 0.09008720281660132
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 14053,
+      "simulated_s": 43.64416725456633,
+      "throughput": 321.9903341959099,
+      "plans": 1479,
+      "phase_steps": {
+        "prefill": 546,
+        "decode": 1153
+      },
+      "decision_s": 262.0870874989778,
+      "simulator_s": 303.41769434465095,
+      "peak_runtime_bytes": {
+        "PIM0": 4405139456,
+        "PIM1": 4226226176,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2830584024
+      },
+      "peak_activation_bytes": {
+        "PIM0": 310688000,
+        "PIM1": 210505152,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 415434240
+      },
+      "ttft_mean_s": 20.508090232349694,
+      "ttft_p95_s": 36.01406735050323,
+      "e2e_mean_s": 21.092996165012895,
+      "e2e_p95_s": 36.309912500086874,
+      "queue_mean_s": 20.424153516609298,
+      "tbt_p95_s": 0.07387026197703173
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 14053,
+      "simulated_s": 43.977862871916265,
+      "throughput": 319.5471330866802,
+      "plans": 1480,
+      "phase_steps": {
+        "prefill": 548,
+        "decode": 1153
+      },
+      "decision_s": 260.60592022398487,
+      "simulator_s": 305.92805416788906,
+      "peak_runtime_bytes": {
+        "PIM0": 4393141248,
+        "PIM1": 4183095568,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2830584024
+      },
+      "peak_activation_bytes": {
+        "PIM0": 357575936,
+        "PIM1": 190467584,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 420466176
+      },
+      "ttft_mean_s": 21.956054635834057,
+      "ttft_p95_s": 38.2573899369943,
+      "e2e_mean_s": 22.545530859812825,
+      "e2e_p95_s": 38.61720872150056,
+      "queue_mean_s": 21.870612784961033,
+      "tbt_p95_s": 0.07801871016009798
+    },
+    {
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 14053,
+      "simulated_s": 43.58812908247104,
+      "throughput": 322.4042943759064,
+      "plans": 1480,
+      "phase_steps": {
+        "prefill": 548,
+        "decode": 1153
+      },
+      "decision_s": 263.10122798522934,
+      "simulator_s": 304.7190309376456,
+      "peak_runtime_bytes": {
+        "PIM0": 4370727936,
+        "PIM1": 4235461632,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2830584024
+      },
+      "peak_activation_bytes": {
+        "PIM0": 314451200,
+        "PIM1": 275277936,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 420466176
+      },
+      "ttft_mean_s": 22.12340611046522,
+      "ttft_p95_s": 38.55768727261391,
+      "e2e_mean_s": 22.709099348813623,
+      "e2e_p95_s": 38.926852044123365,
+      "queue_mean_s": 22.04024113750154,
+      "tbt_p95_s": 0.0813951943589526
+    }
+  ],
+  "wall_s": 27860.189980811905,
+  "updates": 2901
+}
