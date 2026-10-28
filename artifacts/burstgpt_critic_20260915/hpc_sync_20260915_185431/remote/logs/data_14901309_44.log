@@ -1,0 +1,28 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 400, "wall_s": 354.6937382090837}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 800, "wall_s": 710.2216791501269}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 1200, "wall_s": 1040.2835711468942}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 1600, "wall_s": 1379.6550491321832}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 2000, "wall_s": 1733.165622626897}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 2400, "wall_s": 2086.429464471992}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 2800, "wall_s": 2441.7617188720033}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 3200, "wall_s": 2829.212545129005}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 3600, "wall_s": 3197.727346782107}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 4000, "wall_s": 3573.6844598539174}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 4400, "wall_s": 3947.9576167138293}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 4800, "wall_s": 4328.940671661869}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 5200, "wall_s": 4680.3946908121}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 5600, "wall_s": 5031.763160420116}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 6000, "wall_s": 5397.210746805184}
+{"stage": "critic_collect", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 6400, "wall_s": 5725.118829465006}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"stage": "critic_trace_complete", "task": 44, "route": "qwen_14b", "model": "qwen_14b", "load": 1.5, "split": "train", "trace": 858, "plans": 6558, "wall_s": 5832.653621070087, "metrics": {"requests": 1000, "completed": 1000, "output_tokens": 142986, "simulated_s": 1012.0239759370986, "throughput": 141.28716650966692, "plans": 6558, "phase_steps": {"prefill": 929, "decode": 9148}, "decision_s": 1159.0818807203323, "simulator_s": 4657.153992220759, "peak_runtime_bytes": {"PIM0": 16320854480, "PIM1": 16320870400, "CPU0": 0, "Ascend_910B_NPU0": 16320778240}, "peak_activation_bytes": {"PIM0": 178509824, "PIM1": 119565480, "CPU0": 0, "Ascend_910B_NPU0": 557351936}, "ttft_mean_s": 460.9989142084261, "ttft_p95_s": 948.1808743710385, "e2e_mean_s": 476.31774410863795, "e2e_p95_s": 953.930189588343, "queue_mean_s": 460.1785119660171, "tbt_p95_s": 0.7593961652713688}}

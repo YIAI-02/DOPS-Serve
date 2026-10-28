@@ -1,0 +1,34 @@
+{
+  "trace": 0,
+  "wall_s": 10147.994443979114,
+  "requests": 1000,
+  "completed": 1000,
+  "output_tokens": 295937,
+  "simulated_s": 93.10904820471215,
+  "throughput": 3178.3914206634854,
+  "plans": 11593,
+  "phase_steps": {
+    "prefill": 959,
+    "decode": 18934
+  },
+  "decision_s": 3991.228820875287,
+  "simulator_s": 6155.081817003898,
+  "peak_runtime_bytes": {
+    "PIM0": 3299107984,
+    "PIM1": 3299028992,
+    "CPU0": 0,
+    "Ascend_910B_NPU0": 3157701120
+  },
+  "peak_activation_bytes": {
+    "PIM0": 796800,
+    "PIM1": 716800,
+    "CPU0": 0,
+    "Ascend_910B_NPU0": 564834816
+  },
+  "ttft_mean_s": 44.77436621903215,
+  "ttft_p95_s": 86.00184632144264,
+  "e2e_mean_s": 46.23756226083293,
+  "e2e_p95_s": 88.65431392992487,
+  "queue_mean_s": 44.75943795878506,
+  "tbt_p95_s": 0.004614676059830458
+}

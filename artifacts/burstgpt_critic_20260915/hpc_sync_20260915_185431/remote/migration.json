@@ -1,0 +1,11 @@
+{
+  "source": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_ppo_20260914",
+  "destination": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915",
+  "data_counts": {
+    "train": 984,
+    "val": 211,
+    "test": 211
+  },
+  "initial_byte_equal": true,
+  "calibration_reused": true
+}

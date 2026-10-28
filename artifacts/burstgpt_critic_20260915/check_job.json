@@ -1,0 +1,7 @@
+{
+  "job_id": "14901294",
+  "previous_job": "14901244",
+  "previous_failure": "Slurm spool path resolved as experiment root; launcher fixed",
+  "stage": "gpu_critic_check",
+  "partition": "GPU80G"
+}

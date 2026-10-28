@@ -1,0 +1,28 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 400, "wall_s": 328.1104128002189}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 800, "wall_s": 671.1515902783722}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 1200, "wall_s": 982.230777782388}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 1600, "wall_s": 1302.0486885001883}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 2000, "wall_s": 1629.875227991026}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 2400, "wall_s": 1966.373029438313}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 2800, "wall_s": 2299.2981109060347}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 3200, "wall_s": 2664.0535221672617}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 3600, "wall_s": 3013.775165720377}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 4000, "wall_s": 3366.4497004579753}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 4400, "wall_s": 3720.6086712023243}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 4800, "wall_s": 4073.224999926053}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 5200, "wall_s": 4405.762468633242}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 5600, "wall_s": 4728.320896922145}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 6000, "wall_s": 5058.4973472193815}
+{"stage": "critic_collect", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 6400, "wall_s": 5366.733046972193}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"stage": "critic_trace_complete", "task": 51, "route": "shared", "model": "qwen_14b", "load": 0.5, "split": "train", "trace": 858, "plans": 6594, "wall_s": 5493.115855581127, "metrics": {"requests": 1000, "completed": 1000, "output_tokens": 142986, "simulated_s": 428.865313570372, "throughput": 333.4053733784595, "plans": 6594, "phase_steps": {"prefill": 917, "decode": 9223}, "decision_s": 1048.7446143170819, "simulator_s": 4428.681917149574, "peak_runtime_bytes": {"PIM0": 16319726680, "PIM1": 16320512000, "CPU0": 0, "Ascend_910B_NPU0": 16320757760}, "peak_activation_bytes": {"PIM0": 110860288, "PIM1": 109380880, "CPU0": 0, "Ascend_910B_NPU0": 531289088}, "ttft_mean_s": 151.864599603738, "ttft_p95_s": 302.4770364114757, "e2e_mean_s": 158.33261979581496, "e2e_p95_s": 303.74756085949855, "queue_mean_s": 151.57393741521093, "tbt_p95_s": 0.25727034355783474}}

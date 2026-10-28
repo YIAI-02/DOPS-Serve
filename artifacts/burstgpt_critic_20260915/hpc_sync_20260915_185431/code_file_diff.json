@@ -1,0 +1,39 @@
+{
+  "local_only": [
+    "src/dops_serve/io.py"
+  ],
+  "remote_only": [
+    "bifocal_c026_fast.json",
+    "slurm/run.sh",
+    "slurm/submit_continuation.sh",
+    "slurm/submit_training.sh",
+    "slurm/teacher_array.txt",
+    "src/dops_serve/cli.py",
+    "src/dops_serve/dops_fixed_replay.py",
+    "src/dops_serve/inventory.py",
+    "src/dops_serve/placement_baselines.py",
+    "src/dops_serve/placement_comparison.py",
+    "src/dops_serve/placement_evaluation.py",
+    "src/dops_serve/placement_feature_screen.py",
+    "src/dops_serve/placement_restart.py",
+    "src/dops_serve/serving_evaluation.py",
+    "src/dops_serve/static_bc.py",
+    "src/dops_serve/static_bc_ab.py",
+    "src/dops_serve/summary.py",
+    "tests/test_static_bc.py",
+    "tests/test_static_bc_ab.py"
+  ],
+  "different": [
+    "README.md",
+    "pyproject.toml",
+    "src/dops_serve/burstgpt_ppo.py",
+    "src/dops_serve/burstgpt_preflight.py",
+    "src/dops_serve/placement_compiler.py",
+    "src/dops_serve/placement_dataset.py",
+    "src/dops_serve/placement_evaluator.py",
+    "src/dops_serve/placement_policy.py",
+    "src/dops_serve/placement_training.py",
+    "src/dops_serve/replay.py",
+    "src/dops_serve/workloads.py"
+  ]
+}

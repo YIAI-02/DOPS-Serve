@@ -1,0 +1,19 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 400, "wall_s": 240.26791265420616}
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 800, "wall_s": 478.08389024296775}
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 1200, "wall_s": 717.2424827241339}
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 1600, "wall_s": 989.3378846230917}
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 2000, "wall_s": 1274.3479204582982}
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 2400, "wall_s": 1590.554013016168}
+{"stage": "critic_collect", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 2800, "wall_s": 1863.165636321064}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"stage": "critic_trace_complete", "task": 79, "route": "qwen_14b", "model": "qwen_14b", "load": 1.0, "split": "val", "trace": 5, "plans": 2916, "wall_s": 1927.3781141913496, "metrics": {"requests": 1000, "completed": 1000, "output_tokens": 36661, "simulated_s": 1113.6926315226751, "throughput": 32.918418387913675, "plans": 2916, "phase_steps": {"prefill": 755, "decode": 3436}, "decision_s": 466.0352027709596, "simulator_s": 1455.275595347397, "peak_runtime_bytes": {"PIM0": 16320872448, "PIM1": 16320856320, "CPU0": 0, "Ascend_910B_NPU0": 16320798720}, "peak_activation_bytes": {"PIM0": 375470592, "PIM1": 359493120, "CPU0": 0, "Ascend_910B_NPU0": 472854528}, "ttft_mean_s": 398.90579028605674, "ttft_p95_s": 704.4977526150399, "e2e_mean_s": 414.557217733389, "e2e_p95_s": 724.1343103689767, "queue_mean_s": 397.0686898680883, "tbt_p95_s": 1.7432228103178318}}

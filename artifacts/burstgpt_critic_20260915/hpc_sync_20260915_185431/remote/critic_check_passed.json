@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "route": "qwen_1.8b",
+      "completed_epochs": 2,
+      "frozen_actor": true,
+      "resume_without_extra_updates": true
+    },
+    {
+      "route": "qwen_7b",
+      "completed_epochs": 2,
+      "frozen_actor": true,
+      "resume_without_extra_updates": true
+    },
+    {
+      "route": "qwen_14b",
+      "completed_epochs": 2,
+      "frozen_actor": true,
+      "resume_without_extra_updates": true
+    },
+    {
+      "route": "shared",
+      "completed_epochs": 2,
+      "frozen_actor": true,
+      "resume_without_extra_updates": true
+    }
+  ],
+  "device": "cuda",
+  "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+  "validation_reuses_training_fixture": true,
+  "purpose": "collection, full MC, critic fitting and checkpoint wiring only"
+}

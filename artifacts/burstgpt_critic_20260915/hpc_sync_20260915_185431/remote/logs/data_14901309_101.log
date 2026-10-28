@@ -1,0 +1,27 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 400, "wall_s": 229.02821161411703}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 800, "wall_s": 447.9716561511159}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 1200, "wall_s": 680.9896961976774}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 1600, "wall_s": 905.4259499539621}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 2000, "wall_s": 1145.083697203081}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 2400, "wall_s": 1365.9131576446816}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 2800, "wall_s": 1595.7516635777429}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 3200, "wall_s": 1823.4557405877858}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 3600, "wall_s": 2053.3796596578322}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 4000, "wall_s": 2286.2765944460407}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 4400, "wall_s": 2521.9362714807503}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 4800, "wall_s": 2769.2308860206977}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 5200, "wall_s": 3003.442231001798}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 5600, "wall_s": 3234.70787103381}
+{"stage": "critic_collect", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 6000, "wall_s": 3467.9140472118743}
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"stage": "critic_trace_complete", "task": 101, "route": "shared", "model": "qwen_1.8b", "load": 1.5, "split": "val", "trace": 158, "plans": 6083, "wall_s": 3501.7108751810156, "metrics": {"requests": 1000, "completed": 1000, "output_tokens": 128991, "simulated_s": 64.82988083314676, "throughput": 1989.6843607037515, "plans": 6083, "phase_steps": {"prefill": 924, "decode": 8148}, "decision_s": 686.1150664524175, "simulator_s": 2807.8886613901705, "peak_runtime_bytes": {"PIM0": 2889841408, "PIM1": 3155952128, "CPU0": 0, "Ascend_910B_NPU0": 2737503744}, "peak_activation_bytes": {"PIM0": 52550400, "PIM1": 63221760, "CPU0": 0, "Ascend_910B_NPU0": 119688192}, "ttft_mean_s": 29.62267240819941, "ttft_p95_s": 58.76552236543837, "e2e_mean_s": 30.606005975146687, "e2e_p95_s": 59.69165303948748, "queue_mean_s": 29.57385332228425, "tbt_p95_s": 0.04700728727503356}}

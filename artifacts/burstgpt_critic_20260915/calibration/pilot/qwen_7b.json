@@ -1,0 +1,82 @@
+{
+  "model": "qwen_7b",
+  "trace_indices": [
+    0,
+    983
+  ],
+  "source_split": "train",
+  "reference_output_tokens_per_s": 765.2384616054367,
+  "reward_scale_s": 193.3678290157557,
+  "original_arrival_output_tokens_per_s": 41.085354107411725,
+  "rows": [
+    {
+      "trace": 0,
+      "wall_s": 10583.654835455585,
+      "requests": 1000,
+      "completed": 1000,
+      "output_tokens": 295937,
+      "simulated_s": 386.07079966825495,
+      "throughput": 766.5355687461844,
+      "plans": 11593,
+      "phase_steps": {
+        "prefill": 959,
+        "decode": 18934
+      },
+      "decision_s": 4195.299499516375,
+      "simulator_s": 6385.405212489888,
+      "peak_runtime_bytes": {
+        "PIM0": 10503378256,
+        "PIM1": 10503148880,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 14121698304
+      },
+      "peak_activation_bytes": {
+        "PIM0": 1859200,
+        "PIM1": 1629824,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1206912000
+      },
+      "ttft_mean_s": 185.85731707207347,
+      "ttft_p95_s": 356.6604762596733,
+      "e2e_mean_s": 191.92946869988216,
+      "e2e_p95_s": 367.7955878968674,
+      "queue_mean_s": 185.79864265014626,
+      "tbt_p95_s": 0.018912008674533354
+    },
+    {
+      "trace": 983,
+      "wall_s": 0.8738982318900526,
+      "requests": 5,
+      "completed": 5,
+      "output_tokens": 8,
+      "simulated_s": 0.6648583632564379,
+      "throughput": 12.032637990468318,
+      "plans": 2,
+      "phase_steps": {
+        "prefill": 1,
+        "decode": 1
+      },
+      "decision_s": 0.4650093442760408,
+      "simulator_s": 0.4086398291401565,
+      "peak_runtime_bytes": {
+        "PIM0": 7190320640,
+        "PIM1": 7190391296,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 13234405376
+      },
+      "peak_activation_bytes": {
+        "PIM0": 178176,
+        "PIM1": 284160,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 261120000
+      },
+      "ttft_mean_s": 0.4464275599593138,
+      "ttft_p95_s": 0.4464275599593138,
+      "e2e_mean_s": 0.5774860419375882,
+      "e2e_p95_s": 0.6648583632564379,
+      "queue_mean_s": 0.0,
+      "tbt_p95_s": 0.21843080329712405
+    }
+  ],
+  "label": "pilot"
+}

@@ -1,0 +1,1954 @@
+{
+  "task": 103,
+  "route": "shared",
+  "model": "qwen_7b",
+  "load": 1.0,
+  "split": "val",
+  "trace": 158,
+  "worker_seed": 104943,
+  "plans": 6083,
+  "chunks": [
+    {
+      "file": "chunk_000000.pt",
+      "offset": 0,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000001.pt",
+      "offset": 16,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000002.pt",
+      "offset": 32,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000003.pt",
+      "offset": 48,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000004.pt",
+      "offset": 64,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000005.pt",
+      "offset": 80,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000006.pt",
+      "offset": 96,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000007.pt",
+      "offset": 112,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000008.pt",
+      "offset": 128,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000009.pt",
+      "offset": 144,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000010.pt",
+      "offset": 160,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000011.pt",
+      "offset": 176,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000012.pt",
+      "offset": 192,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000013.pt",
+      "offset": 208,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000014.pt",
+      "offset": 224,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000015.pt",
+      "offset": 240,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000016.pt",
+      "offset": 256,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000017.pt",
+      "offset": 272,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000018.pt",
+      "offset": 288,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000019.pt",
+      "offset": 304,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000020.pt",
+      "offset": 320,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000021.pt",
+      "offset": 336,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000022.pt",
+      "offset": 352,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000023.pt",
+      "offset": 368,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000024.pt",
+      "offset": 384,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000025.pt",
+      "offset": 400,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000026.pt",
+      "offset": 416,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000027.pt",
+      "offset": 432,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000028.pt",
+      "offset": 448,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000029.pt",
+      "offset": 464,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000030.pt",
+      "offset": 480,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000031.pt",
+      "offset": 496,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000032.pt",
+      "offset": 512,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000033.pt",
+      "offset": 528,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000034.pt",
+      "offset": 544,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000035.pt",
+      "offset": 560,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000036.pt",
+      "offset": 576,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000037.pt",
+      "offset": 592,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000038.pt",
+      "offset": 608,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000039.pt",
+      "offset": 624,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000040.pt",
+      "offset": 640,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000041.pt",
+      "offset": 656,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000042.pt",
+      "offset": 672,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000043.pt",
+      "offset": 688,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000044.pt",
+      "offset": 704,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000045.pt",
+      "offset": 720,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000046.pt",
+      "offset": 736,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000047.pt",
+      "offset": 752,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000048.pt",
+      "offset": 768,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000049.pt",
+      "offset": 784,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000050.pt",
+      "offset": 800,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000051.pt",
+      "offset": 816,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000052.pt",
+      "offset": 832,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000053.pt",
+      "offset": 848,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000054.pt",
+      "offset": 864,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000055.pt",
+      "offset": 880,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000056.pt",
+      "offset": 896,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000057.pt",
+      "offset": 912,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000058.pt",
+      "offset": 928,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000059.pt",
+      "offset": 944,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000060.pt",
+      "offset": 960,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000061.pt",
+      "offset": 976,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000062.pt",
+      "offset": 992,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000063.pt",
+      "offset": 1008,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000064.pt",
+      "offset": 1024,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000065.pt",
+      "offset": 1040,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000066.pt",
+      "offset": 1056,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000067.pt",
+      "offset": 1072,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000068.pt",
+      "offset": 1088,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000069.pt",
+      "offset": 1104,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000070.pt",
+      "offset": 1120,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000071.pt",
+      "offset": 1136,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000072.pt",
+      "offset": 1152,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000073.pt",
+      "offset": 1168,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000074.pt",
+      "offset": 1184,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000075.pt",
+      "offset": 1200,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000076.pt",
+      "offset": 1216,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000077.pt",
+      "offset": 1232,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000078.pt",
+      "offset": 1248,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000079.pt",
+      "offset": 1264,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000080.pt",
+      "offset": 1280,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000081.pt",
+      "offset": 1296,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000082.pt",
+      "offset": 1312,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000083.pt",
+      "offset": 1328,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000084.pt",
+      "offset": 1344,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000085.pt",
+      "offset": 1360,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000086.pt",
+      "offset": 1376,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000087.pt",
+      "offset": 1392,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000088.pt",
+      "offset": 1408,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000089.pt",
+      "offset": 1424,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000090.pt",
+      "offset": 1440,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000091.pt",
+      "offset": 1456,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000092.pt",
+      "offset": 1472,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000093.pt",
+      "offset": 1488,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000094.pt",
+      "offset": 1504,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000095.pt",
+      "offset": 1520,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000096.pt",
+      "offset": 1536,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000097.pt",
+      "offset": 1552,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000098.pt",
+      "offset": 1568,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000099.pt",
+      "offset": 1584,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000100.pt",
+      "offset": 1600,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000101.pt",
+      "offset": 1616,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000102.pt",
+      "offset": 1632,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000103.pt",
+      "offset": 1648,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000104.pt",
+      "offset": 1664,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000105.pt",
+      "offset": 1680,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000106.pt",
+      "offset": 1696,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000107.pt",
+      "offset": 1712,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000108.pt",
+      "offset": 1728,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000109.pt",
+      "offset": 1744,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000110.pt",
+      "offset": 1760,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000111.pt",
+      "offset": 1776,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000112.pt",
+      "offset": 1792,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000113.pt",
+      "offset": 1808,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000114.pt",
+      "offset": 1824,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000115.pt",
+      "offset": 1840,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000116.pt",
+      "offset": 1856,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000117.pt",
+      "offset": 1872,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000118.pt",
+      "offset": 1888,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000119.pt",
+      "offset": 1904,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000120.pt",
+      "offset": 1920,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000121.pt",
+      "offset": 1936,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000122.pt",
+      "offset": 1952,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000123.pt",
+      "offset": 1968,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000124.pt",
+      "offset": 1984,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000125.pt",
+      "offset": 2000,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000126.pt",
+      "offset": 2016,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000127.pt",
+      "offset": 2032,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000128.pt",
+      "offset": 2048,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000129.pt",
+      "offset": 2064,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000130.pt",
+      "offset": 2080,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000131.pt",
+      "offset": 2096,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000132.pt",
+      "offset": 2112,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000133.pt",
+      "offset": 2128,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000134.pt",
+      "offset": 2144,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000135.pt",
+      "offset": 2160,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000136.pt",
+      "offset": 2176,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000137.pt",
+      "offset": 2192,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000138.pt",
+      "offset": 2208,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000139.pt",
+      "offset": 2224,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000140.pt",
+      "offset": 2240,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000141.pt",
+      "offset": 2256,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000142.pt",
+      "offset": 2272,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000143.pt",
+      "offset": 2288,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000144.pt",
+      "offset": 2304,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000145.pt",
+      "offset": 2320,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000146.pt",
+      "offset": 2336,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000147.pt",
+      "offset": 2352,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000148.pt",
+      "offset": 2368,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000149.pt",
+      "offset": 2384,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000150.pt",
+      "offset": 2400,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000151.pt",
+      "offset": 2416,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000152.pt",
+      "offset": 2432,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000153.pt",
+      "offset": 2448,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000154.pt",
+      "offset": 2464,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000155.pt",
+      "offset": 2480,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000156.pt",
+      "offset": 2496,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000157.pt",
+      "offset": 2512,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000158.pt",
+      "offset": 2528,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000159.pt",
+      "offset": 2544,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000160.pt",
+      "offset": 2560,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000161.pt",
+      "offset": 2576,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000162.pt",
+      "offset": 2592,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000163.pt",
+      "offset": 2608,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000164.pt",
+      "offset": 2624,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000165.pt",
+      "offset": 2640,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000166.pt",
+      "offset": 2656,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000167.pt",
+      "offset": 2672,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000168.pt",
+      "offset": 2688,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000169.pt",
+      "offset": 2704,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000170.pt",
+      "offset": 2720,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000171.pt",
+      "offset": 2736,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000172.pt",
+      "offset": 2752,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000173.pt",
+      "offset": 2768,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000174.pt",
+      "offset": 2784,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000175.pt",
+      "offset": 2800,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000176.pt",
+      "offset": 2816,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000177.pt",
+      "offset": 2832,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000178.pt",
+      "offset": 2848,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000179.pt",
+      "offset": 2864,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000180.pt",
+      "offset": 2880,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000181.pt",
+      "offset": 2896,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000182.pt",
+      "offset": 2912,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000183.pt",
+      "offset": 2928,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000184.pt",
+      "offset": 2944,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000185.pt",
+      "offset": 2960,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000186.pt",
+      "offset": 2976,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000187.pt",
+      "offset": 2992,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000188.pt",
+      "offset": 3008,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000189.pt",
+      "offset": 3024,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000190.pt",
+      "offset": 3040,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000191.pt",
+      "offset": 3056,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000192.pt",
+      "offset": 3072,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000193.pt",
+      "offset": 3088,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000194.pt",
+      "offset": 3104,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000195.pt",
+      "offset": 3120,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000196.pt",
+      "offset": 3136,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000197.pt",
+      "offset": 3152,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000198.pt",
+      "offset": 3168,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000199.pt",
+      "offset": 3184,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000200.pt",
+      "offset": 3200,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000201.pt",
+      "offset": 3216,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000202.pt",
+      "offset": 3232,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000203.pt",
+      "offset": 3248,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000204.pt",
+      "offset": 3264,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000205.pt",
+      "offset": 3280,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000206.pt",
+      "offset": 3296,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000207.pt",
+      "offset": 3312,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000208.pt",
+      "offset": 3328,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000209.pt",
+      "offset": 3344,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000210.pt",
+      "offset": 3360,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000211.pt",
+      "offset": 3376,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000212.pt",
+      "offset": 3392,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000213.pt",
+      "offset": 3408,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000214.pt",
+      "offset": 3424,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000215.pt",
+      "offset": 3440,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000216.pt",
+      "offset": 3456,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000217.pt",
+      "offset": 3472,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000218.pt",
+      "offset": 3488,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000219.pt",
+      "offset": 3504,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000220.pt",
+      "offset": 3520,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000221.pt",
+      "offset": 3536,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000222.pt",
+      "offset": 3552,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000223.pt",
+      "offset": 3568,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000224.pt",
+      "offset": 3584,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000225.pt",
+      "offset": 3600,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000226.pt",
+      "offset": 3616,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000227.pt",
+      "offset": 3632,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000228.pt",
+      "offset": 3648,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000229.pt",
+      "offset": 3664,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000230.pt",
+      "offset": 3680,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000231.pt",
+      "offset": 3696,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000232.pt",
+      "offset": 3712,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000233.pt",
+      "offset": 3728,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000234.pt",
+      "offset": 3744,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000235.pt",
+      "offset": 3760,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000236.pt",
+      "offset": 3776,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000237.pt",
+      "offset": 3792,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000238.pt",
+      "offset": 3808,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000239.pt",
+      "offset": 3824,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000240.pt",
+      "offset": 3840,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000241.pt",
+      "offset": 3856,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000242.pt",
+      "offset": 3872,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000243.pt",
+      "offset": 3888,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000244.pt",
+      "offset": 3904,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000245.pt",
+      "offset": 3920,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000246.pt",
+      "offset": 3936,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000247.pt",
+      "offset": 3952,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000248.pt",
+      "offset": 3968,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000249.pt",
+      "offset": 3984,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000250.pt",
+      "offset": 4000,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000251.pt",
+      "offset": 4016,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000252.pt",
+      "offset": 4032,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000253.pt",
+      "offset": 4048,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000254.pt",
+      "offset": 4064,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000255.pt",
+      "offset": 4080,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000256.pt",
+      "offset": 4096,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000257.pt",
+      "offset": 4112,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000258.pt",
+      "offset": 4128,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000259.pt",
+      "offset": 4144,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000260.pt",
+      "offset": 4160,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000261.pt",
+      "offset": 4176,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000262.pt",
+      "offset": 4192,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000263.pt",
+      "offset": 4208,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000264.pt",
+      "offset": 4224,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000265.pt",
+      "offset": 4240,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000266.pt",
+      "offset": 4256,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000267.pt",
+      "offset": 4272,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000268.pt",
+      "offset": 4288,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000269.pt",
+      "offset": 4304,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000270.pt",
+      "offset": 4320,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000271.pt",
+      "offset": 4336,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000272.pt",
+      "offset": 4352,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000273.pt",
+      "offset": 4368,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000274.pt",
+      "offset": 4384,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000275.pt",
+      "offset": 4400,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000276.pt",
+      "offset": 4416,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000277.pt",
+      "offset": 4432,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000278.pt",
+      "offset": 4448,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000279.pt",
+      "offset": 4464,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000280.pt",
+      "offset": 4480,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000281.pt",
+      "offset": 4496,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000282.pt",
+      "offset": 4512,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000283.pt",
+      "offset": 4528,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000284.pt",
+      "offset": 4544,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000285.pt",
+      "offset": 4560,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000286.pt",
+      "offset": 4576,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000287.pt",
+      "offset": 4592,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000288.pt",
+      "offset": 4608,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000289.pt",
+      "offset": 4624,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000290.pt",
+      "offset": 4640,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000291.pt",
+      "offset": 4656,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000292.pt",
+      "offset": 4672,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000293.pt",
+      "offset": 4688,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000294.pt",
+      "offset": 4704,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000295.pt",
+      "offset": 4720,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000296.pt",
+      "offset": 4736,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000297.pt",
+      "offset": 4752,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000298.pt",
+      "offset": 4768,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000299.pt",
+      "offset": 4784,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000300.pt",
+      "offset": 4800,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000301.pt",
+      "offset": 4816,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000302.pt",
+      "offset": 4832,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000303.pt",
+      "offset": 4848,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000304.pt",
+      "offset": 4864,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000305.pt",
+      "offset": 4880,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000306.pt",
+      "offset": 4896,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000307.pt",
+      "offset": 4912,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000308.pt",
+      "offset": 4928,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000309.pt",
+      "offset": 4944,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000310.pt",
+      "offset": 4960,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000311.pt",
+      "offset": 4976,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000312.pt",
+      "offset": 4992,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000313.pt",
+      "offset": 5008,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000314.pt",
+      "offset": 5024,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000315.pt",
+      "offset": 5040,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000316.pt",
+      "offset": 5056,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000317.pt",
+      "offset": 5072,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000318.pt",
+      "offset": 5088,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000319.pt",
+      "offset": 5104,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000320.pt",
+      "offset": 5120,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000321.pt",
+      "offset": 5136,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000322.pt",
+      "offset": 5152,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000323.pt",
+      "offset": 5168,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000324.pt",
+      "offset": 5184,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000325.pt",
+      "offset": 5200,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000326.pt",
+      "offset": 5216,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000327.pt",
+      "offset": 5232,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000328.pt",
+      "offset": 5248,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000329.pt",
+      "offset": 5264,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000330.pt",
+      "offset": 5280,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000331.pt",
+      "offset": 5296,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000332.pt",
+      "offset": 5312,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000333.pt",
+      "offset": 5328,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000334.pt",
+      "offset": 5344,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000335.pt",
+      "offset": 5360,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000336.pt",
+      "offset": 5376,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000337.pt",
+      "offset": 5392,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000338.pt",
+      "offset": 5408,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000339.pt",
+      "offset": 5424,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000340.pt",
+      "offset": 5440,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000341.pt",
+      "offset": 5456,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000342.pt",
+      "offset": 5472,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000343.pt",
+      "offset": 5488,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000344.pt",
+      "offset": 5504,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000345.pt",
+      "offset": 5520,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000346.pt",
+      "offset": 5536,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000347.pt",
+      "offset": 5552,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000348.pt",
+      "offset": 5568,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000349.pt",
+      "offset": 5584,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000350.pt",
+      "offset": 5600,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000351.pt",
+      "offset": 5616,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000352.pt",
+      "offset": 5632,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000353.pt",
+      "offset": 5648,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000354.pt",
+      "offset": 5664,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000355.pt",
+      "offset": 5680,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000356.pt",
+      "offset": 5696,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000357.pt",
+      "offset": 5712,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000358.pt",
+      "offset": 5728,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000359.pt",
+      "offset": 5744,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000360.pt",
+      "offset": 5760,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000361.pt",
+      "offset": 5776,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000362.pt",
+      "offset": 5792,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000363.pt",
+      "offset": 5808,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000364.pt",
+      "offset": 5824,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000365.pt",
+      "offset": 5840,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000366.pt",
+      "offset": 5856,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000367.pt",
+      "offset": 5872,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000368.pt",
+      "offset": 5888,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000369.pt",
+      "offset": 5904,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000370.pt",
+      "offset": 5920,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000371.pt",
+      "offset": 5936,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000372.pt",
+      "offset": 5952,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000373.pt",
+      "offset": 5968,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000374.pt",
+      "offset": 5984,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000375.pt",
+      "offset": 6000,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000376.pt",
+      "offset": 6016,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000377.pt",
+      "offset": 6032,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000378.pt",
+      "offset": 6048,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000379.pt",
+      "offset": 6064,
+      "plans": 16
+    },
+    {
+      "file": "chunk_000380.pt",
+      "offset": 6080,
+      "plans": 3
+    }
+  ],
+  "actor_unchanged": true,
+  "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/epoch_035.pt",
+  "bc_epoch": 35,
+  "wall_s": 3748.1928830896504,
+  "metrics": {
+    "requests": 1000,
+    "completed": 1000,
+    "output_tokens": 128991,
+    "simulated_s": 317.8440535265186,
+    "throughput": 405.83109411306924,
+    "plans": 6083,
+    "phase_steps": {
+      "prefill": 924,
+      "decode": 8148
+    },
+    "decision_s": 757.9954990330152,
+    "simulator_s": 2979.8874199194834,
+    "peak_runtime_bytes": {
+      "PIM0": 8146033152,
+      "PIM1": 9858530304,
+      "CPU0": 0,
+      "Ascend_910B_NPU0": 13300816896
+    },
+    "peak_activation_bytes": {
+      "PIM0": 111106560,
+      "PIM1": 111106560,
+      "CPU0": 0,
+      "Ascend_910B_NPU0": 255744000
+    },
+    "ttft_mean_s": 144.89597107862483,
+    "ttft_p95_s": 285.453664385203,
+    "e2e_mean_s": 149.7145102287897,
+    "e2e_p95_s": 290.02339658698,
+    "queue_mean_s": 144.6507721555176,
+    "tbt_p95_s": 0.23760315944269905
+  },
+  "bytes": 662544351
+}

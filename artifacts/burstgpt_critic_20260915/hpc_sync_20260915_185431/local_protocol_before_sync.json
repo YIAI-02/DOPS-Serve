@@ -1,0 +1,81 @@
+{
+  "parameters": {
+    "SCHED_DECODE_AMORT_ALPHA": 1.0,
+    "SCHED_DECODE_AMORT_ENABLE": true,
+    "SCHED_DECODE_AMORT_REUSE_PROB": 1.0,
+    "SCHED_DECODE_AMORT_RMIN": 1.0,
+    "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5,
+    "SCHED_JOINT_LK_ENABLE": true,
+    "SCHED_JOINT_LK_GAMMA": 0.4,
+    "SCHED_JOINT_LK_H": 2,
+    "SCHED_JOINT_LK_PLAN_HINT_MAX": 3,
+    "SCHED_WEIGHT_BIAS_ETA": 0.5
+  },
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "loads": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "source_checkpoints": {
+    "qwen_1.8b": {
+      "epoch": 57,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_1.8b/epoch_057.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/qwen_1.8b_E57.pt"
+    },
+    "qwen_7b": {
+      "epoch": 77,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_7b/epoch_077.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/qwen_7b_E77.pt"
+    },
+    "qwen_14b": {
+      "epoch": 42,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/qwen_14b/epoch_042.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/qwen_14b_E42.pt"
+    },
+    "shared": {
+      "epoch": 35,
+      "path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_phase_ab_20260913/fresh_b50_20260914/training/shared/epoch_035.pt",
+      "copy": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915/bc_inputs/shared_E35.pt"
+    }
+  },
+  "decode_features": {
+    "qwen_1.8b": 0.5895403056500043,
+    "qwen_7b": 0.5895403056500043,
+    "qwen_14b": 0.5895403056500043,
+    "shared": 0.5895403056500043
+  },
+  "state_dim": 56,
+  "node_dim": 35,
+  "max_tokens": 7315,
+  "max_batch": 16,
+  "kv_headroom_bytes": 1073741824,
+  "kv_headroom_status": "one GiB per PIM; gated by preflight extreme-length replay",
+  "objective": "sum output tokens / sum complete trace simulated seconds; decision CPU time reported separately",
+  "source_data": "/lustre/home/2501111916/workspace/DOPS-Serve/data/BurstGPT_without_fails_1.csv",
+  "test_locked": true,
+  "stage": "critic_pretraining",
+  "critic": {
+    "seed": 7,
+    "train_indices": [
+      315,
+      758,
+      858,
+      403
+    ],
+    "val_indices": [
+      5,
+      158
+    ],
+    "lr": 0.0001,
+    "mini_plans": 4,
+    "chunk_plans": 16,
+    "max_grad_norm": 0.5,
+    "max_epochs": 20,
+    "patience": 3
+  }
+}
