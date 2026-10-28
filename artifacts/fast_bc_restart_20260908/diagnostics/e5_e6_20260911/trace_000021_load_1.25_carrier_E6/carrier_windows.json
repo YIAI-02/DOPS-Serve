@@ -1,0 +1,28 @@
+[
+  {
+    "output_tokens": 492,
+    "decode_iterations": 32,
+    "start_s": 0.0,
+    "end_s": 27.546508059760836,
+    "duration_s": 27.546508059760836,
+    "decision_s": 0.21432812209241092,
+    "placement_switches": 0,
+    "reward": -7.768896044250165,
+    "token_reward": 0.9553398058252427,
+    "time_reward": -8.724235850075408,
+    "terminal": false
+  },
+  {
+    "output_tokens": 514,
+    "decode_iterations": 32,
+    "start_s": 27.546508059760836,
+    "end_s": 52.10763688629308,
+    "duration_s": 24.561128826532244,
+    "decision_s": 0.11456161108799279,
+    "placement_switches": 0,
+    "reward": -6.78068016922282,
+    "token_reward": 0.9980582524271844,
+    "time_reward": -7.778738421650004,
+    "terminal": false
+  }
+]
