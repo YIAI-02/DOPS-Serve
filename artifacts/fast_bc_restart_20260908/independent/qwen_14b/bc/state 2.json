@@ -1,0 +1,51 @@
+{
+  "epoch": 1,
+  "best_epoch": 1,
+  "passed": false,
+  "no_improvement": 0,
+  "stop": false,
+  "regressions": [],
+  "open_cap": 5,
+  "history": [
+    {
+      "epoch": 1,
+      "scores": [
+        {
+          "model": "qwen_14b",
+          "seed": 7,
+          "ratio": 0.8642408098801673,
+          "repeats": [
+            0.8650023677568406,
+            0.8639546557816752,
+            0.8642643565013367
+          ],
+          "conditions": 25
+        },
+        {
+          "model": "qwen_14b",
+          "seed": 17,
+          "ratio": 0.8659330665623689,
+          "repeats": [
+            0.8665791678611143,
+            0.8650814731324508,
+            0.8659365996449966
+          ],
+          "conditions": 25
+        },
+        {
+          "model": "qwen_14b",
+          "seed": 27,
+          "ratio": 0.9813829788701303,
+          "repeats": [
+            0.9812044578502241,
+            0.9813764881970167,
+            0.9816619038292136
+          ],
+          "conditions": 25
+        }
+      ]
+    }
+  ],
+  "stage": "bc",
+  "complete": true
+}

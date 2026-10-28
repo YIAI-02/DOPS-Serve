@@ -1,0 +1,1 @@
+{"epoch": 2, "training_loss": 0.05203983244817647, "train_anchors": 5255, "optimizer_steps": 5255, "validation": {"candidate_regret": 0.0037097577752244577, "unweighted_nll": 0.290590372060143, "anchors": 1061}, "wall_s": 710.7327235790435}
