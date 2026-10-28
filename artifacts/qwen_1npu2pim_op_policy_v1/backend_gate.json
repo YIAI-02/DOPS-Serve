@@ -1,0 +1,767 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "model": "qwen_1.8b",
+      "workload": "equal_single",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 16515072,
+        "PIM1": 16515072
+      },
+      "prefill_s": 0.08682636506855507,
+      "decode_s": 0.003034691359021957,
+      "complete_plan_pair_compile_s": 0.00039833015762269497,
+      "prefill_host_evaluator_s": 0.1736456190701574,
+      "decode_host_evaluator_s": 0.16429600585252047,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 16515072,
+        "PIM1": 16515072,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2625765376
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 16515072,
+        "PIM1": 16515072,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2620451328
+      },
+      "communication_bytes": 2627760128,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "equal_single",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 16515072,
+        "PIM1": 16515072
+      },
+      "prefill_s": 0.046216845039531246,
+      "decode_s": 0.00030107703075502035,
+      "complete_plan_pair_compile_s": 0.000446635065600276,
+      "prefill_host_evaluator_s": 0.17396204988472164,
+      "decode_host_evaluator_s": 0.17078780592419207,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 1330151424,
+        "PIM1": 1330937856,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 1326752768,
+        "PIM1": 1326752768,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 2741655552,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "equal_single",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 16515072,
+        "PIM1": 16515072
+      },
+      "prefill_s": 0.0455862563755908,
+      "decode_s": 0.0015482371810831286,
+      "complete_plan_pair_compile_s": 0.0005143398884683847,
+      "prefill_host_evaluator_s": 0.17048075492493808,
+      "decode_host_evaluator_s": 0.17121337493881583,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 16515072,
+        "PIM1": 1330151424,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1314422784
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 16515072,
+        "PIM1": 1326746624,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1310237696
+      },
+      "communication_bytes": 2723940352,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "ragged_full_batch",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 484442112,
+        "PIM1": 484442112
+      },
+      "prefill_s": 0.3115365933298582,
+      "decode_s": 0.011376601774359951,
+      "complete_plan_pair_compile_s": 0.0004327860660851002,
+      "prefill_host_evaluator_s": 0.1913356080185622,
+      "decode_host_evaluator_s": 0.182899383129552,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 484442112,
+        "PIM1": 484442112,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 3635675136
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 484442112,
+        "PIM1": 484442112,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2621349888
+      },
+      "communication_bytes": 3619094528,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "ragged_full_batch",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 484442112,
+        "PIM1": 484442112
+      },
+      "prefill_s": 4.10261438405964,
+      "decode_s": 0.004348493239745288,
+      "complete_plan_pair_compile_s": 0.0004397179000079632,
+      "prefill_host_evaluator_s": 0.19335291488096118,
+      "decode_host_evaluator_s": 0.18861278286203742,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 2464940032,
+        "PIM1": 2511732736,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 1795309568,
+        "PIM1": 1795309568,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 18999508992,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "ragged_full_batch",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 484442112,
+        "PIM1": 484442112
+      },
+      "prefill_s": 4.016854325763735,
+      "decode_s": 0.011820215115335486,
+      "complete_plan_pair_compile_s": 0.0005196749698370695,
+      "prefill_host_evaluator_s": 0.19082168396562338,
+      "decode_host_evaluator_s": 0.2070905768778175,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 484442112,
+        "PIM1": 2404777984,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2027290624
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 484442112,
+        "PIM1": 1795211264,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1310867456
+      },
+      "communication_bytes": 16608428032,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "worst_prefill",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 704643072,
+        "PIM1": 704643072
+      },
+      "prefill_s": 0.5897868304313757,
+      "decode_s": 0.018708589361431383,
+      "complete_plan_pair_compile_s": 0.0006463939789682627,
+      "prefill_host_evaluator_s": 0.17827919009141624,
+      "decode_host_evaluator_s": 0.16834805090911686,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 704643072,
+        "PIM1": 704643072,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 4555800576
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 704643072,
+        "PIM1": 704643072,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2621768256
+      },
+      "communication_bytes": 4499898368,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "worst_prefill",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 704643072,
+        "PIM1": 704643072
+      },
+      "prefill_s": 7.747490280614544,
+      "decode_s": 0.0046265039308144296,
+      "complete_plan_pair_compile_s": 0.00047330791130661964,
+      "prefill_host_evaluator_s": 0.17778208013623953,
+      "decode_host_evaluator_s": 0.1747940480709076,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 3330015232,
+        "PIM1": 3376807936,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 2015773056,
+        "PIM1": 2015773056,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 33438400512,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_1.8b",
+      "workload": "worst_prefill",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 704643072,
+        "PIM1": 704643072
+      },
+      "prefill_s": 7.586059582645799,
+      "decode_s": 0.019140468037960545,
+      "complete_plan_pair_compile_s": 0.0005270419642329216,
+      "prefill_host_evaluator_s": 0.17612747801467776,
+      "decode_host_evaluator_s": 0.17528926208615303,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 704643072,
+        "PIM1": 3175481344,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 2672164864
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 704643072,
+        "PIM1": 2015674752,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 1311129984
+      },
+      "communication_bytes": 28939681792,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "equal_single",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 33030144,
+        "PIM1": 33030144
+      },
+      "prefill_s": 0.4313371532907085,
+      "decode_s": 0.01491520921458167,
+      "complete_plan_pair_compile_s": 0.0005490309558808804,
+      "prefill_host_evaluator_s": 0.17567916703410447,
+      "decode_host_evaluator_s": 0.16921922005712986,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 33030144,
+        "PIM1": 33030144,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 13062111232
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 33030144,
+        "PIM1": 33030144,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 13050704896
+      },
+      "communication_bytes": 13065314304,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "equal_single",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 33030144,
+        "PIM1": 33030144
+      },
+      "prefill_s": 0.22381159336046869,
+      "decode_s": 0.0013171351109985963,
+      "complete_plan_pair_compile_s": 0.0004120040684938431,
+      "prefill_host_evaluator_s": 0.17588886991143227,
+      "decode_host_evaluator_s": 0.17487592506222427,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 6565593088,
+        "PIM1": 6567428096,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 6558408704,
+        "PIM1": 6558408704,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 13333526528,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "equal_single",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 33030144,
+        "PIM1": 33030144
+      },
+      "prefill_s": 0.22234021981127403,
+      "decode_s": 0.0075043491708847165,
+      "complete_plan_pair_compile_s": 0.0006483800243586302,
+      "prefill_host_evaluator_s": 0.17427484900690615,
+      "decode_host_evaluator_s": 0.17580357915721834,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 33030144,
+        "PIM1": 6565593088,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 6534397952
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 33030144,
+        "PIM1": 6558394368,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 6525378560
+      },
+      "communication_bytes": 13290962944,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "ragged_full_batch",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 968884224,
+        "PIM1": 968884224
+      },
+      "prefill_s": 1.247695023607691,
+      "decode_s": 0.03163082288774888,
+      "complete_plan_pair_compile_s": 0.0005255171563476324,
+      "prefill_host_evaluator_s": 0.19484914699569345,
+      "decode_host_evaluator_s": 0.18954438180662692,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 968884224,
+        "PIM1": 968884224,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 15143010304
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 968884224,
+        "PIM1": 968884224,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 13052624896
+      },
+      "communication_bytes": 15047983104,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "ragged_full_batch",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 968884224,
+        "PIM1": 968884224
+      },
+      "prefill_s": 19.004272802513256,
+      "decode_s": 0.01828461549499849,
+      "complete_plan_pair_compile_s": 0.00047490885481238365,
+      "prefill_host_evaluator_s": 0.1964926200453192,
+      "decode_host_evaluator_s": 0.1919329350348562,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 8761901056,
+        "PIM1": 8994947072,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 7495614464,
+        "PIM1": 7495614464,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 51268517888,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "ragged_full_batch",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 968884224,
+        "PIM1": 968884224
+      },
+      "prefill_s": 18.80416599982282,
+      "decode_s": 0.03238361744577389,
+      "complete_plan_pair_compile_s": 0.0005365889519453049,
+      "prefill_host_evaluator_s": 0.19422088004648685,
+      "decode_host_evaluator_s": 0.19357118289917707,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 968884224,
+        "PIM1": 8745385984,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 8026062848
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 968884224,
+        "PIM1": 7495385088,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 6526730240
+      },
+      "communication_bytes": 45522878464,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "worst_prefill",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 1409286144,
+        "PIM1": 1409286144
+      },
+      "prefill_s": 2.3601304571247606,
+      "decode_s": 0.07154561887744215,
+      "complete_plan_pair_compile_s": 0.00037921289913356304,
+      "prefill_host_evaluator_s": 0.18131049699150026,
+      "decode_host_evaluator_s": 0.19043419393710792,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 1409286144,
+        "PIM1": 1409286144,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16312696832
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 1409286144,
+        "PIM1": 1409286144,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 13053789504
+      },
+      "communication_bytes": 17605984256,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "worst_prefill",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 1409286144,
+        "PIM1": 1409286144
+      },
+      "prefill_s": 35.83174853484026,
+      "decode_s": 0.01888642499308446,
+      "complete_plan_pair_compile_s": 0.000517240958288312,
+      "prefill_host_evaluator_s": 0.18099640891887248,
+      "decode_host_evaluator_s": 0.17703673499636352,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 10586423296,
+        "PIM1": 10819469312,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 7936754560,
+        "PIM1": 7936754560,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 84959264768,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_7b",
+      "workload": "worst_prefill",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 1409286144,
+        "PIM1": 1409286144
+      },
+      "prefill_s": 35.455076906246546,
+      "decode_s": 0.04703194640075026,
+      "complete_plan_pair_compile_s": 0.0007039238698780537,
+      "prefill_host_evaluator_s": 0.17954017594456673,
+      "decode_host_evaluator_s": 0.17735853604972363,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 1409286144,
+        "PIM1": 10349707264,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 9410183168
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 1409286144,
+        "PIM1": 7936525184,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 6527468416
+      },
+      "communication_bytes": 74149003264,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "equal_single",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 47185920,
+        "PIM1": 47185920
+      },
+      "prefill_s": 0.7138019179304422,
+      "decode_s": 0.7125813618985841,
+      "complete_plan_pair_compile_s": 0.0006078002043068409,
+      "prefill_host_evaluator_s": 0.2854105378501117,
+      "decode_host_evaluator_s": 0.3397839511744678,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 47185920,
+        "PIM1": 47185920,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16310599680
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 47185920,
+        "PIM1": 47185920,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16315888680
+      },
+      "communication_bytes": 43222384640,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "equal_single",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 47185920,
+        "PIM1": 47185920
+      },
+      "prefill_s": 0.3725502840703128,
+      "decode_s": 0.0022059802374486126,
+      "complete_plan_pair_compile_s": 0.0006576550658792257,
+      "prefill_host_evaluator_s": 0.2814922658726573,
+      "decode_host_evaluator_s": 0.2722963970154524,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 10852827136,
+        "PIM1": 10855448576,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 10847594496,
+        "PIM1": 10847594496,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 22179246080,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "equal_single",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 47185920,
+        "PIM1": 47185920
+      },
+      "prefill_s": 0.3695103381352545,
+      "decode_s": 0.012406987392690194,
+      "complete_plan_pair_compile_s": 0.0007515528704971075,
+      "prefill_host_evaluator_s": 0.2790547430049628,
+      "decode_host_evaluator_s": 0.2699705681297928,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 47185920,
+        "PIM1": 10852827136,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 10808262656
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 47185920,
+        "PIM1": 10847574016,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 10800408576
+      },
+      "communication_bytes": 22086737920,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "ragged_full_batch",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 1384120320,
+        "PIM1": 1384120320
+      },
+      "prefill_s": 2.090536028683972,
+      "decode_s": 0.7329972241389804,
+      "complete_plan_pair_compile_s": 0.0004478171467781067,
+      "prefill_host_evaluator_s": 0.3017006451264024,
+      "decode_host_evaluator_s": 0.3547535140533,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 1384120320,
+        "PIM1": 1384120320,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16298536960
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 1384120320,
+        "PIM1": 1384120320,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16317194880
+      },
+      "communication_bytes": 46054768640,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "ragged_full_batch",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 1384120320,
+        "PIM1": 1384120320
+      },
+      "prefill_s": 31.932380519283885,
+      "decode_s": 0.03065024931012772,
+      "complete_plan_pair_compile_s": 0.0005599439609795809,
+      "prefill_host_evaluator_s": 0.30114203318953514,
+      "decode_host_evaluator_s": 0.2966076279990375,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 13828792320,
+        "PIM1": 13558784000,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 12186338560,
+        "PIM1": 12186338560,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 99749396480,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "ragged_full_batch",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 1384120320,
+        "PIM1": 1384120320
+      },
+      "prefill_s": 31.51894787211588,
+      "decode_s": 0.04863704733054419,
+      "complete_plan_pair_compile_s": 0.0006186140235513449,
+      "prefill_host_evaluator_s": 0.32673936197534204,
+      "decode_host_evaluator_s": 0.3455750090070069,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 1384120320,
+        "PIM1": 13472276480,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 12444672000
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 1384120320,
+        "PIM1": 12186010880,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 10802218240
+      },
+      "communication_bytes": 87259217920,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "worst_prefill",
+      "placement": "npu",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 2013265920,
+        "PIM1": 2013265920
+      },
+      "prefill_s": 3.9597626351194206,
+      "decode_s": 0.754012815327548,
+      "complete_plan_pair_compile_s": 0.0004903001245111227,
+      "prefill_host_evaluator_s": 0.3717968550045043,
+      "decode_host_evaluator_s": 0.4375136629678309,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 2013265920,
+        "PIM1": 2013265920,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16304701440
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 2013265920,
+        "PIM1": 2013265920,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 16317809280
+      },
+      "communication_bytes": 48571351040,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "worst_prefill",
+      "placement": "pim",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 2013265920,
+        "PIM1": 2013265920
+      },
+      "prefill_s": 60.228798683192444,
+      "decode_s": 0.03179231530277349,
+      "complete_plan_pair_compile_s": 0.0007260600104928017,
+      "prefill_host_evaluator_s": 0.37589927995577455,
+      "decode_host_evaluator_s": 0.28091147588565946,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 16267345920,
+        "PIM1": 15997337600,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 12816712960,
+        "PIM1": 12816712960,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 0
+      },
+      "communication_bytes": 168640839680,
+      "activation_store_events": 0
+    },
+    {
+      "model": "qwen_14b",
+      "workload": "worst_prefill",
+      "placement": "mixed_shards",
+      "kv_reserved_bytes_by_pim": {
+        "PIM0": 2013265920,
+        "PIM1": 2013265920
+      },
+      "prefill_s": 59.450572523817215,
+      "decode_s": 0.06959675916505148,
+      "complete_plan_pair_compile_s": 0.0006646739784628153,
+      "prefill_host_evaluator_s": 0.29811091092415154,
+      "decode_host_evaluator_s": 0.2725408561527729,
+      "prefill_peak_runtime_bytes": {
+        "PIM0": 2013265920,
+        "PIM1": 15596257280,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 14254080000
+      },
+      "decode_peak_runtime_bytes": {
+        "PIM0": 2013265920,
+        "PIM1": 12816385280,
+        "CPU0": 0,
+        "Ascend_910B_NPU0": 10803447040
+      },
+      "communication_bytes": 145140613120,
+      "activation_store_events": 0
+    }
+  ],
+  "cpu": "Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz",
+  "host": "l06c44n3",
+  "OMP_NUM_THREADS": "1",
+  "npu_backend": "fast",
+  "pim_fast_mode": true,
+  "scope": "decoder DAG integration and capacity probes, not policy training or serving performance comparisons"
+}

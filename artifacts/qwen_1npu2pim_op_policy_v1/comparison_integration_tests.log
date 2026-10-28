@@ -1,0 +1,83 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+l01c05n4
+Model name:          Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+test_maps_paired_anchors_without_output_length_feature (test_anchor_dataset.AnchorDatasetTest.test_maps_paired_anchors_without_output_length_feature) ... ok
+test_builds_paired_anchor_rows (test_comparisons.AnchorComparisonsTest.test_builds_paired_anchor_rows) ... ok
+test_excludes_single_candidate_comparison (test_comparisons.AnchorComparisonsTest.test_excludes_single_candidate_comparison) ... ok
+test_counterfactual_rows_exclude_future_output_length (test_dataset.DatasetTest.test_counterfactual_rows_exclude_future_output_length) ... ok
+test_declared_trace_split_overrides_lexical_order (test_dataset.DatasetTest.test_declared_trace_split_overrides_lexical_order) ... ok
+test_incomplete_plan_requires_explicit_opt_in (test_dataset.DatasetTest.test_incomplete_plan_requires_explicit_opt_in) ... ok
+test_robust_plan_prioritizes_profile_coverage (test_dataset.DatasetTest.test_robust_plan_prioritizes_profile_coverage) ... ok
+test_build_inventory (test_inventory.InventoryTest.test_build_inventory) ... ok
+test_bifocal_uses_live_state_fixed_ownership_and_does_not_mutate_the_carrier (test_placement_comparison.PlacementComparisonTest.test_bifocal_uses_live_state_fixed_ownership_and_does_not_mutate_the_carrier) ... ok
+test_summary_pairs_same_seed_model_load_and_rejects_incomplete_capacity_claims (test_placement_comparison.PlacementComparisonTest.test_summary_pairs_same_seed_model_load_and_rejects_incomplete_capacity_claims) ... ok
+test_projection_checks_coverage_and_fixed_kv_but_collapses_free_pim (test_placement_compiler.PlacementCompilerTest.test_projection_checks_coverage_and_fixed_kv_but_collapses_free_pim) ... ok
+test_real_qwen_graphs_compile_and_execute_new_mixed_mapping (test_placement_compiler.PlacementCompilerTest.test_real_qwen_graphs_compile_and_execute_new_mixed_mapping) ... ok
+test_allreduce_records_actual_ragged_payload_and_link_timeline (test_placement_evaluator.PlacementEvaluatorTest.test_allreduce_records_actual_ragged_payload_and_link_timeline) ... ok
+test_ragged_primitive_counts_and_equal_length_costs (test_placement_evaluator.PlacementEvaluatorTest.test_ragged_primitive_counts_and_equal_length_costs) ... ok
+test_snapshot_isolation_cold_loads_kv_release_and_time_lower_bound (test_placement_evaluator.PlacementEvaluatorTest.test_snapshot_isolation_cold_loads_kv_release_and_time_lower_bound) ... ok
+test_shared_models_legal_sampling_teacher_forcing_and_no_future_features (test_placement_policy.PlacementPolicyTest.test_shared_models_legal_sampling_teacher_forcing_and_no_future_features) ... ok
+test_decision_pause_collects_arrivals_and_prefill_only_trace_finishes (test_placement_replay.PlacementReplayTest.test_decision_pause_collects_arrivals_and_prefill_only_trace_finishes) ... ok
+test_idle_gap_ends_at_the_next_observable_decision_boundary (test_placement_replay.PlacementReplayTest.test_idle_gap_ends_at_the_next_observable_decision_boundary) ... ok
+test_prefill_first_token_refill_drain_rewards_and_window_truncation (test_placement_replay.PlacementReplayTest.test_prefill_first_token_refill_drain_rewards_and_window_truncation) ... ok
+test_bc_checkpoint_and_ppo_execute_new_plans_in_real_backend (test_placement_training.PlacementTrainingTest.test_bc_checkpoint_and_ppo_execute_new_plans_in_real_backend) ... /lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:85: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpl6l_zffb/placements.jsonl' mode='r' encoding='UTF-8'>
+  programs = {row["placement_id"]: row["block_actions"] for row in map(json.loads, (directory / "placements.jsonl").open())}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:101: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpl6l_zffb/train.jsonl' mode='r' encoding='UTF-8'>
+  rows = [json.loads(line) for line in path.open()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:68: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpl6l_zffb/val.jsonl' mode='r' encoding='UTF-8'>
+  for row in map(json.loads, path.open()):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"epoch": 1, "training_loss": 0.7282560914754868, "validation": {"candidate_regret": 1.0, "unweighted_nll": 0.6085520943442544, "anchors": 1}, "wall_s": 0.2267782751005143}
+{"epoch": 2, "training_loss": 0.6328187435865402, "validation": {"candidate_regret": 0.0, "unweighted_nll": 0.5521565950833834, "anchors": 1}, "wall_s": 0.21297824382781982}
+ok
+test_cost_weights_preserve_nonwinners_and_ignore_cost_units (test_placement_training.PlacementTrainingTest.test_cost_weights_preserve_nonwinners_and_ignore_cost_units) ... ok
+test_ppo_reconstructs_prefixes_and_updates_parameters (test_placement_training.PlacementTrainingTest.test_ppo_reconstructs_prefixes_and_updates_parameters) ... ok
+test_probability_ratio_is_for_the_whole_block (test_placement_training.PlacementTrainingTest.test_probability_ratio_is_for_the_whole_block) ... ok
+test_segmented_ppo_restores_optimizer_and_rng_like_uninterrupted_training (test_placement_training.PlacementTrainingTest.test_segmented_ppo_restores_optimizer_and_rng_like_uninterrupted_training) ... {"epoch": 1, "update": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load": 1.0, "terminal": true, "windows": 1, "reward": 3.9551895463434996, "loss": 8.069486618041992, "clip_fraction": 0.0, "approx_kl": 0.0}
+{"epoch": 2, "update": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load": 0.5, "terminal": true, "windows": 1, "reward": 2.948996122056529, "loss": 4.343870639801025, "clip_fraction": 0.0, "approx_kl": 0.0}
+{"epoch": 1, "update": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load": 1.0, "terminal": true, "windows": 1, "reward": 3.9551895463434996, "loss": 8.069486618041992, "clip_fraction": 0.0, "approx_kl": 0.0}
+{"epoch": 2, "update": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load": 0.5, "terminal": true, "windows": 1, "reward": 2.948996122056529, "loss": 4.343870639801025, "clip_fraction": 0.0, "approx_kl": 0.0}
+ok
+test_undiscounted_feedback_and_truncation_bootstrap (test_placement_training.PlacementTrainingTest.test_undiscounted_feedback_and_truncation_bootstrap) ... ok
+test_chronological_splits_keep_original_spacing_and_independent_limit (test_placement_workloads.PlacementWorkloadsTest.test_chronological_splits_keep_original_spacing_and_independent_limit) ... ok
+test_equivalent_plan_keeps_longest_decode_coverage (test_plan_bank.PlanBankTest.test_equivalent_plan_keeps_longest_decode_coverage) ... ok
+test_exact_plan_dedup_and_source_mapping (test_plan_bank.PlanBankTest.test_exact_plan_dedup_and_source_mapping) ... ok
+test_parallel_groups_match_serial_output (test_plan_bank.PlanBankTest.test_parallel_groups_match_serial_output) ... ok
+test_profiles_and_leave_one_out_validation (test_profiles.ProfilesTest.test_profiles_and_leave_one_out_validation) ... ok
+test_all_policies_complete_the_same_test_trace (test_serving_evaluation.ServingEvaluationTest.test_all_policies_complete_the_same_test_trace) ... ok
+test_latency_guardrail_precedes_plan_hysteresis (test_serving_evaluation.ServingEvaluationTest.test_latency_guardrail_precedes_plan_hysteresis) ... ok
+test_oracle_replans_when_completion_leaves_profile_envelope (test_serving_evaluation.ServingEvaluationTest.test_oracle_replans_when_completion_leaves_profile_envelope) ... ok
+test_plan_hysteresis_requires_relative_gain (test_serving_evaluation.ServingEvaluationTest.test_plan_hysteresis_requires_relative_gain) ... ok
+test_projection_does_not_use_final_output_length (test_serving_evaluation.ServingEvaluationTest.test_projection_does_not_use_final_output_length) ... ok
+test_estimated_step_preserves_missing_placement (test_summary.SummaryTest.test_estimated_step_preserves_missing_placement) ... ok
+test_extract_plan_rle (test_summary.SummaryTest.test_extract_plan_rle) ... ok
+test_metadata_and_streamed_arrays (test_summary.SummaryTest.test_metadata_and_streamed_arrays) ... ok
+test_metadata_stops_after_plan_label_without_schedule_keys (test_summary.SummaryTest.test_metadata_stops_after_plan_label_without_schedule_keys) ... ok
+test_observed_decode_transition_changes_plan_identity (test_summary.SummaryTest.test_observed_decode_transition_changes_plan_identity) ... ok
+test_ops_trace_must_match_observed_schedule (test_summary.SummaryTest.test_ops_trace_must_match_observed_schedule) ... ok
+test_ops_trace_recovers_sampled_decode_placement (test_summary.SummaryTest.test_ops_trace_recovers_sampled_decode_placement) ... ok
+test_reads_decode_step_times_without_schedules (test_summary.SummaryTest.test_reads_decode_step_times_without_schedules) ... ok
+test_record_order_does_not_change_placement_identity (test_summary.SummaryTest.test_record_order_does_not_change_placement_identity) ... ok
+test_sampling_pattern_does_not_change_plan_identity (test_summary.SummaryTest.test_sampling_pattern_does_not_change_plan_identity) ... ok
+test_action_switches_reset_at_trace_boundary (test_training_data.TrainingDataTest.test_action_switches_reset_at_trace_boundary) ... ok
+test_preprocessor_and_ranking_pairs (test_training_data.TrainingDataTest.test_preprocessor_and_ranking_pairs) ... ok
+test_robust_static_prioritizes_state_coverage (test_training_data.TrainingDataTest.test_robust_static_prioritizes_state_coverage) ... ok
+test_burstgpt_windows_are_grouped_and_do_not_leak_output_length (test_workloads.WorkloadsTest.test_burstgpt_windows_are_grouped_and_do_not_leak_output_length) ... ok
+test_import_rejects_output_as_max_tokens (test_workloads.WorkloadsTest.test_import_rejects_output_as_max_tokens) ... ok
+test_synthetic_output_length_is_not_the_online_limit (test_workloads.WorkloadsTest.test_synthetic_output_length_is_not_the_online_limit) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 20.817s
+
+OK

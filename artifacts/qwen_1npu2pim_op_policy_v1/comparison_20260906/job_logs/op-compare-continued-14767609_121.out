@@ -1,0 +1,13 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+l01c01n1
+Model name:           Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"baseline_config": null, "case_id": 121, "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/continuation_20260906/seed_7/ppo.pt", "checkpoint_metadata": {"continuation": "weights only; fresh Adam and Torch RNG", "seed": 7, "stage": "PPO", "updates": 331}, "host": "l01c01n1", "load_multiplier": 0.75, "method": "ppo_continued", "model": "qwen_1.8b", "reference_rps": 26.557092010053466, "scope": "decoder DAG timing/scheduling replay", "seed": 7, "slo_s": 5.708090083481547, "split": "val", "traces": [{"communication_bytes": 478351042560, "communication_s_sum": 15.77809399361094, "cumulative_reward": -1206.803026031505, "decision_fraction": 0.05227897848438071, "decision_p95_s": 0.07600693237036465, "decision_s": [0.24650479992851615, 0.07275538006797433, 0.07284431997686625, 0.07276680693030357, 0.07291039801202714, 0.07284007198177278, 0.07611089805141091, 0.07454302604310215, 0.07317089196294546, 0.07548051001504064, 0.0729766609147191, 0.07416749582625926, 0.07462924718856812, 0.07288280711509287, 0.07409975584596395, 0.07260223501361907, 0.07432944793254137, 0.07243932201527059, 0.07379718497395515, 0.07260011183097959, 0.07521905098110437, 0.07309202919714153, 0.07341628894209862, 0.07356840115971863, 0.07362470799125731, 0.07384540303610265, 0.07378813507966697, 0.07372943800874054, 0.0739807931240648, 0.07363282493315637, 0.07347588101401925, 0.0746439341455698, 0.07601709407754242, 0.07507416512817144, 0.07349897990934551, 0.0731933549977839, 0.07345996215008199, 0.0730396460276097, 0.07440346293151379, 0.07276717806234956, 0.07581385993398726, 0.07441616710275412], "decision_total_s": 3.272152129560709, "duration_s": 62.59020785072003, "e2e_p95_s": 11.44260757729804, "e2e_p99_s": 12.359829706135454, "e2e_violation_rate": 0.518, "e2e_violations": 518, "host_wall_s": 522.5397167908959, "output_token_throughput": 345.8687987046038, "output_tokens": 21648, "placement_switches": 3, "queue_wait_p95_s": 11.02974188710249, "requests": 1000, "tbt_p95_s": 0.05741608439848367, "tpot_p95_s": 0.02284800143301954, "trace_id": "burstgpt_val_000000", "ttft_p95_s": 11.056482969024604, "windows": 42}]}

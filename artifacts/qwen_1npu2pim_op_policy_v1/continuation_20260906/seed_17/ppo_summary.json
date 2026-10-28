@@ -1,0 +1,56 @@
+{
+  "stage": "PPO",
+  "seed": 17,
+  "updates": 335,
+  "additional_trace_epochs": 1,
+  "continuation": "weights only; fresh Adam and Torch RNG",
+  "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/learning/seed_17/ppo.pt",
+  "completed_traces": [
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000000",
+      "completed": 1000,
+      "windows": 224
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000000",
+      "completed": 1000,
+      "windows": 225
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000000",
+      "completed": 1000,
+      "windows": 205
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 224
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 226
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 225
+    }
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/continuation_20260906/seed_17/ppo.pt"
+}

@@ -1,0 +1,27 @@
+{
+  "submitted_date": "2026-09-05",
+  "scope": "historical reevaluation and BC/PPO pilot; formal tests not submitted",
+  "backend_config": "configs/op_policy_v1.json",
+  "validation_job": "14754368",
+  "validation_tests_passed": 48,
+  "reevaluation_job": "14754168",
+  "bc_array_job": "14754530",
+  "calibration_array_job": "14754544",
+  "protocol_job": "14754572",
+  "ppo_array_job": "14754581",
+  "seeds": [7, 17, 27],
+  "array_models": ["qwen_1.8b", "qwen_7b", "qwen_14b"],
+  "dependencies": {
+    "14754530": ["14754168", "14754368"],
+    "14754544": ["14754168", "14754368"],
+    "14754572": ["14754544"],
+    "14754581": ["14754530", "14754572"]
+  },
+  "dependency_type": "afterok",
+  "kill_on_invalid_dependency": true,
+  "bc_epochs": 3,
+  "calibration_train_traces_per_model": 1,
+  "calibration_validation_traces_per_model": 1,
+  "requests_per_trace": 1000,
+  "static_full_trace_shortlist": 2
+}

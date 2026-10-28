@@ -1,0 +1,344 @@
+{
+  "checked_at": "2026-09-06T08:45:50+08:00",
+  "timezone": "Asia/Shanghai",
+  "automation_id": "dops-serve",
+  "interval_minutes": 15,
+  "ssh": {
+    "control_socket": "/private/tmp/dops-op-monitor-login.sock",
+    "status": "closed_after_completion",
+    "automatic_reconnect": false,
+    "closed_at": "2026-09-06T08:49:14+08:00",
+    "control_socket_exists": false
+  },
+  "reevaluation": {
+    "job_id": "14754168",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "finished_at": "2026-09-05T20:13:48+08:00",
+    "elapsed_seconds": 2348,
+    "shape_groups_complete": 48,
+    "anchors": 18410,
+    "placements_scored": 833,
+    "sources_covered": 1524,
+    "anchor_files_present": 48,
+    "anchor_files_expected": 48,
+    "missing_placements": []
+  },
+  "bc": {
+    "started_at": "2026-09-05T20:13:48+08:00",
+    "jobs": [
+      {
+        "job_id": "14754530_0",
+        "seed": 7,
+        "state": "COMPLETED",
+        "epoch": 3,
+        "reported_training_anchors": 15460,
+        "completed_epochs": 3,
+        "last_epoch_wall_seconds": 2828.612363738008,
+        "checkpoint_observed": true,
+        "last_validation": {
+          "candidate_regret": 0.0482163389482926,
+          "unweighted_nll": 0.5184544114230649,
+          "anchors": 2950
+        },
+        "exit_code": "0:0",
+        "finished_at": "2026-09-05T22:36:18+08:00",
+        "elapsed_seconds": 8550,
+        "summary_observed": true,
+        "best_validation_epoch": 1,
+        "best_validation_candidate_regret": 0.045664050727071304
+      },
+      {
+        "job_id": "14754530_1",
+        "seed": 17,
+        "state": "COMPLETED",
+        "epoch": 3,
+        "reported_training_anchors": 15460,
+        "completed_epochs": 3,
+        "last_epoch_wall_seconds": 2899.0782484330703,
+        "checkpoint_observed": true,
+        "last_validation": {
+          "candidate_regret": 0.026205432083187225,
+          "unweighted_nll": 0.40476183976325086,
+          "anchors": 2950
+        },
+        "exit_code": "0:0",
+        "finished_at": "2026-09-05T22:38:57+08:00",
+        "elapsed_seconds": 8709,
+        "summary_observed": true,
+        "best_validation_epoch": 2,
+        "best_validation_candidate_regret": 0.01846013648080507
+      },
+      {
+        "job_id": "14754530_2",
+        "seed": 27,
+        "state": "COMPLETED",
+        "epoch": 3,
+        "reported_training_anchors": 15460,
+        "completed_epochs": 3,
+        "last_epoch_wall_seconds": 2847.8031675608363,
+        "checkpoint_observed": true,
+        "last_validation": {
+          "candidate_regret": 0.04119055785810534,
+          "unweighted_nll": 0.4014060915767431,
+          "anchors": 2950
+        },
+        "exit_code": "0:0",
+        "finished_at": "2026-09-05T22:25:46+08:00",
+        "elapsed_seconds": 7918,
+        "summary_observed": true,
+        "best_validation_epoch": 3,
+        "best_validation_candidate_regret": 0.04119055785810534
+      }
+    ],
+    "epochs": 3,
+    "training_anchors_per_epoch": 15460,
+    "validation_anchors_per_epoch": 2950,
+    "completed_epochs": 3,
+    "artifacts_observed": "All three bc.pt checkpoints, three-epoch bc_curve.jsonl files, and bc_summary.json files observed.",
+    "state": "COMPLETED",
+    "finished_at": "2026-09-05T22:38:57+08:00",
+    "parameter_count": 193795,
+    "prior_estimated_finish_range": [
+      "2026-09-05T22:20:00+08:00",
+      "2026-09-05T23:30:00+08:00"
+    ]
+  },
+  "calibration": {
+    "jobs": [
+      {
+        "job_id": "14754544_0",
+        "model": "qwen_1.8b",
+        "state": "COMPLETED",
+        "reported_completed_static_trials": 2,
+        "exit_code": "0:0",
+        "finished_at": "2026-09-05T21:43:48+08:00",
+        "pilot_host_wall_seconds": 5269.276029699948,
+        "model_protocol_observed": true,
+        "reference_rps": 26.557092010053466,
+        "slo_s": 5.708090083481547
+      },
+      {
+        "job_id": "14754544_1",
+        "model": "qwen_7b",
+        "state": "COMPLETED",
+        "reported_completed_static_trials": 2,
+        "exit_code": "0:0",
+        "finished_at": "2026-09-05T21:43:58+08:00",
+        "pilot_host_wall_seconds": 5259.230207086774,
+        "model_protocol_observed": true,
+        "reference_rps": 6.242841528102749,
+        "slo_s": 22.53515061739195
+      },
+      {
+        "job_id": "14754544_2",
+        "model": "qwen_14b",
+        "state": "COMPLETED",
+        "reported_completed_static_trials": 2,
+        "exit_code": "0:0",
+        "finished_at": "2026-09-05T22:36:44+08:00",
+        "pilot_host_wall_seconds": 8373.776866428088,
+        "model_protocol_observed": true,
+        "reference_rps": 1.020126901405602,
+        "slo_s": 190.3464251806725
+      }
+    ],
+    "completed_trace_timings_available": true,
+    "progress_observation": "All three calibration jobs completed with exit 0 and model_protocol.json present. pilot_host_wall_seconds covers the combined pilot calibration work, not one trace.",
+    "state": "COMPLETED",
+    "finished_at": "2026-09-05T22:36:44+08:00"
+  },
+  "protocol": {
+    "job_id": "14754572",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "finished_at": "2026-09-05T22:37:48+08:00",
+    "artifact_observed": "training_protocol.json, 110184 bytes",
+    "test_frozen": false,
+    "status_description": "calibrated pilot; formal testing remains locked"
+  },
+  "ppo": {
+    "job_ids": [
+      "14754581_0",
+      "14754581_1",
+      "14754581_2"
+    ],
+    "state": "COMPLETED",
+    "started_at": "2026-09-05T22:38:57+08:00",
+    "planned_traces_per_seed": 3,
+    "jobs": [
+      {
+        "job_id": "14754581_0",
+        "seed": 7,
+        "state": "COMPLETED",
+        "reported_update": 166,
+        "completed_traces": 3,
+        "completed_models": [
+          "qwen_14b",
+          "qwen_1.8b",
+          "qwen_7b"
+        ],
+        "checkpoint_observed": true,
+        "summary_observed": true,
+        "latest_checkpoint_at": "2026-09-06T01:29:39+08:00",
+        "exit_code": "0:0",
+        "finished_at": "2026-09-06T01:29:49+08:00",
+        "elapsed_seconds": 10252,
+        "checkpoint_bytes": 801807,
+        "curve_rows": 166,
+        "terminal_rows": 3,
+        "nonfinite_metrics": [],
+        "trace_results": [
+          {
+            "model": "qwen_14b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 205,
+            "load_multiplier": 1.25
+          },
+          {
+            "model": "qwen_1.8b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 226,
+            "load_multiplier": 0.5
+          },
+          {
+            "model": "qwen_7b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 226,
+            "load_multiplier": 0.5
+          }
+        ]
+      },
+      {
+        "job_id": "14754581_1",
+        "seed": 17,
+        "state": "COMPLETED",
+        "reported_update": 165,
+        "completed_traces": 3,
+        "completed_models": [
+          "qwen_1.8b",
+          "qwen_7b",
+          "qwen_14b"
+        ],
+        "checkpoint_observed": true,
+        "summary_observed": true,
+        "latest_checkpoint_at": "2026-09-06T01:31:02+08:00",
+        "exit_code": "0:0",
+        "finished_at": "2026-09-06T01:31:03+08:00",
+        "elapsed_seconds": 10326,
+        "checkpoint_bytes": 801807,
+        "curve_rows": 165,
+        "terminal_rows": 3,
+        "nonfinite_metrics": [],
+        "trace_results": [
+          {
+            "model": "qwen_1.8b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 224,
+            "load_multiplier": 1.0
+          },
+          {
+            "model": "qwen_7b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 225,
+            "load_multiplier": 1.0
+          },
+          {
+            "model": "qwen_14b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 205,
+            "load_multiplier": 1.0
+          }
+        ]
+      },
+      {
+        "job_id": "14754581_2",
+        "seed": 27,
+        "state": "COMPLETED",
+        "reported_update": 163,
+        "completed_traces": 3,
+        "completed_models": [
+          "qwen_1.8b",
+          "qwen_7b",
+          "qwen_14b"
+        ],
+        "checkpoint_observed": true,
+        "summary_observed": true,
+        "latest_checkpoint_at": "2026-09-06T01:16:38+08:00",
+        "exit_code": "0:0",
+        "finished_at": "2026-09-06T01:16:44+08:00",
+        "elapsed_seconds": 9467,
+        "checkpoint_bytes": 801807,
+        "curve_rows": 163,
+        "terminal_rows": 3,
+        "nonfinite_metrics": [],
+        "trace_results": [
+          {
+            "model": "qwen_1.8b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 220,
+            "load_multiplier": 1.0
+          },
+          {
+            "model": "qwen_7b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 224,
+            "load_multiplier": 1.0
+          },
+          {
+            "model": "qwen_14b",
+            "trace_id": "burstgpt_train_000000",
+            "completed": 1000,
+            "windows": 205,
+            "load_multiplier": 0.75
+          }
+        ]
+      }
+    ],
+    "progress_observation": "All three seeds completed all three model traces, each with 1000 requests. Curves match summary update counts and contain three terminal records each; checked reward/loss/clip_fraction/approx_kl values are finite. All final checkpoints and summaries exist.",
+    "finished_at": "2026-09-06T01:31:03+08:00",
+    "total_model_trace_runs": 9,
+    "total_request_executions": 9000,
+    "total_windows": 1960,
+    "total_update_batches": 494
+  },
+  "overall_estimated_finish": null,
+  "scope": "Completed BC/calibration/PPO pilot only; formal baseline comparisons, fixed-load test evaluation and leave-one-model-out evaluation remain pending. Decoder DAG timing/scheduling replay, not physical tensor inference.",
+  "notification_baseline": "Final completion audit reported to user; monitor is complete and paused.",
+  "last_check_result": "Final audit: all 12 jobs COMPLETED with exit 0, user Slurm queue empty, required results present and training curves checked. Automation paused; SSH connection closed and socket absence verified. No remote code changes or new jobs.",
+  "last_successful_check_at": "2026-09-06T08:45:50+08:00",
+  "remote_status_current": true,
+  "overall_last_notified_estimate": [
+    "2026-09-06T01:00:00+08:00",
+    "2026-09-06T03:00:00+08:00"
+  ],
+  "last_estimated_finish_before_disconnect": [
+    "2026-09-06T01:15:00+08:00",
+    "2026-09-06T02:15:00+08:00"
+  ],
+  "monitoring_status": "complete",
+  "automation_status": "PAUSED",
+  "all_target_jobs_terminal": true,
+  "all_target_jobs_successful": true,
+  "audited_job_count": 12,
+  "user_slurm_queue_empty": true,
+  "completed_at": "2026-09-06T01:31:03+08:00",
+  "validation": {
+    "job_id": "14754368",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "finished_at": "2026-09-05T19:51:15+08:00",
+    "tests_passed": 48,
+    "test_seconds": 10.083,
+    "log": "/lustre/home/2501111916/workspace/DOPS-Serve/logs/op-policy-learning-14754368_4294967294.out"
+  },
+  "completion_report": "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/completion_summary.md"
+}

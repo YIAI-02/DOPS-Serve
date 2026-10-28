@@ -1,0 +1,374 @@
+{
+  "date": "2026-09-06",
+  "source": "completed 165-condition fixed-validation comparison, continuation curves, current local source",
+  "training_exposure": [
+    {
+      "seed": 7,
+      "outer_epochs": 2,
+      "training_trace_ids": [
+        "burstgpt_train_000000"
+      ],
+      "model_trace_executions": 6,
+      "request_executions": 6000,
+      "windows": 1312,
+      "update_batches": 331,
+      "optimizer_steps": 1324,
+      "continuation_mode": "weights only; fresh Adam and Torch RNG",
+      "epoch_2_schedule": [
+        {
+          "epoch": 2,
+          "model": "qwen_1.8b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 1.0,
+          "completed": 1000,
+          "windows": 224
+        },
+        {
+          "epoch": 2,
+          "model": "qwen_14b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 1.5,
+          "completed": 1000,
+          "windows": 205
+        },
+        {
+          "epoch": 2,
+          "model": "qwen_7b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 0.5,
+          "completed": 1000,
+          "windows": 226
+        }
+      ]
+    },
+    {
+      "seed": 17,
+      "outer_epochs": 2,
+      "training_trace_ids": [
+        "burstgpt_train_000000"
+      ],
+      "model_trace_executions": 6,
+      "request_executions": 6000,
+      "windows": 1329,
+      "update_batches": 335,
+      "optimizer_steps": 1340,
+      "continuation_mode": "weights only; fresh Adam and Torch RNG",
+      "epoch_2_schedule": [
+        {
+          "epoch": 2,
+          "model": "qwen_14b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 0.5,
+          "completed": 1000,
+          "windows": 224
+        },
+        {
+          "epoch": 2,
+          "model": "qwen_7b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 0.5,
+          "completed": 1000,
+          "windows": 226
+        },
+        {
+          "epoch": 2,
+          "model": "qwen_1.8b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 0.75,
+          "completed": 1000,
+          "windows": 225
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "outer_epochs": 2,
+      "training_trace_ids": [
+        "burstgpt_train_000000"
+      ],
+      "model_trace_executions": 6,
+      "request_executions": 6000,
+      "windows": 1301,
+      "update_batches": 327,
+      "optimizer_steps": 1308,
+      "continuation_mode": "weights only; fresh Adam and Torch RNG",
+      "epoch_2_schedule": [
+        {
+          "epoch": 2,
+          "model": "qwen_7b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 1.0,
+          "completed": 1000,
+          "windows": 224
+        },
+        {
+          "epoch": 2,
+          "model": "qwen_14b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 1.5,
+          "completed": 1000,
+          "windows": 205
+        },
+        {
+          "epoch": 2,
+          "model": "qwen_1.8b",
+          "trace_id": "burstgpt_train_000000",
+          "load_multiplier": 1.0,
+          "completed": 1000,
+          "windows": 223
+        }
+      ]
+    }
+  ],
+  "curve_statistics": [
+    {
+      "seed": 7,
+      "model": "qwen_1.8b",
+      "update_batches": 56,
+      "load_multipliers": [
+        1.0
+      ],
+      "reward": -117.09477206937406,
+      "loss": 6430.199425981542,
+      "clip_fraction": 0.0023517219680278295,
+      "approx_kl": 0.00033314506951817195,
+      "max_loss": 109256.16650390625
+    },
+    {
+      "seed": 7,
+      "model": "qwen_7b",
+      "update_batches": 57,
+      "load_multipliers": [
+        0.5
+      ],
+      "reward": -66.49428179362651,
+      "loss": 2004.1861324422118,
+      "clip_fraction": 0.00867402888711934,
+      "approx_kl": 0.0007273083336109318,
+      "max_loss": 31164.89338493347
+    },
+    {
+      "seed": 7,
+      "model": "qwen_14b",
+      "update_batches": 52,
+      "load_multipliers": [
+        1.5
+      ],
+      "reward": -258.9738661338761,
+      "loss": 19829.589887934235,
+      "clip_fraction": 9.765625369394771e-05,
+      "approx_kl": 4.338505053255512e-05,
+      "max_loss": 115058.73666381836
+    },
+    {
+      "seed": 17,
+      "model": "qwen_1.8b",
+      "update_batches": 57,
+      "load_multipliers": [
+        0.75
+      ],
+      "reward": -116.03660312646917,
+      "loss": 5734.876685954921,
+      "clip_fraction": 0.009378916056001592,
+      "approx_kl": 0.0009214536072580255,
+      "max_loss": 94381.05369567871
+    },
+    {
+      "seed": 17,
+      "model": "qwen_7b",
+      "update_batches": 57,
+      "load_multipliers": [
+        0.5
+      ],
+      "reward": -65.32305312341462,
+      "loss": 2605.374233651496,
+      "clip_fraction": 0.0056684680554705364,
+      "approx_kl": 0.0005995505878233303,
+      "max_loss": 73043.2900428772
+    },
+    {
+      "seed": 17,
+      "model": "qwen_14b",
+      "update_batches": 56,
+      "load_multipliers": [
+        0.5
+      ],
+      "reward": -207.9266283275619,
+      "loss": 16393.355351510505,
+      "clip_fraction": 0.005559430811574982,
+      "approx_kl": 0.00051267725108933,
+      "max_loss": 165959.96044921875
+    },
+    {
+      "seed": 27,
+      "model": "qwen_1.8b",
+      "update_batches": 56,
+      "load_multipliers": [
+        1.0
+      ],
+      "reward": -118.00647922818679,
+      "loss": 5266.65759293274,
+      "clip_fraction": 0.003776706057708777,
+      "approx_kl": 0.00091564987514012,
+      "max_loss": 76380.49864196777
+    },
+    {
+      "seed": 27,
+      "model": "qwen_7b",
+      "update_batches": 56,
+      "load_multipliers": [
+        1.0
+      ],
+      "reward": -95.03792810205016,
+      "loss": 4500.373462818076,
+      "clip_fraction": 0.003696986654956293,
+      "approx_kl": 0.0005153647636371954,
+      "max_loss": 97965.173828125
+    },
+    {
+      "seed": 27,
+      "model": "qwen_14b",
+      "update_batches": 52,
+      "load_multipliers": [
+        1.5
+      ],
+      "reward": -261.58071546947366,
+      "loss": 23055.699104445197,
+      "clip_fraction": 0.0029972956567340028,
+      "approx_kl": 0.0004972854695809885,
+      "max_loss": 195814.88330078125
+    }
+  ],
+  "continued_low_load_slo_gap": [
+    {
+      "model": "qwen_1.8b",
+      "slo_s": 5.708090083481547,
+      "p99_s_min": 11.134377392664785,
+      "p99_s_max": 16.136424671614904,
+      "p99_slo_ratio_min": 1.9506309868665512,
+      "p99_slo_ratio_max": 2.826939385261555,
+      "violation_rate_min": 0.409,
+      "violation_rate_max": 0.644
+    },
+    {
+      "model": "qwen_7b",
+      "slo_s": 22.53515061739195,
+      "p99_s_min": 32.25773762396966,
+      "p99_s_max": 47.02946809818242,
+      "p99_slo_ratio_min": 1.431440959576907,
+      "p99_slo_ratio_max": 2.086938263544886,
+      "violation_rate_min": 0.177,
+      "violation_rate_max": 0.379
+    },
+    {
+      "model": "qwen_14b",
+      "slo_s": 190.3464251806725,
+      "p99_s_min": 631.7124301437327,
+      "p99_s_max": 638.4868759254435,
+      "p99_slo_ratio_min": 3.318751216599553,
+      "p99_slo_ratio_max": 3.354341303333679,
+      "violation_rate_min": 0.659,
+      "violation_rate_max": 0.667
+    }
+  ],
+  "threshold_checks": {
+    "learned_cases": 135,
+    "minimum_p95_slo_ratio": 1.3414314819061994,
+    "learned_cases_p95_over_1_25_slo": 135,
+    "minimum_observed_violation_rate": 0.177,
+    "passes_with_same_time_limit_and_10_percent_violation_budget": 0,
+    "reason_time_limit_25_percent_still_fails": "Every case has 1000 requests and its interpolated p95 exceeds 1.25 times the original limit, so at least 50 requests exceed the relaxed limit, above the allowed 10. This is a bound; exact relaxed violation rates were not recalculated."
+  },
+  "p99_threshold_sensitivity": [
+    {
+      "time_limit_factor": 1,
+      "p99_at_or_below_limit_counts": {
+        "static": 3,
+        "bifocal": 0,
+        "bc": 0,
+        "ppo": 0,
+        "ppo_continued": 0
+      }
+    },
+    {
+      "time_limit_factor": 1.1,
+      "p99_at_or_below_limit_counts": {
+        "static": 3,
+        "bifocal": 0,
+        "bc": 0,
+        "ppo": 0,
+        "ppo_continued": 0
+      }
+    },
+    {
+      "time_limit_factor": 1.25,
+      "p99_at_or_below_limit_counts": {
+        "static": 8,
+        "bifocal": 1,
+        "bc": 0,
+        "ppo": 0,
+        "ppo_continued": 0
+      }
+    },
+    {
+      "time_limit_factor": 1.5,
+      "p99_at_or_below_limit_counts": {
+        "static": 15,
+        "bifocal": 5,
+        "bc": 0,
+        "ppo": 1,
+        "ppo_continued": 2
+      }
+    },
+    {
+      "time_limit_factor": 2,
+      "p99_at_or_below_limit_counts": {
+        "static": 15,
+        "bifocal": 5,
+        "bc": 5,
+        "ppo": 8,
+        "ppo_continued": 11
+      }
+    },
+    {
+      "time_limit_factor": 2.5,
+      "p99_at_or_below_limit_counts": {
+        "static": 15,
+        "bifocal": 5,
+        "bc": 11,
+        "ppo": 17,
+        "ppo_continued": 23
+      }
+    },
+    {
+      "time_limit_factor": 3,
+      "p99_at_or_below_limit_counts": {
+        "static": 15,
+        "bifocal": 6,
+        "bc": 20,
+        "ppo": 25,
+        "ppo_continued": 26
+      }
+    },
+    {
+      "time_limit_factor": 3.5,
+      "p99_at_or_below_limit_counts": {
+        "static": 15,
+        "bifocal": 9,
+        "bc": 22,
+        "ppo": 33,
+        "ppo_continued": 34
+      }
+    }
+  ],
+  "sensitivity_scope": "post-hoc threshold checks on fixed outputs; p99 counts are not exact recomputed violation counts",
+  "limitations": [
+    "Only epoch-1 and epoch-2 validation results; no convergence curve.",
+    "One unique training trace and one validation trace; repeating three model variants does not create independent trace samples.",
+    "First continuation reset Adam and Torch RNG.",
+    "Logs do not separate policy/value losses, entropy, gradient norms, or reward components.",
+    "No checkpoint/action probability analysis or new HPC experiment in this diagnostic.",
+    "Original epoch-1 PPO curves are not in the downloaded local files."
+  ],
+  "primary_reference": "https://arxiv.org/abs/1707.06347"
+}

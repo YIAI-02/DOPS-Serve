@@ -1,0 +1,64 @@
+{
+  "remote_artifact_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1",
+  "comparison_directory": "comparison_20260906",
+  "continuation_directory": "continuation_20260906",
+  "validation": {
+    "job_id": "14767579",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "tests_passed": 51,
+    "test_seconds": 20.817,
+    "elapsed_seconds": 40
+  },
+  "preparation": {
+    "job_id": "14767580",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "cases": 165,
+    "split": "val",
+    "trace_ids": [
+      "burstgpt_val_000000"
+    ]
+  },
+  "ppo_continuation": {
+    "job_id": "14767581",
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "state": "RUNNING",
+    "running_tasks": 3,
+    "additional_trace_epochs": 1,
+    "current_epoch": 2,
+    "started_at": "2026-09-06T09:32:54+08:00",
+    "initialization": "legacy PPO weights; fresh Adam and Torch RNG"
+  },
+  "current_comparison": {
+    "job_id": "14767584",
+    "case_range": [
+      0,
+      119
+    ],
+    "planned_cases": 120,
+    "running_tasks": 24,
+    "pending_tasks": 96,
+    "completed_results": 0,
+    "started_at": "2026-09-06T09:33:32+08:00"
+  },
+  "continued_comparison": {
+    "job_id": "14767609",
+    "case_range": [
+      120,
+      164
+    ],
+    "planned_cases": 45,
+    "state": "PENDING",
+    "dependency": "afterok:14767580:14767581"
+  },
+  "summary": {
+    "job_id": "14767610",
+    "state": "PENDING",
+    "dependency": "afterany:14767584:14767609"
+  }
+}
