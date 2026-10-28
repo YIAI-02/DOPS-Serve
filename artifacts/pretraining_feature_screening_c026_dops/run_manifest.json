@@ -1,0 +1,54 @@
+{
+  "source": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026",
+  "reference": "DOPS Bifocal C026",
+  "c026_parameters": {
+    "SCHED_DECODE_AMORT_ALPHA": 1.0,
+    "SCHED_DECODE_AMORT_ENABLE": true,
+    "SCHED_DECODE_AMORT_REUSE_PROB": 1.0,
+    "SCHED_DECODE_AMORT_RMIN": 1.0,
+    "SCHED_JOINT_LK_CONSIST_LAMBDA": 0.5,
+    "SCHED_JOINT_LK_ENABLE": true,
+    "SCHED_JOINT_LK_GAMMA": 0.4,
+    "SCHED_JOINT_LK_H": 2,
+    "SCHED_JOINT_LK_PLAN_HINT_MAX": 3,
+    "SCHED_WEIGHT_BIAS_ETA": 0.5
+  },
+  "models": [
+    "qwen_7b",
+    "qwen_1.8b",
+    "qwen_14b"
+  ],
+  "factor_values": {
+    "batch": [
+      1,
+      4,
+      8,
+      16
+    ],
+    "prompt": [
+      128,
+      512,
+      1024,
+      2048
+    ],
+    "decode": [
+      128,
+      256,
+      512,
+      1024
+    ]
+  },
+  "states": 192,
+  "tasks": 144,
+  "evaluations_per_task": {
+    "prefill": 16,
+    "decode_full_sequence": 16
+  },
+  "evaluator": "native DOPS schedule_with_plan",
+  "decode_transfer": "source plan at the same token index; hold final source plan beyond source horizon",
+  "decode_initial_state": "target reference prefill state, identical for every candidate",
+  "actor_r2_low_threshold": 0.01,
+  "actor_r2_response": "log fixed-placement cost",
+  "actor_r2_reduced": "background + target factor + source-placement factor",
+  "actor_r2_full": "reduced + target-factor-by-source-placement interaction"
+}

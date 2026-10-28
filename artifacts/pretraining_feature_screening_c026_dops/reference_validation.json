@@ -1,0 +1,5575 @@
+{
+  "passed": true,
+  "cases": 192,
+  "decode_tokens": 92160,
+  "checks": [
+    {
+      "case_id": "F000",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.07191524969237685,
+        "total": 0.11668628686016197
+      },
+      "replayed_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.07191524969237685,
+        "total": 0.11668628686016197
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F001",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.11336715429432954,
+        "total": 0.15813819146211466
+      },
+      "replayed_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.11336715429432954,
+        "total": 0.15813819146211466
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F002",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.1922931081728967,
+        "total": 0.23706414534068182
+      },
+      "replayed_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.1922931081728967,
+        "total": 0.23706414534068182
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F003",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.3539397542713186,
+        "total": 0.3987107914391037
+      },
+      "replayed_s": {
+        "prefill": 0.04477103716778512,
+        "decode": 0.3539397542713186,
+        "total": 0.3987107914391037
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F004",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.0747228659946186,
+        "total": 0.15123064317491033
+      },
+      "replayed_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.0747228659946186,
+        "total": 0.15123064317491033
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F005",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.11376884642756259,
+        "total": 0.19027662360785433
+      },
+      "replayed_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.11376884642756259,
+        "total": 0.19027662360785433
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F006",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.19202633186657192,
+        "total": 0.26853410904686364
+      },
+      "replayed_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.19202633186657192,
+        "total": 0.26853410904686364
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F007",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.3598455213937029,
+        "total": 0.43635329857399463
+      },
+      "replayed_s": {
+        "prefill": 0.07650777718029174,
+        "decode": 0.3598455213937029,
+        "total": 0.43635329857399463
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F008",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.08617120289281935,
+        "total": 0.18584760234652223
+      },
+      "replayed_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.08617120289281935,
+        "total": 0.18584760234652223
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F009",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.12863653232980946,
+        "total": 0.22831293178351234
+      },
+      "replayed_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.12863653232980946,
+        "total": 0.22831293178351234
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F010",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.2145555150428901,
+        "total": 0.314231914496593
+      },
+      "replayed_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.2145555150428901,
+        "total": 0.314231914496593
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F011",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.3903467758281122,
+        "total": 0.4900231752818151
+      },
+      "replayed_s": {
+        "prefill": 0.09967639945370288,
+        "decode": 0.3903467758281122,
+        "total": 0.4900231752818151
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F012",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.0881941972726549,
+        "total": 0.18694591507851763
+      },
+      "replayed_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.0881941972726549,
+        "total": 0.18694591507851763
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F013",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.13308803463806287,
+        "total": 0.2318397524439256
+      },
+      "replayed_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.13308803463806287,
+        "total": 0.2318397524439256
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F014",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.22186312593571722,
+        "total": 0.32061484374157995
+      },
+      "replayed_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.22186312593571722,
+        "total": 0.32061484374157995
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F015",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.40770259843458473,
+        "total": 0.5064543162404475
+      },
+      "replayed_s": {
+        "prefill": 0.09875171780586273,
+        "decode": 0.40770259843458473,
+        "total": 0.5064543162404475
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F016",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 0.17191418239856798,
+        "total": 0.24827175587402572
+      },
+      "replayed_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 0.17191418239856798,
+        "total": 0.24827175587402572
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F017",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 0.3125061966121013,
+        "total": 0.388863770087559
+      },
+      "replayed_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 0.3125061966121013,
+        "total": 0.388863770087559
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F018",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 0.5971885028002683,
+        "total": 0.673546076275726
+      },
+      "replayed_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 0.5971885028002683,
+        "total": 0.673546076275726
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F019",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 1.185038144031141,
+        "total": 1.2613957175065988
+      },
+      "replayed_s": {
+        "prefill": 0.07635757347545775,
+        "decode": 1.185038144031141,
+        "total": 1.2613957175065988
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F020",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 0.1843385566307728,
+        "total": 0.278283755881948
+      },
+      "replayed_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 0.1843385566307728,
+        "total": 0.278283755881948
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F021",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 0.3293147886973176,
+        "total": 0.4232599879484928
+      },
+      "replayed_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 0.3293147886973176,
+        "total": 0.4232599879484928
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F022",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 0.6232602921408613,
+        "total": 0.7172054913920365
+      },
+      "replayed_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 0.6232602921408613,
+        "total": 0.7172054913920365
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F023",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 1.2296517492493573,
+        "total": 1.3235969485005326
+      },
+      "replayed_s": {
+        "prefill": 0.09394519925117517,
+        "decode": 1.2296517492493573,
+        "total": 1.3235969485005326
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F024",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 0.1893841498564201,
+        "total": 0.29438012773499084
+      },
+      "replayed_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 0.1893841498564201,
+        "total": 0.29438012773499084
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F025",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 0.33967358240297496,
+        "total": 0.4446695602815457
+      },
+      "replayed_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 0.33967358240297496,
+        "total": 0.4446695602815457
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F026",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 0.6468513857813781,
+        "total": 0.7518473636599489
+      },
+      "replayed_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 0.6468513857813781,
+        "total": 0.7518473636599489
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F027",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 1.2785305978969446,
+        "total": 1.3835265757755153
+      },
+      "replayed_s": {
+        "prefill": 0.10499597787857073,
+        "decode": 1.2785305978969446,
+        "total": 1.3835265757755153
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F028",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 0.20000977148381455,
+        "total": 0.3495608583282217
+      },
+      "replayed_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 0.20000977148381455,
+        "total": 0.3495608583282217
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F029",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 0.362683268224611,
+        "total": 0.5122343550690182
+      },
+      "replayed_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 0.362683268224611,
+        "total": 0.5122343550690182
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F030",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 0.6919514054852929,
+        "total": 0.8415024923297001
+      },
+      "replayed_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 0.6919514054852929,
+        "total": 0.8415024923297001
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F031",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 1.36663504143934,
+        "total": 1.5161861282837472
+      },
+      "replayed_s": {
+        "prefill": 0.14955108684440716,
+        "decode": 1.36663504143934,
+        "total": 1.5161861282837472
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F032",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 0.26936972069172116,
+        "total": 0.36764421890030685
+      },
+      "replayed_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 0.26936972069172116,
+        "total": 0.36764421890030685
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F033",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 0.5320775545613164,
+        "total": 0.6303520527699021
+      },
+      "replayed_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 0.5320775545613164,
+        "total": 0.6303520527699021
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F034",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 1.0582812597027866,
+        "total": 1.1565557579113723
+      },
+      "replayed_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 1.0582812597027866,
+        "total": 1.1565557579113723
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F035",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 2.1438313589002465,
+        "total": 2.242105857108832
+      },
+      "replayed_s": {
+        "prefill": 0.09827449820858568,
+        "decode": 2.1438313589002465,
+        "total": 2.242105857108832
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F036",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 0.25864495541691757,
+        "total": 0.3604365875923633
+      },
+      "replayed_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 0.25864495541691757,
+        "total": 0.3604365875923633
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F037",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 0.49320945533307925,
+        "total": 0.595001087508525
+      },
+      "replayed_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 0.49320945533307925,
+        "total": 0.595001087508525
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F038",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 0.9622374531367364,
+        "total": 1.064029085312182
+      },
+      "replayed_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 0.9622374531367364,
+        "total": 1.064029085312182
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F039",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 1.926588768872025,
+        "total": 2.0283804010474706
+      },
+      "replayed_s": {
+        "prefill": 0.1017916321754457,
+        "decode": 1.926588768872025,
+        "total": 2.0283804010474706
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F040",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 0.2733433008972213,
+        "total": 0.41007700492912846
+      },
+      "replayed_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 0.2733433008972213,
+        "total": 0.41007700492912846
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F041",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 0.5134230660540817,
+        "total": 0.6501567700859889
+      },
+      "replayed_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 0.5134230660540817,
+        "total": 0.6501567700859889
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F042",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 1.0023229692532594,
+        "total": 1.1390566732851666
+      },
+      "replayed_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 1.0023229692532594,
+        "total": 1.1390566732851666
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F043",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 2.009567351727139,
+        "total": 2.146301055759046
+      },
+      "replayed_s": {
+        "prefill": 0.13673370403190716,
+        "decode": 2.009567351727139,
+        "total": 2.146301055759046
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F044",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 0.2897066316343718,
+        "total": 0.5859069636610426
+      },
+      "replayed_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 0.2897066316343718,
+        "total": 0.5859069636610426
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F045",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 0.551308176756938,
+        "total": 0.8475085087836087
+      },
+      "replayed_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 0.551308176756938,
+        "total": 0.8475085087836087
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F046",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 1.083129203796489,
+        "total": 1.3793295358231599
+      },
+      "replayed_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 1.083129203796489,
+        "total": 1.3793295358231599
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F047",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 2.1761866515084947,
+        "total": 2.4723869835351655
+      },
+      "replayed_s": {
+        "prefill": 0.29620033202667073,
+        "decode": 2.1761866515084947,
+        "total": 2.4723869835351655
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F048",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 0.2972525158387808,
+        "total": 0.3899960854512841
+      },
+      "replayed_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 0.2972525158387808,
+        "total": 0.3899960854512841
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F049",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 0.5885963552948731,
+        "total": 0.6813399249073764
+      },
+      "replayed_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 0.5885963552948731,
+        "total": 0.6813399249073764
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F050",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 1.1861119542796885,
+        "total": 1.278855523892192
+      },
+      "replayed_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 1.1861119542796885,
+        "total": 1.278855523892192
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F051",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 2.444228671342728,
+        "total": 2.5369722409552313
+      },
+      "replayed_s": {
+        "prefill": 0.0927435696125033,
+        "decode": 2.444228671342728,
+        "total": 2.5369722409552313
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F052",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 0.31362860071071397,
+        "total": 0.44395361333637107
+      },
+      "replayed_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 0.31362860071071397,
+        "total": 0.44395361333637107
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F053",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 0.6202644122601358,
+        "total": 0.7505894248857929
+      },
+      "replayed_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 0.6202644122601358,
+        "total": 0.7505894248857929
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F054",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 1.2492494049993301,
+        "total": 1.3795744176249873
+      },
+      "replayed_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 1.2492494049993301,
+        "total": 1.3795744176249873
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F055",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 2.571309950221701,
+        "total": 2.701634962847358
+      },
+      "replayed_s": {
+        "prefill": 0.13032501262565713,
+        "decode": 2.571309950221701,
+        "total": 2.701634962847358
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F056",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 0.3345240111354407,
+        "total": 0.6050895775371113
+      },
+      "replayed_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 0.3345240111354407,
+        "total": 0.6050895775371113
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F057",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 0.6623636646581103,
+        "total": 0.9329292310597809
+      },
+      "replayed_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 0.6623636646581103,
+        "total": 0.9329292310597809
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F058",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 1.3340976971240706,
+        "total": 1.6046632635257412
+      },
+      "replayed_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 1.3340976971240706,
+        "total": 1.6046632635257412
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F059",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 2.7415470972914093,
+        "total": 3.01211266369308
+      },
+      "replayed_s": {
+        "prefill": 0.2705655664016706,
+        "decode": 2.7415470972914093,
+        "total": 3.01211266369308
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F060",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 0.37172142085793103,
+        "total": 0.9615082512893067
+      },
+      "replayed_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 0.37172142085793103,
+        "total": 0.9615082512893067
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F061",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 0.7370340606692772,
+        "total": 1.326820891100653
+      },
+      "replayed_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 0.7370340606692772,
+        "total": 1.326820891100653
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F062",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 1.4818188124311322,
+        "total": 2.071605642862508
+      },
+      "replayed_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 1.4818188124311322,
+        "total": 2.071605642862508
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F063",
+      "model": "qwen_1.8b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 3.027529869992747,
+        "total": 3.617316700424123
+      },
+      "replayed_s": {
+        "prefill": 0.5897868304313757,
+        "decode": 3.027529869992747,
+        "total": 3.617316700424123
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F064",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.32829317224892013,
+        "total": 0.5473219754420253
+      },
+      "replayed_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.32829317224892013,
+        "total": 0.5473219754420253
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F065",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.5051520816025732,
+        "total": 0.7241808847956783
+      },
+      "replayed_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.5051520816025732,
+        "total": 0.7241808847956783
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F066",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.8611401492695878,
+        "total": 1.080168952462693
+      },
+      "replayed_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.8611401492695878,
+        "total": 1.080168952462693
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F067",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 1.5198678003503447,
+        "total": 1.7388966035434499
+      },
+      "replayed_s": {
+        "prefill": 0.2190288031931052,
+        "decode": 1.5198678003503447,
+        "total": 1.7388966035434499
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F068",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 0.34286458263923414,
+        "total": 0.7070607168830143
+      },
+      "replayed_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 0.34286458263923414,
+        "total": 0.7070607168830143
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F069",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 0.5139876789551107,
+        "total": 0.8781838131988908
+      },
+      "replayed_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 0.5139876789551107,
+        "total": 0.8781838131988908
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F070",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 0.8560193639026873,
+        "total": 1.2202154981464675
+      },
+      "replayed_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 0.8560193639026873,
+        "total": 1.2202154981464675
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F071",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 1.5495214296380597,
+        "total": 1.91371756388184
+      },
+      "replayed_s": {
+        "prefill": 0.36419613424378017,
+        "decode": 1.5495214296380597,
+        "total": 1.91371756388184
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F072",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 0.38825055987259943,
+        "total": 0.8425603653997635
+      },
+      "replayed_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 0.38825055987259943,
+        "total": 0.8425603653997635
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F073",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 0.5635224980871487,
+        "total": 1.0178323036143129
+      },
+      "replayed_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 0.5635224980871487,
+        "total": 1.0178323036143129
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F074",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 0.9163738634778045,
+        "total": 1.3706836690049686
+      },
+      "replayed_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 0.9163738634778045,
+        "total": 1.3706836690049686
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F075",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 1.6311575900975714,
+        "total": 2.0854673956247356
+      },
+      "replayed_s": {
+        "prefill": 0.4543098055271641,
+        "decode": 1.6311575900975714,
+        "total": 2.0854673956247356
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F076",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 0.3787617059336146,
+        "total": 0.8372049561923779
+      },
+      "replayed_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 0.3787617059336146,
+        "total": 0.8372049561923779
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F077",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 0.5578646313999082,
+        "total": 1.0163078816586715
+      },
+      "replayed_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 0.5578646313999082,
+        "total": 1.0163078816586715
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F078",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 0.9185553512919838,
+        "total": 1.3769986015507472
+      },
+      "replayed_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 0.9185553512919838,
+        "total": 1.3769986015507472
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F079",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 1.6490903069145095,
+        "total": 2.107533557173273
+      },
+      "replayed_s": {
+        "prefill": 0.4584432502587633,
+        "decode": 1.6490903069145095,
+        "total": 2.107533557173273
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F080",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 0.750312262104932,
+        "total": 1.1141579210374328
+      },
+      "replayed_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 0.750312262104932,
+        "total": 1.1141579210374328
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F081",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 1.3654278713239427,
+        "total": 1.7292735302564437
+      },
+      "replayed_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 1.3654278713239427,
+        "total": 1.7292735302564437
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F082",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 2.59412922688611,
+        "total": 2.957974885818611
+      },
+      "replayed_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 2.59412922688611,
+        "total": 2.957974885818611
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F083",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 5.026361389370248,
+        "total": 5.390207048302749
+      },
+      "replayed_s": {
+        "prefill": 0.36384565893250087,
+        "decode": 5.026361389370248,
+        "total": 5.390207048302749
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F084",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 0.8132718103620337,
+        "total": 1.2604998506598595
+      },
+      "replayed_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 0.8132718103620337,
+        "total": 1.2604998506598595
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F085",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 1.4121800532896769,
+        "total": 1.8594080935875028
+      },
+      "replayed_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 1.4121800532896769,
+        "total": 1.8594080935875028
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F086",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 2.6313945228633324,
+        "total": 3.0786225631611583
+      },
+      "replayed_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 2.6313945228633324,
+        "total": 3.0786225631611583
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F087",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 5.1231490008800105,
+        "total": 5.570377041177836
+      },
+      "replayed_s": {
+        "prefill": 0.4472280402978258,
+        "decode": 5.1231490008800105,
+        "total": 5.570377041177836
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F088",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 0.8245636465234805,
+        "total": 1.296031852770174
+      },
+      "replayed_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 0.8245636465234805,
+        "total": 1.296031852770174
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F089",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 1.4339825040289917,
+        "total": 1.9054507102756852
+      },
+      "replayed_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 1.4339825040289917,
+        "total": 1.9054507102756852
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F090",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 2.6860215402549317,
+        "total": 3.1574897465016254
+      },
+      "replayed_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 2.6860215402549317,
+        "total": 3.1574897465016254
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F091",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 5.22706843608334,
+        "total": 5.698536642330033
+      },
+      "replayed_s": {
+        "prefill": 0.47146820624669356,
+        "decode": 5.22706843608334,
+        "total": 5.698536642330033
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F092",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 0.8507945005514682,
+        "total": 1.442922052446754
+      },
+      "replayed_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 0.8507945005514682,
+        "total": 1.442922052446754
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F093",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 1.479254472009015,
+        "total": 2.071382023904301
+      },
+      "replayed_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 1.479254472009015,
+        "total": 2.071382023904301
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F094",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 2.78062120604812,
+        "total": 3.372748757943406
+      },
+      "replayed_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 2.78062120604812,
+        "total": 3.372748757943406
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F095",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 5.420323497503014,
+        "total": 6.012451049398299
+      },
+      "replayed_s": {
+        "prefill": 0.5921275518952859,
+        "decode": 5.420323497503014,
+        "total": 6.012451049398299
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F096",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 1.1998587343985165,
+        "total": 1.6508974370204073
+      },
+      "replayed_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 1.1998587343985165,
+        "total": 1.6508974370204073
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F097",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 2.322503304675374,
+        "total": 2.7735420072972645
+      },
+      "replayed_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 2.322503304675374,
+        "total": 2.7735420072972645
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F098",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 4.58747963510633,
+        "total": 5.038518337728221
+      },
+      "replayed_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 4.58747963510633,
+        "total": 5.038518337728221
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F099",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 9.183799514475236,
+        "total": 9.634838217097126
+      },
+      "replayed_s": {
+        "prefill": 0.45103870262189066,
+        "decode": 9.183799514475236,
+        "total": 9.634838217097126
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F100",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 1.2363441667449515,
+        "total": 1.7003355663510202
+      },
+      "replayed_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 1.2363441667449515,
+        "total": 1.7003355663510202
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F101",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 2.2912468488374076,
+        "total": 2.7552382484434763
+      },
+      "replayed_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 2.2912468488374076,
+        "total": 2.7552382484434763
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F102",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 4.419537604697728,
+        "total": 4.883529004303797
+      },
+      "replayed_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 4.419537604697728,
+        "total": 4.883529004303797
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F103",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 8.731273166325666,
+        "total": 9.195264565931735
+      },
+      "replayed_s": {
+        "prefill": 0.4639913996060686,
+        "decode": 8.731273166325666,
+        "total": 9.195264565931735
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F104",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 1.2578496538723583,
+        "total": 1.8200699792051442
+      },
+      "replayed_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 1.2578496538723583,
+        "total": 1.8200699792051442
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F105",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 2.330039928657189,
+        "total": 2.892260253989975
+      },
+      "replayed_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 2.330039928657189,
+        "total": 2.892260253989975
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F106",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 4.499327454277077,
+        "total": 5.061547779609863
+      },
+      "replayed_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 4.499327454277077,
+        "total": 5.061547779609863
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F107",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 8.899188565643108,
+        "total": 9.461408890975894
+      },
+      "replayed_s": {
+        "prefill": 0.5622203253327859,
+        "decode": 8.899188565643108,
+        "total": 9.461408890975894
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F108",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 1.2763990124735676,
+        "total": 2.457417599418603
+      },
+      "replayed_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 1.2763990124735676,
+        "total": 2.457417599418603
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F109",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 2.3950550485056437,
+        "total": 3.5760736354506792
+      },
+      "replayed_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 2.3950550485056437,
+        "total": 3.5760736354506792
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F110",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 4.64580240311993,
+        "total": 5.826820990064966
+      },
+      "replayed_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 4.64580240311993,
+        "total": 5.826820990064966
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F111",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 9.210527616843248,
+        "total": 10.391546203788284
+      },
+      "replayed_s": {
+        "prefill": 1.1810185869450356,
+        "decode": 9.210527616843248,
+        "total": 10.391546203788284
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F112",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 1.5195807276375999,
+        "total": 1.9640049654451914
+      },
+      "replayed_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 1.5195807276375999,
+        "total": 1.9640049654451914
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F113",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 2.9831644699500948,
+        "total": 3.4275887077576863
+      },
+      "replayed_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 2.9831644699500948,
+        "total": 3.4275887077576863
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F114",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 5.9310184332479015,
+        "total": 6.375442671055493
+      },
+      "replayed_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 5.9310184332479015,
+        "total": 6.375442671055493
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F115",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 11.961672774341054,
+        "total": 12.406097012148646
+      },
+      "replayed_s": {
+        "prefill": 0.44442423780759144,
+        "decode": 11.961672774341054,
+        "total": 12.406097012148646
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F116",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 1.539132965398926,
+        "total": 2.0863996774504616
+      },
+      "replayed_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 1.539132965398926,
+        "total": 2.0863996774504616
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F117",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 3.0327303306005913,
+        "total": 3.579997042652127
+      },
+      "replayed_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 3.0327303306005913,
+        "total": 3.579997042652127
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F118",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 6.048137213371155,
+        "total": 6.595403925422691
+      },
+      "replayed_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 6.048137213371155,
+        "total": 6.595403925422691
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F119",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 12.199378066721021,
+        "total": 12.746644778772557
+      },
+      "replayed_s": {
+        "prefill": 0.5472667120515357,
+        "decode": 12.199378066721021,
+        "total": 12.746644778772557
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F120",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 1.5776403929190093,
+        "total": 2.6988445267390446
+      },
+      "replayed_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 1.5776403929190093,
+        "total": 2.6988445267390446
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F121",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 3.110337031138675,
+        "total": 4.231541164958711
+      },
+      "replayed_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 3.110337031138675,
+        "total": 4.231541164958711
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F122",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 6.208598006415525,
+        "total": 7.329802140235561
+      },
+      "replayed_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 6.208598006415525,
+        "total": 7.329802140235561
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F123",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 12.519850863054028,
+        "total": 13.641054996874063
+      },
+      "replayed_s": {
+        "prefill": 1.1212041338200354,
+        "decode": 12.519850863054028,
+        "total": 13.641054996874063
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F124",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 1.6682696075355001,
+        "total": 4.028400064660261
+      },
+      "replayed_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 1.6682696075355001,
+        "total": 4.028400064660261
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F125",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 3.2830067187098826,
+        "total": 5.643137175834643
+      },
+      "replayed_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 3.2830067187098826,
+        "total": 5.643137175834643
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F126",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 6.538259970832314,
+        "total": 8.898390427957075
+      },
+      "replayed_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 6.538259970832314,
+        "total": 8.898390427957075
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F127",
+      "model": "qwen_7b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 13.169210502241702,
+        "total": 15.529340959366463
+      },
+      "replayed_s": {
+        "prefill": 2.3601304571247606,
+        "decode": 13.169210502241702,
+        "total": 15.529340959366463
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F128",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 0.4084123973241234,
+        "total": 0.7768426405417886
+      },
+      "replayed_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 0.4084123973241234,
+        "total": 0.7768426405417886
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F129",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 0.6887402126521299,
+        "total": 1.0571704558697952
+      },
+      "replayed_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 0.6887402126521299,
+        "total": 1.0571704558697952
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F130",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 1.2539222605989675,
+        "total": 1.6223525038166327
+      },
+      "replayed_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 1.2539222605989675,
+        "total": 1.6223525038166327
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F131",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 2.4027571724732053,
+        "total": 2.7711874156908705
+      },
+      "replayed_s": {
+        "prefill": 0.36843024321766527,
+        "decode": 2.4027571724732053,
+        "total": 2.7711874156908705
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F132",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 0.6078543729976362,
+        "total": 1.2183214417917858
+      },
+      "replayed_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 0.6078543729976362,
+        "total": 1.2183214417917858
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F133",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 0.897700634643781,
+        "total": 1.5081677034379306
+      },
+      "replayed_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 0.897700634643781,
+        "total": 1.5081677034379306
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F134",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 1.4721712905891653,
+        "total": 2.082638359383315
+      },
+      "replayed_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 1.4721712905891653,
+        "total": 2.082638359383315
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F135",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 2.639264218452559,
+        "total": 3.249731287246709
+      },
+      "replayed_s": {
+        "prefill": 0.6104670687941496,
+        "decode": 2.639264218452559,
+        "total": 3.249731287246709
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F136",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 0.7117093790998719,
+        "total": 1.5359657338710098
+      },
+      "replayed_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 0.7117093790998719,
+        "total": 1.5359657338710098
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F137",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 1.0070932400055976,
+        "total": 1.8313495947767355
+      },
+      "replayed_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 1.0070932400055976,
+        "total": 1.8313495947767355
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F138",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 1.5983610960635524,
+        "total": 2.4226174508346903
+      },
+      "replayed_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 1.5983610960635524,
+        "total": 2.4226174508346903
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F139",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 2.7994754241620328,
+        "total": 3.6237317789331707
+      },
+      "replayed_s": {
+        "prefill": 0.8242563547711379,
+        "decode": 2.7994754241620328,
+        "total": 3.6237317789331707
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F140",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 0.6775973200833063,
+        "total": 1.4397823770875968
+      },
+      "replayed_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 0.6775973200833063,
+        "total": 1.4397823770875968
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F141",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 0.9808257686753719,
+        "total": 1.7430108256796624
+      },
+      "replayed_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 0.9808257686753719,
+        "total": 1.7430108256796624
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F142",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 1.5919269698507625,
+        "total": 2.354112026855053
+      },
+      "replayed_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 1.5919269698507625,
+        "total": 2.354112026855053
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F143",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 2.8325665881855375,
+        "total": 3.5947516451898283
+      },
+      "replayed_s": {
+        "prefill": 0.7621850570042905,
+        "decode": 2.8325665881855375,
+        "total": 3.5947516451898283
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F144",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 1.2706438715661694,
+        "total": 1.8803956846230143
+      },
+      "replayed_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 1.2706438715661694,
+        "total": 1.8803956846230143
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F145",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 2.3322131530463954,
+        "total": 2.9419649661032405
+      },
+      "replayed_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 2.3322131530463954,
+        "total": 2.9419649661032405
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F146",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 4.433059622515857,
+        "total": 5.042811435572702
+      },
+      "replayed_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 4.433059622515857,
+        "total": 5.042811435572702
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F147",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 8.508044438686415,
+        "total": 9.11779625174326
+      },
+      "replayed_s": {
+        "prefill": 0.6097518130568449,
+        "decode": 8.508044438686415,
+        "total": 9.11779625174326
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F148",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 1.3860206712894243,
+        "total": 2.125317544699965
+      },
+      "replayed_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 1.3860206712894243,
+        "total": 2.125317544699965
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F149",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 2.382724162482059,
+        "total": 3.1220210358925997
+      },
+      "replayed_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 2.382724162482059,
+        "total": 3.1220210358925997
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F150",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 4.422619711937483,
+        "total": 5.161916585348024
+      },
+      "replayed_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 4.422619711937483,
+        "total": 5.161916585348024
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F151",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 8.610707347627827,
+        "total": 9.350004221038368
+      },
+      "replayed_s": {
+        "prefill": 0.7392968734105407,
+        "decode": 8.610707347627827,
+        "total": 9.350004221038368
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F152",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 1.3937442161004467,
+        "total": 2.1751130280256965
+      },
+      "replayed_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 1.3937442161004467,
+        "total": 2.1751130280256965
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F153",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 2.41552368069822,
+        "total": 3.1968924926234696
+      },
+      "replayed_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 2.41552368069822,
+        "total": 3.1968924926234696
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F154",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 4.522808747955086,
+        "total": 5.304177559880335
+      },
+      "replayed_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 4.522808747955086,
+        "total": 5.304177559880335
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F155",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 8.80831118346786,
+        "total": 9.589679995393109
+      },
+      "replayed_s": {
+        "prefill": 0.7813688119252498,
+        "decode": 8.80831118346786,
+        "total": 9.589679995393109
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F156",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.992715917954063,
+        "decode": 1.447284063195756,
+        "total": 2.439999981149819
+      },
+      "replayed_s": {
+        "prefill": 0.992715917954063,
+        "decode": 1.447284063195756,
+        "total": 2.439999981149819
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F157",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.992715917954063,
+        "decode": 2.512334703813769,
+        "total": 3.505050621767832
+      },
+      "replayed_s": {
+        "prefill": 0.992715917954063,
+        "decode": 2.512334703813769,
+        "total": 3.505050621767832
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F158",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.992715917954063,
+        "decode": 4.709881210637388,
+        "total": 5.702597128591451
+      },
+      "replayed_s": {
+        "prefill": 0.992715917954063,
+        "decode": 4.709881210637388,
+        "total": 5.702597128591451
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F159",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.992715917954063,
+        "decode": 9.156567971554031,
+        "total": 10.149283889508094
+      },
+      "replayed_s": {
+        "prefill": 0.992715917954063,
+        "decode": 9.156567971554031,
+        "total": 10.149283889508094
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F160",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 2.0166160576181884,
+        "total": 2.8375345522819044
+      },
+      "replayed_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 2.0166160576181884,
+        "total": 2.8375345522819044
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F161",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 3.8876177305524955,
+        "total": 4.7085362252162115
+      },
+      "replayed_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 3.8876177305524955,
+        "total": 4.7085362252162115
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F162",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 7.664998887208591,
+        "total": 8.485917381872307
+      },
+      "replayed_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 7.664998887208591,
+        "total": 8.485917381872307
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F163",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 15.338256018684612,
+        "total": 16.15917451334833
+      },
+      "replayed_s": {
+        "prefill": 0.8209184946637161,
+        "decode": 15.338256018684612,
+        "total": 16.15917451334833
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F164",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 2.1260299265906526,
+        "total": 2.8921399494534024
+      },
+      "replayed_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 2.1260299265906526,
+        "total": 2.8921399494534024
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F165",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 3.9117514159592086,
+        "total": 4.677861438821958
+      },
+      "replayed_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 3.9117514159592086,
+        "total": 4.677861438821958
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F166",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 7.512434144140173,
+        "total": 8.278544167002924
+      },
+      "replayed_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 7.512434144140173,
+        "total": 8.278544167002924
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F167",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 14.833369822673022,
+        "total": 15.599479845535772
+      },
+      "replayed_s": {
+        "prefill": 0.7661100228627499,
+        "decode": 14.833369822673022,
+        "total": 15.599479845535772
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F168",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 2.1678513475766845,
+        "total": 3.0995321092807475
+      },
+      "replayed_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 2.1678513475766845,
+        "total": 3.0995321092807475
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F169",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 4.004871507176123,
+        "total": 4.9365522688801855
+      },
+      "replayed_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 4.004871507176123,
+        "total": 4.9365522688801855
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F170",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 7.673457394736855,
+        "total": 8.605138156440917
+      },
+      "replayed_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 7.673457394736855,
+        "total": 8.605138156440917
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F171",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 15.148448535031653,
+        "total": 16.080129296735716
+      },
+      "replayed_s": {
+        "prefill": 0.9316807617040629,
+        "decode": 15.148448535031653,
+        "total": 16.080129296735716
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F172",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 2.2388372829076517,
+        "total": 4.220028989830806
+      },
+      "replayed_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 2.2388372829076517,
+        "total": 4.220028989830806
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F173",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 4.166434332731491,
+        "total": 6.147626039654645
+      },
+      "replayed_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 4.166434332731491,
+        "total": 6.147626039654645
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F174",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 8.00173088602343,
+        "total": 9.982922592946585
+      },
+      "replayed_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 8.00173088602343,
+        "total": 9.982922592946585
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F175",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 15.80296332949433,
+        "total": 17.784155036417484
+      },
+      "replayed_s": {
+        "prefill": 1.9811917069231542,
+        "decode": 15.80296332949433,
+        "total": 17.784155036417484
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F176",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 2.743861692653896,
+        "total": 3.477436520165999
+      },
+      "replayed_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 2.743861692653896,
+        "total": 3.477436520165999
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F177",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 5.235940848033336,
+        "total": 5.9695156755454395
+      },
+      "replayed_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 5.235940848033336,
+        "total": 5.9695156755454395
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F178",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 10.220838886709721,
+        "total": 10.954413714221825
+      },
+      "replayed_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 10.220838886709721,
+        "total": 10.954413714221825
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F179",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 20.31901767288546,
+        "total": 21.052592500397566
+      },
+      "replayed_s": {
+        "prefill": 0.7335748275121035,
+        "decode": 20.31901767288546,
+        "total": 21.052592500397566
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F180",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.901163183579063,
+        "decode": 2.743720865229283,
+        "total": 3.644884048808346
+      },
+      "replayed_s": {
+        "prefill": 0.901163183579063,
+        "decode": 2.743720865229283,
+        "total": 3.644884048808346
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F181",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.901163183579063,
+        "decode": 5.253279321881509,
+        "total": 6.1544425054605725
+      },
+      "replayed_s": {
+        "prefill": 0.901163183579063,
+        "decode": 5.253279321881509,
+        "total": 6.1544425054605725
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F182",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.901163183579063,
+        "decode": 10.308421637942644,
+        "total": 11.209584821521707
+      },
+      "replayed_s": {
+        "prefill": 0.901163183579063,
+        "decode": 10.308421637942644,
+        "total": 11.209584821521707
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F183",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 0.901163183579063,
+        "decode": 20.655309768039256,
+        "total": 21.556472951618318
+      },
+      "replayed_s": {
+        "prefill": 0.901163183579063,
+        "decode": 20.655309768039256,
+        "total": 21.556472951618318
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F184",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.859121394423154,
+        "decode": 2.7788652562531357,
+        "total": 4.6379866506762895
+      },
+      "replayed_s": {
+        "prefill": 1.859121394423154,
+        "decode": 2.7788652562531357,
+        "total": 4.6379866506762895
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F185",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.859121394423154,
+        "decode": 5.369856052366067,
+        "total": 7.22897744678922
+      },
+      "replayed_s": {
+        "prefill": 1.859121394423154,
+        "decode": 5.369856052366067,
+        "total": 7.22897744678922
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F186",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.859121394423154,
+        "decode": 10.597134129743457,
+        "total": 12.456255524166611
+      },
+      "replayed_s": {
+        "prefill": 1.859121394423154,
+        "decode": 10.597134129743457,
+        "total": 12.456255524166611
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F187",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 1.859121394423154,
+        "decode": 21.26403411147965,
+        "total": 23.123155505902805
+      },
+      "replayed_s": {
+        "prefill": 1.859121394423154,
+        "decode": 21.26403411147965,
+        "total": 23.123155505902805
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F188",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 3.959762635119421,
+        "decode": 2.9813371231338155,
+        "total": 6.9410997582532366
+      },
+      "replayed_s": {
+        "prefill": 3.959762635119421,
+        "decode": 2.9813371231338155,
+        "total": 6.9410997582532366
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 128,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F189",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 3.959762635119421,
+        "decode": 5.730473026506676,
+        "total": 9.690235661626097
+      },
+      "replayed_s": {
+        "prefill": 3.959762635119421,
+        "decode": 5.730473026506676,
+        "total": 9.690235661626097
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 256,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F190",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 3.959762635119421,
+        "decode": 11.28217696242703,
+        "total": 15.241939597546452
+      },
+      "replayed_s": {
+        "prefill": 3.959762635119421,
+        "decode": 11.28217696242703,
+        "total": 15.241939597546452
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 512,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    },
+    {
+      "case_id": "F191",
+      "model": "qwen_14b",
+      "passed": true,
+      "expected_s": {
+        "prefill": 3.959762635119421,
+        "decode": 22.56013951810296,
+        "total": 26.519902153222382
+      },
+      "replayed_s": {
+        "prefill": 3.959762635119421,
+        "decode": 22.56013951810296,
+        "total": 26.519902153222382
+      },
+      "relative_error": {
+        "prefill": 0.0,
+        "decode": 0.0,
+        "total": 0.0
+      },
+      "phase_matches": {
+        "prefill": true,
+        "decode": true,
+        "total": true
+      },
+      "all_decode_steps_match": true,
+      "decode_tokens": 1024,
+      "max_decode_step_error_s": 0.0,
+      "device_and_order_preserved": true
+    }
+  ]
+}
