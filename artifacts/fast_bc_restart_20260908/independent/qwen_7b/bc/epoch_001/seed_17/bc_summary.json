@@ -1,0 +1,27 @@
+{
+  "stage": "BC",
+  "seed": 17,
+  "epochs": 1,
+  "temperature": 1.0,
+  "parameter_count": 193795,
+  "exclude_model": null,
+  "models": [
+    "qwen_7b"
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_001/seed_17/bc.pt",
+  "last_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_001/seed_17/bc_last.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.05204433056490749,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.00112167344202003,
+        "unweighted_nll": 0.38249928518096593,
+        "anchors": 1033
+      },
+      "wall_s": 508.2755230339244
+    }
+  ]
+}

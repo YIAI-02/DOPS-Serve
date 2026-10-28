@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "case_id": 182,
+  "model": "qwen_14b",
+  "batch": 16,
+  "prompt": 512,
+  "decode": 512,
+  "policies": [
+    "AF",
+    "Bifocal",
+    "Naive",
+    "NeuPIMs",
+    "PD",
+    "PD+Attn",
+    "PD+FFN",
+    "PD+Linear",
+    "weights_on_pim"
+  ],
+  "raw_policies": [
+    "algo:AF",
+    "algo:Bifocal",
+    "algo:Naive",
+    "algo:NeuPIMs",
+    "algo:PD",
+    "algo:PD+Attn",
+    "algo:PD+FFN",
+    "algo:PD+Linear",
+    "algo:weights_on_pim"
+  ],
+  "summaries": [
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_AF/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_Bifocal/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_Naive/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_NeuPIMs/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_PD/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_PD+Attn/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_PD+FFN/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_PD+Linear/best_summary_512x512.json",
+    "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_14b_fp16_b16_s2/qwen_14b_fp16_b16_s2/algo_weights_on_pim/best_summary_512x512.json"
+  ],
+  "host_wall_s": 1238.655835607089,
+  "existing_output_validation": false
+}

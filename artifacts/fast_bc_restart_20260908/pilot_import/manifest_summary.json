@@ -1,0 +1,33 @@
+{
+  "scanned_sources": 27,
+  "complete_sources": 27,
+  "projected_pim_changes": 47745,
+  "decode_steps": 3456,
+  "unique_projected_placements": 198,
+  "by_model": {
+    "qwen_1.8b": 9,
+    "qwen_14b": 9,
+    "qwen_7b": 9
+  },
+  "by_policy": {
+    "algo:AF": 3,
+    "algo:Bifocal": 3,
+    "algo:Naive": 3,
+    "algo:NeuPIMs": 3,
+    "algo:PD": 3,
+    "algo:PD+Attn": 3,
+    "algo:PD+FFN": 3,
+    "algo:PD+Linear": 3,
+    "algo:weights_on_pim": 3
+  },
+  "hardware_key": "exp1/hw_hardware_1npu_2aim/sst2_rst2",
+  "model_keys": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "plan_count_cap": null,
+  "decode_step_cap": null,
+  "training_costs_ready": true,
+  "workers": 3
+}

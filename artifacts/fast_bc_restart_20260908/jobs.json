@@ -1,0 +1,564 @@
+{
+  "jobs": {
+    "prepare": {
+      "job_id": "14791054",
+      "stage": "prepare",
+      "array": null,
+      "cpus": 1,
+      "environment": {},
+      "complete": true
+    },
+    "profile": {
+      "job_id": "14791058",
+      "stage": "profile",
+      "array": null,
+      "cpus": 4,
+      "environment": {},
+      "complete": true
+    },
+    "teacher-pilot": {
+      "job_id": "14791150",
+      "stage": "check-pilot",
+      "array": null,
+      "cpus": 1,
+      "environment": {},
+      "recovered_outputs_from": "14791059",
+      "job_name": "dfr-teacher-check",
+      "complete": true
+    },
+    "teacher-pilot-label-failure": {
+      "job_id": "14791059",
+      "stage": "teacher",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "PILOT": "1"
+      },
+      "failed": true,
+      "reason": "DOPS generation completed; wrapper expected unprefixed names instead of algo: names"
+    },
+    "pilot-gate": {
+      "job_id": "14791151",
+      "stage": "pilot-gate",
+      "array": null,
+      "cpus": 3,
+      "environment": {},
+      "complete": true
+    },
+    "teachers": {
+      "job_id": "14791152",
+      "stage": "teacher",
+      "array": "0-191%48",
+      "cpus": 1,
+      "environment": {},
+      "complete": true
+    },
+    "import": {
+      "job_id": "14791526",
+      "stage": "import",
+      "array": null,
+      "cpus": 16,
+      "environment": {},
+      "complete": true
+    },
+    "reevaluate": {
+      "job_id": "14791532",
+      "stage": "reevaluate",
+      "array": null,
+      "cpus": 16,
+      "environment": {},
+      "complete": true
+    },
+    "calibrate-waiting-field-failure": {
+      "job_id": "14791656",
+      "stage": "calibrate",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {},
+      "failed": true,
+      "failure_reason": "Throughput-only calibration accessed removed waiting_s after completing candidate trials; preserve original results and remaining array task."
+    },
+    "calibration-regression-red": {
+      "job_id": "14799358",
+      "stage": "calibration-regression",
+      "array": null,
+      "cpus": 1,
+      "environment": {},
+      "failed": true,
+      "expected_failure": true
+    },
+    "calibration-check": {
+      "job_id": "14799564",
+      "stage": "calibration-check",
+      "array": null,
+      "cpus": 1,
+      "environment": {},
+      "complete": true
+    },
+    "calibrate": {
+      "job_id": "14799573",
+      "stage": "calibrate-recover",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {},
+      "dependency": "afterany:14791656",
+      "recovered_outputs_from": "14791656",
+      "complete": true
+    },
+    "freeze": {
+      "job_id": "14802388",
+      "stage": "freeze",
+      "array": null,
+      "cpus": 1,
+      "environment": {},
+      "complete": true
+    },
+    "static": {
+      "job_id": "14802389",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/validation/static"
+      },
+      "complete": true
+    },
+    "shared-bc-1": {
+      "job_id": "14802390",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "shared",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-1": {
+      "job_id": "14802391",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-1": {
+      "job_id": "14802445",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-1": {
+      "job_id": "14802446",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_14b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "shared-bc-1-prepare-val": {
+      "job_id": "14802911",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "shared",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-1-prepare-val": {
+      "job_id": "14802912",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-1-prepare-val": {
+      "job_id": "14802913",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-1-prepare-val": {
+      "job_id": "14802914",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_14b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "shared-bc-1-val": {
+      "job_id": "14803059",
+      "stage": "evaluate",
+      "array": "0-224%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/shared/bc/validation_001"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-1-val": {
+      "job_id": "14803060",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_1.8b/bc/validation_001"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-1-val": {
+      "job_id": "14803061",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/validation_001"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-1-val": {
+      "job_id": "14803062",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_14b/bc/validation_001"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-1-summary": {
+      "job_id": "14804721",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-1-summary": {
+      "job_id": "14804722",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-2": {
+      "job_id": "14804728",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-2": {
+      "job_id": "14804729",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-1-plot-refresh": {
+      "job_id": "14804786",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "purpose": "Refresh plots using per-condition repeat medians and integer epoch ticks",
+      "complete": true
+    },
+    "independent-qwen_7b-bc-1-plot-refresh": {
+      "job_id": "14804787",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "purpose": "Refresh plots using per-condition repeat medians and integer epoch ticks",
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-2-prepare-val": {
+      "job_id": "14805331",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-2-prepare-val": {
+      "job_id": "14805332",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-2-val": {
+      "job_id": "14805337",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_1.8b/bc/validation_002"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-2-val": {
+      "job_id": "14805338",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/validation_002"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-1-summary": {
+      "job_id": "14805621",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_14b",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-2": {
+      "job_id": "14805622",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_14b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "shared-bc-1-summary": {
+      "job_id": "14810792",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "shared",
+        "EPOCH": "1",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-2-summary": {
+      "job_id": "14810793",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-2-summary": {
+      "job_id": "14810794",
+      "stage": "summarize",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-2-prepare-val": {
+      "job_id": "14810795",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_14b",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "shared-bc-2": {
+      "job_id": "14810797",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "shared",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-3": {
+      "job_id": "14810798",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "3",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-3": {
+      "job_id": "14810799",
+      "stage": "bc",
+      "array": "0-2",
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "3",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_14b-bc-2-val": {
+      "job_id": "14810800",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_14b/bc/validation_002"
+      }
+    },
+    "shared-bc-2-prepare-val": {
+      "job_id": "14813245",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "shared",
+        "EPOCH": "2",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_1.8b-bc-3-prepare-val": {
+      "job_id": "14813246",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_1.8b",
+        "EPOCH": "3",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "independent-qwen_7b-bc-3-prepare-val": {
+      "job_id": "14813247",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "environment": {
+        "BRANCH": "independent/qwen_7b",
+        "EPOCH": "3",
+        "PHASE": "bc"
+      },
+      "complete": true
+    },
+    "shared-bc-2-val": {
+      "job_id": "14813311",
+      "stage": "evaluate",
+      "array": "0-224%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/shared/bc/validation_002"
+      }
+    },
+    "independent-qwen_1.8b-bc-3-val": {
+      "job_id": "14813312",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_1.8b/bc/validation_003"
+      }
+    },
+    "independent-qwen_7b-bc-3-val": {
+      "job_id": "14813313",
+      "stage": "evaluate",
+      "array": "0-74%48",
+      "cpus": 1,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/validation_003"
+      }
+    }
+  },
+  "teacher_concurrency": 48,
+  "eval_concurrency": 48,
+  "complete": false
+}

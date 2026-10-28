@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "model": "qwen_1.8b",
+      "sample_threads": 1,
+      "update_threads": 1,
+      "sample_s": 36.7858935338445,
+      "update_s": 2.662151131546125,
+      "update_repeats_s": [
+        2.683160765096545,
+        2.6411414979957044
+      ]
+    },
+    {
+      "model": "qwen_1.8b",
+      "sample_threads": 1,
+      "update_threads": 2,
+      "sample_s": 36.7858935338445,
+      "update_s": 2.5279279914684594,
+      "update_repeats_s": [
+        2.502200380899012,
+        2.5536556020379066
+      ]
+    },
+    {
+      "model": "qwen_1.8b",
+      "sample_threads": 1,
+      "update_threads": 4,
+      "sample_s": 36.7858935338445,
+      "update_s": 2.5675256500253454,
+      "update_repeats_s": [
+        2.6329340341035277,
+        2.502117265947163
+      ]
+    },
+    {
+      "model": "qwen_7b",
+      "sample_threads": 1,
+      "update_threads": 1,
+      "sample_s": 37.05438163597137,
+      "update_s": 2.4654861924936995,
+      "update_repeats_s": [
+        2.4572486819233745,
+        2.4737237030640244
+      ]
+    },
+    {
+      "model": "qwen_7b",
+      "sample_threads": 1,
+      "update_threads": 2,
+      "sample_s": 37.05438163597137,
+      "update_s": 2.5510196700925007,
+      "update_repeats_s": [
+        2.5765983790624887,
+        2.525440961122513
+      ]
+    },
+    {
+      "model": "qwen_7b",
+      "sample_threads": 1,
+      "update_threads": 4,
+      "sample_s": 37.05438163597137,
+      "update_s": 2.7994945343816653,
+      "update_repeats_s": [
+        2.662599782925099,
+        2.9363892858382314
+      ]
+    },
+    {
+      "model": "qwen_14b",
+      "sample_threads": 1,
+      "update_threads": 1,
+      "sample_s": 54.70587262092158,
+      "update_s": 4.394496765453368,
+      "update_repeats_s": [
+        4.408908132929355,
+        4.380085397977382
+      ]
+    },
+    {
+      "model": "qwen_14b",
+      "sample_threads": 1,
+      "update_threads": 2,
+      "sample_s": 54.70587262092158,
+      "update_s": 4.240176603896543,
+      "update_repeats_s": [
+        4.220307120820507,
+        4.260046086972579
+      ]
+    },
+    {
+      "model": "qwen_14b",
+      "sample_threads": 1,
+      "update_threads": 4,
+      "sample_s": 54.70587262092158,
+      "update_s": 4.252961904974654,
+      "update_repeats_s": [
+        4.240891034016386,
+        4.265032775932923
+      ]
+    }
+  ],
+  "runtime": {
+    "sample_threads": 1,
+    "update_threads": 2,
+    "update_device": "cpu",
+    "validation_signature": {
+      "cpu_model": "Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz",
+      "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+      "sample_threads": 1
+    }
+  },
+  "fresh_random_probe_only": true
+}

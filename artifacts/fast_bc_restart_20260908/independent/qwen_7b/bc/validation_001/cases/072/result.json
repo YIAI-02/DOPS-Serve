@@ -1,0 +1,111 @@
+{
+  "case_id": 72,
+  "method": "bc",
+  "seed": 27,
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_001/seed_27/bc_last.pt",
+  "epoch": 1,
+  "model": "qwen_7b",
+  "load_multiplier": 1.5,
+  "trace_id": "burstgpt_val_000042",
+  "split": "val",
+  "scope": "decoder DAG timing/scheduling replay",
+  "host": "l04c28n2",
+  "signature": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz",
+    "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+    "sample_threads": 1
+  },
+  "reference_rps": 7.44979062437224,
+  "traces": [
+    {
+      "trace_id": "burstgpt_val_000042",
+      "requests": 1000,
+      "output_tokens": 2053,
+      "duration_s": 220.33987756319542,
+      "host_wall_s": 47.92407247796655,
+      "e2e_p95_s": 125.58155044742217,
+      "e2e_p99_s": 130.8717218122979,
+      "ttft_p95_s": 125.4163913379036,
+      "tpot_p95_s": 0.013976159458678694,
+      "tbt_p95_s": 2.356904482602502,
+      "queue_wait_p95_s": 122.05351099190818,
+      "placement_switches": 2,
+      "decision_s": [
+        0.17891431809403002,
+        0.07710628886707127,
+        0.07615842297673225
+      ],
+      "communication_bytes": 719918965248,
+      "communication_s_sum": 23.746052774752467,
+      "output_token_throughput": 9.317423712424374,
+      "decision_total_s": 0.33217902993783355,
+      "decision_p95_s": 0.16873351517133411,
+      "decision_fraction": 0.0015075756309366273,
+      "cumulative_reward": -339.19532419825896,
+      "windows": 3,
+      "repeat": 0
+    },
+    {
+      "trace_id": "burstgpt_val_000042",
+      "requests": 1000,
+      "output_tokens": 2053,
+      "duration_s": 220.22955380875538,
+      "host_wall_s": 48.691242749104276,
+      "e2e_p95_s": 125.33049852838133,
+      "e2e_p99_s": 130.88284139496804,
+      "ttft_p95_s": 124.9039101146123,
+      "tpot_p95_s": 0.01397620789867915,
+      "tbt_p95_s": 2.307733772199569,
+      "queue_wait_p95_s": 121.44449649542588,
+      "placement_switches": 2,
+      "decision_s": [
+        0.06984854699112475,
+        0.07713857106864452,
+        0.07639798591844738
+      ],
+      "communication_bytes": 719926385152,
+      "communication_s_sum": 23.7462975153957,
+      "output_token_throughput": 9.322091265656379,
+      "decision_total_s": 0.22338510397821665,
+      "decision_p95_s": 0.07706451255362481,
+      "decision_fraction": 0.0010143284591685705,
+      "cumulative_reward": -339.023493762732,
+      "windows": 3,
+      "repeat": 1
+    },
+    {
+      "trace_id": "burstgpt_val_000042",
+      "requests": 1000,
+      "output_tokens": 2053,
+      "duration_s": 220.2368250087082,
+      "host_wall_s": 48.74860828393139,
+      "e2e_p95_s": 125.33776972833414,
+      "e2e_p99_s": 130.89011259492088,
+      "ttft_p95_s": 124.91118131456511,
+      "tpot_p95_s": 0.01397620789867915,
+      "tbt_p95_s": 2.307733772199569,
+      "queue_wait_p95_s": 121.45176769537868,
+      "placement_switches": 2,
+      "decision_s": [
+        0.07038185396231711,
+        0.07730365893803537,
+        0.08297079103067517
+      ],
+      "communication_bytes": 719926385152,
+      "communication_s_sum": 23.7462975153957,
+      "output_token_throughput": 9.321783493377296,
+      "decision_total_s": 0.23065630393102765,
+      "decision_p95_s": 0.0824040778214112,
+      "decision_fraction": 0.0010473103393218073,
+      "cumulative_reward": -339.03481873495616,
+      "windows": 3,
+      "repeat": 2
+    }
+  ],
+  "baseline_config": null,
+  "checkpoint_metadata": {
+    "stage": "BC",
+    "seed": 27,
+    "epoch": 1
+  }
+}

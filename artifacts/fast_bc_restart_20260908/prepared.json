@@ -1,0 +1,87 @@
+{
+  "complete": true,
+  "config": {
+    "models": [
+      "qwen_1.8b",
+      "qwen_7b",
+      "qwen_14b"
+    ],
+    "hardware_key": "exp1/hw_hardware_1npu_2aim/sst2_rst2",
+    "dtype": "fp16",
+    "tp_qkv": 2,
+    "tp_ffn": 2,
+    "npu_backend": "fast",
+    "pim_fast_mode": true,
+    "weight_source": "host",
+    "weight_format": "ND",
+    "PIM_RUNTIME_LRU_THRESHOLD": 0.95,
+    "PIM_STATIC_ALLOC_RATIO": 1.0,
+    "kernel_launch_enabled": {
+      "Ascend_910B": false,
+      "A100": false,
+      "Aim PIM": false
+    },
+    "max_batch": 16,
+    "prompt_min": 128,
+    "prompt_max": 2048,
+    "max_tokens": 1024,
+    "decode_window": 32,
+    "requests_per_trace": 1000,
+    "timing_scope": "decoder DAG timing/scheduling replay",
+    "status": "fresh fast teacher and fresh BC; fixed throughput objective"
+  },
+  "trace_manifest": {
+    "train_trace_ids": [
+      "burstgpt_train_000000",
+      "burstgpt_train_000098",
+      "burstgpt_train_000197",
+      "burstgpt_train_000296",
+      "burstgpt_train_000395"
+    ],
+    "validation_trace_ids": [
+      "burstgpt_val_000000",
+      "burstgpt_val_000021",
+      "burstgpt_val_000042",
+      "burstgpt_val_000063",
+      "burstgpt_val_000084"
+    ],
+    "confirmation_trace_ids": [
+      "burstgpt_val_000001",
+      "burstgpt_val_000022",
+      "burstgpt_val_000043",
+      "burstgpt_val_000064",
+      "burstgpt_val_000085"
+    ],
+    "test_trace_ids": [
+      "burstgpt_test_000000",
+      "burstgpt_test_000021",
+      "burstgpt_test_000042",
+      "burstgpt_test_000063",
+      "burstgpt_test_000084"
+    ],
+    "previously_used_validation": [
+      "burstgpt_val_000000",
+      "burstgpt_val_000021",
+      "burstgpt_val_000042",
+      "burstgpt_val_000063",
+      "burstgpt_val_000084"
+    ],
+    "historical_manifests_checked": [
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/calibration/qwen_1.8b/model_protocol.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/calibration/qwen_14b/model_protocol.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/calibration/qwen_7b/model_protocol.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/comparison_20260906/comparison_cases.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/data_preflight.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/probe_protocol.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/training_protocol.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/validation/epoch_000/comparison_cases.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/validation/epoch_001/comparison_cases.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/validation/epoch_002/comparison_cases.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/validation/references/comparison_cases.json",
+      "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/training_protocol.json"
+    ],
+    "confirmation_locked": true,
+    "test_locked": true,
+    "test_request_contents_read": false
+  }
+}
