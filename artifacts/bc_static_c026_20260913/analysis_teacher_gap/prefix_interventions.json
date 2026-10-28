@@ -1,0 +1,24 @@
+[
+  {
+    "route": "teacher_prefill_only",
+    "case_id": 68,
+    "execution_s": 1.2709487738861573,
+    "prefill_s": 0.37114257186340643,
+    "decode_s": 0.8998062020227509,
+    "bc_over_teacher": 0.5607851970116086,
+    "correct_fraction_including_forced_prefix": 0.4770267611176702,
+    "forced_plans": 1,
+    "plans": 66
+  },
+  {
+    "route": "teacher_prefill_and_first_decode",
+    "case_id": 68,
+    "execution_s": 0.7868107452045117,
+    "prefill_s": 0.37114257186340643,
+    "decode_s": 0.41566817334110523,
+    "bc_over_teacher": 0.9058458630609512,
+    "correct_fraction_including_forced_prefix": 0.8652105470287288,
+    "forced_plans": 2,
+    "plans": 66
+  }
+]

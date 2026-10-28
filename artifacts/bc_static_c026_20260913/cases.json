@@ -1,0 +1,1922 @@
+[
+  {
+    "case_id": 0,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/000.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F000/run_config.json"
+  },
+  {
+    "case_id": 1,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/001.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F001/run_config.json"
+  },
+  {
+    "case_id": 2,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/002.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F002/run_config.json"
+  },
+  {
+    "case_id": 3,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/003.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F003/run_config.json"
+  },
+  {
+    "case_id": 4,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/004.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F004/run_config.json"
+  },
+  {
+    "case_id": 5,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 256,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/005.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F005/run_config.json"
+  },
+  {
+    "case_id": 6,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 512,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/006.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F006/run_config.json"
+  },
+  {
+    "case_id": 7,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/007.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F007/run_config.json"
+  },
+  {
+    "case_id": 8,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/008.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F008/run_config.json"
+  },
+  {
+    "case_id": 9,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/009.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F009/run_config.json"
+  },
+  {
+    "case_id": 10,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/010.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F010/run_config.json"
+  },
+  {
+    "case_id": 11,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/011.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F011/run_config.json"
+  },
+  {
+    "case_id": 12,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/012.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F012/run_config.json"
+  },
+  {
+    "case_id": 13,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/013.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F013/run_config.json"
+  },
+  {
+    "case_id": 14,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/014.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F014/run_config.json"
+  },
+  {
+    "case_id": 15,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/015.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F015/run_config.json"
+  },
+  {
+    "case_id": 16,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 128,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/016.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F016/run_config.json"
+  },
+  {
+    "case_id": 17,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 256,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/017.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F017/run_config.json"
+  },
+  {
+    "case_id": 18,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 512,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/018.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F018/run_config.json"
+  },
+  {
+    "case_id": 19,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/019.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F019/run_config.json"
+  },
+  {
+    "case_id": 20,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/020.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F020/run_config.json"
+  },
+  {
+    "case_id": 21,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/021.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F021/run_config.json"
+  },
+  {
+    "case_id": 22,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/022.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F022/run_config.json"
+  },
+  {
+    "case_id": 23,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/023.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F023/run_config.json"
+  },
+  {
+    "case_id": 24,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/024.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F024/run_config.json"
+  },
+  {
+    "case_id": 25,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/025.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F025/run_config.json"
+  },
+  {
+    "case_id": 26,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/026.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F026/run_config.json"
+  },
+  {
+    "case_id": 27,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/027.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F027/run_config.json"
+  },
+  {
+    "case_id": 28,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/028.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F028/run_config.json"
+  },
+  {
+    "case_id": 29,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/029.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F029/run_config.json"
+  },
+  {
+    "case_id": 30,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/030.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F030/run_config.json"
+  },
+  {
+    "case_id": 31,
+    "model": "qwen_1.8b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/031.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F031/run_config.json"
+  },
+  {
+    "case_id": 32,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/032.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F032/run_config.json"
+  },
+  {
+    "case_id": 33,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/033.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F033/run_config.json"
+  },
+  {
+    "case_id": 34,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/034.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F034/run_config.json"
+  },
+  {
+    "case_id": 35,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/035.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F035/run_config.json"
+  },
+  {
+    "case_id": 36,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/036.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F036/run_config.json"
+  },
+  {
+    "case_id": 37,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/037.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F037/run_config.json"
+  },
+  {
+    "case_id": 38,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/038.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F038/run_config.json"
+  },
+  {
+    "case_id": 39,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/039.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F039/run_config.json"
+  },
+  {
+    "case_id": 40,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/040.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F040/run_config.json"
+  },
+  {
+    "case_id": 41,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/041.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F041/run_config.json"
+  },
+  {
+    "case_id": 42,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/042.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F042/run_config.json"
+  },
+  {
+    "case_id": 43,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/043.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F043/run_config.json"
+  },
+  {
+    "case_id": 44,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/044.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F044/run_config.json"
+  },
+  {
+    "case_id": 45,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/045.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F045/run_config.json"
+  },
+  {
+    "case_id": 46,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/046.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F046/run_config.json"
+  },
+  {
+    "case_id": 47,
+    "model": "qwen_1.8b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/047.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F047/run_config.json"
+  },
+  {
+    "case_id": 48,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/048.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F048/run_config.json"
+  },
+  {
+    "case_id": 49,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/049.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F049/run_config.json"
+  },
+  {
+    "case_id": 50,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/050.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F050/run_config.json"
+  },
+  {
+    "case_id": 51,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/051.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F051/run_config.json"
+  },
+  {
+    "case_id": 52,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/052.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F052/run_config.json"
+  },
+  {
+    "case_id": 53,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/053.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F053/run_config.json"
+  },
+  {
+    "case_id": 54,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/054.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F054/run_config.json"
+  },
+  {
+    "case_id": 55,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/055.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F055/run_config.json"
+  },
+  {
+    "case_id": 56,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/056.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F056/run_config.json"
+  },
+  {
+    "case_id": 57,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/057.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F057/run_config.json"
+  },
+  {
+    "case_id": 58,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/058.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F058/run_config.json"
+  },
+  {
+    "case_id": 59,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/059.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F059/run_config.json"
+  },
+  {
+    "case_id": 60,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/060.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F060/run_config.json"
+  },
+  {
+    "case_id": 61,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/061.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F061/run_config.json"
+  },
+  {
+    "case_id": 62,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/062.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F062/run_config.json"
+  },
+  {
+    "case_id": 63,
+    "model": "qwen_1.8b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/063.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F063/run_config.json"
+  },
+  {
+    "case_id": 64,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/064.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F064/run_config.json"
+  },
+  {
+    "case_id": 65,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/065.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F065/run_config.json"
+  },
+  {
+    "case_id": 66,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/066.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F066/run_config.json"
+  },
+  {
+    "case_id": 67,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/067.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F067/run_config.json"
+  },
+  {
+    "case_id": 68,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/068.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F068/run_config.json"
+  },
+  {
+    "case_id": 69,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 256,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/069.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F069/run_config.json"
+  },
+  {
+    "case_id": 70,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 512,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/070.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F070/run_config.json"
+  },
+  {
+    "case_id": 71,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/071.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F071/run_config.json"
+  },
+  {
+    "case_id": 72,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/072.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F072/run_config.json"
+  },
+  {
+    "case_id": 73,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/073.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F073/run_config.json"
+  },
+  {
+    "case_id": 74,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/074.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F074/run_config.json"
+  },
+  {
+    "case_id": 75,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/075.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F075/run_config.json"
+  },
+  {
+    "case_id": 76,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/076.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F076/run_config.json"
+  },
+  {
+    "case_id": 77,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/077.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F077/run_config.json"
+  },
+  {
+    "case_id": 78,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/078.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F078/run_config.json"
+  },
+  {
+    "case_id": 79,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/079.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F079/run_config.json"
+  },
+  {
+    "case_id": 80,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 128,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/080.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F080/run_config.json"
+  },
+  {
+    "case_id": 81,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 256,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/081.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F081/run_config.json"
+  },
+  {
+    "case_id": 82,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 512,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/082.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F082/run_config.json"
+  },
+  {
+    "case_id": 83,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/083.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F083/run_config.json"
+  },
+  {
+    "case_id": 84,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/084.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F084/run_config.json"
+  },
+  {
+    "case_id": 85,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/085.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F085/run_config.json"
+  },
+  {
+    "case_id": 86,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/086.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F086/run_config.json"
+  },
+  {
+    "case_id": 87,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/087.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F087/run_config.json"
+  },
+  {
+    "case_id": 88,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/088.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F088/run_config.json"
+  },
+  {
+    "case_id": 89,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/089.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F089/run_config.json"
+  },
+  {
+    "case_id": 90,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/090.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F090/run_config.json"
+  },
+  {
+    "case_id": 91,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/091.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F091/run_config.json"
+  },
+  {
+    "case_id": 92,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/092.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F092/run_config.json"
+  },
+  {
+    "case_id": 93,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/093.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F093/run_config.json"
+  },
+  {
+    "case_id": 94,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/094.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F094/run_config.json"
+  },
+  {
+    "case_id": 95,
+    "model": "qwen_7b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/095.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F095/run_config.json"
+  },
+  {
+    "case_id": 96,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/096.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F096/run_config.json"
+  },
+  {
+    "case_id": 97,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/097.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F097/run_config.json"
+  },
+  {
+    "case_id": 98,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/098.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F098/run_config.json"
+  },
+  {
+    "case_id": 99,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/099.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F099/run_config.json"
+  },
+  {
+    "case_id": 100,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/100.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F100/run_config.json"
+  },
+  {
+    "case_id": 101,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/101.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F101/run_config.json"
+  },
+  {
+    "case_id": 102,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/102.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F102/run_config.json"
+  },
+  {
+    "case_id": 103,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/103.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F103/run_config.json"
+  },
+  {
+    "case_id": 104,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/104.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F104/run_config.json"
+  },
+  {
+    "case_id": 105,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/105.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F105/run_config.json"
+  },
+  {
+    "case_id": 106,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/106.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F106/run_config.json"
+  },
+  {
+    "case_id": 107,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/107.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F107/run_config.json"
+  },
+  {
+    "case_id": 108,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/108.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F108/run_config.json"
+  },
+  {
+    "case_id": 109,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/109.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F109/run_config.json"
+  },
+  {
+    "case_id": 110,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/110.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F110/run_config.json"
+  },
+  {
+    "case_id": 111,
+    "model": "qwen_7b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/111.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F111/run_config.json"
+  },
+  {
+    "case_id": 112,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/112.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F112/run_config.json"
+  },
+  {
+    "case_id": 113,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/113.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F113/run_config.json"
+  },
+  {
+    "case_id": 114,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/114.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F114/run_config.json"
+  },
+  {
+    "case_id": 115,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/115.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F115/run_config.json"
+  },
+  {
+    "case_id": 116,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/116.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F116/run_config.json"
+  },
+  {
+    "case_id": 117,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/117.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F117/run_config.json"
+  },
+  {
+    "case_id": 118,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/118.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F118/run_config.json"
+  },
+  {
+    "case_id": 119,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/119.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F119/run_config.json"
+  },
+  {
+    "case_id": 120,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/120.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F120/run_config.json"
+  },
+  {
+    "case_id": 121,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/121.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F121/run_config.json"
+  },
+  {
+    "case_id": 122,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/122.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F122/run_config.json"
+  },
+  {
+    "case_id": 123,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/123.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F123/run_config.json"
+  },
+  {
+    "case_id": 124,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/124.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F124/run_config.json"
+  },
+  {
+    "case_id": 125,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/125.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F125/run_config.json"
+  },
+  {
+    "case_id": 126,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/126.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F126/run_config.json"
+  },
+  {
+    "case_id": 127,
+    "model": "qwen_7b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/127.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F127/run_config.json"
+  },
+  {
+    "case_id": 128,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/128.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F128/run_config.json"
+  },
+  {
+    "case_id": 129,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/129.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F129/run_config.json"
+  },
+  {
+    "case_id": 130,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/130.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F130/run_config.json"
+  },
+  {
+    "case_id": 131,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/131.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F131/run_config.json"
+  },
+  {
+    "case_id": 132,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/132.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F132/run_config.json"
+  },
+  {
+    "case_id": 133,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 256,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/133.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F133/run_config.json"
+  },
+  {
+    "case_id": 134,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 512,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/134.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F134/run_config.json"
+  },
+  {
+    "case_id": 135,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/135.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F135/run_config.json"
+  },
+  {
+    "case_id": 136,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/136.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F136/run_config.json"
+  },
+  {
+    "case_id": 137,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/137.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F137/run_config.json"
+  },
+  {
+    "case_id": 138,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/138.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F138/run_config.json"
+  },
+  {
+    "case_id": 139,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/139.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F139/run_config.json"
+  },
+  {
+    "case_id": 140,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/140.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F140/run_config.json"
+  },
+  {
+    "case_id": 141,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/141.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F141/run_config.json"
+  },
+  {
+    "case_id": 142,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/142.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F142/run_config.json"
+  },
+  {
+    "case_id": 143,
+    "model": "qwen_14b",
+    "batch": 1,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/143.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F143/run_config.json"
+  },
+  {
+    "case_id": 144,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 128,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/144.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F144/run_config.json"
+  },
+  {
+    "case_id": 145,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 256,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/145.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F145/run_config.json"
+  },
+  {
+    "case_id": 146,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 512,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/146.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F146/run_config.json"
+  },
+  {
+    "case_id": 147,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/147.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F147/run_config.json"
+  },
+  {
+    "case_id": 148,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/148.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F148/run_config.json"
+  },
+  {
+    "case_id": 149,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/149.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F149/run_config.json"
+  },
+  {
+    "case_id": 150,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/150.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F150/run_config.json"
+  },
+  {
+    "case_id": 151,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/151.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F151/run_config.json"
+  },
+  {
+    "case_id": 152,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/152.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F152/run_config.json"
+  },
+  {
+    "case_id": 153,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/153.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F153/run_config.json"
+  },
+  {
+    "case_id": 154,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/154.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F154/run_config.json"
+  },
+  {
+    "case_id": 155,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/155.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F155/run_config.json"
+  },
+  {
+    "case_id": 156,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/156.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F156/run_config.json"
+  },
+  {
+    "case_id": 157,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/157.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F157/run_config.json"
+  },
+  {
+    "case_id": 158,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/158.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F158/run_config.json"
+  },
+  {
+    "case_id": 159,
+    "model": "qwen_14b",
+    "batch": 4,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/159.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F159/run_config.json"
+  },
+  {
+    "case_id": 160,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/160.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F160/run_config.json"
+  },
+  {
+    "case_id": 161,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/161.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F161/run_config.json"
+  },
+  {
+    "case_id": 162,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/162.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F162/run_config.json"
+  },
+  {
+    "case_id": 163,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/163.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F163/run_config.json"
+  },
+  {
+    "case_id": 164,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/164.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F164/run_config.json"
+  },
+  {
+    "case_id": 165,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/165.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F165/run_config.json"
+  },
+  {
+    "case_id": 166,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/166.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F166/run_config.json"
+  },
+  {
+    "case_id": 167,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/167.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F167/run_config.json"
+  },
+  {
+    "case_id": 168,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/168.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F168/run_config.json"
+  },
+  {
+    "case_id": 169,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/169.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F169/run_config.json"
+  },
+  {
+    "case_id": 170,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/170.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F170/run_config.json"
+  },
+  {
+    "case_id": 171,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/171.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F171/run_config.json"
+  },
+  {
+    "case_id": 172,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/172.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F172/run_config.json"
+  },
+  {
+    "case_id": 173,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/173.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F173/run_config.json"
+  },
+  {
+    "case_id": 174,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/174.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F174/run_config.json"
+  },
+  {
+    "case_id": 175,
+    "model": "qwen_14b",
+    "batch": 8,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/175.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F175/run_config.json"
+  },
+  {
+    "case_id": 176,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/176.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F176/run_config.json"
+  },
+  {
+    "case_id": 177,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/177.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F177/run_config.json"
+  },
+  {
+    "case_id": 178,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/178.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F178/run_config.json"
+  },
+  {
+    "case_id": 179,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 128,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/179.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F179/run_config.json"
+  },
+  {
+    "case_id": 180,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/180.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F180/run_config.json"
+  },
+  {
+    "case_id": 181,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/181.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F181/run_config.json"
+  },
+  {
+    "case_id": 182,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/182.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F182/run_config.json"
+  },
+  {
+    "case_id": 183,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 512,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/183.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F183/run_config.json"
+  },
+  {
+    "case_id": 184,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 128,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/184.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F184/run_config.json"
+  },
+  {
+    "case_id": 185,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 256,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/185.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F185/run_config.json"
+  },
+  {
+    "case_id": 186,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 512,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/186.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F186/run_config.json"
+  },
+  {
+    "case_id": 187,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 1024,
+    "decode": 1024,
+    "split": "test",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/187.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F187/run_config.json"
+  },
+  {
+    "case_id": 188,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 128,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/188.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F188/run_config.json"
+  },
+  {
+    "case_id": 189,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 256,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/189.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F189/run_config.json"
+  },
+  {
+    "case_id": 190,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 512,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/190.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F190/run_config.json"
+  },
+  {
+    "case_id": 191,
+    "model": "qwen_14b",
+    "batch": 16,
+    "prompt": 2048,
+    "decode": 1024,
+    "split": "train",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/191.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F191/run_config.json"
+  }
+]

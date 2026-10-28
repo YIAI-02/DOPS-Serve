@@ -1,0 +1,18 @@
+{
+  "fresh_initialization": true,
+  "route": "shared",
+  "seed": 7,
+  "parameter_count": 945411,
+  "dimensions": {
+    "state_dim": 47,
+    "node_dim": 35,
+    "hidden": 256,
+    "depth": 4
+  },
+  "train_tasks": 144,
+  "val_tasks": 24,
+  "train_plans": 34848,
+  "host": "l12gpu07",
+  "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}

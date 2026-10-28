@@ -1,0 +1,83 @@
+{
+  "case": {
+    "case_id": 68,
+    "model": "qwen_7b",
+    "batch": 1,
+    "prompt": 512,
+    "decode": 128,
+    "split": "val",
+    "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/068.json",
+    "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F068/run_config.json"
+  },
+  "teacher_method": "Bifocal",
+  "teacher_expected_s": 0.712729258555411,
+  "routes": {
+    "teacher": {
+      "execution_s": 0.712729258555411,
+      "prefill_s": 0.37114257186340643,
+      "decode_s": 0.3415866866920046,
+      "recorded_time_reproduced": true
+    },
+    "E8": {
+      "execution_s": 0.8211757057822219,
+      "prefill_s": 0.4346555208166437,
+      "decode_s": 0.38652018496557816,
+      "recorded_time_reproduced": true,
+      "mean_conditional_nll": 0.053880584577916925,
+      "matching": {
+        "teacher_prefix": {
+          "correct_fraction": 0.9913419913419913,
+          "wrong_nodes": 352,
+          "total_nodes": 40656,
+          "exact_plans": 28,
+          "plans": 66
+        },
+        "free_teacher_state": {
+          "correct_fraction": 0.9914157811885085,
+          "wrong_nodes": 349,
+          "total_nodes": 40656,
+          "exact_plans": 28,
+          "plans": 66
+        },
+        "autonomous": {
+          "correct_fraction": 0.5815131837859111,
+          "wrong_nodes": 17014,
+          "total_nodes": 40656,
+          "exact_plans": 0,
+          "plans": 66
+        }
+      }
+    },
+    "E10": {
+      "execution_s": 2.31255637694658,
+      "prefill_s": 0.4346555208166437,
+      "decode_s": 1.8779008561299362,
+      "recorded_time_reproduced": true,
+      "mean_conditional_nll": 0.055698890133168207,
+      "matching": {
+        "teacher_prefix": {
+          "correct_fraction": 0.9896202282565919,
+          "wrong_nodes": 422,
+          "total_nodes": 40656,
+          "exact_plans": 28,
+          "plans": 66
+        },
+        "free_teacher_state": {
+          "correct_fraction": 0.9862258953168044,
+          "wrong_nodes": 560,
+          "total_nodes": 40656,
+          "exact_plans": 28,
+          "plans": 66
+        },
+        "autonomous": {
+          "correct_fraction": 0.1685360094451004,
+          "wrong_nodes": 33804,
+          "total_nodes": 40656,
+          "exact_plans": 0,
+          "plans": 66
+        }
+      }
+    }
+  },
+  "regression_reproduced": true
+}

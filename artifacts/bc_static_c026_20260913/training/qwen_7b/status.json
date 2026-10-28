@@ -1,0 +1,21 @@
+{
+  "epoch": 10,
+  "stage": "epoch_complete",
+  "rows": [
+    {
+      "route": "qwen_7b",
+      "epoch": 10,
+      "model": "qwen_7b",
+      "train_nll": 0.009168966360322555,
+      "val_nll": 0.021319708462578395,
+      "bc_throughput": 74.9083764487005,
+      "teacher_throughput": 642.1045851952821,
+      "pd_throughput": 343.41951938269926,
+      "teacher_gap_pct": -88.3339290551992,
+      "bc_over_pd": 0.2181249818977943,
+      "simulation_only_teacher_gap_pct": -72.16905919170983,
+      "decision_s": 133.98546221270226,
+      "epoch_wall_s": 165.29686798201874
+    }
+  ]
+}

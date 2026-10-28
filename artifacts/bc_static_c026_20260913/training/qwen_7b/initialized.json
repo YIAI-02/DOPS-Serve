@@ -1,0 +1,18 @@
+{
+  "fresh_initialization": true,
+  "route": "qwen_7b",
+  "seed": 7,
+  "parameter_count": 945411,
+  "dimensions": {
+    "state_dim": 47,
+    "node_dim": 35,
+    "hidden": 256,
+    "depth": 4
+  },
+  "train_tasks": 48,
+  "val_tasks": 8,
+  "train_plans": 11616,
+  "host": "l12gpu26",
+  "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+  "gpu": "NVIDIA A800 80GB PCIe"
+}

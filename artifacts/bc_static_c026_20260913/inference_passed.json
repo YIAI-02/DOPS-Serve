@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "real_states_checked": 198,
+  "native_gru_conditionals_match": true,
+  "autonomous_replay": {
+    "case_id": 0,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 128,
+    "route": "smoke_optimized",
+    "epoch": 1,
+    "winner": "weights_on_pim",
+    "output_tokens": 128,
+    "bc_s": 5.285938583948972,
+    "bc_simulated_s": 0.11178721667392717,
+    "decision_s": 5.174151367275044,
+    "teacher_s": 0.10169327843248047,
+    "pd_s": 0.9301021472439758,
+    "bc_throughput": 24.2151886495009,
+    "teacher_throughput": 1258.68692575376,
+    "teacher_gap_pct": -98.07615474872755,
+    "bc_over_pd": 0.17595780436577138,
+    "host": "l01c03n2",
+    "cpu": "x86_64",
+    "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+    "threads": 1
+  }
+}

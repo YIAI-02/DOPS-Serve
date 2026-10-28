@@ -1,0 +1,13 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"route": "qwen_14b", "case_id": 174, "model": "qwen_14b", "batch": 8, "prompt": 2048, "decode": 512, "epoch": 10, "winner": "Bifocal", "original_simulated_s": 10.686866253316262, "repeated_simulated_s": 10.686866253316262, "original_replay_matches": true, "note": "Recording overhead is excluded from any inference speed claim. Only exact action repetition and original simulated-time equality are reported."}

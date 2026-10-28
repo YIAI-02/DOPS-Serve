@@ -1,0 +1,10 @@
+{
+  "last_checked_at": "2026-09-13 12:40:08 UTC",
+  "connection_status": "login_and_data_connected",
+  "connection_failure_notified": false,
+  "reason": "all_four_routes_completed_10_epochs",
+  "reported_epochs": {"qwen_1.8b": 10, "qwen_7b": 10, "qwen_14b": 10, "shared": 10},
+  "automation_status": "PAUSED",
+  "remote_job_state_verified": true,
+  "awaiting_user_before_continuation": true
+}

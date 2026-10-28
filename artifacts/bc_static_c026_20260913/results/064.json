@@ -1,0 +1,140 @@
+{
+  "case_id": 64,
+  "model": "qwen_7b",
+  "batch": 1,
+  "prompt": 128,
+  "decode": 128,
+  "split": "train",
+  "run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bc_static_c026_20260913/configs/064.json",
+  "source_run_config_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/bifocal_hparam_scan_20260909/full_results/C026/F064/run_config.json",
+  "complete": true,
+  "winner": "weights_on_pim",
+  "summary_path": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/teacher_runs/exp1/hw_hardware_1npu_2aim/sst2_rst2/qwen_7b_fp16_b1_s2/qwen_7b_fp16_b1_s2/algo_weights_on_pim/best_summary_128x128.json",
+  "teacher_s": 0.4281861391843865,
+  "pd_s": null,
+  "pd_simulated_s": 0.8259153353372071,
+  "pd_decision_s": null,
+  "output_tokens": 128,
+  "samples": 66,
+  "scores": [
+    {
+      "method": "Bifocal",
+      "simulated_s": 0.5474123821581008,
+      "throughput": 233.82737433774687,
+      "normalization_s": 0.024533277843147516,
+      "source_times": {
+        "prefill": 0.2190288031931052,
+        "decode": 0.32829317224892013,
+        "total": 0.5473219754420253
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "Naive",
+      "simulated_s": 1.02976144142577,
+      "throughput": 124.3006339631205,
+      "normalization_s": 0.02581959147937596,
+      "source_times": {
+        "prefill": 0.22673345101572712,
+        "decode": 0.8068814834332523,
+        "total": 1.0336149344489793
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "PD",
+      "simulated_s": 0.8259153353372071,
+      "throughput": 154.97956572962747,
+      "normalization_s": 0.025623452151194215,
+      "source_times": {
+        "prefill": 0.4313371532907085,
+        "decode": 0.38156771526106265,
+        "total": 0.8129048685517711
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "AF",
+      "simulated_s": 2.0962946768038355,
+      "throughput": 61.06011784333593,
+      "normalization_s": 0.024370742728933692,
+      "source_times": {
+        "prefill": 0.40823012297930467,
+        "decode": 1.688064553824531,
+        "total": 2.0962946768038355
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "PD+Linear",
+      "simulated_s": 1.21363204599889,
+      "throughput": 105.4685400092979,
+      "normalization_s": 0.02838563872501254,
+      "source_times": {
+        "prefill": 0.4313371532907085,
+        "decode": 0.7822948927081816,
+        "total": 1.21363204599889
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "PD+Attn",
+      "simulated_s": 2.332140004013975,
+      "throughput": 54.88521262861241,
+      "normalization_s": 0.02879115892574191,
+      "source_times": {
+        "prefill": 0.4313371532907085,
+        "decode": 1.9008028507232664,
+        "total": 2.332140004013975
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "PD+FFN",
+      "simulated_s": 1.4310740132188058,
+      "throughput": 89.44331237774303,
+      "normalization_s": 0.029209756525233388,
+      "source_times": {
+        "prefill": 0.4313371532907085,
+        "decode": 1.0031758163082662,
+        "total": 1.4345129695989747
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "weights_on_pim",
+      "simulated_s": 0.4281861391843865,
+      "throughput": 298.93541216400826,
+      "normalization_s": 0.02826379518955946,
+      "source_times": {
+        "prefill": 0.23054755760996512,
+        "decode": 0.1976385815744214,
+        "total": 0.4281861391843865
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    },
+    {
+      "method": "NeuPIMs",
+      "simulated_s": 2.332140004013975,
+      "throughput": 54.88521262861241,
+      "normalization_s": 0.02943631960079074,
+      "source_times": {
+        "prefill": 0.4313371532907085,
+        "decode": 1.9024978057035378,
+        "total": 2.333834958994246
+      },
+      "native_decision_s": null,
+      "source_host_wall_s": null
+    }
+  ],
+  "repeat_time_match": true,
+  "exact_three_device_roundtrip": true
+}

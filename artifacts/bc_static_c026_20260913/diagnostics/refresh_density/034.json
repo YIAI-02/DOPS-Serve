@@ -1,0 +1,3234 @@
+{
+  "route": "shared",
+  "case_id": 70,
+  "model": "qwen_7b",
+  "batch": 1,
+  "prompt": 512,
+  "decode": 512,
+  "epoch": 10,
+  "winner": "Bifocal",
+  "bc": {
+    "decode_plans": 257,
+    "comparisons": 256,
+    "same_count": 253,
+    "steady_comparisons": 255,
+    "steady_same_count": 253,
+    "steady_changed_nodes": 13,
+    "steady_changed_learned_nodes": 13,
+    "nodes": 728,
+    "learned_nodes": 616,
+    "longest_constant_run_tokens": 508,
+    "changed_at": [
+      1,
+      2,
+      4
+    ],
+    "boundaries": [
+      {
+        "token_index": 1,
+        "changed_nodes": 114,
+        "changed_learned_nodes": 114,
+        "same_plan": false
+      },
+      {
+        "token_index": 2,
+        "changed_nodes": 12,
+        "changed_learned_nodes": 12,
+        "same_plan": false
+      },
+      {
+        "token_index": 4,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 6,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 8,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 10,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 12,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 14,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 16,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 18,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 20,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 22,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 24,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 26,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 28,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 30,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 32,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 34,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 36,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 38,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 40,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 42,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 44,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 46,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 48,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 50,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 52,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 54,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 56,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 58,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 60,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 62,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 64,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 66,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 68,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 70,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 72,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 74,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 76,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 78,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 80,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 82,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 84,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 86,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 88,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 90,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 92,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 94,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 96,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 98,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 100,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 102,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 104,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 106,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 108,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 110,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 112,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 114,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 116,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 118,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 120,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 122,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 124,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 126,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 128,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 130,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 132,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 134,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 136,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 138,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 140,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 142,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 144,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 146,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 148,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 150,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 152,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 154,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 156,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 158,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 160,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 162,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 164,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 166,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 168,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 170,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 172,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 174,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 176,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 178,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 180,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 182,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 184,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 186,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 188,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 190,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 192,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 194,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 196,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 198,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 200,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 202,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 204,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 206,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 208,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 210,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 212,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 214,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 216,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 218,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 220,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 222,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 224,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 226,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 228,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 230,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 232,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 234,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 236,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 238,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 240,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 242,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 244,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 246,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 248,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 250,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 252,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 254,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 256,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 258,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 260,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 262,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 264,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 266,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 268,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 270,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 272,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 274,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 276,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 278,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 280,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 282,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 284,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 286,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 288,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 290,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 292,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 294,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 296,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 298,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 300,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 302,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 304,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 306,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 308,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 310,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 312,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 314,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 316,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 318,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 320,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 322,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 324,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 326,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 328,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 330,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 332,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 334,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 336,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 338,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 340,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 342,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 344,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 346,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 348,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 350,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 352,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 354,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 356,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 358,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 360,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 362,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 364,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 366,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 368,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 370,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 372,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 374,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 376,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 378,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 380,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 382,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 384,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 386,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 388,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 390,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 392,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 394,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 396,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 398,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 400,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 402,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 404,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 406,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 408,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 410,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 412,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 414,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 416,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 418,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 420,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 422,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 424,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 426,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 428,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 430,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 432,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 434,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 436,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 438,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 440,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 442,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 444,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 446,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 448,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 450,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 452,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 454,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 456,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 458,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 460,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 462,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 464,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 466,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 468,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 470,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 472,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 474,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 476,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 478,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 480,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 482,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 484,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 486,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 488,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 490,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 492,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 494,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 496,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 498,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 500,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 502,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 504,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 506,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 508,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 510,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      }
+    ]
+  },
+  "teacher": {
+    "decode_plans": 257,
+    "comparisons": 256,
+    "same_count": 143,
+    "steady_comparisons": 255,
+    "steady_same_count": 143,
+    "steady_changed_nodes": 193,
+    "steady_changed_learned_nodes": 193,
+    "nodes": 728,
+    "learned_nodes": 616,
+    "longest_constant_run_tokens": 22,
+    "changed_at": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      12,
+      14,
+      24,
+      26,
+      30,
+      36,
+      38,
+      40,
+      42,
+      44,
+      52,
+      54,
+      56,
+      60,
+      62,
+      64,
+      70,
+      72,
+      76,
+      78,
+      82,
+      86,
+      88,
+      96,
+      98,
+      100,
+      104,
+      106,
+      112,
+      120,
+      122,
+      128,
+      130,
+      134,
+      136,
+      138,
+      140,
+      148,
+      152,
+      154,
+      164,
+      166,
+      172,
+      174,
+      178,
+      186,
+      192,
+      196,
+      206,
+      208,
+      216,
+      228,
+      230,
+      238,
+      244,
+      246,
+      268,
+      272,
+      282,
+      286,
+      298,
+      300,
+      304,
+      308,
+      310,
+      312,
+      314,
+      322,
+      328,
+      334,
+      338,
+      350,
+      352,
+      354,
+      364,
+      368,
+      370,
+      376,
+      386,
+      392,
+      394,
+      398,
+      400,
+      408,
+      412,
+      414,
+      416,
+      420,
+      424,
+      428,
+      434,
+      438,
+      440,
+      446,
+      448,
+      450,
+      454,
+      462,
+      464,
+      468,
+      476,
+      478,
+      484,
+      486,
+      490,
+      494,
+      496,
+      504
+    ],
+    "boundaries": [
+      {
+        "token_index": 1,
+        "changed_nodes": 58,
+        "changed_learned_nodes": 58,
+        "same_plan": false
+      },
+      {
+        "token_index": 2,
+        "changed_nodes": 55,
+        "changed_learned_nodes": 55,
+        "same_plan": false
+      },
+      {
+        "token_index": 4,
+        "changed_nodes": 28,
+        "changed_learned_nodes": 28,
+        "same_plan": false
+      },
+      {
+        "token_index": 6,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 8,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 10,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 12,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 14,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 16,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 18,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 20,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 22,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 24,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 26,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 28,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 30,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 32,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 34,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 36,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 38,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 40,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 42,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 44,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 46,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 48,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 50,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 52,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 54,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 56,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 58,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 60,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 62,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 64,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 66,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 68,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 70,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 72,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 74,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 76,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 78,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 80,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 82,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 84,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 86,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 88,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 90,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 92,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 94,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 96,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 98,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 100,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 102,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 104,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 106,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 108,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 110,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 112,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 114,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 116,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 118,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 120,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 122,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 124,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 126,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 128,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 130,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 132,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 134,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 136,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 138,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 140,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 142,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 144,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 146,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 148,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 150,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 152,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 154,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 156,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 158,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 160,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 162,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 164,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 166,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 168,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 170,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 172,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 174,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 176,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 178,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 180,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 182,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 184,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 186,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 188,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 190,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 192,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 194,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 196,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 198,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 200,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 202,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 204,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 206,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 208,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 210,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 212,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 214,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 216,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 218,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 220,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 222,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 224,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 226,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 228,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 230,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 232,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 234,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 236,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 238,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 240,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 242,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 244,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 246,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 248,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 250,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 252,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 254,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 256,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 258,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 260,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 262,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 264,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 266,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 268,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 270,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 272,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 274,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 276,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 278,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 280,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 282,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 284,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 286,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 288,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 290,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 292,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 294,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 296,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 298,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 300,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 302,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 304,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 306,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 308,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 310,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 312,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 314,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 316,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 318,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 320,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 322,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 324,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 326,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 328,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 330,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 332,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 334,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 336,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 338,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 340,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 342,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 344,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 346,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 348,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 350,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 352,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 354,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 356,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 358,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 360,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 362,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 364,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 366,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 368,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 370,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 372,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 374,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 376,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 378,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 380,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 382,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 384,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 386,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 388,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 390,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 392,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 394,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 396,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 398,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 400,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 402,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 404,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 406,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 408,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 410,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 412,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 414,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 416,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 418,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 420,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 422,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 424,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 426,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 428,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 430,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 432,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 434,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 436,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 438,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 440,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 442,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 444,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 446,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 448,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 450,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 452,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 454,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 456,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 458,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 460,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 462,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 464,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 466,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 468,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 470,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 472,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 474,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 476,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 478,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 480,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 482,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 484,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 486,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 488,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 490,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 492,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 494,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 496,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 498,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 500,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 502,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 504,
+        "changed_nodes": 1,
+        "changed_learned_nodes": 1,
+        "same_plan": false
+      },
+      {
+        "token_index": 506,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 508,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      },
+      {
+        "token_index": 510,
+        "changed_nodes": 0,
+        "changed_learned_nodes": 0,
+        "same_plan": true
+      }
+    ]
+  },
+  "original_simulated_s": 1.8170900709803919,
+  "repeated_simulated_s": 1.8170900709803919,
+  "original_replay_matches": true,
+  "note": "Recording overhead is excluded from any inference speed claim. Only exact action repetition and original simulated-time equality are reported."
+}

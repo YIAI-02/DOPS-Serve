@@ -1,0 +1,200 @@
+{
+  "complete": true,
+  "checks": [
+    {
+      "model": "qwen_1.8b",
+      "state_dim": 47,
+      "node_dim": 35,
+      "nodes": 728,
+      "first_nll": 0.951833963394165,
+      "last_nll": 0.8123621940612793,
+      "samples": 66,
+      "native_checks": [
+        {
+          "method": "Bifocal",
+          "reference_s": 0.11668628686016197,
+          "replay_s": 0.11668628686016197
+        },
+        {
+          "method": "Naive",
+          "reference_s": 0.20264627101260452,
+          "replay_s": 0.20264627101260452
+        },
+        {
+          "method": "PD",
+          "reference_s": 0.1689473377536215,
+          "replay_s": 0.1689473377536215
+        },
+        {
+          "method": "AF",
+          "reference_s": 0.42699082900467145,
+          "replay_s": 0.42699082900467145
+        },
+        {
+          "method": "PD+Linear",
+          "reference_s": 0.2483391572498615,
+          "replay_s": 0.2483391572498615
+        },
+        {
+          "method": "PD+Attn",
+          "reference_s": 0.46891121156513704,
+          "replay_s": 0.46891121156513704
+        },
+        {
+          "method": "PD+FFN",
+          "reference_s": 0.29268114573287934,
+          "replay_s": 0.29268114573287934
+        },
+        {
+          "method": "weights_on_pim",
+          "reference_s": 0.10169327843248047,
+          "replay_s": 0.10169327843248047
+        },
+        {
+          "method": "NeuPIMs",
+          "reference_s": 0.4696573015214126,
+          "replay_s": 0.4696573015214126
+        }
+      ]
+    },
+    {
+      "model": "qwen_7b",
+      "state_dim": 47,
+      "node_dim": 35,
+      "nodes": 728,
+      "first_nll": 0.8101314902305603,
+      "last_nll": 0.3846619427204132,
+      "samples": 66,
+      "native_checks": [
+        {
+          "method": "Bifocal",
+          "reference_s": 0.5473219754420253,
+          "replay_s": 0.5473219754420253
+        },
+        {
+          "method": "Naive",
+          "reference_s": 1.0336149344489793,
+          "replay_s": 1.0336149344489793
+        },
+        {
+          "method": "PD",
+          "reference_s": 0.8129048685517711,
+          "replay_s": 0.8129048685517711
+        },
+        {
+          "method": "AF",
+          "reference_s": 2.0962946768038355,
+          "replay_s": 2.0962946768038355
+        },
+        {
+          "method": "PD+Linear",
+          "reference_s": 1.21363204599889,
+          "replay_s": 1.21363204599889
+        },
+        {
+          "method": "PD+Attn",
+          "reference_s": 2.332140004013975,
+          "replay_s": 2.332140004013975
+        },
+        {
+          "method": "PD+FFN",
+          "reference_s": 1.4345129695989747,
+          "replay_s": 1.4345129695989747
+        },
+        {
+          "method": "weights_on_pim",
+          "reference_s": 0.4281861391843865,
+          "replay_s": 0.4281861391843865
+        },
+        {
+          "method": "NeuPIMs",
+          "reference_s": 2.333834958994246,
+          "replay_s": 2.333834958994246
+        }
+      ]
+    },
+    {
+      "model": "qwen_14b",
+      "state_dim": 47,
+      "node_dim": 35,
+      "nodes": 1040,
+      "first_nll": 0.3831183910369873,
+      "last_nll": 0.08081723004579544,
+      "samples": 66,
+      "native_checks": [
+        {
+          "method": "Bifocal",
+          "reference_s": 0.7768426405417886,
+          "replay_s": 0.7768426405417886
+        },
+        {
+          "method": "Naive",
+          "reference_s": 1.7534030705276897,
+          "replay_s": 1.7534030705276897
+        },
+        {
+          "method": "PD",
+          "reference_s": 1.3514913311943189,
+          "replay_s": 1.3514913311943189
+        },
+        {
+          "method": "AF",
+          "reference_s": 72.43722281405375,
+          "replay_s": 72.43722281405375
+        },
+        {
+          "method": "PD+Linear",
+          "reference_s": 1.9760915540662451,
+          "replay_s": 1.9760915540662451
+        },
+        {
+          "method": "PD+Attn",
+          "reference_s": 91.9127974286997,
+          "replay_s": 91.9127974286997
+        },
+        {
+          "method": "PD+FFN",
+          "reference_s": 2.5469796237323625,
+          "replay_s": 2.5469796237323625
+        },
+        {
+          "method": "weights_on_pim",
+          "reference_s": 0.7048339892081958,
+          "replay_s": 0.7048339892081958
+        },
+        {
+          "method": "NeuPIMs",
+          "reference_s": 91.91620676418954,
+          "replay_s": 91.91620676418954
+        }
+      ]
+    }
+  ],
+  "autonomous_replay": {
+    "case_id": 0,
+    "model": "qwen_1.8b",
+    "batch": 1,
+    "prompt": 128,
+    "decode": 128,
+    "route": "smoke",
+    "epoch": 1,
+    "winner": "weights_on_pim",
+    "output_tokens": 128,
+    "bc_s": 4.582534196955474,
+    "bc_simulated_s": 0.11178721667392717,
+    "decision_s": 4.470746980281547,
+    "teacher_s": 0.10169327843248047,
+    "pd_s": 0.8515193144213996,
+    "bc_throughput": 27.93214289269028,
+    "teacher_throughput": 1258.68692575376,
+    "teacher_gap_pct": -97.7808506371858,
+    "bc_over_pd": 0.18581843098675152,
+    "host": "l12gpu26",
+    "cpu": "x86_64",
+    "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+    "threads": 1
+  },
+  "gpu": "NVIDIA A800 80GB PCIe",
+  "parameter_count": 945411,
+  "smoke_checkpoint_excluded_from_training": true
+}

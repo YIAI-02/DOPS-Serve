@@ -1,0 +1,91 @@
+{
+  "metric": "execution time only; all decision costs excluded",
+  "recomputed_rows": 60,
+  "case_rows": 480,
+  "summary": [
+    {
+      "route": "qwen_1.8b",
+      "model": "qwen_1.8b",
+      "e1_token_s": 2178.06309860629,
+      "e10_token_s": 1993.1014378554696,
+      "teacher_token_s": 2739.739157418468,
+      "pd_token_s": 2346.5850230724745,
+      "e10_teacher_pct": 72.74785384070938,
+      "e10_over_pd": 0.8493625495170956,
+      "e10_pd_gain_pct": -15.063745048290444,
+      "best_epoch": 9,
+      "best_token_s": 2336.923565953014,
+      "best_over_pd": 0.9958827585514841
+    },
+    {
+      "route": "qwen_7b",
+      "model": "qwen_7b",
+      "e1_token_s": 440.5648038194552,
+      "e10_token_s": 178.7037470330161,
+      "teacher_token_s": 642.1045851952821,
+      "pd_token_s": 579.7781623644169,
+      "e10_teacher_pct": 27.830940808290173,
+      "e10_over_pd": 0.30822779924003535,
+      "e10_pd_gain_pct": -69.17722007599647,
+      "best_epoch": 8,
+      "best_token_s": 584.3311536566436,
+      "best_over_pd": 1.0078529885873226
+    },
+    {
+      "route": "qwen_14b",
+      "model": "qwen_14b",
+      "e1_token_s": 13.800758786133237,
+      "e10_token_s": 348.4496002817036,
+      "teacher_token_s": 375.9280983095889,
+      "pd_token_s": 346.71997137144876,
+      "e10_teacher_pct": 92.69049104032231,
+      "e10_over_pd": 1.004988547107377,
+      "e10_pd_gain_pct": 0.49885471073769505,
+      "best_epoch": 10,
+      "best_token_s": 348.4496002817036,
+      "best_over_pd": 1.004988547107377
+    },
+    {
+      "route": "shared",
+      "model": "qwen_1.8b",
+      "e1_token_s": 680.0198729611384,
+      "e10_token_s": 2295.100249510802,
+      "teacher_token_s": 2739.739157418468,
+      "pd_token_s": 2346.5850230724745,
+      "e10_teacher_pct": 83.77075763932837,
+      "e10_over_pd": 0.9780597024802187,
+      "e10_pd_gain_pct": -2.1940297519781327,
+      "best_epoch": 8,
+      "best_token_s": 2382.840657819682,
+      "best_over_pd": 1.0154503818914415
+    },
+    {
+      "route": "shared",
+      "model": "qwen_7b",
+      "e1_token_s": 234.3449025300722,
+      "e10_token_s": 551.3223576635007,
+      "teacher_token_s": 642.1045851952821,
+      "pd_token_s": 579.7781623644169,
+      "e10_teacher_pct": 85.86176930909598,
+      "e10_over_pd": 0.95091949551037,
+      "e10_pd_gain_pct": -4.908050448962998,
+      "best_epoch": 7,
+      "best_token_s": 570.7971963822214,
+      "best_over_pd": 0.9845096511645594
+    },
+    {
+      "route": "shared",
+      "model": "qwen_14b",
+      "e1_token_s": 299.98830384385633,
+      "e10_token_s": 328.82235860926244,
+      "teacher_token_s": 375.9280983095889,
+      "pd_token_s": 346.71997137144876,
+      "e10_teacher_pct": 87.46948155454626,
+      "e10_over_pd": 0.9483802081218673,
+      "e10_pd_gain_pct": -5.16197918781327,
+      "best_epoch": 8,
+      "best_token_s": 333.6471750331711,
+      "best_over_pd": 0.962295808093868
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "epoch": 10,
+  "stage": "epoch_complete",
+  "rows": [
+    {
+      "route": "shared",
+      "epoch": 10,
+      "model": "qwen_1.8b",
+      "train_nll": 0.012597089011690342,
+      "val_nll": 0.02067495749414122,
+      "bc_throughput": 119.23671741017614,
+      "teacher_throughput": 2739.739157418468,
+      "pd_throughput": 612.4649690364073,
+      "teacher_gap_pct": -95.64788067187652,
+      "bc_over_pd": 0.19468332629337406,
+      "simulation_only_teacher_gap_pct": -16.229242360671638,
+      "decision_s": 137.3927195239812,
+      "epoch_wall_s": 302.23224774189293
+    },
+    {
+      "route": "shared",
+      "epoch": 10,
+      "model": "qwen_7b",
+      "train_nll": 0.0031830859681931376,
+      "val_nll": 0.01812398420974098,
+      "bc_throughput": 102.63010147898014,
+      "teacher_throughput": 642.1045851952821,
+      "pd_throughput": 340.42539545861104,
+      "teacher_gap_pct": -84.01660666419826,
+      "bc_over_pd": 0.30147604393826116,
+      "simulation_only_teacher_gap_pct": -14.138230690904031,
+      "decision_s": 137.0288299387321,
+      "epoch_wall_s": 302.2322624309454
+    },
+    {
+      "route": "shared",
+      "epoch": 10,
+      "model": "qwen_14b",
+      "train_nll": 0.004036343264201501,
+      "val_nll": 0.020789229582648856,
+      "bc_throughput": 69.27142921249897,
+      "teacher_throughput": 375.9280983095889,
+      "pd_throughput": 216.59681681702213,
+      "teacher_gap_pct": -81.57322383615717,
+      "bc_over_pd": 0.3198173926582609,
+      "simulation_only_teacher_gap_pct": -12.530518445453732,
+      "decision_s": 196.90232224506326,
+      "epoch_wall_s": 302.23227142193355
+    }
+  ]
+}
