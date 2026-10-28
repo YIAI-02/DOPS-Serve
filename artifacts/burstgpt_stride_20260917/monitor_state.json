@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-09-17T09:45:14.377961+08:00",
+  "job_id": 14938932,
+  "last_verified_slurm_state": "COMPLETED",
+  "node": "l01c04n4",
+  "cpus": 16,
+  "hpc_check_passed": true,
+  "stage": "complete",
+  "automation_id": "ppo-fp32",
+  "automation_status": "ACTIVE",
+  "initial_start_reported": true,
+  "complete_reported": true,
+  "exit_code": "0:0",
+  "chosen_stride": null,
+  "production_unchanged": true,
+  "temporary_helpers_removed_local": true,
+  "temporary_helpers_removed_hpc": true
+}

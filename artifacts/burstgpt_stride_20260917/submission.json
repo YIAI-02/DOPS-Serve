@@ -1,0 +1,35 @@
+{
+  "job_id": 14938932,
+  "submitted_at": "2026-09-17T09:16:10.591326+08:00",
+  "remote_root": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_stride_20260917",
+  "partition": "C064M0256G",
+  "cpus_per_task": 16,
+  "gpus": 0,
+  "walltime": "1-00:00:00",
+  "source_ppo_array": 14935360,
+  "strides": [
+    2,
+    4,
+    8,
+    16
+  ],
+  "stage1_traces": [
+    184
+  ],
+  "confirmation_traces": [
+    1,
+    191
+  ],
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "loads": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "all_traces_complete": true,
+  "production_unchanged": true
+}

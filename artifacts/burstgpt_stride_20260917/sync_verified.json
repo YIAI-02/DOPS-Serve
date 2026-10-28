@@ -1,0 +1,25 @@
+{
+  "verified_at": "2026-09-17T09:12:03.958340+08:00",
+  "uploaded_files": [
+    "artifacts/burstgpt_stride_20260917/code/experiment.py",
+    "artifacts/burstgpt_stride_20260917/code/stride_replay.py",
+    "artifacts/burstgpt_stride_20260917/code/run.sh",
+    "md/2026-09-17_DecodeStride对照实验.md",
+    "artifacts/burstgpt_stride_20260917/local_check/check_passed.json"
+  ],
+  "reference_files_compared": [
+    "artifacts/burstgpt_ppo_20260916/protocol.json",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/replay.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/placement_training.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/placement_policy.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/placement_evaluator.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/placement_dataset.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/placement_compiler.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/burstgpt_ppo.py",
+    "artifacts/burstgpt_ppo_20260916/code/src/dops_serve/workloads.py"
+  ],
+  "comparison": "byte-for-byte readback",
+  "remote_root": "/lustre/home/2501111916/workspace/DOPS-Serve",
+  "submitted": true,
+  "job_id": 14938932
+}

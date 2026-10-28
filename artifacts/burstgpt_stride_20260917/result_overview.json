@@ -1,0 +1,57 @@
+{
+  "job_id": 14938932,
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "start_cst": "2026-09-17T09:15:14+08:00",
+  "end_cst": "2026-09-17T09:36:17+08:00",
+  "elapsed_s": 1263,
+  "checked_cst": "2026-09-17T09:42:58+08:00",
+  "completed_cases": 36,
+  "requests_per_case": 1000,
+  "output_tokens_per_case": 9538,
+  "aggregates": [
+    {
+      "stride": 2,
+      "cells": 9,
+      "sum_replay_wall_s": 4598.187548403628,
+      "speedup": 1.0,
+      "wall_reduction_percent": 0.0,
+      "plans": 11080,
+      "decision_s": 1020.2405252619646,
+      "simulator_s": 3576.0172924101353
+    },
+    {
+      "stride": 4,
+      "cells": 9,
+      "sum_replay_wall_s": 4387.819783497602,
+      "speedup": 1.047943574550899,
+      "wall_reduction_percent": 4.575014887747686,
+      "plans": 8639,
+      "decision_s": 794.3894666684791,
+      "simulator_s": 3591.4759679739363
+    },
+    {
+      "stride": 8,
+      "cells": 9,
+      "sum_replay_wall_s": 4274.062622242607,
+      "speedup": 1.0758353245631558,
+      "wall_reduction_percent": 7.048971420784023,
+      "plans": 7520,
+      "decision_s": 694.5630188183859,
+      "simulator_s": 3577.6556988228112
+    },
+    {
+      "stride": 16,
+      "cells": 9,
+      "sum_replay_wall_s": 4231.076767683029,
+      "speedup": 1.0867653320602906,
+      "wall_reduction_percent": 7.983814858705585,
+      "plans": 6867,
+      "decision_s": 636.1612482536584,
+      "simulator_s": 3593.0467354846187
+    }
+  ],
+  "all_candidates_failed_makespan_gate": true,
+  "confirmation_run": false,
+  "ppo_restarted": false
+}
