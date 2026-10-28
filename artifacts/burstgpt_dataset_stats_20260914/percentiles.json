@@ -1,0 +1,296 @@
+{
+  "source_hpc": "/lustre/home/2501111916/workspace/DOPS-Serve/data/BurstGPT_without_fails_1.csv",
+  "source_bytes": 51429517,
+  "rows": 1404294,
+  "scope": "All source rows retained; no filters or deduplication. Clipping scenarios are calculations only; source remains unchanged.",
+  "quantile_method": "nearest rank: sorted value at ceil(p*N), 1-based",
+  "splits": "stable Timestamp sort; first floor(0.70*N) train, next through floor(0.85*N) val, remainder test",
+  "quantiles": {
+    "all": {
+      "Request tokens": {
+        "p90": 1824,
+        "p95": 2466
+      },
+      "Response tokens": {
+        "p90": 276,
+        "p95": 466
+      },
+      "Total tokens": {
+        "p90": 2285,
+        "p95": 2818
+      }
+    },
+    "train": {
+      "Request tokens": {
+        "p90": 2193,
+        "p95": 2750
+      },
+      "Response tokens": {
+        "p90": 321,
+        "p95": 561
+      },
+      "Total tokens": {
+        "p90": 2455,
+        "p95": 3095
+      }
+    },
+    "val": {
+      "Request tokens": {
+        "p90": 1730,
+        "p95": 2488
+      },
+      "Response tokens": {
+        "p90": 230,
+        "p95": 359
+      },
+      "Total tokens": {
+        "p90": 1896,
+        "p95": 2659
+      }
+    },
+    "test": {
+      "Request tokens": {
+        "p90": 629,
+        "p95": 824
+      },
+      "Response tokens": {
+        "p90": 34,
+        "p95": 153
+      },
+      "Total tokens": {
+        "p90": 669,
+        "p95": 870
+      }
+    }
+  },
+  "output_clipping_candidates": {
+    "all_p90": {
+      "output_cap": 276,
+      "impact_by_split": {
+        "all": {
+          "requests": 1404294,
+          "capped_requests": 139783,
+          "capped_request_percent": 9.953969752772567,
+          "original_output_tokens": 176278813,
+          "removed_output_tokens": 61113829,
+          "removed_output_token_percent": 34.66884531381545,
+          "remaining_output_tokens": 115164984,
+          "max_prompt_plus_cap": 29941,
+          "max_actual_total_after_output_cap": 29941
+        },
+        "train": {
+          "requests": 983005,
+          "capped_requests": 118819,
+          "capped_request_percent": 12.087324072614075,
+          "original_output_tokens": 152237137,
+          "removed_output_tokens": 56377671,
+          "removed_output_token_percent": 37.03279772004645,
+          "remaining_output_tokens": 95859466,
+          "max_prompt_plus_cap": 6418,
+          "max_actual_total_after_output_cap": 6278
+        },
+        "val": {
+          "requests": 210644,
+          "capped_requests": 16115,
+          "capped_request_percent": 7.6503484552135355,
+          "original_output_tokens": 17724056,
+          "removed_output_tokens": 3531777,
+          "removed_output_token_percent": 19.9264603993578,
+          "remaining_output_tokens": 14192279,
+          "max_prompt_plus_cap": 21836,
+          "max_actual_total_after_output_cap": 21836
+        },
+        "test": {
+          "requests": 210645,
+          "capped_requests": 4849,
+          "capped_request_percent": 2.301977260319495,
+          "original_output_tokens": 6317620,
+          "removed_output_tokens": 1204381,
+          "removed_output_token_percent": 19.063840496895985,
+          "remaining_output_tokens": 5113239,
+          "max_prompt_plus_cap": 29941,
+          "max_actual_total_after_output_cap": 29941
+        }
+      },
+      "reference_if_prompt_also_capped": {
+        "prompt_cap": 1824,
+        "output_cap": 276,
+        "affected_requests": 249278,
+        "affected_request_percent": 17.751126188675592,
+        "removed_prompt_token_percent": 13.238219481224995,
+        "max_prompt_plus_output_caps": 2100
+      }
+    },
+    "all_p95": {
+      "output_cap": 466,
+      "impact_by_split": {
+        "all": {
+          "requests": 1404294,
+          "capped_requests": 70025,
+          "capped_request_percent": 4.986491432705687,
+          "original_output_tokens": 176278813,
+          "removed_output_tokens": 42403501,
+          "removed_output_token_percent": 24.054791542078288,
+          "remaining_output_tokens": 133875312,
+          "max_prompt_plus_cap": 30131,
+          "max_actual_total_after_output_cap": 30131
+        },
+        "train": {
+          "requests": 983005,
+          "capped_requests": 61387,
+          "capped_request_percent": 6.2448309011653045,
+          "original_output_tokens": 152237137,
+          "removed_output_tokens": 40308387,
+          "removed_output_token_percent": 26.477368002526216,
+          "remaining_output_tokens": 111928750,
+          "max_prompt_plus_cap": 6608,
+          "max_actual_total_after_output_cap": 6468
+        },
+        "val": {
+          "requests": 210644,
+          "capped_requests": 6095,
+          "capped_request_percent": 2.893507529291126,
+          "original_output_tokens": 17724056,
+          "removed_output_tokens": 1574346,
+          "removed_output_token_percent": 8.882537947296036,
+          "remaining_output_tokens": 16149710,
+          "max_prompt_plus_cap": 22026,
+          "max_actual_total_after_output_cap": 22026
+        },
+        "test": {
+          "requests": 210645,
+          "capped_requests": 2543,
+          "capped_request_percent": 1.2072444159605022,
+          "original_output_tokens": 6317620,
+          "removed_output_tokens": 520768,
+          "removed_output_token_percent": 8.243104206964015,
+          "remaining_output_tokens": 5796852,
+          "max_prompt_plus_cap": 30131,
+          "max_actual_total_after_output_cap": 30131
+        }
+      },
+      "reference_if_prompt_also_capped": {
+        "prompt_cap": 2466,
+        "output_cap": 466,
+        "affected_requests": 133413,
+        "affected_request_percent": 9.500361035509659,
+        "removed_prompt_token_percent": 4.948143897711252,
+        "max_prompt_plus_output_caps": 2932
+      }
+    },
+    "train_p90": {
+      "output_cap": 321,
+      "impact_by_split": {
+        "all": {
+          "requests": 1404294,
+          "capped_requests": 114932,
+          "capped_request_percent": 8.184326074169654,
+          "original_output_tokens": 176278813,
+          "removed_output_tokens": 55408719,
+          "removed_output_token_percent": 31.43243255217517,
+          "remaining_output_tokens": 120870094,
+          "max_prompt_plus_cap": 29986,
+          "max_actual_total_after_output_cap": 29986
+        },
+        "train": {
+          "requests": 983005,
+          "capped_requests": 97975,
+          "capped_request_percent": 9.966887248793242,
+          "original_output_tokens": 152237137,
+          "removed_output_tokens": 51522560,
+          "removed_output_token_percent": 33.843621218389046,
+          "remaining_output_tokens": 100714577,
+          "max_prompt_plus_cap": 6463,
+          "max_actual_total_after_output_cap": 6323
+        },
+        "val": {
+          "requests": 210644,
+          "capped_requests": 12797,
+          "capped_request_percent": 6.075178974953001,
+          "original_output_tokens": 17724056,
+          "removed_output_tokens": 2884510,
+          "removed_output_token_percent": 16.2745479928522,
+          "remaining_output_tokens": 14839546,
+          "max_prompt_plus_cap": 21881,
+          "max_actual_total_after_output_cap": 21881
+        },
+        "test": {
+          "requests": 210645,
+          "capped_requests": 4160,
+          "capped_request_percent": 1.9748866576467516,
+          "original_output_tokens": 6317620,
+          "removed_output_tokens": 1001649,
+          "removed_output_token_percent": 15.854847236775875,
+          "remaining_output_tokens": 5315971,
+          "max_prompt_plus_cap": 29986,
+          "max_actual_total_after_output_cap": 29986
+        }
+      },
+      "reference_if_prompt_also_capped": {
+        "prompt_cap": 2193,
+        "output_cap": 321,
+        "affected_requests": 209645,
+        "affected_request_percent": 14.928853929447822,
+        "removed_prompt_token_percent": 7.762404432373109,
+        "max_prompt_plus_output_caps": 2514
+      }
+    },
+    "train_p95": {
+      "output_cap": 561,
+      "impact_by_split": {
+        "all": {
+          "requests": 1404294,
+          "capped_requests": 54680,
+          "capped_request_percent": 3.893771532172038,
+          "original_output_tokens": 176278813,
+          "removed_output_tokens": 36531565,
+          "removed_output_token_percent": 20.723741201956017,
+          "remaining_output_tokens": 139747248,
+          "max_prompt_plus_cap": 30226,
+          "max_actual_total_after_output_cap": 30226
+        },
+        "train": {
+          "requests": 983005,
+          "capped_requests": 49057,
+          "capped_request_percent": 4.990513781720337,
+          "original_output_tokens": 152237137,
+          "removed_output_tokens": 35104581,
+          "removed_output_token_percent": 23.059144234957596,
+          "remaining_output_tokens": 117132556,
+          "max_prompt_plus_cap": 6703,
+          "max_actual_total_after_output_cap": 6534
+        },
+        "val": {
+          "requests": 210644,
+          "capped_requests": 3897,
+          "capped_request_percent": 1.8500408271776076,
+          "original_output_tokens": 17724056,
+          "removed_output_tokens": 1107952,
+          "removed_output_token_percent": 6.251119946811271,
+          "remaining_output_tokens": 16616104,
+          "max_prompt_plus_cap": 22121,
+          "max_actual_total_after_output_cap": 22121
+        },
+        "test": {
+          "requests": 210645,
+          "capped_requests": 1726,
+          "capped_request_percent": 0.8193880699755512,
+          "original_output_tokens": 6317620,
+          "removed_output_tokens": 319032,
+          "removed_output_token_percent": 5.049876377496589,
+          "remaining_output_tokens": 5998588,
+          "max_prompt_plus_cap": 30226,
+          "max_actual_total_after_output_cap": 30226
+        }
+      },
+      "reference_if_prompt_also_capped": {
+        "prompt_cap": 2750,
+        "output_cap": 561,
+        "affected_requests": 108945,
+        "affected_request_percent": 7.757990848070276,
+        "removed_prompt_token_percent": 2.878808432018275,
+        "max_prompt_plus_output_caps": 3311
+      }
+    }
+  }
+}

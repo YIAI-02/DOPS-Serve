@@ -1,0 +1,137 @@
+{
+  "source_hpc": "/lustre/home/2501111916/workspace/DOPS-Serve/data/BurstGPT_without_fails_1.csv",
+  "source_bytes": 51429517,
+  "source_mtime": "2026-09-04 09:19:06 +0800",
+  "scope": "all original rows; no type or length filtering; no deduplication",
+  "rows": 1404294,
+  "columns": [
+    "Timestamp",
+    "Model",
+    "Request tokens",
+    "Response tokens",
+    "Total tokens",
+    "Log Type"
+  ],
+  "minimum_tokens": {
+    "Request tokens": 7,
+    "Response tokens": 1,
+    "Total tokens": 11
+  },
+  "maximum_tokens": {
+    "Request tokens": 29665,
+    "Response tokens": 7315,
+    "Total tokens": 30306
+  },
+  "maxima_examples": {
+    "Request tokens": {
+      "csv_line": 1404169,
+      "rows_equal_to_max": 1,
+      "Timestamp": 5261144,
+      "Model": "GPT-4",
+      "Request tokens": 29665,
+      "Response tokens": 641,
+      "Total tokens": 30306,
+      "Log Type": "Conversation log"
+    },
+    "Response tokens": {
+      "csv_line": 18934,
+      "rows_equal_to_max": 2,
+      "Timestamp": 657328,
+      "Model": "GPT-4",
+      "Request tokens": 878,
+      "Response tokens": 7315,
+      "Total tokens": 8193,
+      "Log Type": "API log"
+    },
+    "Total tokens": {
+      "csv_line": 1404169,
+      "rows_equal_to_max": 1,
+      "Timestamp": 5261144,
+      "Model": "GPT-4",
+      "Request tokens": 29665,
+      "Response tokens": 641,
+      "Total tokens": 30306,
+      "Log Type": "Conversation log"
+    }
+  },
+  "checks": {
+    "missing_token_values": 0,
+    "nonpositive_prompt_rows": 0,
+    "nonpositive_output_rows": 0,
+    "total_token_mismatch_rows": 0
+  },
+  "proposed_uniform_max_tokens": 7315,
+  "largest_prompt_plus_uniform_cap": 36980,
+  "per_model_and_log_type": [
+    {
+      "Model": "ChatGPT",
+      "Log Type": "API log",
+      "rows": 1091749,
+      "prompt_max": 14782,
+      "output_max": 4096,
+      "total_max": 14812
+    },
+    {
+      "Model": "ChatGPT",
+      "Log Type": "Conversation log",
+      "rows": 97418,
+      "prompt_max": 14124,
+      "output_max": 2048,
+      "total_max": 15491
+    },
+    {
+      "Model": "GPT-4",
+      "Log Type": "API log",
+      "rows": 166838,
+      "prompt_max": 9593,
+      "output_max": 7315,
+      "total_max": 10136
+    },
+    {
+      "Model": "GPT-4",
+      "Log Type": "Conversation log",
+      "rows": 48289,
+      "prompt_max": 29665,
+      "output_max": 2048,
+      "total_max": 30306
+    }
+  ],
+  "observed_total_above_8192_rows": 119,
+  "observed_total_above_32768_rows": 0,
+  "chronological_70_15_15_splits": {
+    "train": {
+      "requests": 983005,
+      "full_1000_request_traces": 983,
+      "tail_requests": 5,
+      "total_traces_including_tail": 984,
+      "source_timestamp_first": 5,
+      "source_timestamp_last": 3705392,
+      "max_prompt": 6142,
+      "max_output": 7315,
+      "max_total": 8193
+    },
+    "val": {
+      "requests": 210644,
+      "full_1000_request_traces": 210,
+      "tail_requests": 644,
+      "total_traces_including_tail": 211,
+      "source_timestamp_first": 3705394,
+      "source_timestamp_last": 4809957,
+      "max_prompt": 21560,
+      "max_output": 4096,
+      "max_total": 22232
+    },
+    "test": {
+      "requests": 210645,
+      "full_1000_request_traces": 210,
+      "tail_requests": 645,
+      "total_traces_including_tail": 211,
+      "source_timestamp_first": 4809965,
+      "source_timestamp_last": 5269973,
+      "max_prompt": 29665,
+      "max_output": 2922,
+      "max_total": 30306
+    }
+  },
+  "train_output_max_equals_full_output_max": true
+}
