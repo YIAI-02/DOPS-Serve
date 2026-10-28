@@ -1,0 +1,75 @@
+{
+  "stage": "BC",
+  "seed": 27,
+  "epochs": 5,
+  "temperature": 1.0,
+  "parameter_count": 193795,
+  "exclude_model": null,
+  "models": [
+    "qwen_7b"
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_005/seed_27/bc.pt",
+  "last_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_005/seed_27/bc_last.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.08157573561714226,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.04130220369990745,
+        "unweighted_nll": 0.795539601213906,
+        "anchors": 1033
+      },
+      "wall_s": 502.7238402920775
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.0252854380145984,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.0020407720696979316,
+        "unweighted_nll": 0.2684889742820183,
+        "anchors": 1033
+      },
+      "wall_s": 737.2072604959831
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.016111837562579213,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.04131455363020432,
+        "unweighted_nll": 0.03358419723126134,
+        "anchors": 1033
+      },
+      "wall_s": 752.4332517350558
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.011582570246690294,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.01529182786332752,
+        "unweighted_nll": 0.0762791238609985,
+        "anchors": 1033
+      },
+      "wall_s": 470.7554017629009
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.010357996079363704,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.04129642887466123,
+        "unweighted_nll": 0.039507739681511146,
+        "anchors": 1033
+      },
+      "wall_s": 518.1283880439587
+    }
+  ]
+}

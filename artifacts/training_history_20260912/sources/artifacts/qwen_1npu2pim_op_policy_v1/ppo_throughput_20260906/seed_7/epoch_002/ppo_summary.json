@@ -1,0 +1,253 @@
+{
+  "stage": "PPO",
+  "seed": 7,
+  "updates": 1663,
+  "additional_trace_epochs": 1,
+  "continuation": "exact optimizer/RNG resume",
+  "source_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/seed_7/epoch_001/ppo.pt",
+  "completed_traces": [
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 226
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 226
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 217
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000098",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 290
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000098",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 290
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000098",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 289
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000197",
+      "load_multiplier": 1.0,
+      "completed": 1000,
+      "windows": 367
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000197",
+      "load_multiplier": 1.0,
+      "completed": 1000,
+      "windows": 367
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000197",
+      "load_multiplier": 1.0,
+      "completed": 1000,
+      "windows": 367
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000296",
+      "load_multiplier": 1.25,
+      "completed": 1000,
+      "windows": 94
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000296",
+      "load_multiplier": 1.25,
+      "completed": 1000,
+      "windows": 121
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000296",
+      "load_multiplier": 1.25,
+      "completed": 1000,
+      "windows": 19
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000395",
+      "load_multiplier": 1.5,
+      "completed": 1000,
+      "windows": 35
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000395",
+      "load_multiplier": 1.5,
+      "completed": 1000,
+      "windows": 57
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000395",
+      "load_multiplier": 1.5,
+      "completed": 1000,
+      "windows": 34
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 226
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 205
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000000",
+      "load_multiplier": 0.75,
+      "completed": 1000,
+      "windows": 226
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000098",
+      "load_multiplier": 1.0,
+      "completed": 1000,
+      "windows": 290
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000098",
+      "load_multiplier": 1.0,
+      "completed": 1000,
+      "windows": 289
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000098",
+      "load_multiplier": 1.0,
+      "completed": 1000,
+      "windows": 289
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000197",
+      "load_multiplier": 1.25,
+      "completed": 1000,
+      "windows": 367
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000197",
+      "load_multiplier": 1.25,
+      "completed": 1000,
+      "windows": 367
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000197",
+      "load_multiplier": 1.25,
+      "completed": 1000,
+      "windows": 367
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000296",
+      "load_multiplier": 1.5,
+      "completed": 1000,
+      "windows": 110
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000296",
+      "load_multiplier": 1.5,
+      "completed": 1000,
+      "windows": 15
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000296",
+      "load_multiplier": 1.5,
+      "completed": 1000,
+      "windows": 82
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000395",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 412
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000395",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 59
+    },
+    {
+      "epoch": 2,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000395",
+      "load_multiplier": 0.5,
+      "completed": 1000,
+      "windows": 294
+    }
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/seed_7/epoch_002/ppo.pt",
+  "epoch": 2,
+  "training_wall_s": 87693.7144551687
+}

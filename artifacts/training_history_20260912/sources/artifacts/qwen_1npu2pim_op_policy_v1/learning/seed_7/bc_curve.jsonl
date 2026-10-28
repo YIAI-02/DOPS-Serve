@@ -1,0 +1,3 @@
+{"epoch": 1, "training_loss": 0.08094456965482723, "validation": {"candidate_regret": 0.045664050727071304, "unweighted_nll": 0.3555283660687724, "anchors": 2950}, "wall_s": 2841.9183297529817}
+{"epoch": 2, "training_loss": 0.05116879629393812, "validation": {"candidate_regret": 0.04854094748165259, "unweighted_nll": 0.5628045930970783, "anchors": 2950}, "wall_s": 2835.1231982370373}
+{"epoch": 3, "training_loss": 0.04264231265219835, "validation": {"candidate_regret": 0.0482163389482926, "unweighted_nll": 0.5184544114230649, "anchors": 2950}, "wall_s": 2828.612363738008}

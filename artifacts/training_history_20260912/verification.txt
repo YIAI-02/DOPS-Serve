@@ -1,0 +1,12 @@
+Snapshot: 2026-09-12
+Main records: 204
+Formula static check: PASS; 9657 formula cells; zero errors
+Independent formula evaluation: PASS; 9657 cached results agree with recomputation
+XLSX vs all_epochs.csv: PASS; every numeric value and blank checked
+Fresh BC progress cross-check: PASS; 120 validated model/seed/epoch rows
+Early comparison local raw CSV vs current HPC summary: PASS; 135 conditions
+Styles/counts/shared-string structure: PASS
+LibreOffice: unavailable; LibreOffice dynamic recalculation not performed
+No training, validation job, or monitoring started.
+Pandas XLSX read: PASS; seven worksheets; 204 main rows; 105 BC validation rows match sources.
+Reader quality notices: expected missing measurements/unlogged metrics and heterogeneous BC/PPO loss scales; no values filtered or imputed.

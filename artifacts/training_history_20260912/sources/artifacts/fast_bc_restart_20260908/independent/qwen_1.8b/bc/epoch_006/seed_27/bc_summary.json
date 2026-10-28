@@ -1,0 +1,87 @@
+{
+  "stage": "BC",
+  "seed": 27,
+  "epochs": 6,
+  "temperature": 1.0,
+  "parameter_count": 193795,
+  "exclude_model": null,
+  "models": [
+    "qwen_1.8b"
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_1.8b/bc/epoch_006/seed_27/bc.pt",
+  "last_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_1.8b/bc/epoch_006/seed_27/bc_last.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.09323527094404349,
+      "train_anchors": 5200,
+      "optimizer_steps": 5200,
+      "validation": {
+        "candidate_regret": 0.038610518744391274,
+        "unweighted_nll": 1.6895849992561258,
+        "anchors": 1033
+      },
+      "wall_s": 498.51161425490864
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.02461637968291472,
+      "train_anchors": 5200,
+      "optimizer_steps": 5200,
+      "validation": {
+        "candidate_regret": 0.000584710487126366,
+        "unweighted_nll": 0.39362353324258326,
+        "anchors": 1033
+      },
+      "wall_s": 692.8345671119168
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.013351164950745044,
+      "train_anchors": 5200,
+      "optimizer_steps": 5200,
+      "validation": {
+        "candidate_regret": 0.039277477486648324,
+        "unweighted_nll": 0.18629826730982085,
+        "anchors": 1033
+      },
+      "wall_s": 709.9217840679921
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.011734586618523979,
+      "train_anchors": 5200,
+      "optimizer_steps": 5200,
+      "validation": {
+        "candidate_regret": 0.03871092933011413,
+        "unweighted_nll": 0.12096559614025917,
+        "anchors": 1033
+      },
+      "wall_s": 476.06215090095066
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.009824451156842075,
+      "train_anchors": 5200,
+      "optimizer_steps": 5200,
+      "validation": {
+        "candidate_regret": 0.0007108513011101179,
+        "unweighted_nll": 0.10581960530466131,
+        "anchors": 1033
+      },
+      "wall_s": 487.9655402698554
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.008193425202842913,
+      "train_anchors": 5200,
+      "optimizer_steps": 5200,
+      "validation": {
+        "candidate_regret": 0.03891314564373076,
+        "unweighted_nll": 0.04911557282146676,
+        "anchors": 1033
+      },
+      "wall_s": 492.4135951970238
+    }
+  ]
+}

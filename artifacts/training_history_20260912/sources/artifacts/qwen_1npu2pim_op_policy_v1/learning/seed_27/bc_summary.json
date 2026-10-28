@@ -1,0 +1,41 @@
+{
+  "stage": "BC",
+  "seed": 27,
+  "epochs": 3,
+  "temperature": 1.0,
+  "parameter_count": 193795,
+  "exclude_model": null,
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/learning/seed_27/bc.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.0777867235560643,
+      "validation": {
+        "candidate_regret": 0.048706634009816036,
+        "unweighted_nll": 0.5143572798420291,
+        "anchors": 2950
+      },
+      "wall_s": 2471.107934019994
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.0524936060648059,
+      "validation": {
+        "candidate_regret": 0.045142575817919604,
+        "unweighted_nll": 0.4562478629956888,
+        "anchors": 2950
+      },
+      "wall_s": 2559.0821059918962
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.04524890396873713,
+      "validation": {
+        "candidate_regret": 0.04119055785810534,
+        "unweighted_nll": 0.4014060915767431,
+        "anchors": 2950
+      },
+      "wall_s": 2847.8031675608363
+    }
+  ]
+}

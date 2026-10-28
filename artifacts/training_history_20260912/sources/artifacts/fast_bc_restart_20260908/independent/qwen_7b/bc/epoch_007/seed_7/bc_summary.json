@@ -1,0 +1,99 @@
+{
+  "stage": "BC",
+  "seed": 7,
+  "epochs": 7,
+  "temperature": 1.0,
+  "parameter_count": 193795,
+  "exclude_model": null,
+  "models": [
+    "qwen_7b"
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_007/seed_7/bc.pt",
+  "last_checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/fast_bc_restart_20260908/independent/qwen_7b/bc/epoch_007/seed_7/bc_last.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.07001747571734596,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.015575001988235825,
+        "unweighted_nll": 0.5644747376334442,
+        "anchors": 1033
+      },
+      "wall_s": 494.25999643304385
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.020300330718593346,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.04010913483511204,
+        "unweighted_nll": 0.11983376134530799,
+        "anchors": 1033
+      },
+      "wall_s": 730.6051207729615
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.01345840354570885,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.0020997902005965054,
+        "unweighted_nll": 0.5162812903778785,
+        "anchors": 1033
+      },
+      "wall_s": 480.5134391509928
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.01298884024475105,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.0010507949765982125,
+        "unweighted_nll": 0.03250862844067701,
+        "anchors": 1033
+      },
+      "wall_s": 497.0687918011099
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.011150696794329548,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.030150441145087102,
+        "unweighted_nll": 0.061411768936028815,
+        "anchors": 1033
+      },
+      "wall_s": 505.17509708809666
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.010528884080814245,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.0010699525533858906,
+        "unweighted_nll": 0.05003560852882055,
+        "anchors": 1033
+      },
+      "wall_s": 529.0095337089151
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.00899026959736603,
+      "train_anchors": 5215,
+      "optimizer_steps": 5215,
+      "validation": {
+        "candidate_regret": 0.04032538433691823,
+        "unweighted_nll": 0.024448438431708255,
+        "anchors": 1033
+      },
+      "wall_s": 476.2622634640429
+    }
+  ]
+}

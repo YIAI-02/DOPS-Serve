@@ -1,0 +1,29 @@
+{
+  "stage": "PPO",
+  "seed": 7,
+  "updates": 166,
+  "completed_traces": [
+    {
+      "epoch": 1,
+      "model": "qwen_14b",
+      "trace_id": "burstgpt_train_000000",
+      "completed": 1000,
+      "windows": 205
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_1.8b",
+      "trace_id": "burstgpt_train_000000",
+      "completed": 1000,
+      "windows": 226
+    },
+    {
+      "epoch": 1,
+      "model": "qwen_7b",
+      "trace_id": "burstgpt_train_000000",
+      "completed": 1000,
+      "windows": 226
+    }
+  ],
+  "checkpoint": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/learning/seed_7/ppo.pt"
+}
