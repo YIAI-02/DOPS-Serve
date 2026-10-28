@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "environments": 12,
+  "updates": [
+    {
+      "route": "qwen_1.8b",
+      "iteration": 0,
+      "plans_per_load": [
+        8,
+        8,
+        8
+      ],
+      "initial_kl": 4.605370630305185e-11,
+      "mean_kl": 0.0004264040813817606,
+      "epochs": 4,
+      "optimizer_steps": 8,
+      "kl_stopped": false,
+      "actor_loss": 0.00021427783455389097,
+      "value_loss": 0.6309028243025144,
+      "entropy": 0.026815368173023064,
+      "clip_fraction": 0.006848620192613453,
+      "actor_grad_norm": 0.19884072057902813,
+      "critic_grad_norm": 17.05218505859375
+    },
+    {
+      "route": "qwen_1.8b",
+      "iteration": 1,
+      "plans_per_load": [
+        8,
+        8,
+        8
+      ],
+      "initial_kl": -1.2017559049864893e-09,
+      "mean_kl": 0.000132398409728622,
+      "epochs": 4,
+      "optimizer_steps": 8,
+      "kl_stopped": false,
+      "actor_loss": -0.00029067881405353893,
+      "value_loss": 1.2084585862855117,
+      "entropy": 0.011869621152679127,
+      "clip_fraction": 0.001843208864253635,
+      "actor_grad_norm": 0.21521846018731594,
+      "critic_grad_norm": 23.320625066757202
+    },
+    {
+      "route": "qwen_7b",
+      "iteration": 0,
+      "plans_per_load": [
+        8,
+        8,
+        8
+      ],
+      "initial_kl": 7.250525144200624e-10,
+      "mean_kl": 0.0007585881608518171,
+      "epochs": 4,
+      "optimizer_steps": 8,
+      "kl_stopped": false,
+      "actor_loss": 0.0002657257673490838,
+      "value_loss": 0.5244393817653569,
+      "entropy": 0.020886835040679824,
+      "clip_fraction": 0.006764069250493776,
+      "actor_grad_norm": 0.16858126735314727,
+      "critic_grad_norm": 13.755817890167236
+    },
+    {
+      "route": "qwen_7b",
+      "iteration": 1,
+      "plans_per_load": [
+        8,
+        8,
+        8
+      ],
+      "initial_kl": -8.923822335243457e-10,
+      "mean_kl": 8.432016087075074e-05,
+      "epochs": 4,
+      "optimizer_steps": 8,
+      "kl_stopped": false,
+      "actor_loss": -0.00023329890973400238,
+      "value_loss": 0.008441834075104755,
+      "entropy": 0.006485950468534914,
+      "clip_fraction": 0.0012006222932541277,
+      "actor_grad_norm": 0.09950104355812073,
+      "critic_grad_norm": 1.6469121724367142
+    },
+    {
+      "route": "qwen_14b",
+      "iteration": 0,
+      "plans_per_load": [
+        8,
+        8,
+        8
+      ],
+      "initial_kl": 3.0740345218822024e-10,
+      "mean_kl": 0.0005505360606493371,
+      "epochs": 4,
+      "optimizer_steps": 8,
+      "kl_stopped": false,
+      "actor_loss": -0.000123843650726492,
+      "value_loss": 0.883809712715447,
+      "entropy": 0.0439449951518327,
+      "clip_fraction": 0.011197916435776278,
+      "actor_grad_norm": 0.13596507906913757,
+      "critic_grad_norm": 15.149948835372925
+    },
+    {
+      "route": "qwen_14b",
+      "iteration": 1,
+      "plans_per_load": [
+        8,
+        8,
+        8
+      ],
+      "initial_kl": 1.7527811713831178e-09,
+      "mean_kl": 0.0001445107768769517,
+      "epochs": 4,
+      "optimizer_steps": 8,
+      "kl_stopped": false,
+      "actor_loss": -0.0005182899670520165,
+      "value_loss": 4.566394689182441,
+      "entropy": 0.008093907362005362,
+      "clip_fraction": 0.0009824810355591278,
+      "actor_grad_norm": 0.08582112286239862,
+      "critic_grad_norm": 76.1600694656372
+    }
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+  "purpose": "actual pretrained weights, IPC, bootstrap, broadcast and update; discarded"
+}

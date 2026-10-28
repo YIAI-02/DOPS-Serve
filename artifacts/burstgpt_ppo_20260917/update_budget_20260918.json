@@ -1,0 +1,192 @@
+{
+  "snapshot_at": "2026-09-18T14:32:42+08:00",
+  "runs": [
+    {
+      "seed": 4,
+      "status": {
+        "stage": "ppo_update",
+        "epoch": 2,
+        "update": 2218,
+        "environment_done": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "status_at": "2026-09-18T14:32:29+08:00",
+      "logged_rollout_updates": 2218,
+      "optimizer_steps_per_network": 68828,
+      "epochs": [
+        {
+          "epoch": 1,
+          "complete": true,
+          "rollout_updates": 2110,
+          "optimizer_steps_per_network": 61916,
+          "both_optimizer_calls": 123832,
+          "sampling_h": 5.134618208083557,
+          "update_h": 12.617191725981085,
+          "cohort_wall_h": 17.774224095712157,
+          "kl_stops": 0,
+          "full_64_steps": 253
+        },
+        {
+          "epoch": 2,
+          "complete": false,
+          "rollout_updates": 108,
+          "optimizer_steps_per_network": 6912,
+          "both_optimizer_calls": 13824,
+          "sampling_h": 0.2929307451615265,
+          "update_h": 2.2422061538145255,
+          "cohort_wall_h": 0.0,
+          "kl_stops": 0,
+          "full_64_steps": 108
+        }
+      ],
+      "validation_files": [
+        "epoch_000.json"
+      ],
+      "finite": true,
+      "e0_wall_h_approx": 3.6534581751293604,
+      "projection": {
+        "basis": "linear projection from first complete epoch; every trained validation assumed to cost the initial E0",
+        "epochs": 50,
+        "rollout_updates": 105500,
+        "optimizer_steps_per_network": 3095800,
+        "both_optimizer_calls": 6191600,
+        "training_h": 888.7112047856078,
+        "initial_and_ten_validations_h": 40.18803992642297,
+        "total_h": 928.8992447120308,
+        "total_days": 38.70413519633462
+      },
+      "first_epoch_mean_cycle_s": 30.325690400267188,
+      "first_epoch_mean_update_s": 21.526962186508012
+    },
+    {
+      "seed": 15,
+      "status": {
+        "stage": "ppo_update",
+        "epoch": 2,
+        "update": 2239,
+        "environment_done": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "status_at": "2026-09-18T14:32:27+08:00",
+      "logged_rollout_updates": 2239,
+      "optimizer_steps_per_network": 69541,
+      "epochs": [
+        {
+          "epoch": 1,
+          "complete": true,
+          "rollout_updates": 2223,
+          "optimizer_steps_per_network": 68517,
+          "both_optimizer_calls": 137034,
+          "sampling_h": 5.301551729424003,
+          "update_h": 13.52237276164582,
+          "cohort_wall_h": 18.847626521222086,
+          "kl_stops": 1,
+          "full_64_steps": 256
+        },
+        {
+          "epoch": 2,
+          "complete": false,
+          "rollout_updates": 16,
+          "optimizer_steps_per_network": 1024,
+          "both_optimizer_calls": 2048,
+          "sampling_h": 0.04314831582609461,
+          "update_h": 0.331481945899755,
+          "cohort_wall_h": 0.0,
+          "kl_stops": 0,
+          "full_64_steps": 16
+        }
+      ],
+      "validation_files": [
+        "epoch_000.json"
+      ],
+      "finite": true,
+      "e0_wall_h_approx": 3.734652567042245,
+      "projection": {
+        "basis": "linear projection from first complete epoch; every trained validation assumed to cost the initial E0",
+        "epochs": 50,
+        "rollout_updates": 111150,
+        "optimizer_steps_per_network": 3425850,
+        "both_optimizer_calls": 6851700,
+        "training_h": 942.3813260611043,
+        "initial_and_ten_validations_h": 41.08117823746469,
+        "total_h": 983.462504298569,
+        "total_days": 40.977604345773706
+      },
+      "first_epoch_mean_cycle_s": 30.52247209914508,
+      "first_epoch_mean_update_s": 21.89857937108635
+    },
+    {
+      "seed": 26,
+      "status": {
+        "stage": "ppo_update",
+        "epoch": 1,
+        "update": 2151,
+        "environment_done": [
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "status_at": "2026-09-18T14:33:42+08:00",
+      "logged_rollout_updates": 2151,
+      "optimizer_steps_per_network": 68848,
+      "epochs": [
+        {
+          "epoch": 1,
+          "complete": false,
+          "rollout_updates": 2151,
+          "optimizer_steps_per_network": 68848,
+          "both_optimizer_calls": 137696,
+          "sampling_h": 5.2634554561657,
+          "update_h": 13.53754759548245,
+          "cohort_wall_h": 11.309276108814455,
+          "kl_stops": 0,
+          "full_64_steps": 253
+        }
+      ],
+      "validation_files": [
+        "epoch_000.json"
+      ],
+      "finite": true,
+      "e0_wall_h_approx": 3.7015258817540273
+    }
+  ],
+  "all_nine_equal_speed_scenario_days": [
+    116.11240558900386,
+    122.93281303732113
+  ],
+  "all_nine_equal_speed_scenario_note": "Conditional only: assumes 7B and 14B equal measured 1.8B speed, three concurrent jobs, no queue delays or restart loss; not a measured ETA."
+}
