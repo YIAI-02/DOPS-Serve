@@ -1,0 +1,18 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"trace_pairs": 75}
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"state": "cold_prefill", "batch": 8, "prompt": 128, "shape_index": 8, "seed": 27, "E5_s": 1.7167292406026904, "E6_s": 0.7230292757352175, "E6_over_E5": 0.4211667504896604, "changed_nodes": 788, "changed_ops": {"Q": 73, "QK": 76, "Softmax": 60, "SV": 72, "O": 73, "Add": 74, "FFN_W1": 62, "FFN_W3": 73, "SwiGLU": 76, "FFN_W2": 69, "LN": 78, "K": 1, "V": 1}, "decision_host_s": {"5": 0.20853601186536252, "6": 0.09717693412676454}, "repeat_exact": true}
+{"state": "static_decode", "batch": 8, "prompt": 128, "shape_index": 8, "seed": 27, "E5_s": 0.3553264654742315, "E6_s": 0.35591109919681074, "E6_over_E5": 1.0016453424649892, "changed_nodes": 25, "changed_ops": {"LN": 1, "Q": 3, "V": 1, "SV": 3, "SwiGLU": 4, "QK": 3, "FFN_W1": 4, "FFN_W3": 2, "FFN_W2": 1, "Softmax": 3}, "decision_host_s": {"5": 0.1070143929682672, "6": 0.1091809889767319}, "repeat_exact": true}
+{"state": "npu_decode", "batch": 8, "prompt": 128, "shape_index": 8, "seed": 27, "E5_s": 0.3013862630963744, "E6_s": 0.3611902859890235, "E6_over_E5": 1.198429823171886, "changed_nodes": 482, "changed_ops": {"LN": 18, "Q": 38, "V": 39, "SV": 39, "SwiGLU": 38, "QK": 39, "Add": 78, "FFN_W3": 78, "FFN_W2": 39, "Softmax": 39, "FFN_W1": 37}, "decision_host_s": {"5": 0.11154571012593806, "6": 0.11132063902914524}, "repeat_exact": true}
