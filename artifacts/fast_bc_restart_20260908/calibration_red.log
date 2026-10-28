@@ -1,0 +1,34 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"calibration_model": "qwen_1.8b", "static_candidate": 0, "throughput": 79.67568690955413}
+E
+======================================================================
+ERROR: test_throughput_calibration_uses_windows_without_queue_penalty (test_placement_calibration.PlacementCalibrationTest.test_throughput_calibration_uses_windows_without_queue_penalty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/tests/test_placement_calibration.py", line 25, in test_throughput_calibration_uses_windows_without_queue_penalty
+    result = calibrate_model(backend, directory, config, "qwen_1.8b", candidate_budget=1, throughput_only=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_evaluation.py", line 180, in calibrate_model
+    waiting_scale = statistics.median(w["waiting_s"] for w in windows)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/statistics.py", line 614, in median
+    data = sorted(data)
+           ^^^^^^^^^^^^
+  File "/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_evaluation.py", line 180, in <genexpr>
+    waiting_scale = statistics.median(w["waiting_s"] for w in windows)
+                                      ~^^^^^^^^^^^^^
+KeyError: 'waiting_s'
+
+----------------------------------------------------------------------
+Ran 1 test in 3.391s
+
+FAILED (errors=1)

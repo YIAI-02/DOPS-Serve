@@ -1,0 +1,30 @@
+{
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "hardware_key": "exp1/hw_hardware_1npu_2aim/sst2_rst2",
+  "dtype": "fp16",
+  "tp_qkv": 2,
+  "tp_ffn": 2,
+  "npu_backend": "fast",
+  "pim_fast_mode": true,
+  "weight_source": "host",
+  "weight_format": "ND",
+  "PIM_RUNTIME_LRU_THRESHOLD": 0.95,
+  "PIM_STATIC_ALLOC_RATIO": 1.0,
+  "kernel_launch_enabled": {
+    "Ascend_910B": false,
+    "A100": false,
+    "Aim PIM": false
+  },
+  "max_batch": 16,
+  "prompt_min": 128,
+  "prompt_max": 2048,
+  "max_tokens": 1024,
+  "decode_window": 32,
+  "requests_per_trace": 1000,
+  "timing_scope": "decoder DAG timing/scheduling replay",
+  "status": "fresh fast teacher and fresh BC; fixed throughput objective"
+}

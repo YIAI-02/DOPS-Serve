@@ -1,0 +1,1882 @@
+[
+  {
+    "candidate": 0,
+    "placement_ids": {
+      "prefill": "placement_002790",
+      "decode": "placement_002791"
+    },
+    "screening_cost_s": 2.6115437838512516
+  },
+  {
+    "candidate": 1,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002796"
+    },
+    "screening_cost_s": 7.046827236108286
+  },
+  {
+    "candidate": 2,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002800"
+    },
+    "screening_cost_s": 6.94495520280769
+  },
+  {
+    "candidate": 3,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002805"
+    },
+    "screening_cost_s": 6.94495520280769
+  },
+  {
+    "candidate": 4,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002819"
+    },
+    "screening_cost_s": 7.199213426465495
+  },
+  {
+    "candidate": 5,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002820"
+    },
+    "screening_cost_s": 8.109025994799785
+  },
+  {
+    "candidate": 6,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002821"
+    },
+    "screening_cost_s": 7.222869103512965
+  },
+  {
+    "candidate": 7,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002822"
+    },
+    "screening_cost_s": 6.945161185540516
+  },
+  {
+    "candidate": 8,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002823"
+    },
+    "screening_cost_s": 7.2504767175458085
+  },
+  {
+    "candidate": 9,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002824"
+    },
+    "screening_cost_s": 8.169600954072914
+  },
+  {
+    "candidate": 10,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002825"
+    },
+    "screening_cost_s": 7.187852513650425
+  },
+  {
+    "candidate": 11,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002826"
+    },
+    "screening_cost_s": 6.9637498640720095
+  },
+  {
+    "candidate": 12,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002827"
+    },
+    "screening_cost_s": 7.042919460973746
+  },
+  {
+    "candidate": 13,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002968"
+    },
+    "screening_cost_s": 10.785144190861732
+  },
+  {
+    "candidate": 14,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002969"
+    },
+    "screening_cost_s": 10.779421198419868
+  },
+  {
+    "candidate": 15,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002970"
+    },
+    "screening_cost_s": 10.766245454675515
+  },
+  {
+    "candidate": 16,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002971"
+    },
+    "screening_cost_s": 10.779948423012305
+  },
+  {
+    "candidate": 17,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002972"
+    },
+    "screening_cost_s": 10.766772679267952
+  },
+  {
+    "candidate": 18,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002975"
+    },
+    "screening_cost_s": 10.783740731948562
+  },
+  {
+    "candidate": 19,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002976"
+    },
+    "screening_cost_s": 10.779704860073199
+  },
+  {
+    "candidate": 20,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002977"
+    },
+    "screening_cost_s": 10.780232084665636
+  },
+  {
+    "candidate": 21,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002996"
+    },
+    "screening_cost_s": 7.916671838617711
+  },
+  {
+    "candidate": 22,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002997"
+    },
+    "screening_cost_s": 7.580039901289423
+  },
+  {
+    "candidate": 23,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002998"
+    },
+    "screening_cost_s": 7.842801456646504
+  },
+  {
+    "candidate": 24,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_002999"
+    },
+    "screening_cost_s": 7.862106975987758
+  },
+  {
+    "candidate": 25,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003000"
+    },
+    "screening_cost_s": 7.673426479966042
+  },
+  {
+    "candidate": 26,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003001"
+    },
+    "screening_cost_s": 8.058472201004863
+  },
+  {
+    "candidate": 27,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003002"
+    },
+    "screening_cost_s": 8.058472201004863
+  },
+  {
+    "candidate": 28,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003014"
+    },
+    "screening_cost_s": 7.833980680939186
+  },
+  {
+    "candidate": 29,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003015"
+    },
+    "screening_cost_s": 7.766103953961786
+  },
+  {
+    "candidate": 30,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003016"
+    },
+    "screening_cost_s": 7.8962574499037785
+  },
+  {
+    "candidate": 31,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003017"
+    },
+    "screening_cost_s": 7.8962574499037785
+  },
+  {
+    "candidate": 32,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003018"
+    },
+    "screening_cost_s": 7.802045851519266
+  },
+  {
+    "candidate": 33,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003019"
+    },
+    "screening_cost_s": 8.024321727088841
+  },
+  {
+    "candidate": 34,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003020"
+    },
+    "screening_cost_s": 8.024321727088841
+  },
+  {
+    "candidate": 35,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003021"
+    },
+    "screening_cost_s": 7.901949195556449
+  },
+  {
+    "candidate": 36,
+    "placement_ids": {
+      "prefill": "placement_002792",
+      "decode": "placement_003022"
+    },
+    "screening_cost_s": 7.901949195556449
+  },
+  {
+    "candidate": 37,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002796"
+    },
+    "screening_cost_s": 7.052551556626055
+  },
+  {
+    "candidate": 38,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002800"
+    },
+    "screening_cost_s": 6.950679523325459
+  },
+  {
+    "candidate": 39,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002803"
+    },
+    "screening_cost_s": 7.68735304871484
+  },
+  {
+    "candidate": 40,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002804"
+    },
+    "screening_cost_s": 7.033931400225883
+  },
+  {
+    "candidate": 41,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002805"
+    },
+    "screening_cost_s": 6.950679523325459
+  },
+  {
+    "candidate": 42,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002806"
+    },
+    "screening_cost_s": 7.052551556626055
+  },
+  {
+    "candidate": 43,
+    "placement_ids": {
+      "prefill": "placement_002802",
+      "decode": "placement_002807"
+    },
+    "screening_cost_s": 6.950885506058285
+  },
+  {
+    "candidate": 44,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002796"
+    },
+    "screening_cost_s": 7.085571951691831
+  },
+  {
+    "candidate": 45,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002809"
+    },
+    "screening_cost_s": 8.489950149123
+  },
+  {
+    "candidate": 46,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002810"
+    },
+    "screening_cost_s": 10.2856931200401
+  },
+  {
+    "candidate": 47,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002811"
+    },
+    "screening_cost_s": 7.548393957564934
+  },
+  {
+    "candidate": 48,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002812"
+    },
+    "screening_cost_s": 7.085571951691831
+  },
+  {
+    "candidate": 49,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002813"
+    },
+    "screening_cost_s": 7.083536965111265
+  },
+  {
+    "candidate": 50,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002814"
+    },
+    "screening_cost_s": 7.066951795291648
+  },
+  {
+    "candidate": 51,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002815"
+    },
+    "screening_cost_s": 10.238836380346326
+  },
+  {
+    "candidate": 52,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002816"
+    },
+    "screening_cost_s": 8.185918345373333
+  },
+  {
+    "candidate": 53,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002817"
+    },
+    "screening_cost_s": 7.198341774277754
+  },
+  {
+    "candidate": 54,
+    "placement_ids": {
+      "prefill": "placement_002808",
+      "decode": "placement_002818"
+    },
+    "screening_cost_s": 10.493441836362535
+  },
+  {
+    "candidate": 55,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002830"
+    },
+    "screening_cost_s": 11.43796024577259
+  },
+  {
+    "candidate": 56,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002831"
+    },
+    "screening_cost_s": 11.239915858614262
+  },
+  {
+    "candidate": 57,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002836"
+    },
+    "screening_cost_s": 11.640385103062362
+  },
+  {
+    "candidate": 58,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002837"
+    },
+    "screening_cost_s": 16.686139445505457
+  },
+  {
+    "candidate": 59,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002838"
+    },
+    "screening_cost_s": 11.52359174094767
+  },
+  {
+    "candidate": 60,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002938"
+    },
+    "screening_cost_s": 14.227601212796154
+  },
+  {
+    "candidate": 61,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002954"
+    },
+    "screening_cost_s": 16.910709218666256
+  },
+  {
+    "candidate": 62,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002955"
+    },
+    "screening_cost_s": 17.19440498927408
+  },
+  {
+    "candidate": 63,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002956"
+    },
+    "screening_cost_s": 11.831484079526923
+  },
+  {
+    "candidate": 64,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002957"
+    },
+    "screening_cost_s": 19.38992868631142
+  },
+  {
+    "candidate": 65,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002958"
+    },
+    "screening_cost_s": 14.193414283769023
+  },
+  {
+    "candidate": 66,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002959"
+    },
+    "screening_cost_s": 14.142834124344375
+  },
+  {
+    "candidate": 67,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002980"
+    },
+    "screening_cost_s": 16.83387065235479
+  },
+  {
+    "candidate": 68,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002981"
+    },
+    "screening_cost_s": 14.473181784435393
+  },
+  {
+    "candidate": 69,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002982"
+    },
+    "screening_cost_s": 14.296329845640106
+  },
+  {
+    "candidate": 70,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002983"
+    },
+    "screening_cost_s": 16.74811505809847
+  },
+  {
+    "candidate": 71,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002984"
+    },
+    "screening_cost_s": 16.729651751408603
+  },
+  {
+    "candidate": 72,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002991"
+    },
+    "screening_cost_s": 16.83291142538285
+  },
+  {
+    "candidate": 73,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002992"
+    },
+    "screening_cost_s": 14.473001001084484
+  },
+  {
+    "candidate": 74,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002993"
+    },
+    "screening_cost_s": 16.748148214950994
+  },
+  {
+    "candidate": 75,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002994"
+    },
+    "screening_cost_s": 16.967040826468896
+  },
+  {
+    "candidate": 76,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_002995"
+    },
+    "screening_cost_s": 16.66575462160693
+  },
+  {
+    "candidate": 77,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_003030"
+    },
+    "screening_cost_s": 16.638801341725816
+  },
+  {
+    "candidate": 78,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_003031"
+    },
+    "screening_cost_s": 16.543371418014875
+  },
+  {
+    "candidate": 79,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_003032"
+    },
+    "screening_cost_s": 16.639645604324066
+  },
+  {
+    "candidate": 80,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_003033"
+    },
+    "screening_cost_s": 16.643485903046418
+  },
+  {
+    "candidate": 81,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_003034"
+    },
+    "screening_cost_s": 16.52491039867991
+  },
+  {
+    "candidate": 82,
+    "placement_ids": {
+      "prefill": "placement_002828",
+      "decode": "placement_003035"
+    },
+    "screening_cost_s": 16.550167625989573
+  },
+  {
+    "candidate": 83,
+    "placement_ids": {
+      "prefill": "placement_002832",
+      "decode": "placement_002831"
+    },
+    "screening_cost_s": 11.245521981494944
+  },
+  {
+    "candidate": 84,
+    "placement_ids": {
+      "prefill": "placement_002832",
+      "decode": "placement_002833"
+    },
+    "screening_cost_s": 16.5886795170929
+  },
+  {
+    "candidate": 85,
+    "placement_ids": {
+      "prefill": "placement_002832",
+      "decode": "placement_002834"
+    },
+    "screening_cost_s": 13.69124841375773
+  },
+  {
+    "candidate": 86,
+    "placement_ids": {
+      "prefill": "placement_002832",
+      "decode": "placement_002835"
+    },
+    "screening_cost_s": 13.606132972621527
+  },
+  {
+    "candidate": 87,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002840"
+    },
+    "screening_cost_s": 1.282931034945472
+  },
+  {
+    "candidate": 88,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002841"
+    },
+    "screening_cost_s": 10.731136148723339
+  },
+  {
+    "candidate": 89,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002842"
+    },
+    "screening_cost_s": 1.2620918030033241
+  },
+  {
+    "candidate": 90,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002843"
+    },
+    "screening_cost_s": 7.368091608128346
+  },
+  {
+    "candidate": 91,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002844"
+    },
+    "screening_cost_s": 7.365469569727725
+  },
+  {
+    "candidate": 92,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002845"
+    },
+    "screening_cost_s": 7.822089574609184
+  },
+  {
+    "candidate": 93,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002966"
+    },
+    "screening_cost_s": 10.316415856211044
+  },
+  {
+    "candidate": 94,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_002967"
+    },
+    "screening_cost_s": 7.4452753823285045
+  },
+  {
+    "candidate": 95,
+    "placement_ids": {
+      "prefill": "placement_002839",
+      "decode": "placement_003037"
+    },
+    "screening_cost_s": 7.331383070519641
+  },
+  {
+    "candidate": 96,
+    "placement_ids": {
+      "prefill": "placement_002846",
+      "decode": "placement_002847"
+    },
+    "screening_cost_s": 10.619795995170476
+  },
+  {
+    "candidate": 97,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002849"
+    },
+    "screening_cost_s": 10.94014755602232
+  },
+  {
+    "candidate": 98,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002850"
+    },
+    "screening_cost_s": 11.014638527461477
+  },
+  {
+    "candidate": 99,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002851"
+    },
+    "screening_cost_s": 11.04469468217741
+  },
+  {
+    "candidate": 100,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002852"
+    },
+    "screening_cost_s": 11.02495460548084
+  },
+  {
+    "candidate": 101,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002853"
+    },
+    "screening_cost_s": 11.014638527461477
+  },
+  {
+    "candidate": 102,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002854"
+    },
+    "screening_cost_s": 11.04469468217741
+  },
+  {
+    "candidate": 103,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002855"
+    },
+    "screening_cost_s": 11.04202984243885
+  },
+  {
+    "candidate": 104,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002856"
+    },
+    "screening_cost_s": 11.041746180785523
+  },
+  {
+    "candidate": 105,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002857"
+    },
+    "screening_cost_s": 11.042313504092185
+  },
+  {
+    "candidate": 106,
+    "placement_ids": {
+      "prefill": "placement_002848",
+      "decode": "placement_002858"
+    },
+    "screening_cost_s": 11.041746180785523
+  },
+  {
+    "candidate": 107,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002852"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 108,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002858"
+    },
+    "screening_cost_s": 13.298481469959498
+  },
+  {
+    "candidate": 109,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002860"
+    },
+    "screening_cost_s": 10.572166336097073
+  },
+  {
+    "candidate": 110,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002861"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 111,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002862"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 112,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002863"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 113,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002864"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 114,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002865"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 115,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002866"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 116,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002867"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 117,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002868"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 118,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002869"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 119,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002870"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 120,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002871"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 121,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002872"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 122,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002873"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 123,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002874"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 124,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002875"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 125,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002876"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 126,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002877"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 127,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002878"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 128,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002879"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 129,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002880"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 130,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002881"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 131,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002882"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 132,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002883"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 133,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002884"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 134,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002885"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 135,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002886"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 136,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002887"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 137,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002888"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 138,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002889"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 139,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002890"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 140,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002891"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 141,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002892"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 142,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002893"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 143,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002894"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 144,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002895"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 145,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002896"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 146,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002897"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 147,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002898"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 148,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002899"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 149,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002900"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 150,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002901"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 151,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002902"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 152,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002903"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 153,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002904"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 154,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002905"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 155,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002906"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 156,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002907"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 157,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002908"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 158,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002909"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 159,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002910"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 160,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002911"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 161,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002912"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 162,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002913"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 163,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002914"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 164,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002915"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 165,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002916"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 166,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002917"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 167,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002918"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 168,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002919"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 169,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002920"
+    },
+    "screening_cost_s": 13.302062394408994
+  },
+  {
+    "candidate": 170,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002921"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 171,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002922"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 172,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002923"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 173,
+    "placement_ids": {
+      "prefill": "placement_002859",
+      "decode": "placement_002924"
+    },
+    "screening_cost_s": 13.293616579163677
+  },
+  {
+    "candidate": 174,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002851"
+    },
+    "screening_cost_s": 10.962365343685766
+  },
+  {
+    "candidate": 175,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002852"
+    },
+    "screening_cost_s": 10.942625266989197
+  },
+  {
+    "candidate": 176,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002854"
+    },
+    "screening_cost_s": 10.962365343685766
+  },
+  {
+    "candidate": 177,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002855"
+    },
+    "screening_cost_s": 10.959700503947207
+  },
+  {
+    "candidate": 178,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002856"
+    },
+    "screening_cost_s": 10.959416842293871
+  },
+  {
+    "candidate": 179,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002857"
+    },
+    "screening_cost_s": 10.959984165600533
+  },
+  {
+    "candidate": 180,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002858"
+    },
+    "screening_cost_s": 10.959416842293871
+  },
+  {
+    "candidate": 181,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002926"
+    },
+    "screening_cost_s": 10.847206178275208
+  },
+  {
+    "candidate": 182,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002927"
+    },
+    "screening_cost_s": 10.924650324329946
+  },
+  {
+    "candidate": 183,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002928"
+    },
+    "screening_cost_s": 10.924650324329946
+  },
+  {
+    "candidate": 184,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002970"
+    },
+    "screening_cost_s": 10.840019190218568
+  },
+  {
+    "candidate": 185,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002978"
+    },
+    "screening_cost_s": 10.858567061676457
+  },
+  {
+    "candidate": 186,
+    "placement_ids": {
+      "prefill": "placement_002925",
+      "decode": "placement_002979"
+    },
+    "screening_cost_s": 10.853478595616258
+  },
+  {
+    "candidate": 187,
+    "placement_ids": {
+      "prefill": "placement_002929",
+      "decode": "placement_002852"
+    },
+    "screening_cost_s": 15.66950873433197
+  },
+  {
+    "candidate": 188,
+    "placement_ids": {
+      "prefill": "placement_002929",
+      "decode": "placement_002861"
+    },
+    "screening_cost_s": 15.677635466660401
+  },
+  {
+    "candidate": 189,
+    "placement_ids": {
+      "prefill": "placement_002929",
+      "decode": "placement_002930"
+    },
+    "screening_cost_s": 15.629863480143598
+  },
+  {
+    "candidate": 190,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002932"
+    },
+    "screening_cost_s": 16.054062287975576
+  },
+  {
+    "candidate": 191,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002933"
+    },
+    "screening_cost_s": 13.849612861862584
+  },
+  {
+    "candidate": 192,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002934"
+    },
+    "screening_cost_s": 13.727323680549475
+  },
+  {
+    "candidate": 193,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002935"
+    },
+    "screening_cost_s": 15.279475320043634
+  },
+  {
+    "candidate": 194,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002936"
+    },
+    "screening_cost_s": 15.263501700523094
+  },
+  {
+    "candidate": 195,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002937"
+    },
+    "screening_cost_s": 13.530788973213172
+  },
+  {
+    "candidate": 196,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002938"
+    },
+    "screening_cost_s": 13.603980456839626
+  },
+  {
+    "candidate": 197,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002945"
+    },
+    "screening_cost_s": 18.815133350529436
+  },
+  {
+    "candidate": 198,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002946"
+    },
+    "screening_cost_s": 16.20374983762983
+  },
+  {
+    "candidate": 199,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002951"
+    },
+    "screening_cost_s": 13.604712184240178
+  },
+  {
+    "candidate": 200,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002952"
+    },
+    "screening_cost_s": 19.230208485845626
+  },
+  {
+    "candidate": 201,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002953"
+    },
+    "screening_cost_s": 13.371765600800403
+  },
+  {
+    "candidate": 202,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002960"
+    },
+    "screening_cost_s": 16.054062287975576
+  },
+  {
+    "candidate": 203,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002961"
+    },
+    "screening_cost_s": 16.77672343825689
+  },
+  {
+    "candidate": 204,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002962"
+    },
+    "screening_cost_s": 19.073269053611728
+  },
+  {
+    "candidate": 205,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002963"
+    },
+    "screening_cost_s": 18.82747947596781
+  },
+  {
+    "candidate": 206,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002964"
+    },
+    "screening_cost_s": 13.60099449780886
+  },
+  {
+    "candidate": 207,
+    "placement_ids": {
+      "prefill": "placement_002931",
+      "decode": "placement_002965"
+    },
+    "screening_cost_s": 13.617763256181899
+  },
+  {
+    "candidate": 208,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002938"
+    },
+    "screening_cost_s": 13.123963068709855
+  },
+  {
+    "candidate": 209,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002940"
+    },
+    "screening_cost_s": 13.63640641849415
+  },
+  {
+    "candidate": 210,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002941"
+    },
+    "screening_cost_s": 13.120670348426785
+  },
+  {
+    "candidate": 211,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002942"
+    },
+    "screening_cost_s": 13.125228183675649
+  },
+  {
+    "candidate": 212,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002943"
+    },
+    "screening_cost_s": 10.377205204297606
+  },
+  {
+    "candidate": 213,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002944"
+    },
+    "screening_cost_s": 10.26936182497273
+  },
+  {
+    "candidate": 214,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002945"
+    },
+    "screening_cost_s": 10.379726949050758
+  },
+  {
+    "candidate": 215,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002946"
+    },
+    "screening_cost_s": 11.814473562065126
+  },
+  {
+    "candidate": 216,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002947"
+    },
+    "screening_cost_s": 12.54227210760575
+  },
+  {
+    "candidate": 217,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002948"
+    },
+    "screening_cost_s": 12.444427396733573
+  },
+  {
+    "candidate": 218,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002949"
+    },
+    "screening_cost_s": 12.624849453929059
+  },
+  {
+    "candidate": 219,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002950"
+    },
+    "screening_cost_s": 13.214515180144563
+  },
+  {
+    "candidate": 220,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002951"
+    },
+    "screening_cost_s": 13.12887153288016
+  },
+  {
+    "candidate": 221,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002952"
+    },
+    "screening_cost_s": 10.435315308574282
+  },
+  {
+    "candidate": 222,
+    "placement_ids": {
+      "prefill": "placement_002939",
+      "decode": "placement_002953"
+    },
+    "screening_cost_s": 13.22232662095087
+  },
+  {
+    "candidate": 223,
+    "placement_ids": {
+      "prefill": "placement_002985",
+      "decode": "placement_002932"
+    },
+    "screening_cost_s": 15.844208465480314
+  },
+  {
+    "candidate": 224,
+    "placement_ids": {
+      "prefill": "placement_002985",
+      "decode": "placement_003032"
+    },
+    "screening_cost_s": 15.838772010714326
+  },
+  {
+    "candidate": 225,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003004"
+    },
+    "screening_cost_s": 7.585999978875478
+  },
+  {
+    "candidate": 226,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003005"
+    },
+    "screening_cost_s": 7.967496485602361
+  },
+  {
+    "candidate": 227,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003006"
+    },
+    "screening_cost_s": 7.96791455340561
+  },
+  {
+    "candidate": 228,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003007"
+    },
+    "screening_cost_s": 7.986535823224368
+  },
+  {
+    "candidate": 229,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003008"
+    },
+    "screening_cost_s": 7.952746079629042
+  },
+  {
+    "candidate": 230,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003009"
+    },
+    "screening_cost_s": 7.953164147432291
+  },
+  {
+    "candidate": 231,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003010"
+    },
+    "screening_cost_s": 7.971785417251049
+  },
+  {
+    "candidate": 232,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003011"
+    },
+    "screening_cost_s": 7.9865759219385914
+  },
+  {
+    "candidate": 233,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003012"
+    },
+    "screening_cost_s": 7.987103146531029
+  },
+  {
+    "candidate": 234,
+    "placement_ids": {
+      "prefill": "placement_003003",
+      "decode": "placement_003013"
+    },
+    "screening_cost_s": 7.987103146531029
+  }
+]

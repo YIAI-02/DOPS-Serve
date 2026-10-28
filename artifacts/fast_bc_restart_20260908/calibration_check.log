@@ -1,0 +1,61 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{"calibration_model": "qwen_1.8b", "static_candidate": 0, "throughput": 79.65073228202033}
+{"calibration_model": "qwen_1.8b", "static_candidate": 1, "throughput": 79.65098372372445}
+{"calibration_model": "qwen_1.8b", "recovered_candidate": 1, "coefficient_replay_throughput": 79.65705639169742}
+............./lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:91: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpppt0ady3/placements.jsonl' mode='r' encoding='UTF-8'>
+  programs = {row["placement_id"]: row["block_actions"] for row in map(json.loads, (directory / "placements.jsonl").open())}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:119: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpppt0ady3/b_train.jsonl' mode='r' encoding='UTF-8'>
+  rows = [json.loads(line) for line in path.open()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:74: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpppt0ady3/b_val.jsonl' mode='r' encoding='UTF-8'>
+  for row in map(json.loads, path.open()):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"epoch": 1, "training_loss": 0.704238772392273, "train_anchors": 1, "optimizer_steps": 1, "validation": {"candidate_regret": 0.0, "unweighted_nll": 0.6976060569286346, "anchors": 1}, "wall_s": 0.021885412046685815}
+{"epoch": 2, "training_loss": 0.653936579823494, "train_anchors": 1, "optimizer_steps": 1, "validation": {"candidate_regret": 0.0, "unweighted_nll": 0.7154670059680939, "anchors": 1}, "wall_s": 0.004564019152894616}
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:91: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpppt0ady3/placements.jsonl' mode='r' encoding='UTF-8'>
+  programs = {row["placement_id"]: row["block_actions"] for row in map(json.loads, (directory / "placements.jsonl").open())}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"epoch": 1, "training_loss": 0.704238772392273, "train_anchors": 1, "optimizer_steps": 1, "validation": {"candidate_regret": 0.0, "unweighted_nll": 0.6976060569286346, "anchors": 1}, "wall_s": 0.004591565113514662}
+{"epoch": 2, "training_loss": 0.653936579823494, "train_anchors": 1, "optimizer_steps": 1, "validation": {"candidate_regret": 0.0, "unweighted_nll": 0.7154670059680939, "anchors": 1}, "wall_s": 0.004617095924913883}
+............./lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:91: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp6ohmm90l/placements.jsonl' mode='r' encoding='UTF-8'>
+  programs = {row["placement_id"]: row["block_actions"] for row in map(json.loads, (directory / "placements.jsonl").open())}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:119: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp6ohmm90l/train.jsonl' mode='r' encoding='UTF-8'>
+  rows = [json.loads(line) for line in path.open()]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/lustre/home/2501111916/workspace/DOPS-Serve/src/dops_serve/placement_training.py:74: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmp6ohmm90l/val.jsonl' mode='r' encoding='UTF-8'>
+  for row in map(json.loads, path.open()):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"epoch": 1, "training_loss": 0.7282560914754868, "train_anchors": 1, "optimizer_steps": 1, "validation": {"candidate_regret": 1.0, "unweighted_nll": 0.6085520943442544, "anchors": 1}, "wall_s": 0.1969805669505149}
+{"epoch": 2, "training_loss": 0.6328187435865402, "train_anchors": 1, "optimizer_steps": 1, "validation": {"candidate_regret": 0.0, "unweighted_nll": 0.5521565950833834, "anchors": 1}, "wall_s": 0.19808667316101491}
+....{"epoch": 1, "update": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load": 1.0, "terminal": true, "windows": 1, "reward": 3.9551895463434996, "token_reward": 5, "time_reward": -1.0448104536565004, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 2, "cumulative_windows": 1, "cumulative_training_wall_s": 0.0, "gradient_norm": 16.791948318481445, "loss": 8.069486618041992, "actor_loss": 3.75722123635569e-07, "value_loss": 16.156763076782227, "entropy": 8.895064353942871, "return_mean": 3.9551892280578613, "return_abs_mean": 3.9551892280578613, "value_mean": -0.06213158741593361, "value_abs_mean": 0.13348166644573212, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 1.0, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 2, "update": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load": 0.5, "terminal": true, "windows": 1, "reward": 2.948996122056529, "token_reward": 5, "time_reward": -2.051003877943471, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 4, "cumulative_windows": 2, "cumulative_training_wall_s": 0.0, "gradient_norm": 12.383868217468262, "loss": 4.343870639801025, "actor_loss": -1.2341354249656433e-06, "value_loss": 8.705455780029297, "entropy": 8.855814933776855, "return_mean": 2.948996067047119, "return_abs_mean": 2.948996067047119, "value_mean": 0.000988093437626958, "value_abs_mean": 0.12053203582763672, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 0.5, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 1, "update": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load": 1.0, "terminal": true, "windows": 1, "reward": 3.9551895463434996, "token_reward": 5, "time_reward": -1.0448104536565004, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 2, "cumulative_windows": 1, "cumulative_training_wall_s": 0.0, "gradient_norm": 16.791948318481445, "loss": 8.069486618041992, "actor_loss": 3.75722123635569e-07, "value_loss": 16.156763076782227, "entropy": 8.895064353942871, "return_mean": 3.9551892280578613, "return_abs_mean": 3.9551892280578613, "value_mean": -0.06213158741593361, "value_abs_mean": 0.13348166644573212, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 1.0, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 2, "update": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load": 0.5, "terminal": true, "windows": 1, "reward": 2.948996122056529, "token_reward": 5, "time_reward": -2.051003877943471, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 4, "cumulative_windows": 2, "cumulative_training_wall_s": 0.0, "gradient_norm": 12.383868217468262, "loss": 4.343870639801025, "actor_loss": -1.2341354249656433e-06, "value_loss": 8.705455780029297, "entropy": 8.855814933776855, "return_mean": 2.948996067047119, "return_abs_mean": 2.948996067047119, "value_mean": 0.000988093437626958, "value_abs_mean": 0.12053203582763672, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 0.5, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 1, "update": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load": 0.5, "terminal": true, "windows": 1, "reward": 2.9498345859208825, "token_reward": 5, "time_reward": -2.0501654140791175, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 2, "cumulative_windows": 1, "cumulative_training_wall_s": 0.0, "gradient_norm": 11.980718612670898, "loss": 4.460635662078857, "actor_loss": -1.732792156872165e-06, "value_loss": 8.938923835754395, "entropy": 8.824424743652344, "return_mean": 2.9498345851898193, "return_abs_mean": 2.9498345851898193, "value_mean": -0.03947863727807999, "value_abs_mean": 0.053654320538043976, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 0.5, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 2, "update": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load": 1.0, "terminal": true, "windows": 1, "reward": 3.9490409244551756, "token_reward": 5, "time_reward": -1.0509590755448246, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 4, "cumulative_windows": 2, "cumulative_training_wall_s": 0.0, "gradient_norm": 15.745806694030762, "loss": 7.697972774505615, "actor_loss": 2.554484801464696e-08, "value_loss": 15.413680076599121, "entropy": 8.867203712463379, "return_mean": 3.949040651321411, "return_abs_mean": 3.949040651321411, "value_mean": 0.02360248938202858, "value_abs_mean": 0.06479988992214203, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 1.0, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 1, "update": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load": 0.5, "terminal": true, "windows": 1, "reward": 2.9498345859208825, "token_reward": 5, "time_reward": -2.0501654140791175, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 2, "cumulative_windows": 1, "cumulative_training_wall_s": 0.0, "gradient_norm": 11.980718612670898, "loss": 4.460635662078857, "actor_loss": -1.732792156872165e-06, "value_loss": 8.938923835754395, "entropy": 8.824424743652344, "return_mean": 2.9498345851898193, "return_abs_mean": 2.9498345851898193, "value_mean": -0.03947863727807999, "value_abs_mean": 0.053654320538043976, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 1, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 0.5, "completed": 2, "windows": 1}, "wall_s": 0.0}
+{"epoch": 2, "update": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load": 1.0, "terminal": true, "windows": 1, "reward": 3.9490409244551756, "token_reward": 5, "time_reward": -1.0509590755448246, "sample_wall_s": 0.0, "simulator_wall_s": 0.0, "decision_wall_s": 0.0, "cumulative_requests": 4, "cumulative_windows": 2, "cumulative_training_wall_s": 0.0, "gradient_norm": 15.745806694030762, "loss": 7.697972774505615, "actor_loss": 2.554484801464696e-08, "value_loss": 15.413680076599121, "entropy": 8.867203712463379, "return_mean": 3.949040651321411, "return_abs_mean": 3.949040651321411, "value_mean": 0.02360248938202858, "value_abs_mean": 0.06479988992214203, "clip_fraction": 0.0, "approx_kl": 0.0, "update_wall_s": 0.0}
+{"trace_complete": {"epoch": 2, "model": "qwen_1.8b", "trace_id": "tiny", "load_multiplier": 1.0, "completed": 2, "windows": 1}, "wall_s": 0.0}
+...
+----------------------------------------------------------------------
+Ran 33 tests in 30.148s
+
+OK
