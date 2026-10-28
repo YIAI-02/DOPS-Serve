@@ -1,0 +1,44 @@
+{
+  "model": "qwen_7b",
+  "request": {
+    "request_id": "burstgpt_row_984027",
+    "source_row": 984027,
+    "source_timestamp": 3707405.0,
+    "arrival_time": 73.0,
+    "prompt_len": 352,
+    "output_len": 40,
+    "max_tokens": 7315
+  },
+  "wall_with_profiler_s": 10.398895541991806,
+  "scope": "local single request; profiled env.step only; no acceleration implementation",
+  "requests": 1,
+  "completed": 1,
+  "output_tokens": 40,
+  "simulated_s": 0.47662758260844384,
+  "throughput": 83.92296513997712,
+  "plans": 22,
+  "phase_steps": {
+    "prefill": 1,
+    "decode": 39
+  },
+  "decision_s": 0.0,
+  "simulator_s": 9.70596529004979,
+  "peak_runtime_bytes": {
+    "PIM0": 6323154944,
+    "PIM1": 7068153856,
+    "CPU0": 0,
+    "Ascend_910B_NPU0": 5315379200
+  },
+  "peak_activation_bytes": {
+    "PIM0": 31719424,
+    "PIM1": 26673152,
+    "CPU0": 0,
+    "Ascend_910B_NPU0": 38387712
+  },
+  "ttft_mean_s": 0.2949126967572795,
+  "ttft_p95_s": 0.2949126967572795,
+  "e2e_mean_s": 0.47662758260844384,
+  "e2e_p95_s": 0.47662758260844384,
+  "queue_mean_s": 0.0,
+  "tbt_p95_s": 0.0019706163496579225
+}

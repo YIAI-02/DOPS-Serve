@@ -1,0 +1,44 @@
+{
+  "model": "qwen_1.8b",
+  "request": {
+    "request_id": "burstgpt_row_984027",
+    "source_row": 984027,
+    "source_timestamp": 3707405.0,
+    "arrival_time": 73.0,
+    "prompt_len": 352,
+    "output_len": 40,
+    "max_tokens": 7315
+  },
+  "wall_with_profiler_s": 10.548715249984525,
+  "scope": "local single request; profiled env.step only; no acceleration implementation",
+  "requests": 1,
+  "completed": 1,
+  "output_tokens": 40,
+  "simulated_s": 0.1421462042575996,
+  "throughput": 281.4004088882413,
+  "plans": 22,
+  "phase_steps": {
+    "prefill": 1,
+    "decode": 39
+  },
+  "decision_s": 0.0,
+  "simulator_s": 9.858458668051753,
+  "peak_runtime_bytes": {
+    "PIM0": 1480313856,
+    "PIM1": 1438626816,
+    "CPU0": 0,
+    "Ascend_910B_NPU0": 2516811776
+  },
+  "peak_activation_bytes": {
+    "PIM0": 3244032,
+    "PIM1": 9461760,
+    "CPU0": 0,
+    "Ascend_910B_NPU0": 21086208
+  },
+  "ttft_mean_s": 0.08557367075896138,
+  "ttft_p95_s": 0.08557367075896138,
+  "e2e_mean_s": 0.1421462042575996,
+  "e2e_p95_s": 0.1421462042575996,
+  "queue_mean_s": 0.0,
+  "tbt_p95_s": 0.0036139220715824816
+}

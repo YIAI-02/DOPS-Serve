@@ -1,0 +1,160 @@
+[
+  {
+    "model": "qwen_1.8b",
+    "total_profiled_s": 9.811939592000007,
+    "total_calls": 32330678,
+    "selected": [
+      {
+        "file": "placement_cost.py",
+        "line": 15,
+        "function": "configure_requests",
+        "calls": 40,
+        "own_s": 2.4710000000000002e-05,
+        "cumulative_s": 2.4710000000000002e-05
+      },
+      {
+        "file": "stats_recorder.py",
+        "line": 32,
+        "function": "log_op_device",
+        "calls": 35840,
+        "own_s": 0.025374591000000002,
+        "cumulative_s": 0.029003284
+      },
+      {
+        "file": "placement_cost.py",
+        "line": 40,
+        "function": "estimate_flops",
+        "calls": 29120,
+        "own_s": 0.021611292,
+        "cumulative_s": 0.3495264
+      },
+      {
+        "file": "scheduler_base.py",
+        "line": 122,
+        "function": "_log_scheduled_op_trace",
+        "calls": 35840,
+        "own_s": 0.026256475,
+        "cumulative_s": 0.058229701
+      },
+      {
+        "file": "estimate_mixin.py",
+        "line": 209,
+        "function": "estimate_flops",
+        "calls": 29120,
+        "own_s": 0.169409794,
+        "cumulative_s": 0.327915108
+      },
+      {
+        "file": "estimate_mixin.py",
+        "line": 356,
+        "function": "estimate_activation_bytes",
+        "calls": 141040,
+        "own_s": 0.8463917120000001,
+        "cumulative_s": 2.635008977
+      },
+      {
+        "file": "placement_compiler.py",
+        "line": 44,
+        "function": "normalize",
+        "calls": 40,
+        "own_s": 0.0064116270000000005,
+        "cumulative_s": 0.015926583
+      },
+      {
+        "file": "placement_cost.py",
+        "line": 46,
+        "function": "estimate_activation_bytes",
+        "calls": 141040,
+        "own_s": 0.27159489600000003,
+        "cumulative_s": 3.4868532300000004
+      },
+      {
+        "file": "scheduler_base.py",
+        "line": 1744,
+        "function": "_get_graph_index",
+        "calls": 40,
+        "own_s": 0.00038584800000000005,
+        "cumulative_s": 0.001646705
+      }
+    ]
+  },
+  {
+    "model": "qwen_7b",
+    "total_profiled_s": 9.659744735999993,
+    "total_calls": 31980262,
+    "selected": [
+      {
+        "file": "placement_cost.py",
+        "line": 15,
+        "function": "configure_requests",
+        "calls": 40,
+        "own_s": 2.3624000000000003e-05,
+        "cumulative_s": 2.3624000000000003e-05
+      },
+      {
+        "file": "stats_recorder.py",
+        "line": 32,
+        "function": "log_op_device",
+        "calls": 35840,
+        "own_s": 0.025328349,
+        "cumulative_s": 0.029025149
+      },
+      {
+        "file": "placement_cost.py",
+        "line": 40,
+        "function": "estimate_flops",
+        "calls": 29120,
+        "own_s": 0.02194586,
+        "cumulative_s": 0.35147355300000005
+      },
+      {
+        "file": "scheduler_base.py",
+        "line": 122,
+        "function": "_log_scheduled_op_trace",
+        "calls": 35840,
+        "own_s": 0.026239255000000003,
+        "cumulative_s": 0.05813953
+      },
+      {
+        "file": "estimate_mixin.py",
+        "line": 209,
+        "function": "estimate_flops",
+        "calls": 29120,
+        "own_s": 0.169564075,
+        "cumulative_s": 0.329527693
+      },
+      {
+        "file": "estimate_mixin.py",
+        "line": 356,
+        "function": "estimate_activation_bytes",
+        "calls": 141040,
+        "own_s": 0.849403211,
+        "cumulative_s": 2.624124101
+      },
+      {
+        "file": "placement_compiler.py",
+        "line": 44,
+        "function": "normalize",
+        "calls": 40,
+        "own_s": 0.006464628,
+        "cumulative_s": 0.015930085
+      },
+      {
+        "file": "placement_cost.py",
+        "line": 46,
+        "function": "estimate_activation_bytes",
+        "calls": 141040,
+        "own_s": 0.27487698,
+        "cumulative_s": 3.480710234
+      },
+      {
+        "file": "scheduler_base.py",
+        "line": 1744,
+        "function": "_get_graph_index",
+        "calls": 40,
+        "own_s": 0.00035512,
+        "cumulative_s": 0.001560331
+      }
+    ]
+  }
+]
