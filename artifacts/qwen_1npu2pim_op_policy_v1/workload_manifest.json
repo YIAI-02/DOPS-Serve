@@ -1,0 +1,29 @@
+{
+  "source": "/lustre/home/2501111916/workspace/DOPS-Serve/data/BurstGPT_without_fails_1.csv",
+  "eligible_requests": 706125,
+  "excluded": {
+    "not_chatgpt_api": 312545,
+    "prompt_out_of_range": 371094,
+    "output_out_of_range": 14530
+  },
+  "splits": {
+    "train": {
+      "eligible_requests": 494287,
+      "traces": 494,
+      "discarded_tail": 287
+    },
+    "val": {
+      "eligible_requests": 105919,
+      "traces": 105,
+      "discarded_tail": 919
+    },
+    "test": {
+      "eligible_requests": 105919,
+      "traces": 105,
+      "discarded_tail": 919
+    }
+  },
+  "requests_per_trace": 1000,
+  "arrival_scaling": "unscaled; calibrate on train/validation",
+  "variants": "model and load variants inherit source_window_id and split"
+}

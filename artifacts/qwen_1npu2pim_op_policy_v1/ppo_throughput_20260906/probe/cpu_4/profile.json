@@ -1,0 +1,107 @@
+{
+  "runtime": {
+    "sample_threads": 4,
+    "update_threads": 4,
+    "update_device": "cpu"
+  },
+  "signature": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz",
+    "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+    "sample_threads": 4
+  },
+  "io_s": 0.03858131496235728,
+  "rows": [
+    {
+      "model": "qwen_1.8b",
+      "repeat": 0,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 69.17447114991955,
+      "update_s": 6.660437983926386,
+      "total_s": 75.83496019407175,
+      "simulator_s": 67.52836038428359,
+      "decision_s": 1.1764519361313432,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 97.05341649500001,
+      "peak_rss_kib": 583780
+    },
+    {
+      "model": "qwen_7b",
+      "repeat": 0,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 68.82557688211091,
+      "update_s": 6.5875872541219,
+      "total_s": 75.41324603091925,
+      "simulator_s": 67.50771194929257,
+      "decision_s": 0.8207589290104806,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 96.70591173,
+      "peak_rss_kib": 585564
+    },
+    {
+      "model": "qwen_14b",
+      "repeat": 0,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 122.20587809220888,
+      "update_s": 9.255164518021047,
+      "total_s": 131.46109671099111,
+      "simulator_s": 120.03806746820919,
+      "decision_s": 1.2824202412739396,
+      "output_tokens": 3330,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 161.171160283,
+      "peak_rss_kib": 596776
+    },
+    {
+      "model": "qwen_1.8b",
+      "repeat": 1,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 68.9638455810491,
+      "update_s": 6.341701420256868,
+      "total_s": 75.3055835890118,
+      "simulator_s": 67.70702010532841,
+      "decision_s": 0.7744263445492834,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 95.63476365999998,
+      "peak_rss_kib": 597764
+    },
+    {
+      "model": "qwen_7b",
+      "repeat": 1,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 68.9333514010068,
+      "update_s": 6.3922333917580545,
+      "total_s": 75.32565586920828,
+      "simulator_s": 67.57433660165407,
+      "decision_s": 0.8018384766764939,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 95.76414442600003,
+      "peak_rss_kib": 597776
+    },
+    {
+      "model": "qwen_14b",
+      "repeat": 1,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 122.63044034712948,
+      "update_s": 10.14708519121632,
+      "total_s": 132.77758007496595,
+      "simulator_s": 120.48740515066311,
+      "decision_s": 1.2592895559500903,
+      "output_tokens": 3330,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 165.0590094999999,
+      "peak_rss_kib": 597776
+    }
+  ],
+  "probe_only": true,
+  "gpu_name": null
+}

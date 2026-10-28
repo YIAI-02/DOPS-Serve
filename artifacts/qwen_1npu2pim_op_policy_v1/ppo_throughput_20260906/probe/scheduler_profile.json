@@ -1,0 +1,50 @@
+[
+  {
+    "model": "qwen_1.8b",
+    "requests": 32,
+    "identical_replay_and_kv": true,
+    "wall_s": {
+      "original": [
+        33.66371717513539,
+        33.77301547303796
+      ],
+      "optimized": [
+        31.843089297180995,
+        31.877925546839833
+      ]
+    },
+    "speedup": 1.0583122822705824
+  },
+  {
+    "model": "qwen_7b",
+    "requests": 32,
+    "identical_replay_and_kv": true,
+    "wall_s": {
+      "original": [
+        33.979323723120615,
+        33.99006606312469
+      ],
+      "optimized": [
+        32.09076302498579,
+        32.12614058284089
+      ]
+    },
+    "speedup": 1.058434554885036
+  },
+  {
+    "model": "qwen_14b",
+    "requests": 32,
+    "identical_replay_and_kv": true,
+    "wall_s": {
+      "original": [
+        55.40204005804844,
+        55.733835947932675
+      ],
+      "optimized": [
+        49.132335145026445,
+        49.13502974016592
+      ]
+    },
+    "speedup": 1.1309540673632927
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "jobs": {
+    "prepare": {
+      "job_id": "14779319",
+      "stage": "prepare",
+      "array": null,
+      "cpus": 4,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {},
+      "complete": true
+    },
+    "profile-cpu-1": {
+      "job_id": "14779335",
+      "stage": "profile",
+      "array": null,
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "PROBE_THREADS": "1"
+      },
+      "complete": true
+    },
+    "profile-cpu-2": {
+      "job_id": "14779336",
+      "stage": "profile",
+      "array": null,
+      "cpus": 2,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "PROBE_THREADS": "2"
+      },
+      "complete": true
+    },
+    "profile-cpu-4": {
+      "job_id": "14779337",
+      "stage": "profile",
+      "array": null,
+      "cpus": 4,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "PROBE_THREADS": "4"
+      },
+      "complete": true
+    },
+    "profile-gpu": {
+      "job_id": "14779338",
+      "stage": "profile",
+      "array": null,
+      "cpus": 1,
+      "partition": "GPU80G",
+      "gres": "gpu:1",
+      "environment": {
+        "UPDATE_DEVICE": "cuda",
+        "PROBE_THREADS": "1"
+      },
+      "complete": true
+    },
+    "freeze": {
+      "job_id": "14779357",
+      "stage": "freeze",
+      "array": null,
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {},
+      "complete": true
+    },
+    "initialize": {
+      "job_id": "14779363",
+      "stage": "initialize",
+      "array": "0-2",
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {},
+      "complete": true
+    },
+    "prepare-val-0": {
+      "job_id": "14779383",
+      "stage": "prepare-validation",
+      "array": null,
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "EPOCH": "0"
+      },
+      "complete": true
+    },
+    "val-0": {
+      "job_id": "14779390",
+      "stage": "evaluate",
+      "array": "0-224%256",
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/validation/epoch_000"
+      }
+    },
+    "references": {
+      "job_id": "14779391",
+      "stage": "evaluate",
+      "array": "0-374%256",
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "COMPARISON_DIR": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/qwen_1npu2pim_op_policy_v1/ppo_throughput_20260906/validation/references"
+      }
+    },
+    "train-1": {
+      "job_id": "14779392",
+      "stage": "train",
+      "array": "0-2",
+      "cpus": 1,
+      "partition": "C064M0256G",
+      "gres": null,
+      "environment": {
+        "EPOCH": "1",
+        "UPDATE_DEVICE": "cpu"
+      }
+    }
+  },
+  "eval_concurrency": 256,
+  "gpu": {
+    "partition": "GPU80G",
+    "gres": "gpu:1"
+  }
+}

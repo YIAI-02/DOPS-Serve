@@ -1,0 +1,107 @@
+{
+  "runtime": {
+    "sample_threads": 1,
+    "update_threads": 1,
+    "update_device": "cuda"
+  },
+  "signature": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz",
+    "torch_version": "2.6.0a0+df5bbc09d1.nv24.12",
+    "sample_threads": 1
+  },
+  "io_s": 0.03435125504620373,
+  "rows": [
+    {
+      "model": "qwen_1.8b",
+      "repeat": 0,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 65.5548043991439,
+      "update_s": 9.292775585083291,
+      "total_s": 74.84760816092603,
+      "simulator_s": 64.45274132932536,
+      "decision_s": 0.8244287148118019,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 73.328674936,
+      "peak_rss_kib": 1336328
+    },
+    {
+      "model": "qwen_7b",
+      "repeat": 0,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 65.8469263301231,
+      "update_s": 6.8981143578421324,
+      "total_s": 72.7450581761077,
+      "simulator_s": 64.90644182125106,
+      "decision_s": 0.6557201026007533,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 72.592561169,
+      "peak_rss_kib": 1339336
+    },
+    {
+      "model": "qwen_14b",
+      "repeat": 0,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 115.90113923000172,
+      "update_s": 9.880276397801936,
+      "total_s": 125.78143255203031,
+      "simulator_s": 114.47751725022681,
+      "decision_s": 0.9412288200110197,
+      "output_tokens": 3330,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 125.51345597599999,
+      "peak_rss_kib": 1346380
+    },
+    {
+      "model": "qwen_1.8b",
+      "repeat": 1,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 65.73460729792714,
+      "update_s": 6.911445514997467,
+      "total_s": 72.64607289596461,
+      "simulator_s": 64.78467402909882,
+      "decision_s": 0.6574033198412508,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 72.49364535199999,
+      "peak_rss_kib": 1349772
+    },
+    {
+      "model": "qwen_7b",
+      "repeat": 1,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 65.70260527799837,
+      "update_s": 6.99898709799163,
+      "total_s": 72.70160870207474,
+      "simulator_s": 64.75956210447475,
+      "decision_s": 0.6572803887538612,
+      "output_tokens": 3313,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 72.54744786099997,
+      "peak_rss_kib": 1349972
+    },
+    {
+      "model": "qwen_14b",
+      "repeat": 1,
+      "windows": 8,
+      "completed_requests": 62,
+      "sample_s": 116.01142114913091,
+      "update_s": 9.93515975610353,
+      "total_s": 125.94659801200032,
+      "simulator_s": 114.57742081652395,
+      "decision_s": 0.9497750538866967,
+      "output_tokens": 3330,
+      "full_trace_output_tokens": 103024,
+      "cpu_time_s": 125.67264489899998,
+      "peak_rss_kib": 1349976
+    }
+  ],
+  "probe_only": true,
+  "gpu_name": "NVIDIA A100 80GB PCIe"
+}

@@ -1,0 +1,22 @@
+{
+  "trace_counts": {
+    "train": 494,
+    "val": 105,
+    "test": 105
+  },
+  "validation_trace_ids": [
+    "burstgpt_val_000000",
+    "burstgpt_val_000021",
+    "burstgpt_val_000042",
+    "burstgpt_val_000063",
+    "burstgpt_val_000084"
+  ],
+  "test_trace_ids": [
+    "burstgpt_test_000000",
+    "burstgpt_test_000021",
+    "burstgpt_test_000042",
+    "burstgpt_test_000063",
+    "burstgpt_test_000084"
+  ],
+  "test_request_contents_read": false
+}
