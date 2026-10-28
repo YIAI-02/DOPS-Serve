@@ -1,0 +1,40 @@
+{
+  "remote_source": "/lustre/home/2501111916/workspace/DOPS-Serve/artifacts/burstgpt_critic_20260915",
+  "transfer_node": "wm2-data.pku.edu.cn",
+  "remote_observed_at": "2026-09-15 18:58:50 CST",
+  "local_working_code_overwritten": false,
+  "remote_files_modified": false,
+  "source_code_and_results_transferred": true,
+  "rollout_completion_records": 108,
+  "independent_routes": {
+    "qwen_1.8b": {
+      "status": "passed",
+      "best_epoch": 2,
+      "last_epoch": 5,
+      "actor_unchanged": true,
+      "ppo_started": false
+    },
+    "qwen_7b": {
+      "status": "passed",
+      "best_epoch": 1,
+      "last_epoch": 4,
+      "actor_unchanged": true,
+      "ppo_started": false
+    },
+    "qwen_14b": {
+      "status": "passed",
+      "best_epoch": 5,
+      "last_epoch": 8,
+      "actor_unchanged": true,
+      "ppo_started": false
+    }
+  },
+  "not_transferred": [
+    "raw rollout tensors",
+    "backend",
+    "raw data",
+    "bc_inputs"
+  ],
+  "checkpoint_load_test": "pending; local inspected Python environments have no torch",
+  "slurm_queue_query": "not performed in this sync; login connection not restored"
+}

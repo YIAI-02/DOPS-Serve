@@ -1,0 +1,35 @@
+{
+  "scope": "local code only; HPC and original BC untouched",
+  "deleted_files": [
+    "src/dops_serve/cli.py",
+    "src/dops_serve/dops_fixed_replay.py",
+    "src/dops_serve/inventory.py",
+    "src/dops_serve/placement_baselines.py",
+    "src/dops_serve/placement_comparison.py",
+    "src/dops_serve/placement_evaluation.py",
+    "src/dops_serve/placement_feature_screen.py",
+    "src/dops_serve/placement_restart.py",
+    "src/dops_serve/serving_evaluation.py",
+    "src/dops_serve/static_bc.py",
+    "src/dops_serve/static_bc_ab.py",
+    "src/dops_serve/summary.py",
+    "slurm/run.sh",
+    "slurm/submit_training.sh",
+    "slurm/submit_continuation.sh",
+    "slurm/teacher_array.txt",
+    "tests/test_static_bc.py",
+    "tests/test_static_bc_ab.py",
+    "bifocal_c026_fast.json"
+  ],
+  "python_modules_before": 23,
+  "python_modules_after": 12,
+  "source_lines_before": 6418,
+  "source_lines_after": 1995,
+  "validation": {
+    "unit_tests": 9,
+    "four_route_cpu_integration": true,
+    "frozen_actor": true,
+    "resume_without_extra_updates": true,
+    "hpc_modified": false
+  }
+}
