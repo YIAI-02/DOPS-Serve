@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "environments": 12,
+  "updates": 1,
+  "device": "cpu",
+  "checkpoint_and_pending_validation_resume": true,
+  "no_repeated_updates": true,
+  "test_locked": true,
+  "interrupted_cohort_replay_exact": true,
+  "fixtures": "four two-request traces; all test checkpoints discarded",
+  "wall_s": 58.42530529201031
+}

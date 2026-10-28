@@ -1,0 +1,115 @@
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"stage": "evaluation_cohort_complete", "split": "val", "traces": [0, 1, 2, 3]}
+{"stage": "ppo_update", "route": "qwen_1.8b", "seed": 4, "pilot": true, "epoch": 1, "traces": [2, 0, 3, 1], "update": 1, "plans_per_environment": [4, 4, 4, 3, 3, 3, 5, 5, 5, 3, 3, 3], "plans_per_load": [15, 15, 15], "environment_done": [true, true, true, true, true, true, true, true, true, true, true, true], "fragment_diagnostics": [{"raw_advantage_mean": 1.054580807685852, "raw_advantage_std": 0.32869482040405273}, {"raw_advantage_mean": 1.1311832666397095, "raw_advantage_std": 0.3591614067554474}, {"raw_advantage_mean": 1.26555597782135, "raw_advantage_std": 0.4633067846298218}, {"raw_advantage_mean": 0.984869122505188, "raw_advantage_std": 0.3162956237792969}, {"raw_advantage_mean": 1.0886650085449219, "raw_advantage_std": 0.3649401068687439}, {"raw_advantage_mean": 0.9985108375549316, "raw_advantage_std": 0.32828640937805176}, {"raw_advantage_mean": 1.114520788192749, "raw_advantage_std": 0.2866840958595276}, {"raw_advantage_mean": 1.223730444908142, "raw_advantage_std": 0.354309618473053}, {"raw_advantage_mean": 1.1153732538223267, "raw_advantage_std": 0.3011111915111542}, {"raw_advantage_mean": 1.0226597785949707, "raw_advantage_std": 0.37806427478790283}, {"raw_advantage_mean": 1.0102334022521973, "raw_advantage_std": 0.3148171603679657}, {"raw_advantage_mean": 1.1962858438491821, "raw_advantage_std": 0.5247611403465271}], "reward": -1.5314673973968735, "sample_wall_s": 1.2121505829854868, "update_wall_s": 22.522662458010018, "gpu_peak_allocated_bytes": 0, "simulator_s": 4.2080389960319735, "initial_kl": 1.1679899952453236e-10, "mean_kl": 0.0026960226536485196, "epochs": 4, "optimizer_steps": 16, "kl_stopped": false, "actor_loss": -0.007567110781868302, "value_loss": 0.40797323677300784, "entropy": 0.02342284041030022, "clip_fraction": 0.010002367460401729, "actor_grad_norm": 0.12682800577022135, "critic_grad_norm": 9.963399946689606}
+{"stage": "evaluation_cohort_complete", "split": "val", "traces": [0, 1, 2, 3]}
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"stage": "evaluation_cohort_complete", "split": "val", "traces": [0, 1, 2, 3]}
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"stage": "ppo_update", "route": "qwen_1.8b", "seed": 4, "pilot": true, "epoch": 1, "traces": [2, 0, 3, 1], "update": 1, "plans_per_environment": [4, 4, 4, 3, 3, 3, 5, 5, 5, 3, 3, 3], "plans_per_load": [15, 15, 15], "environment_done": [true, true, true, true, true, true, true, true, true, true, true, true], "fragment_diagnostics": [{"raw_advantage_mean": 1.054580807685852, "raw_advantage_std": 0.32869482040405273}, {"raw_advantage_mean": 1.1311832666397095, "raw_advantage_std": 0.3591614067554474}, {"raw_advantage_mean": 1.26555597782135, "raw_advantage_std": 0.4633067846298218}, {"raw_advantage_mean": 0.984869122505188, "raw_advantage_std": 0.3162956237792969}, {"raw_advantage_mean": 1.0886650085449219, "raw_advantage_std": 0.3649401068687439}, {"raw_advantage_mean": 0.9985108375549316, "raw_advantage_std": 0.32828640937805176}, {"raw_advantage_mean": 1.114520788192749, "raw_advantage_std": 0.2866840958595276}, {"raw_advantage_mean": 1.223730444908142, "raw_advantage_std": 0.354309618473053}, {"raw_advantage_mean": 1.1153732538223267, "raw_advantage_std": 0.3011111915111542}, {"raw_advantage_mean": 1.0226597785949707, "raw_advantage_std": 0.37806427478790283}, {"raw_advantage_mean": 1.0102334022521973, "raw_advantage_std": 0.3148171603679657}, {"raw_advantage_mean": 1.1962858438491821, "raw_advantage_std": 0.5247611403465271}], "reward": -1.5314673973968735, "sample_wall_s": 1.1910852500004694, "update_wall_s": 22.47149733401602, "gpu_peak_allocated_bytes": 0, "simulator_s": 4.114506877027452, "initial_kl": 1.1679899952453236e-10, "mean_kl": 0.0026960226536485196, "epochs": 4, "optimizer_steps": 16, "kl_stopped": false, "actor_loss": -0.007567110781868302, "value_loss": 0.40797323677300784, "entropy": 0.02342284041030022, "clip_fraction": 0.010002367460401729, "actor_grad_norm": 0.12682800577022135, "critic_grad_norm": 9.963399946689606}
+{"stage": "evaluation_cohort_complete", "split": "val", "traces": [0, 1, 2, 3]}
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"stage": "orchestration_check_passed", "passed": true, "environments": 12, "updates": 1, "device": "cpu", "checkpoint_and_pending_validation_resume": true, "no_repeated_updates": true, "test_locked": true, "interrupted_cohort_replay_exact": true, "fixtures": "four two-request traces; all test checkpoints discarded", "wall_s": 58.42530529201031}

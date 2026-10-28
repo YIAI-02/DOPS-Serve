@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-27",
+  "source": "DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_training.py",
+  "probe": "same fragment rewards and stored critic predictions; bootstrap changed from -1 to -10",
+  "plans": 16,
+  "bootstrap_values": [
+    -1,
+    -10
+  ],
+  "normalized_advantage_max_abs_difference": 1.0969003483296547e-13,
+  "scope": "actual node_returns function; standard-library float64 implementation of documented normalization formula; no actor update or simulator replay"
+}

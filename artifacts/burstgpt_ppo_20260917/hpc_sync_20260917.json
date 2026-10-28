@@ -1,0 +1,58 @@
+{
+  "verified_at": "2026-09-17T10:32:26.211065+08:00",
+  "uploaded_files": [
+    "artifacts/burstgpt_ppo_20260917/code/pyproject.toml",
+    "artifacts/burstgpt_ppo_20260917/code/slurm/submit_ppo.sh",
+    "artifacts/burstgpt_ppo_20260917/code/slurm/run_ppo.sh",
+    "artifacts/burstgpt_ppo_20260917/code/tests/test_burstgpt_ppo.py",
+    "artifacts/burstgpt_ppo_20260917/code/tests/test_cost_cache.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_training.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_cost.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/cache_check.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_ppo.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_policy.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/workloads.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/io.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/__init__.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_preflight.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/replay.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_evaluator.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_dataset.py",
+    "artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_compiler.py",
+    "artifacts/burstgpt_ppo_20260917/configs/qwen_14b.json",
+    "artifacts/burstgpt_ppo_20260917/configs/qwen_7b.json",
+    "artifacts/burstgpt_ppo_20260917/configs/qwen_1.8b.json",
+    "artifacts/burstgpt_ppo_20260917/backend",
+    "artifacts/burstgpt_ppo_20260917/calibration",
+    "artifacts/burstgpt_ppo_20260917/data",
+    "artifacts/burstgpt_ppo_20260917/initial",
+    "artifacts/burstgpt_ppo_20260917/protocol.json",
+    "artifacts/burstgpt_ppo_20260917/formal_budget.json",
+    "artifacts/burstgpt_ppo_20260917/trace_selection.json",
+    "md/2026-09-17_PPO精确缓存与8加4重启方案.md"
+  ],
+  "reference_files_compared": [
+    "artifacts/burstgpt_ppo_20260917/validation_reference/code/src/dops_serve/placement_cost.py"
+  ],
+  "comparison": "byte-for-byte readback; symlink targets compared",
+  "remote_root": "/lustre/home/2501111916/workspace/DOPS-Serve",
+  "complete": true,
+  "cleanup_sync_at": "2026-09-17T10:58:23.040288+08:00",
+  "cleanup_files_compared": [
+    "code/slurm/run_ppo.sh",
+    "validation_reference/code/src/dops_serve/placement_cost.py",
+    "initial_weights/qwen_1.8b/critic.pt",
+    "initial_weights/qwen_1.8b/e0.pt",
+    "initial_weights/qwen_14b/critic.pt",
+    "initial_weights/qwen_14b/e0.pt",
+    "initial_weights/qwen_7b/critic.pt",
+    "initial_weights/qwen_7b/e0.pt"
+  ],
+  "dependency_links": {
+    "backend": "../burstgpt_critic_20260915/backend",
+    "calibration": "../burstgpt_critic_20260915/calibration",
+    "data": "../burstgpt_critic_20260915/data",
+    "initial": "initial_weights"
+  },
+  "old_root_cleanup": "Local and HPC legacy PPO root fully deleted after CPU job completed"
+}

@@ -1,0 +1,23 @@
+test_critic_bootstrap_and_gradient_separation (test_burstgpt_ppo.BurstPPOContract.test_critic_bootstrap_and_gradient_separation) ... /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_training.py:38: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /Users/runner/work/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:821.)
+  return float(critic(state, nodes, actions)[0, first])
+ok
+test_final_selection_keeps_e0_and_e50_without_opening_test (test_burstgpt_ppo.BurstPPOContract.test_final_selection_keeps_e0_and_e50_without_opening_test) ... ok
+test_fragment_normalization_removes_independent_bootstrap_offsets (test_burstgpt_ppo.BurstPPOContract.test_fragment_normalization_removes_independent_bootstrap_offsets) ... ok
+test_full_import_retains_types_duplicates_tails_and_lengths (test_burstgpt_ppo.BurstPPOContract.test_full_import_retains_types_duplicates_tails_and_lengths) ... ok
+test_kl_stops_after_first_minibatch_not_after_full_pass (test_burstgpt_ppo.BurstPPOContract.test_kl_stops_after_first_minibatch_not_after_full_pass) ... ok
+test_migration_preserves_old_weights_and_zero_columns (test_burstgpt_ppo.BurstPPOContract.test_migration_preserves_old_weights_and_zero_columns) ... ok
+test_ppo_updates_both_networks_and_resume_reproduces_next_update (test_burstgpt_ppo.BurstPPOContract.test_ppo_updates_both_networks_and_resume_reproduces_next_update) ... ok
+test_sampling_conditional_ratio_and_fixed_nodes (test_burstgpt_ppo.BurstPPOContract.test_sampling_conditional_ratio_and_fixed_nodes) ... /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+ok
+test_terminal_and_truncated_node_returns (test_burstgpt_ppo.BurstPPOContract.test_terminal_and_truncated_node_returns) ... ok
+test_flops_reuse_and_batch_change (test_cost_cache.CostCacheContract.test_flops_reuse_and_batch_change) ... ok
+test_primitive_cost_bypasses_ragged_cache (test_cost_cache.CostCacheContract.test_primitive_cost_bypasses_ragged_cache) ... ok
+test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates (test_cost_cache.CostCacheContract.test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.106s
+
+OK
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json

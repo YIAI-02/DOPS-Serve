@@ -1,0 +1,13 @@
+{
+  "transfer_node": "data",
+  "files": [
+    {
+      "file": "artifacts/burstgpt_ppo_20260917/code/slurm/run_ppo.sh",
+      "byte_equal": true
+    },
+    {
+      "file": "artifacts/burstgpt_ppo_20260917/code/slurm/submit_ppo.sh",
+      "byte_equal": true
+    }
+  ]
+}

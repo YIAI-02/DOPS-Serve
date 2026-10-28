@@ -1,0 +1,25 @@
+test_flops_reuse_and_batch_change (test_cost_cache.CostCacheContract.test_flops_reuse_and_batch_change) ... FAIL
+test_primitive_cost_bypasses_ragged_cache (test_cost_cache.CostCacheContract.test_primitive_cost_bypasses_ragged_cache) ... ok
+test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates (test_cost_cache.CostCacheContract.test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates) ... FAIL
+
+======================================================================
+FAIL: test_flops_reuse_and_batch_change (test_cost_cache.CostCacheContract.test_flops_reuse_and_batch_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/tests/test_cost_cache.py", line 53, in test_flops_reuse_and_batch_change
+    self.assertEqual(len(calls), count_first)
+AssertionError: 4 != 2
+
+======================================================================
+FAIL: test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates (test_cost_cache.CostCacheContract.test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/tests/test_cost_cache.py", line 34, in test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates
+    self.assertEqual(len(calls), count_first)
+AssertionError: 4 != 2
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.093s
+
+FAILED (failures=2)
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json

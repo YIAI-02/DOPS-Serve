@@ -1,0 +1,9 @@
+{
+  "model": "qwen_14b",
+  "load": 1.5,
+  "trace": 1,
+  "repeat": 0,
+  "completed": 997,
+  "plans": 3337,
+  "wall_s": 4133.316094935999
+}

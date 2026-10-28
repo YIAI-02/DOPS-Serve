@@ -1,0 +1,20 @@
+{
+  "cases": 36,
+  "exact_parity": true,
+  "rounds": [
+    {
+      "repeat": 0,
+      "original_wall_s": 21078.674071173053,
+      "cached_wall_s": 17718.32994507986,
+      "speedup": 1.1896535472874132
+    },
+    {
+      "repeat": 1,
+      "original_wall_s": 21088.987550006837,
+      "cached_wall_s": 17660.627980631136,
+      "speedup": 1.1941244429776603
+    }
+  ],
+  "quick": false,
+  "passed": true
+}

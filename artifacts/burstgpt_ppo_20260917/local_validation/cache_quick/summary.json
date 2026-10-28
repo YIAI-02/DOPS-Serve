@@ -1,0 +1,14 @@
+{
+  "cases": 3,
+  "exact_parity": true,
+  "rounds": [
+    {
+      "repeat": 0,
+      "original_wall_s": 3.979403209988959,
+      "cached_wall_s": 3.4086449169553816,
+      "speedup": 1.1674443384215514
+    }
+  ],
+  "quick": true,
+  "passed": true
+}

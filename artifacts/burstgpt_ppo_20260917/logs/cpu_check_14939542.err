@@ -1,0 +1,43 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+test_critic_bootstrap_and_gradient_separation (test_burstgpt_ppo.BurstPPOContract.test_critic_bootstrap_and_gradient_separation) ... ok
+test_final_selection_keeps_e0_and_e50_without_opening_test (test_burstgpt_ppo.BurstPPOContract.test_final_selection_keeps_e0_and_e50_without_opening_test) ... ok
+test_fragment_normalization_removes_independent_bootstrap_offsets (test_burstgpt_ppo.BurstPPOContract.test_fragment_normalization_removes_independent_bootstrap_offsets) ... ok
+test_full_import_retains_types_duplicates_tails_and_lengths (test_burstgpt_ppo.BurstPPOContract.test_full_import_retains_types_duplicates_tails_and_lengths) ... ok
+test_kl_stops_after_first_minibatch_not_after_full_pass (test_burstgpt_ppo.BurstPPOContract.test_kl_stops_after_first_minibatch_not_after_full_pass) ... ok
+test_migration_preserves_old_weights_and_zero_columns (test_burstgpt_ppo.BurstPPOContract.test_migration_preserves_old_weights_and_zero_columns) ... ok
+test_ppo_updates_both_networks_and_resume_reproduces_next_update (test_burstgpt_ppo.BurstPPOContract.test_ppo_updates_both_networks_and_resume_reproduces_next_update) ... ok
+test_sampling_conditional_ratio_and_fixed_nodes (test_burstgpt_ppo.BurstPPOContract.test_sampling_conditional_ratio_and_fixed_nodes) ... ok
+test_terminal_and_truncated_node_returns (test_burstgpt_ppo.BurstPPOContract.test_terminal_and_truncated_node_returns) ... ok
+test_flops_reuse_and_batch_change (test_cost_cache.CostCacheContract.test_flops_reuse_and_batch_change) ... ok
+test_primitive_cost_bypasses_ragged_cache (test_cost_cache.CostCacheContract.test_primitive_cost_bypasses_ragged_cache) ... ok
+test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates (test_cost_cache.CostCacheContract.test_repeated_activation_query_reuses_exact_value_and_next_token_invalidates) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 4.609s
+
+OK
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 

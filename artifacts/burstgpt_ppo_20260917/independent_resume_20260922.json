@@ -1,0 +1,42 @@
+{
+  "checked_at": "2026-09-22T17:56:20+08:00",
+  "submitted_at": "2026-09-22T17:55:51+08:00",
+  "submission_mode": "independent_jobs",
+  "has_array_job_id": false,
+  "superseded_array_job": 15111469,
+  "superseded_array_state": "CANCELLED",
+  "model": "qwen_1.8b",
+  "runs": [
+    {
+      "seed": 4,
+      "job_id": 15111540,
+      "state": "RUNNING",
+      "node": "l12gpu02",
+      "stage": "ppo_update",
+      "epoch": 7,
+      "update": 13539,
+      "status_at": "2026-09-22T18:04:28+08:00"
+    },
+    {
+      "seed": 15,
+      "job_id": 15111541,
+      "state": "PENDING",
+      "reason": "Priority"
+    },
+    {
+      "seed": 26,
+      "job_id": 15111542,
+      "state": "PENDING",
+      "reason": "Priority"
+    }
+  ],
+  "target_total_epochs": 50,
+  "source_sync": "independent_launcher_sync_20260922.json",
+  "resume_boundary": "last.pt after E6",
+  "changed_files": [
+    "code/slurm/run_ppo.sh",
+    "code/slurm/submit_ppo.sh"
+  ],
+  "ppo_algorithm_changed": false,
+  "seed4_resume_verified": true
+}

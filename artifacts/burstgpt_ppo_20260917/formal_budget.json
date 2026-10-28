@@ -1,0 +1,27 @@
+{
+  "user_approved": true,
+  "approved_at_utc": "2026-09-16T14:53:45Z",
+  "approval": "可以，我觉得可以先优化token 模拟的时间，但是要保证整体的makespan 不变，另外改成8条训练trace＋4条验证trace，仍跑50epoch",
+  "report": "md/2026-09-17_PPO精确缓存与8加4重启方案.md",
+  "models": [
+    "qwen_1.8b",
+    "qwen_7b",
+    "qwen_14b"
+  ],
+  "seeds": [
+    4,
+    15,
+    26
+  ],
+  "epochs": 50,
+  "cpus_per_job": 16,
+  "gpus_per_job": 1,
+  "workers_per_job": 12,
+  "max_parallel_jobs": 3,
+  "requested_walltime_hours": 120,
+  "requires_hpc_cpu_and_cuda_checks": true,
+  "approved_at": "2026-09-17T10:21:31.967261+08:00",
+  "train_traces": 8,
+  "val_traces": 4,
+  "requires_exact_cache_parity": true
+}

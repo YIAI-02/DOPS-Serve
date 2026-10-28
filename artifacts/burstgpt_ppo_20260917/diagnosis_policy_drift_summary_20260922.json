@@ -1,0 +1,44 @@
+[
+  {
+    "checkpoint": "E5_seed4",
+    "phase": "prefill",
+    "states": 11,
+    "agreement": 0.5365997634150765,
+    "mean_conditional_kl_to_e0": 3.3276694525371897
+  },
+  {
+    "checkpoint": "E5_seed4",
+    "phase": "decode",
+    "states": 17,
+    "agreement": 0.4288579085293938,
+    "mean_conditional_kl_to_e0": 5.028389622183407
+  },
+  {
+    "checkpoint": "E5_seed15",
+    "phase": "prefill",
+    "states": 11,
+    "agreement": 0.3890200744975697,
+    "mean_conditional_kl_to_e0": 5.160431710156527
+  },
+  {
+    "checkpoint": "E5_seed15",
+    "phase": "decode",
+    "states": 17,
+    "agreement": 0.3395721947445589,
+    "mean_conditional_kl_to_e0": 6.474475467906279
+  },
+  {
+    "checkpoint": "E5_seed26",
+    "phase": "prefill",
+    "states": 11,
+    "agreement": 0.30401416393843567,
+    "mean_conditional_kl_to_e0": 8.012693708593195
+  },
+  {
+    "checkpoint": "E5_seed26",
+    "phase": "decode",
+    "states": 17,
+    "agreement": 0.2728227639899534,
+    "mean_conditional_kl_to_e0": 9.496431028141695
+  }
+]

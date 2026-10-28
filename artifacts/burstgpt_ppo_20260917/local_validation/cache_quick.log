@@ -1,0 +1,16 @@
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+{"model": "qwen_7b", "load": 1.0, "trace": 0, "repeat": 0, "quick": true, "exact_parity": true, "original_wall_s": 1.171745914965868, "cached_wall_s": 0.9971616249531507, "speedup": 1.175081236224789, "pair_wall_s": 2.1721802089887206}
+{"model": "qwen_1.8b", "load": 1.0, "trace": 0, "repeat": 0, "quick": true, "exact_parity": true, "original_wall_s": 1.183118168002693, "cached_wall_s": 1.0105299600108992, "speedup": 1.1707897982459938, "pair_wall_s": 2.1969647080113646}
+{"model": "qwen_14b", "load": 1.0, "trace": 0, "repeat": 0, "quick": true, "exact_parity": true, "original_wall_s": 1.6245391270203982, "cached_wall_s": 1.4009533319913317, "speedup": 1.1595954625492477, "pair_wall_s": 3.0300104999914765}
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+{"cases": 3, "exact_parity": true, "rounds": [{"repeat": 0, "original_wall_s": 3.979403209988959, "cached_wall_s": 3.4086449169553816, "speedup": 1.1674443384215514}], "quick": true, "passed": true}

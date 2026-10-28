@@ -1,0 +1,100 @@
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_critic_20260915/backend/DOPS/src/examples/hardware_1npu_2aim.json
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_ppo.py", line 424, in <module>
+    main()
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_ppo.py", line 418, in main
+    orchestration_check(root)
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_preflight.py", line 143, in orchestration_check
+    train(test_root, route, 4, 1, 4, "check", False, "cpu")
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_ppo.py", line 254, in train
+    e0 = evaluate_with_workers(root, workers, initial["actor"], protocol["quick_val_indices"], "val", calibration)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/burstgpt_ppo.py", line 91, in evaluate_with_workers
+    results = workers.call("evaluate", [Ellipsis if rows is Ellipsis else weights for rows in payloads])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/burstgpt_ppo_20260917/code/src/dops_serve/placement_training.py", line 158, in call
+    connection.send((command, payload))
+  File "/Users/yangjiaqi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yangjiaqi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/multiprocessing/reductions.py", line 602, in reduce_storage
+    metadata = storage._share_filename_cpu_()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/storage.py", line 458, in wrapper
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/storage.py", line 540, in _share_filename_cpu_
+    return super()._share_filename_cpu_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: torch_shm_manager at "/Users/yangjiaqi/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/artifacts/bc_static_c026_20260913/.venv/lib/python3.12/site-packages/torch/bin/torch_shm_manager": Operation not permitted
+Exception raised from start_manager at /Users/runner/work/pytorch/pytorch/torch/lib/libshm/core.cpp:67 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>) + 52 (0x106457f18 in libc10.dylib)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) + 120 (0x106455584 in libc10.dylib)
+frame #2: THManagedMapAllocatorInit::THManagedMapAllocatorInit(char const*, char const*) + 2104 (0x10149fb14 in libshm.dylib)
+frame #3: THManagedMapAllocator::makeDataPtr(char const*, char const*, int, unsigned long) + 68 (0x1014a0114 in libshm.dylib)
+frame #4: THPStorage_shareFilename(_object*, _object*) + 156 (0x1085b8bf4 in libtorch_python.dylib)
+frame #5: cfunction_vectorcall_NOARGS.llvm.10486576392999470509 + 104 (0x1003bdb48 in python3.12)
+frame #6: _PyEval_EvalFrameDefault + 179208 (0x1001d0400 in python3.12)
+frame #7: PyObject_CallOneArg + 116 (0x100114fb4 in python3.12)
+frame #8: save + 9108 (0x1001e9094 in python3.12)
+frame #9: save + 1236 (0x1001e71d4 in python3.12)
+frame #10: save_reduce + 676 (0x10022140c in python3.12)
+frame #11: save + 696 (0x1001e6fb8 in python3.12)
+frame #12: save + 1272 (0x1001e71f8 in python3.12)
+frame #13: save_reduce + 676 (0x10022140c in python3.12)
+frame #14: save + 696 (0x1001e6fb8 in python3.12)
+frame #15: save + 6180 (0x1001e8524 in python3.12)
+frame #16: save + 1272 (0x1001e71f8 in python3.12)
+frame #17: dump + 196 (0x100217d44 in python3.12)
+frame #18: _pickle_Pickler_dump + 232 (0x10023e0b4 in python3.12)
+frame #19: method_vectorcall_FASTCALL_KEYWORDS_METHOD.llvm.5753011072279882559 + 132 (0x1003a9fc8 in python3.12)
+frame #20: _PyEval_EvalFrameDefault + 164276 (0x1001cc9ac in python3.12)
+frame #21: PyEval_EvalCode + 216 (0x100239754 in python3.12)
+frame #22: builtin_exec + 396 (0x100269858 in python3.12)
+frame #23: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.10486576392999470509 + 92 (0x1003bda8c in python3.12)
+frame #24: _PyEval_EvalFrameDefault + 164276 (0x1001cc9ac in python3.12)
+frame #25: pymain_run_module + 268 (0x1002e2980 in python3.12)
+frame #26: Py_RunMain + 684 (0x1002df794 in python3.12)
+frame #27: pymain_main.llvm.8365553958624210224 + 456 (0x1002a71b4 in python3.12)
+frame #28: main + 36 (0x1002a6fe0 in python3.12)
+frame #29: start + 6992 (0x1871efe00 in dyld)
+
