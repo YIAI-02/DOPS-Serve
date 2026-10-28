@@ -5,3 +5,7 @@ __pycache__/
 artifacts/
 data/
 logs/
+local-archives/
+md/
+.DS_Store
+._*

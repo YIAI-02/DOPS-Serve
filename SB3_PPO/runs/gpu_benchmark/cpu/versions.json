@@ -1,0 +1,12 @@
+{
+  "python": "3.12.3",
+  "host": "l12gpu23",
+  "cpu_model": "Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz",
+  "slurm_job_id": "16254739",
+  "cuda_runtime": "12.6",
+  "gpu": "NVIDIA A800 80GB PCIe",
+  "stable-baselines3": "2.9.2",
+  "gymnasium": "1.4.0",
+  "torch": "2.14.1+cu126",
+  "numpy": "2.3.5"
+}

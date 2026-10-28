@@ -1,0 +1,9 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "stable-baselines3": "2.9.2",
+  "gymnasium": "1.4.0",
+  "torch": "2.14.1",
+  "numpy": "2.3.5",
+  "tensorboard": "2.21.0"
+}

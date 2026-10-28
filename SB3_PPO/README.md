@@ -51,9 +51,9 @@ C 固定为冷启动全主算子 NPU 基线的完整请求耗时。`gamma=1`，�
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m pytest tests -q
-.venv/bin/python -m dops_sb3.train --smoke --out runs/local_smoke
-.venv/bin/python -m dops_sb3.verify_run runs/local_smoke
-.venv/bin/python -m dops_sb3.train --out runs/ppo_seed0
+.venv/bin/python -m dops_sb3.train --smoke --out runs/new_smoke
+.venv/bin/python -m dops_sb3.verify_run runs/new_smoke
+.venv/bin/python -m dops_sb3.train --out runs/new_training
 ```
 
 输出目录必须是新目录。`--smoke` 使用 512 steps / n_steps=256，仅验证训练链路；正式参数保持在 JSON 中。
@@ -82,10 +82,10 @@ login 节点（只提交；实际安装与运行在 Slurm 计算节点）：
 cd /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO
 mkdir -p runs
 sbatch -A hpc2006191081 -q high -p C064M0256G -N 1 -n 1 -c 2 -t 00:30:00 \
-  -J sb3-check -o runs/check_%j.out slurm/run.sh setup-check runs/hpc_smoke
-# 验收通过后，按实测吞吐选定 walltime；这里预留 48 小时。
-sbatch -A hpc2006191081 -q high -p C064M0256G -N 1 -n 1 -c 2 -t 2-00:00:00 \
-  -J sb3-ppo-s0 -o runs/train_%j.out slurm/run.sh train runs/ppo_seed0
+  -J sb3-check -o runs/check_%j.out slurm/run.sh setup-check runs/new_hpc_smoke
+# 验收通过后，按实测吞吐选定 walltime；这里预留 4 天运行上限。
+sbatch -A hpc2006191081 -q high -p C064M0256G -N 1 -n 1 -c 2 -t 4-00:00:00 \
+  -J sb3-ppo-s0 -o runs/train_%j.out slurm/run.sh train runs/new_training
 ```
 
 ## 观测与工件
@@ -108,3 +108,24 @@ Loss 横轴用原生 `train/n_updates`（训练 epoch 计数），避免 SB3 延
 PPO total loss 是原生最后 minibatch 的值，不是整轮平均值；value/policy loss 的口径沿用 SB3。
 周期评估在采样期间触发，因此最后一次梯度更新后的 final 策略另行保存、评估和标注；best 指周期评估最优。
 先看确定性评估 reward/latency 相对初始、随机和固定策略是否改善，再结合 loss、KL 等诊断；不以 loss 下降或短 smoke 结果宣称学会调度。
+
+## 已归档的运行结果
+
+当前仓库已包含下列结果；重新运行须使用新的输出目录，不能覆盖归档目录。
+
+| 目录 | 用途与状态 |
+| --- | --- |
+| [runs/ppo_seed0](runs/ppo_seed0) | 正式 CPU 训练，1,531,904 steps，已完成；含 74 个周期 checkpoint、初始/最佳/最终模型、配置、全部指标和曲线 |
+| [runs/hpc_smoke](runs/hpc_smoke)、[runs/local_smoke](runs/local_smoke) | HPC / 本地 512-step 链路验收，不用于判断学习效果 |
+| [runs/gpu_benchmark](runs/gpu_benchmark) | 同一 A800 节点 CPU/CUDA 各 4096-step 对比，已完成，未观察到可靠 CUDA 加速 |
+| [runs/gpu_benchmark_repeat](runs/gpu_benchmark_repeat) | 用户要求停止的 A100 复测，仅有部分输出，不能作完整对比 |
+| [reports](reports) | 首次验收、正式提交、GPU 测速、最终结果报告 |
+
+正式训练最佳模拟请求耗时为 63.416 ms，最终为 103.798 ms；全 PIM 基线为 63.518 ms。训练中存在回退，约 139 万步后持续退化，不能判定为稳定收敛。详见 [正式训练结果](reports/2026-10-28_SB3_PPO_正式训练结果.md)。
+
+```bash
+.venv/bin/python -m dops_sb3.verify_run runs/ppo_seed0
+.venv/bin/tensorboard --logdir runs/ppo_seed0
+```
+
+历史 BC / Critic / 自写 PPO 的源码与工件位于 [archive/bc-ppo](https://github.com/YIAI-02/DOPS-Serve/tree/archive/bc-ppo)。

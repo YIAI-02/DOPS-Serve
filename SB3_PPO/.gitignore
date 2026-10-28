@@ -1,7 +1,14 @@
 .venv/
 .hpc-venv/
 wheelhouse/
-runs/
+runs/*
+!runs/ppo_seed0/
+!runs/hpc_smoke/
+!runs/local_smoke/
+!runs/gpu_benchmark/
+!runs/gpu_benchmark_repeat/
+!runs/*.out
+!runs/source_sync.json
 __pycache__/
 *.pyc
 .pytest_cache/

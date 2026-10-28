@@ -1,0 +1,104 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+......                                                                   [100%]
+6 passed in 60.66s (0:01:00)
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+Logging to /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/hpc_smoke
+Eval num_timesteps=256, episode_reward=-0.47 +/- 0.00
+Episode length: 153.00 +/- 0.00
+---------------------------------
+| eval/              |          |
+|    mean_ep_length  | 153      |
+|    mean_reward     | -0.471   |
+| rollout/           |          |
+|    latency_s       | 0.225    |
+|    speedup         | 1.24     |
+| time/              |          |
+|    total_timesteps | 256      |
+---------------------------------
+New best mean reward!
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 153      |
+|    ep_rew_mean     | -0.804   |
+| time/              |          |
+|    fps             | 11       |
+|    iterations      | 1        |
+|    time_elapsed    | 22       |
+|    total_timesteps | 256      |
+---------------------------------
+Eval num_timesteps=512, episode_reward=-1.00 +/- 0.00
+Episode length: 153.00 +/- 0.00
+------------------------------------------
+| eval/                   |              |
+|    mean_ep_length       | 153          |
+|    mean_reward          | -1           |
+| rollout/                |              |
+|    latency_s            | 0.24         |
+|    speedup              | 1.17         |
+| time/                   |              |
+|    total_timesteps      | 512          |
+| train/                  |              |
+|    approx_kl            | 0.0058499696 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.691       |
+|    explained_variance   | -12.3        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.00647      |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.0047      |
+|    value_loss           | 0.0456       |
+------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 153      |
+|    ep_rew_mean     | -0.84    |
+| time/              |          |
+|    fps             | 11       |
+|    iterations      | 2        |
+|    time_elapsed    | 43       |
+|    total_timesteps | 512      |
+---------------------------------
+------------------------------------------
+| time/                   |              |
+|    total_timesteps      | 512          |
+| train/                  |              |
+|    approx_kl            | 0.0011282782 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -0.681       |
+|    explained_variance   | -0.697       |
+|    learning_rate        | 0.0003       |
+|    loss                 | -0.00572     |
+|    n_updates            | 20           |
+|    policy_gradient_loss | -0.0022      |
+|    value_loss           | 0.0159       |
+------------------------------------------
+Saved run: /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/hpc_smoke
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+{
+  "verified": true,
+  "actual_timesteps": 512,
+  "env_steps_per_s": 11.85242975602247,
+  "final_reward": -1.0460189281846275,
+  "smoke": true
+}

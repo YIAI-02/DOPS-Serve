@@ -1,0 +1,100 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+Tue Oct 27 16:21:53 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:B1:00.0 Off |                    0 |
+| N/A   58C    P0             51W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+Using cuda device
+Wrapping the env in a DummyVecEnv.
+/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/.hpc-gpu-venv/lib/python3.12/site-packages/stable_baselines3/common/on_policy_algorithm.py:150: UserWarning: You are trying to run TimedPPO on the GPU, but it is primarily intended to run on the CPU when not using a CNN policy (you are using ActorCriticPolicy which should be a MlpPolicy). See https://github.com/DLR-RM/stable-baselines3/issues/1245 for more info. You can pass `device='cpu'` or `export CUDA_VISIBLE_DEVICES=` to force using the CPU.Note: The model will train, but the GPU utilization will be poor and the training might take longer than on CPU.
+  warnings.warn(
+Logging to runs/gpu_benchmark_repeat/cuda
+{"phase": "rollout", "seconds": 107.81182840000838, "total_steps": 2048}
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 153      |
+|    ep_rew_mean     | -0.804   |
+|    latency_s       | 0.225    |
+|    speedup         | 1.25     |
+| time/              |          |
+|    fps             | 18       |
+|    iterations      | 1        |
+|    time_elapsed    | 107      |
+|    total_timesteps | 2048     |
+---------------------------------
+{"phase": "update", "seconds": 4.764418965991354, "total_steps": 2048}
+{"phase": "rollout", "seconds": 104.77703831499093, "total_steps": 4096}
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 153         |
+|    ep_rew_mean          | -0.773      |
+|    latency_s            | 0.208       |
+|    speedup              | 1.35        |
+| time/                   |             |
+|    fps                  | 18          |
+|    iterations           | 2           |
+|    time_elapsed         | 217         |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.010580939 |
+|    clip_fraction        | 0.0387      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.687      |
+|    explained_variance   | -9.64       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.00736    |
+|    n_updates            | 10          |
+|    policy_gradient_loss | -0.00517    |
+|    value_loss           | 0.013       |
+-----------------------------------------
+{"phase": "update", "seconds": 0.8798300939961337, "total_steps": 4096}
+-----------------------------------------
+| time/                   |             |
+|    total_timesteps      | 4096        |
+| train/                  |             |
+|    approx_kl            | 0.005154197 |
+|    clip_fraction        | 0.00386     |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -0.682      |
+|    explained_variance   | 0.424       |
+|    learning_rate        | 0.0003      |
+|    loss                 | -0.0164     |
+|    n_updates            | 20          |
+|    policy_gradient_loss | -0.00288    |
+|    value_loss           | 0.00258     |
+-----------------------------------------
+{"device": "cuda", "actual_device": "cuda", "steps": 4096, "learn_wall_s": 218.25046359701082, "steps_per_s": 18.767428634484236, "env_step_wall_s": 204.23756283713738, "rollout_s": 212.5888667149993, "update_s": 5.644249059987487, "timings": [{"phase": "rollout", "seconds": 107.81182840000838, "total_steps": 2048}, {"phase": "update", "seconds": 4.764418965991354, "total_steps": 2048}, {"phase": "rollout", "seconds": 104.77703831499093, "total_steps": 4096}, {"phase": "update", "seconds": 0.8798300939961337, "total_steps": 4096}], "save_wall_s": 0.3070425979967695, "eval_wall_s": 7.385804498975631, "parameters_changed": true}
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 560.35.03
+DEBUG: Loaded hardware config from /lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+Using cpu device
+Wrapping the env in a DummyVecEnv.
+Logging to runs/gpu_benchmark_repeat/cpu
+[2026-10-27T16:28:18.248] error: *** JOB 16257145 ON l12gpu06 CANCELLED AT 2026-10-27T16:28:18 DUE to SIGNAL Terminated ***

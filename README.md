@@ -1,205 +1,36 @@
-# DOPS-Serve
+# DOPS-Serve：SB3 PPO 算子放置实验
 
-DOPS-Serve is an independent, output-only pipeline for building serving-side
-training data from precomputed [DOPS](https://github.com/YIAI-02/DOPS)
-schedules. It never imports or invokes the DOPS scheduler.
+main 保存当前基于 Stable Baselines3 的 PPO 实验：无 BC，固定 prompt 64、decode 64，使用 DOPS 的 NPU/PIM 解析模拟环境。
 
-## Boundary
+旧 BC、Critic 预训练和自写 PPO 的代码、结果与分析记录集中保存在 [archive/bc-ppo 分支](https://github.com/YIAI-02/DOPS-Serve/tree/archive/bc-ppo)。该分支也保留更早的 serving 实验代码；当前 main 的训练入口为 `SB3_PPO/`。
 
-- Input: an existing DOPS `output/` tree, opened read-only.
-- Derived artifacts: inventory, plan bank, performance profiles, serving
-  episodes, model checkpoints, and paired evaluation results.
-- V1 action: `(plan_id, horizon)` with horizons 32, 64, and 128.
-- Plan identity uses node-to-device mappings and decode transitions. Sampled
-  `schedule: null` steps are recovered only from the linked operation trace,
-  after every observed summary placement matches that trace exactly.
-- Dataset generation rejects plans that remain incomplete after trace recovery,
-  unless a smoke run explicitly uses `--allow-incomplete-plans`.
-- Offline `output_len` may terminate replay, but it is never an online feature.
-- Closed-loop evaluation gives each policy the same request trace and an
-  independent runtime state. Its latency metric is the global p95 over all
-  completed requests, not the earlier mean of anchor-window labels.
-- The MLP latency guardrail projects only already-arrived requests using their
-  declared `max_tokens`; only the explicitly named myopic oracle may use
-  simulator completion truth for one-step action selection.
-- A closed-loop horizon is a maximum. If an observed completion moves the
-  runtime state outside the selected plan's profile envelope, replay stops at
-  that token boundary and selects again without extrapolating the missing shape.
-- Replay results are simulation artifacts, not physical NPU/PIM measurements.
+| 内容 | 入口 |
+| --- | --- |
+| 实验合同、环境语义、安装与训练命令 | [SB3_PPO/README.md](SB3_PPO/README.md) |
+| 原生 PPO 训练入口 | [dops_sb3/train.py](SB3_PPO/dops_sb3/train.py) |
+| 环境 / PPO 配置 | [environment.json](SB3_PPO/configs/environment.json) / [ppo.json](SB3_PPO/configs/ppo.json) |
+| 正式训练结果报告 | [2026-10-28 正式训练结果](SB3_PPO/reports/2026-10-28_SB3_PPO_正式训练结果.md) |
+| 正式训练完整输出 | [runs/ppo_seed0](SB3_PPO/runs/ppo_seed0) |
+| 初次验收、作业启动、GPU 对比记录 | [reports](SB3_PPO/reports) |
 
-The first target input tree is:
+## 已完成实验：seed 0
 
-```text
-/lustre/home/2501111916/workspace/DOPS_0330_merge/TriForm/algorithms/output
-```
+CPU 作业 16252628 于北京时间 2026-10-28 09:02:51 正常完成，运行 20 小时 55 分 41 秒，完成 1,531,904 个环境步和 10,012 个完整 episode。4 天为申请的运行上限。
 
-## Quick start
+| 策略 | Reward（越高越好） | 模拟请求耗时（ms，越低越好） |
+| --- | ---: | ---: |
+| 全 NPU | −1.000000 | 279.856 |
+| 全 PIM | −0.226966 | 63.518 |
+| 初始 PPO | −0.470974 | 131.805 |
+| 最佳周期评估 PPO（737,280 步） | **−0.226603** | **63.416** |
+| 最终 PPO | −0.370898 | 103.798 |
 
-Run the standard-library stages directly from the checkout:
+早期 Reward 明显改善，训练中多次回退，约 139 万步后出现持续退化。最佳策略仅比全 PIM 减少 0.16% 耗时，最终策略比最佳策略增加 63.68% 耗时；该实验不能判定为稳定收敛，也没有证明相对全 PIM 的实质性优势。
 
-```bash
-export PYTHONPATH="$PWD/src"
-python -m dops_serve.cli inventory \
-  --output-root /path/to/DOPS/output \
-  --artifact-dir artifacts
+![Reward 与模拟请求耗时](SB3_PPO/runs/ppo_seed0/figures/reward_latency.png)
 
-python -m dops_serve.cli anchor-comparisons \
-  --output-root /path/to/DOPS/output \
-  --inventory artifacts/inventory.csv \
-  --output artifacts/anchor_comparisons.csv
+[Loss 曲线](SB3_PPO/runs/ppo_seed0/figures/loss.png) · [最佳模型](SB3_PPO/runs/ppo_seed0/best/best_model.zip) · [最终模型](SB3_PPO/runs/ppo_seed0/last_model.zip) · [74 个周期 checkpoint](SB3_PPO/runs/ppo_seed0/checkpoints)
 
-python -m dops_serve.cli plan-bank \
-  --inventory artifacts/inventory.csv \
-  --artifact-dir artifacts \
-  --policy attacc --policy attn_on_pim --policy facil --policy heft \
-  --policy hefthint --policy ianus --policy pd --policy weights_on_pim \
-  --workers 6
+完整结果保留 Monitor CSV、原生 SB3 progress.csv、TensorBoard 事件、评估 NPZ、运行配置与依赖版本、初始/最佳/最终模型和 Slurm 日志。最终模型在本地重载后的确定性评估与 HPC 输出完全一致。
 
-python -m dops_serve.cli profiles \
-  --inventory artifacts/inventory.csv \
-  --plan-sources artifacts/plan_sources.csv \
-  --artifact-dir artifacts
-
-python -m dops_serve.cli anchor-dataset \
-  --comparisons artifacts/anchor_comparisons.csv \
-  --plan-sources artifacts/plan_sources.csv \
-  --profiles artifacts/profiles.csv \
-  --signatures artifacts/plan_signatures.csv \
-  --output artifacts/anchor_dataset_windows.csv \
-  --workers 8
-
-python -m dops_serve.cli generate-workloads \
-  --output artifacts/workloads.jsonl \
-  --model llama_7b
-
-python -m dops_serve.cli import-burstgpt \
-  --input data/BurstGPT_without_fails_1.csv \
-  --output artifacts/workloads_burstgpt.jsonl \
-  --model llama_7b \
-  --traces 16 \
-  --requests-per-trace 100 \
-  --target-median-rps 2.0 \
-  --max-tokens-default 1024 \
-  --source-model ChatGPT \
-  --log-type "API log" \
-  --selection mixed \
-  --split-seed 7
-
-python -m dops_serve.cli dataset \
-  --workload artifacts/workloads.jsonl \
-  --profiles artifacts/profiles.csv \
-  --signatures artifacts/plan_signatures.csv \
-  --output artifacts/dataset.csv \
-  --hardware-key exp1/hw_hardware_1npu_2aim/sst2_rst2
-
-python -m dops_serve.cli train \
-  --dataset artifacts/dataset.csv \
-  --output-dir artifacts/model_llama_7b
-
-python -m dops_serve.cli serving-evaluate \
-  --workload artifacts/workloads.jsonl \
-  --profiles artifacts/profiles.csv \
-  --signatures artifacts/plan_signatures.csv \
-  --checkpoint artifacts/model_llama_7b/checkpoints/best.pt \
-  --output-dir artifacts/serving_eval_llama_7b \
-  --hardware-key exp1/hw_hardware_1npu_2aim/sst2_rst2 \
-  --latency-slo-s 30 \
-  --plan-switch-margin 0.02
-```
-
-Use `slurm/smoke_real_outputs.sbatch` first. The full anchor pipeline is split
-into `slurm/build_artifacts.sbatch` and `slurm/train_anchor.sbatch`. The build
-script requests one 64-core node because this cluster allocates memory per CPU,
-then runs six independent model/hardware groups concurrently. All scripts must
-be submitted from a login node; execution stays on Slurm compute nodes. Use
-`slurm/evaluate_serving.sbatch` to rerun only closed-loop evaluation from an
-existing irregular workload and checkpoint.
-`slurm/run_burstgpt_real.sbatch` builds temporally separated representative and
-peak windows from the official BurstGPT CSV, applies seeded trace-grouped
-splits within each window class, and evaluates both the synthetic checkpoint
-and the real-trace checkpoint on
-the same held-out requests. The importer filters to the supported profile
-envelope and assigns an independent constant `max_tokens`; `Response tokens`
-is used only to terminate offline replay.
-
-## Current output audit
-
-The 2026-09-03 re-audit found 4,673 summaries and 711
-`baseline_compare_*.json` files. Those comparison files contain 4,639 policy
-outcomes; 579 files compare 2--8 policies under the same regular shape. They
-are useful supervised labels for anchor-workload plan ranking.
-
-The `anchor-comparisons` stage links those outcomes to the summary inventory,
-checks timing agreement, and excludes unpaired records. The full run retained
-577 paired groups and 4,495 ranking rows. It excluded 10 outcomes without a
-valid inventory summary and two whose comparison and summary timings disagree.
-The paired anchor labels do not replace replaying complete fixed plans under
-the same irregular serving state. The first full Plan Bank run parsed all 4,669
-valid summaries, retained 299 complete plans and 4,079 mapped profiles, and
-excluded 590 source mappings only because of the 32-plan-per-target cap. Its
-leave-one-profile-out validation produced 8,074 rows with 14.8% p95 absolute
-percentage error; this is an interpolation diagnostic, not a serving result.
-
-`anchor-dataset` maps only paired rows whose summaries belong to distinct,
-complete retained plans. It reads measured `step_time` values from source
-decode lengths 128, 256, 512, and 1024, creates a state every 32 generated
-tokens, and labels actions with horizons 32, 64, and 128. A horizon that reaches
-the end of an offline trace is truncated to the tokens actually generated.
-Online state features contain only the current generated-token count and active
-context; all `max_tokens` fields remain zero, and the final source decode length
-is not a model feature. Plan extraction now validates placement through at most
-1,024 decode steps and keeps the longest representative of an equivalent plan.
-
-The completed 128-only anchor diagnostic contained 146 paired states and 1,005
-candidate rows (703/123/179 train/validation/test). Its MLP reached 95.9% of the
-offline oracle's mean throughput on 27 paired test states. This remains a
-regular-anchor scorer diagnostic; serving claims still require counterfactual
-replay on the same irregular request states.
-
-The 64-core, six-worker v7 build (`14733834`) completed in 2:22:29. It parsed
-all 4,669 summaries and retained 299 plans; all 299 have complete placement,
-including 215 plans covered through 1,024 decode steps. It mapped 3,993
-profiles and excluded 676 source mappings only because of the 32-plan cap.
-Leave-one-profile-out validation has 7,916 rows and 14.9% p95 absolute
-percentage error.
-
-The dependent eight-worker anchor run (`14733838`) completed in 17:38. It
-retained 576 paired comparisons across source decode lengths 128, 256, 512,
-and 1024, producing 8,600 states and 168,876 candidate-action rows
-(117,432/27,240/24,204 train/validation/test). Every state compares 2--8 plans
-and every plan has horizons 32, 64, and 128. On the same 1,284 paired test
-states, the MLP reached 99.1% of the offline oracle's mean window throughput.
-Its 358 action switches and 5.81 s mean window p95 latency are not evidence that
-serving stability or latency guardrails are satisfied. These remain offline
-regular-anchor timing labels, not tensor execution or irregular serving replay.
-
-The first irregular synthetic run built 16 traces and 23,447 valid
-counterfactual rows, then trained a 53,674-byte checkpoint. After changing
-closed-loop horizons to stop and replan at an observed profile boundary,
-evaluation-only high-QoS job `14740006` completed all four held-out traces and
-400 requests with no exclusions. Against the paired robust-static baseline,
-the MLP increased output-token throughput from 176.19 to 194.18 token/s
-(+10.21%) and reduced global request p95 from 47.44 to 36.75 s (-22.53%). It
-reached 96.22% of the myopic oracle's throughput, but still had 31 requests over
-the 30 s SLO because 33 decisions had no projected action below that limit.
-
-[The official BurstGPT v2.0 no-failure trace](https://github.com/HPMLL/BurstGPT/releases/tag/v2.0)
-contains 1,404,294 requests. The
-profile-compatible ChatGPT API subset has 706,125 requests; the v2 experiment
-uses 16 non-overlapping, time-stratified windows (eight representative and eight
-peak), with seeded grouped splits of 10/2/4 traces. Held-out replay covers 400
-requests and 34,751 output tokens. Against the same paired robust-static
-baseline, the real-trace MLP increased end-to-end output-token throughput from
-109.729 to 110.741 token/s (+0.92%), reduced mean request latency from 2.634 to
-2.253 s (-14.48%), and reduced global p95 latency from 9.330 to 9.247 s
-(-0.89%). Its p95 queue wait increased from 2.526 to 2.772 s (+9.76%); no
-request violated the 30 s SLO. It reached 99.20% of myopic-oracle throughput
-with five plan switches and 20 horizon switches. The synthetic checkpoint had
-nearly identical throughput and a lower 8.682 s p95, so this amount of real
-training data does not yet establish an adaptation benefit.
-Training loss continued down to 0.0050 at epoch 80, while validation MSE was
-best at epoch 18 (0.318) and ended at 0.411; the saved checkpoint correctly
-uses epoch 18 rather than the overfit final epoch.
-
-Both experiments are profile-driven timing replay. They do not execute model
-tensors or kernels and do not establish physical NPU/PIM serving performance.
+结果来自单 seed、单一固定请求形状的解析模拟，不是真实 NPU/PIM 硬件测量。GPU 对比与已取消的重复测试另见报告，均不作为正式训练结果。
