@@ -1,0 +1,77 @@
+{
+  "stage": "ppo_update",
+  "route": "qwen_1.8b",
+  "seed": 26,
+  "pilot": false,
+  "epoch": 1,
+  "traces": [
+    467,
+    835,
+    161,
+    756
+  ],
+  "update": 2151,
+  "plans_per_environment": [
+    16,
+    16,
+    16,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "plans_per_load": [
+    16,
+    16,
+    16
+  ],
+  "environment_done": [
+    false,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "fragment_diagnostics": [
+    {
+      "raw_advantage_mean": -0.0068056900054216385,
+      "raw_advantage_std": 0.0033357448410242796
+    },
+    {
+      "raw_advantage_mean": -0.0064239948987960815,
+      "raw_advantage_std": 0.0034185051918029785
+    },
+    {
+      "raw_advantage_mean": -0.0071491762064397335,
+      "raw_advantage_std": 0.003524618921801448
+    }
+  ],
+  "reward": -0.03524367380703948,
+  "sample_wall_s": 11.370296079199761,
+  "update_wall_s": 7.094346654135734,
+  "gpu_peak_allocated_bytes": 129189376,
+  "simulator_s": 25.0917693329975,
+  "initial_kl": 4.587214071797426e-10,
+  "mean_kl": 0.00042213702542118697,
+  "epochs": 4,
+  "optimizer_steps": 16,
+  "kl_stopped": false,
+  "actor_loss": -0.0007780371039795399,
+  "value_loss": 2.9005887327571145e-05,
+  "entropy": 0.12619170841450494,
+  "clip_fraction": 0.01236133662496286,
+  "actor_grad_norm": 0.20019029919058084,
+  "critic_grad_norm": 0.10051662632031366
+}
