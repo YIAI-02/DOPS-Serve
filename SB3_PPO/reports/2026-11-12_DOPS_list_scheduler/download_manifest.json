@@ -1,0 +1,2561 @@
+{
+  "repository": "https://github.com/YIAI-02/DOPS",
+  "branch": "micro26_pieak_final",
+  "retrieved_date": "2026-11-12",
+  "method": "Source files downloaded via GitHub API/raw; Git metadata subsequently fetched over authenticated SSH, shallow depth 1, blob filter. Tracking micro26_pieak_final with a sparse checkout excluding experiment/demo/examples/.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 82,
+      "mode": "100644"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 804,
+      "mode": "100644"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1841,
+      "mode": "100644"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "bytes": 26075,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/command_single_evaluate.sh",
+      "bytes": 1121,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/command_single_weight.sh",
+      "bytes": 1089,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/run_hpc_command_single_evaluate.sh",
+      "bytes": 379,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/run_hpc_sweep_bifocal_all.sh",
+      "bytes": 1195,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/run_hpc_sweep_npu_aim_evaluate.slurm",
+      "bytes": 773,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/run_hpc_sweep_weight_suggest.sh",
+      "bytes": 14831,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/sweep_bifocal_all_params.py",
+      "bytes": 25653,
+      "mode": "100644"
+    },
+    {
+      "path": "commands/sweep_models_npu_aim_evaluate.sh",
+      "bytes": 9365,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/llama_13b_shape.json",
+      "bytes": 136,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/llama_405b_shape.json",
+      "bytes": 142,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/llama_70b_shape.json",
+      "bytes": 135,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/llama_7b_shape.json",
+      "bytes": 135,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/mixtral_8x7b_shape.json",
+      "bytes": 283,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/qwen_1.8b_shape.json",
+      "bytes": 225,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/qwen_14b_shape.json",
+      "bytes": 224,
+      "mode": "100644"
+    },
+    {
+      "path": "configs/qwen_7b_shape.json",
+      "bytes": 224,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/CONFIG_REFERENCE.md",
+      "bytes": 18089,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/EXPERIMENT_HYPERPARAMETERS.md",
+      "bytes": 1514,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/framework.pdf",
+      "bytes": 414766,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/framework_preview.png",
+      "bytes": 151803,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/demo/index.html",
+      "bytes": 112364,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/demo/plot_trace_gantt.py",
+      "bytes": 47150,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/demo/server.py",
+      "bytes": 712,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp1_batch.py",
+      "bytes": 20739,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp1_diff.py",
+      "bytes": 24458,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp1_gantt.py",
+      "bytes": 17663,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp1_simulated.py",
+      "bytes": 14981,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp1_utilization_violin.py",
+      "bytes": 105918,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp1_verify.py",
+      "bytes": 33492,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp2_baseline_marginal.py",
+      "bytes": 30407,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp2_heatmap.py",
+      "bytes": 65962,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp3_iter_from_txt_json.py",
+      "bytes": 26091,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp3_layout_compare.py",
+      "bytes": 46781,
+      "mode": "100644"
+    },
+    {
+      "path": "experiment/experiment_fig/plot_exp3_layout_compare_cfg_example.json",
+      "bytes": 663,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b16_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18232,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b16_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18290,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b16_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18249,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b1_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18007,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b1_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18183,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b1_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18063,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b1_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18174,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b4_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18114,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b4_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18016,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b4_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18302,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b4_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18282,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b8_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18285,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b8_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18206,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP128_sst8_rst8__mixtral_8x7b_int8_b8_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18247,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b16_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18252,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b16_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18164,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b16_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18212,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b16_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18123,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b1_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 17986,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b1_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18246,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b1_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18075,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b1_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18162,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b4_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18155,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b4_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 17943,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b4_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18217,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b4_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18096,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b8_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18131,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b8_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18041,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b8_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18063,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_1.8b_fp16_b8_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18112,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b16_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18172,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b16_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18197,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b16_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18081,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b16_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18180,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b1_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18132,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b1_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 17923,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b1_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18183,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b1_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18175,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b4_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18168,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b4_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18210,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b4_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 17969,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b4_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18189,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b8_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18258,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b8_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18184,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b8_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18216,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_14b_fp16_b8_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18074,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b16_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18214,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b16_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18265,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b16_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18045,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b16_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18113,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b1_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18227,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b1_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18151,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b1_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 17980,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b1_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18178,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b4_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18050,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b4_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18191,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b4_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18162,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b4_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18207,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b8_s2__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18248,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b8_s2__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18134,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b8_s2__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18164,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP32_sst2_rst2__qwen_7b_fp16_b8_s2__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 17944,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b16_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18175,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b16_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18058,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b16_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18172,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b1_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18131,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b1_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18032,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b1_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18133,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b1_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18131,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b4_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18124,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b4_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 17955,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b4_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18151,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b8_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18156,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b8_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18144,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_13b_fp16_b8_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18128,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b16_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18239,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b1_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18169,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b1_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18148,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b1_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18168,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b1_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18155,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b4_s8__1024x128__1024x256__1024x512__1024x1024.pdf",
+      "bytes": 18017,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b4_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18156,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b4_s8__2048x128__2048x256__2048x512__2048x1024.pdf",
+      "bytes": 18152,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b4_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18178,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b8_s8__128x128__128x256__128x512__128x1024.pdf",
+      "bytes": 18161,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_2/hw_hardware_HP64_sst8_rst8__llama_7b_fp16_b8_s8__512x128__512x256__512x512__512x1024.pdf",
+      "bytes": 18194,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p01_layout_compare.pdf",
+      "bytes": 19532,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p02_layout_compare.pdf",
+      "bytes": 19726,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p03_layout_compare.pdf",
+      "bytes": 19092,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p04_layout_compare.pdf",
+      "bytes": 18479,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p05_layout_compare.pdf",
+      "bytes": 18891,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p06_layout_compare.pdf",
+      "bytes": 18662,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p07_layout_compare.pdf",
+      "bytes": 18480,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p08_layout_compare.pdf",
+      "bytes": 18943,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p09_layout_compare.pdf",
+      "bytes": 18637,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p10_layout_compare.pdf",
+      "bytes": 18335,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p11_layout_compare.pdf",
+      "bytes": 18481,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/llama7b/llama_7b_fp16_p12_layout_compare.pdf",
+      "bytes": 18339,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p01_layout_compare.pdf",
+      "bytes": 18727,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p02_layout_compare.pdf",
+      "bytes": 18986,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p03_layout_compare.pdf",
+      "bytes": 18827,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p04_layout_compare.pdf",
+      "bytes": 18947,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p05_layout_compare.pdf",
+      "bytes": 18204,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p06_layout_compare.pdf",
+      "bytes": 18488,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p07_layout_compare.pdf",
+      "bytes": 18614,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p08_layout_compare.pdf",
+      "bytes": 19032,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p09_layout_compare.pdf",
+      "bytes": 18892,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p10_layout_compare.pdf",
+      "bytes": 18238,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p11_layout_compare.pdf",
+      "bytes": 19386,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p12_layout_compare.pdf",
+      "bytes": 19846,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p13_layout_compare.pdf",
+      "bytes": 19034,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen14b/qwen_14b_fp16_p14_layout_compare.pdf",
+      "bytes": 18354,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p01_layout_compare.pdf",
+      "bytes": 18821,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p02_layout_compare.pdf",
+      "bytes": 19103,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p03_layout_compare.pdf",
+      "bytes": 18903,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p04_layout_compare.pdf",
+      "bytes": 18727,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p05_layout_compare.pdf",
+      "bytes": 18927,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p06_layout_compare.pdf",
+      "bytes": 18806,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p07_layout_compare.pdf",
+      "bytes": 19253,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p08_layout_compare.pdf",
+      "bytes": 18732,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p09_layout_compare.pdf",
+      "bytes": 18518,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p10_layout_compare.pdf",
+      "bytes": 19065,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p11_layout_compare.pdf",
+      "bytes": 19202,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p12_layout_compare.pdf",
+      "bytes": 18576,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p13_layout_compare.pdf",
+      "bytes": 18585,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p14_layout_compare.pdf",
+      "bytes": 18917,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen1p8b/qwen_1.8b_fp16_p15_layout_compare.pdf",
+      "bytes": 19136,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p01_layout_compare.pdf",
+      "bytes": 18938,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p02_layout_compare.pdf",
+      "bytes": 18513,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p03_layout_compare.pdf",
+      "bytes": 18610,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p04_layout_compare.pdf",
+      "bytes": 18769,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p05_layout_compare.pdf",
+      "bytes": 18219,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p06_layout_compare.pdf",
+      "bytes": 18671,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p07_layout_compare.pdf",
+      "bytes": 18720,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p08_layout_compare.pdf",
+      "bytes": 18830,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p09_layout_compare.pdf",
+      "bytes": 18752,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p10_layout_compare.pdf",
+      "bytes": 18748,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p11_layout_compare.pdf",
+      "bytes": 19085,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p12_layout_compare.pdf",
+      "bytes": 19271,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p13_layout_compare.pdf",
+      "bytes": 18910,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p14_layout_compare.pdf",
+      "bytes": 19039,
+      "mode": "100644"
+    },
+    {
+      "path": "figs/paper_supplementary/section_6_4/qwen7b/qwen_7b_fp16_p15_layout_compare.pdf",
+      "bytes": 19064,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/CMakeLists.txt",
+      "bytes": 1705,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/cmake/cpu_lib.cmake",
+      "bytes": 622,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/cmake/npu_lib.cmake",
+      "bytes": 798,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/data_utils.h",
+      "bytes": 6300,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/fit_to_0315_config.py",
+      "bytes": 8642,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/format_conv_bench.cpp",
+      "bytes": 342,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/format_conv_bench_kernel.h",
+      "bytes": 10194,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/main.cpp",
+      "bytes": 8724,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/parse_msprof_summary.py",
+      "bytes": 11583,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/data_format/run_sim_msprof_sweep.sh",
+      "bytes": 6939,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/CMakeLists.txt",
+      "bytes": 2284,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/build_mmad_lut.py",
+      "bytes": 7171,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/cmake/cpu_lib.cmake",
+      "bytes": 622,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/cmake/npu_lib.cmake",
+      "bytes": 798,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/data_utils.h",
+      "bytes": 6300,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/main.cpp",
+      "bytes": 15513,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/mmad_custom.cpp",
+      "bytes": 685,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/mmad_custom.h",
+      "bytes": 7541,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/mmad_custom_cube_only.h",
+      "bytes": 8726,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/run.sh",
+      "bytes": 5001,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/run_sweep.sh",
+      "bytes": 4391,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/scripts/gen_data.py",
+      "bytes": 3574,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/mmad/scripts/verify_result.py",
+      "bytes": 5484,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/non_linear/CMakeLists.txt",
+      "bytes": 1864,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/non_linear/gelu_impl.h",
+      "bytes": 18371,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/non_linear/gelu_tiling_impl.cpp",
+      "bytes": 2786,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/non_linear/main.cpp",
+      "bytes": 9952,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/non_linear/run_msprof_sweep.sh",
+      "bytes": 5267,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/host_tiling/softmax_custom_tiling.h",
+      "bytes": 4771,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_impl/softmax_kernel.h",
+      "bytes": 7679,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/CMakeLists.txt",
+      "bytes": 3112,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/build_softmax_lut.py",
+      "bytes": 9619,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/cmake/cpu_lib.cmake",
+      "bytes": 1361,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/cmake/npu_lib.cmake",
+      "bytes": 1491,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/data_utils.h",
+      "bytes": 6643,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/main.cpp",
+      "bytes": 19758,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/run.sh",
+      "bytes": 3663,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/scripts/gen_data.py",
+      "bytes": 2102,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/softmax_custom.cpp",
+      "bytes": 1747,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/ascendc/softmax/kernel_launch_method_by_direct/softmax_custom_tiling.cpp",
+      "bytes": 1550,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/relayout/batch_linear_to_pimopt.py",
+      "bytes": 6343,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/relayout/gen_layout_mode_trace.py",
+      "bytes": 5578,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/relayout/linear_to_pimopt_gddr6.yaml",
+      "bytes": 433,
+      "mode": "100644"
+    },
+    {
+      "path": "measurements/relayout/run_layout_mode.py",
+      "bytes": 12524,
+      "mode": "100644"
+    },
+    {
+      "path": "src/aim_simulator/PIM_AiM.json",
+      "bytes": 129,
+      "mode": "100644"
+    },
+    {
+      "path": "src/aim_simulator/example.yaml",
+      "bytes": 451,
+      "mode": "100644"
+    },
+    {
+      "path": "src/buffer_manager.py",
+      "bytes": 21683,
+      "mode": "100644"
+    },
+    {
+      "path": "src/comm_primitives.py",
+      "bytes": 7274,
+      "mode": "100644"
+    },
+    {
+      "path": "src/config.py",
+      "bytes": 9872,
+      "mode": "100644"
+    },
+    {
+      "path": "src/config.py.bifocal_all_sweep_bak",
+      "bytes": 9984,
+      "mode": "100644"
+    },
+    {
+      "path": "src/cost_model.py",
+      "bytes": 1841,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/__init__.py",
+      "bytes": 49,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/compute_mixin.py",
+      "bytes": 31862,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/cost_model_npu_ascend_backend.py",
+      "bytes": 32277,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/cost_model_npu_llmcompass_backend.py",
+      "bytes": 13534,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/cost_model_pim_backend.py",
+      "bytes": 44012,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/estimate_mixin.py",
+      "bytes": 26035,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/npu_backends.py",
+      "bytes": 15654,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/pim_backends.py",
+      "bytes": 9074,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/runtime_mixin.py",
+      "bytes": 24355,
+      "mode": "100644"
+    },
+    {
+      "path": "src/costmodel_impl/shared.py",
+      "bytes": 14276,
+      "mode": "100644"
+    },
+    {
+      "path": "src/dtype_utils.py",
+      "bytes": 2344,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/burstgpt_eval_config.json",
+      "bytes": 894,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/evaluate_len_sweep_config_npu.json",
+      "bytes": 338,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/evaluate_len_sweep_config_npu_4.json",
+      "bytes": 416,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/evaluate_len_sweep_config_npu_8.json",
+      "bytes": 416,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/evaluate_len_sweep_config_npu_baseline.json",
+      "bytes": 348,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/evaluate_quant_sparse_config.json",
+      "bytes": 2348,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/evaluate_test_config.json",
+      "bytes": 1073,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/hardware_1npu_2aim.json",
+      "bytes": 1697,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/hardware_1npu_2aim_star.json",
+      "bytes": 1941,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/hardware_1npu_4aim.json",
+      "bytes": 2703,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/hardware_1npu_8aim.json",
+      "bytes": 4715,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/weight_suggest_sweep.json",
+      "bytes": 848,
+      "mode": "100644"
+    },
+    {
+      "path": "src/examples/weight_suggest_test_config.json",
+      "bytes": 1022,
+      "mode": "100644"
+    },
+    {
+      "path": "src/hardware.py",
+      "bytes": 17175,
+      "mode": "100644"
+    },
+    {
+      "path": "src/main.py",
+      "bytes": 4096,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/__init__.py",
+      "bytes": 80,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/app.py",
+      "bytes": 8367,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/baselines.py",
+      "bytes": 9078,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/burstgpt_serving_eval.py",
+      "bytes": 31246,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/cli.py",
+      "bytes": 14039,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/evaluate.py",
+      "bytes": 21276,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/graph_utils.py",
+      "bytes": 3925,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/kv_policy.py",
+      "bytes": 20839,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/log_utils.py",
+      "bytes": 4006,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/runner.py",
+      "bytes": 39062,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/shared.py",
+      "bytes": 2636,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/simulator.py",
+      "bytes": 7671,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/storage.py",
+      "bytes": 4096,
+      "mode": "100644"
+    },
+    {
+      "path": "src/mainlib/weight_formats.py",
+      "bytes": 7897,
+      "mode": "100644"
+    },
+    {
+      "path": "src/model_definition.py",
+      "bytes": 48659,
+      "mode": "100644"
+    },
+    {
+      "path": "src/model_parser.py",
+      "bytes": 17494,
+      "mode": "100644"
+    },
+    {
+      "path": "src/optimizations.py",
+      "bytes": 26980,
+      "mode": "100644"
+    },
+    {
+      "path": "src/pkl/pim_latency_cache.pkl",
+      "bytes": 5183809,
+      "mode": "100644"
+    },
+    {
+      "path": "src/plan_label.py",
+      "bytes": 1484,
+      "mode": "100644"
+    },
+    {
+      "path": "src/run_bifocal.py",
+      "bytes": 9705,
+      "mode": "100644"
+    },
+    {
+      "path": "src/runtime_models/format_conv_fit.json",
+      "bytes": 800,
+      "mode": "100644"
+    },
+    {
+      "path": "src/runtime_models/gelu_lut.csv",
+      "bytes": 704,
+      "mode": "100644"
+    },
+    {
+      "path": "src/runtime_models/mmad_lut.csv",
+      "bytes": 1167,
+      "mode": "100644"
+    },
+    {
+      "path": "src/runtime_models/rmsnorm_lut.csv",
+      "bytes": 1562,
+      "mode": "100644"
+    },
+    {
+      "path": "src/runtime_models/softmax_lut.csv",
+      "bytes": 3355,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/__init__.py",
+      "bytes": 476,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_base.py",
+      "bytes": 97924,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_bifocal.py",
+      "bytes": 46314,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_comm.py",
+      "bytes": 2017,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_common.py",
+      "bytes": 3651,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_heft.py",
+      "bytes": 24750,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_naive.py",
+      "bytes": 6725,
+      "mode": "100644"
+    },
+    {
+      "path": "src/scheduler/scheduler_types.py",
+      "bytes": 498,
+      "mode": "100644"
+    },
+    {
+      "path": "src/stats_recorder.py",
+      "bytes": 19367,
+      "mode": "100644"
+    },
+    {
+      "path": "src/sweep_bifocal.py",
+      "bytes": 15326,
+      "mode": "100644"
+    },
+    {
+      "path": "src/sweep_weight_suggest_params.py",
+      "bytes": 48596,
+      "mode": "100644"
+    },
+    {
+      "path": "src/task_graph.py",
+      "bytes": 11523,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/CENT.png",
+      "bytes": 562545,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/LICENSE",
+      "bytes": 1255,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/README.md",
+      "bytes": 5483,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/Figures.xlsx",
+      "bytes": 89331,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/GPT.py",
+      "bytes": 34633,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/Llama.py",
+      "bytes": 92288,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/TransformerBlock.py",
+      "bytes": 98529,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/aim_sim.py",
+      "bytes": 21666,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/cent_power_calculator.py",
+      "bytes": 19766,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/cxl_latency.py",
+      "bytes": 7965,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/function_sim.py",
+      "bytes": 3041,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/process_results.sh",
+      "bytes": 933,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/processed_results.csv",
+      "bytes": 6062,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/run_sim.py",
+      "bytes": 28490,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/scaling_study_various_DP.py",
+      "bytes": 17706,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/simulation.sh",
+      "bytes": 1995,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/simulation_results.csv",
+      "bytes": 105938,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/simulation_results_long_context.csv",
+      "bytes": 5208,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cent_simulation/utils.py",
+      "bytes": 9590,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cost_model/cost_model.py",
+      "bytes": 6578,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/cost_model/supply_chain_model.py",
+      "bytes": 13516,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_70B_16k.csv",
+      "bytes": 158,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_70B_32k.csv",
+      "bytes": 159,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_70B_4k.csv",
+      "bytes": 158,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_70B_8k.csv",
+      "bytes": 157,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_70B_decoding.csv",
+      "bytes": 65,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_70B_latency.csv",
+      "bytes": 106,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_energy.csv",
+      "bytes": 101,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_latency.csv",
+      "bytes": 82,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_power.csv",
+      "bytes": 101,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/data/GPU_throughput.csv",
+      "bytes": 106,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_12.py",
+      "bytes": 6057,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_13a.py",
+      "bytes": 1909,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_13b.py",
+      "bytes": 2568,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_13c.py",
+      "bytes": 2443,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_14a.py",
+      "bytes": 3111,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_14b.py",
+      "bytes": 3241,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_14c.py",
+      "bytes": 3626,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_14d.py",
+      "bytes": 3485,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_15a.py",
+      "bytes": 2463,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_scripts/figure_15c.py",
+      "bytes": 2467,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_12a.csv",
+      "bytes": 324,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_12b.csv",
+      "bytes": 88,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_13a.csv",
+      "bytes": 121,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_13b.csv",
+      "bytes": 340,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_13c.csv",
+      "bytes": 148,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_14a.csv",
+      "bytes": 163,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_14b.csv",
+      "bytes": 497,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_14c.csv",
+      "bytes": 535,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_14d.csv",
+      "bytes": 239,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_15a.csv",
+      "bytes": 426,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figure_source_data/figure_15c.csv",
+      "bytes": 327,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_12a.pdf",
+      "bytes": 15259,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_12b.pdf",
+      "bytes": 14785,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_13a.pdf",
+      "bytes": 13224,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_13b.pdf",
+      "bytes": 14721,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_13c.pdf",
+      "bytes": 13658,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_14a.pdf",
+      "bytes": 13300,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_14b.pdf",
+      "bytes": 15710,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_14c.pdf",
+      "bytes": 14527,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_14d.pdf",
+      "bytes": 16645,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_15a.pdf",
+      "bytes": 13560,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/figures/figure_15c.pdf",
+      "bytes": 13989,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/generate_figures.sh",
+      "bytes": 381,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/remove_old_results.sh",
+      "bytes": 132,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/requirements.txt",
+      "bytes": 31,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/trace/.gitignore",
+      "bytes": 21,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/trace/compile.py",
+      "bytes": 2523,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/trace/compile.sh",
+      "bytes": 1380,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/CENT/utils.py",
+      "bytes": 458,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/.gitignore",
+      "bytes": 51,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/.gitmodules",
+      "bytes": 128,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/Dockerfile",
+      "bytes": 691,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/LICENSE",
+      "bytes": 1507,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/LLMCompass_AE_Appendix.pdf",
+      "bytes": 120559,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/README.md",
+      "bytes": 2581,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/.gitignore",
+      "bytes": 58,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure10.pdf",
+      "bytes": 25672,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure11.pdf",
+      "bytes": 15823,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure12a.pdf",
+      "bytes": 25699,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure12b.pdf",
+      "bytes": 25341,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5a.pdf",
+      "bytes": 10625,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5b.pdf",
+      "bytes": 10217,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5c.pdf",
+      "bytes": 17047,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5d.pdf",
+      "bytes": 10519,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5e.pdf",
+      "bytes": 10505,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5f.pdf",
+      "bytes": 17045,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5g.pdf",
+      "bytes": 18529,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5h.pdf",
+      "bytes": 18468,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5i.pdf",
+      "bytes": 12324,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5j.pdf",
+      "bytes": 12991,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5k.pdf",
+      "bytes": 12911,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure5l.pdf",
+      "bytes": 17042,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure6a.pdf",
+      "bytes": 18325,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure6b.pdf",
+      "bytes": 15697,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure7a.pdf",
+      "bytes": 22347,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure7b.pdf",
+      "bytes": 22064,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure8a.pdf",
+      "bytes": 19944,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure8b.pdf",
+      "bytes": 19778,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure9a.pdf",
+      "bytes": 22414,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/expected_results/figure9b.pdf",
+      "bytes": 22323,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure10/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure10/plot_latency.py",
+      "bytes": 7296,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure10/run_figure10.sh",
+      "bytes": 102,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure10/test_latency.py",
+      "bytes": 4237,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure11/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure11/plot_decoding.py",
+      "bytes": 3735,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure11/run_figure11.sh",
+      "bytes": 104,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure11/test_decoding.py",
+      "bytes": 2557,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure12/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure12/plot_throughput.py",
+      "bytes": 7153,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure12/run_figure12.sh",
+      "bytes": 148,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure12/test_throughput.py",
+      "bytes": 5275,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ab/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ab/plot_matmul.py",
+      "bytes": 7871,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ab/real_hardware/matmul_A100.csv",
+      "bytes": 868,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ab/real_hardware/matmul_MI210.csv",
+      "bytes": 947,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ab/run.sh",
+      "bytes": 375,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ab/test_matmul.py",
+      "bytes": 5208,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/cf/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/cf/plot_softmax.py",
+      "bytes": 7087,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/cf/real_hardware/softmax_A100.csv",
+      "bytes": 644,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/cf/real_hardware/softmax_MI210.csv",
+      "bytes": 654,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/cf/run.sh",
+      "bytes": 382,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/cf/test_softmax.py",
+      "bytes": 4360,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/de/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/de/plot_layernorm.py",
+      "bytes": 4777,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/de/real_hardware/layernorm_A100.csv",
+      "bytes": 656,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/de/real_hardware/layernorm_MI210.csv",
+      "bytes": 650,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/de/run.sh",
+      "bytes": 289,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/de/test_layernorm.py",
+      "bytes": 5510,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/g/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/g/plot_gelu.py",
+      "bytes": 3840,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/g/real_hardware/gelu_A100.csv",
+      "bytes": 541,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/g/real_hardware/gelu_MI210.csv",
+      "bytes": 545,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/g/run.sh",
+      "bytes": 354,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/g/test_gelu.py",
+      "bytes": 3186,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/h/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/h/run.sh",
+      "bytes": 70,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/h/test_allreduce.py",
+      "bytes": 3556,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ijkl/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ijkl/plot_transformer.py",
+      "bytes": 7852,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ijkl/real_hardware/transformerAR_A100.csv",
+      "bytes": 245,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ijkl/real_hardware/transformer_A100.csv",
+      "bytes": 233,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ijkl/run.sh",
+      "bytes": 567,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/ijkl/test_transformer.py",
+      "bytes": 4761,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure5/run_figure5.sh",
+      "bytes": 148,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure6/real_hardware/die_area.csv",
+      "bytes": 85,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure6/run_figure6.sh",
+      "bytes": 65,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure6/test_cost_model.py",
+      "bytes": 5161,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure7/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure7/change_core_size.py",
+      "bytes": 4174,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure7/plot_core_size.py",
+      "bytes": 3809,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure7/run_figure7.sh",
+      "bytes": 106,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure8/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure8/change_memory_bw.py",
+      "bytes": 3423,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure8/plot_memory_bw.py",
+      "bytes": 3231,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure8/run_figure8.sh",
+      "bytes": 106,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure9/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure9/change_l1_cache.py",
+      "bytes": 3484,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure9/plot_l1_cache.py",
+      "bytes": 3805,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/ae/figure9/run_figure9.sh",
+      "bytes": 104,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/GA100.json",
+      "bytes": 2195,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/ga102_template.json",
+      "bytes": 1976,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/generation_system.json",
+      "bytes": 2191,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/latency_design.json",
+      "bytes": 2195,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/mi210.json",
+      "bytes": 1841,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/mi210_template.json",
+      "bytes": 2187,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/prefilling_system.json",
+      "bytes": 2196,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/configs/template.json",
+      "bytes": 2195,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/cost_model/__init__.py",
+      "bytes": 30,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/cost_model/cost_examples.py",
+      "bytes": 1087,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/cost_model/cost_model.py",
+      "bytes": 14735,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/cost_model/regfile_area.py",
+      "bytes": 673,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/design_space_exploration/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/design_space_exploration/dse.py",
+      "bytes": 13789,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/docs/run.md",
+      "bytes": 5115,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/environment.yml",
+      "bytes": 162,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/__init__.py",
+      "bytes": 160,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/arch_template.py",
+      "bytes": 93,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/compute_module.py",
+      "bytes": 5468,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/device.py",
+      "bytes": 1102,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/interconnect.py",
+      "bytes": 2259,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/io_module.py",
+      "bytes": 264,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/memory_module.py",
+      "bytes": 228,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/hardware_model/system.py",
+      "bytes": 572,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/__init__.py",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/communication_primitives.py",
+      "bytes": 4262,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/gelu.py",
+      "bytes": 4653,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/layernorm.py",
+      "bytes": 12476,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/matmul.py",
+      "bytes": 63684,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/operators.py",
+      "bytes": 3503,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/softmax.py",
+      "bytes": 11641,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/transformer.py",
+      "bytes": 27286,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/software_model/utils.py",
+      "bytes": 505,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table.csv",
+      "bytes": 2107,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table_128_128.csv",
+      "bytes": 14859,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table_16_16.csv",
+      "bytes": 1020385,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table_32_32.csv",
+      "bytes": 544559,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table_64_64.csv",
+      "bytes": 11693,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table_8_8.csv",
+      "bytes": 3537,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/systolic_array_model/look_up_table_old.csv",
+      "bytes": 134488,
+      "mode": "100644"
+    },
+    {
+      "path": "submodules/LLMCompass/utils.py",
+      "bytes": 393,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_weight_formats.py",
+      "bytes": 950,
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_weight_suggest_mode.py",
+      "bytes": 2111,
+      "mode": "100644"
+    }
+  ],
+  "omitted_files": [
+    {
+      "path": "experiment/demo/examples/README.md",
+      "bytes": 1366
+    },
+    {
+      "path": "experiment/demo/examples/mixtral_8x7b_int8_b4_p1024_d1024/Bifocal_linear_prefill-1024xdecode_1024_ops_trace.csv",
+      "bytes": 81609612
+    },
+    {
+      "path": "experiment/demo/examples/mixtral_8x7b_int8_b4_p1024_d1024/PD_linear_prefill-1024xdecode_1024_ops_trace.csv",
+      "bytes": 78363359
+    },
+    {
+      "path": "experiment/demo/examples/qwen14b_fp16_b8_p1024_d512/Bifocal_linear_prefill-1024xdecode_512_ops_trace.csv",
+      "bytes": 32178709
+    },
+    {
+      "path": "experiment/demo/examples/qwen14b_fp16_b8_p1024_d512/PD_linear_prefill-1024xdecode_512_ops_trace.csv",
+      "bytes": 49716566
+    },
+    {
+      "path": "experiment/demo/examples/qwen1p8b_b16_p2048_d128/Bifocal_linear_prefill-2048xdecode_128_ops_trace.csv",
+      "bytes": 9704969
+    },
+    {
+      "path": "experiment/demo/examples/qwen1p8b_b16_p2048_d128/PD_linear_prefill-2048xdecode_128_ops_trace.csv",
+      "bytes": 8710973
+    },
+    {
+      "path": "experiment/demo/examples/qwen7b_fp16_b16_p512_d512/Bifocal_linear_prefill-512xdecode_512_ops_trace.csv",
+      "bytes": 38124055
+    },
+    {
+      "path": "experiment/demo/examples/qwen7b_fp16_b16_p512_d512/PD_linear_prefill-512xdecode_512_ops_trace.csv",
+      "bytes": 34723844
+    }
+  ]
+}

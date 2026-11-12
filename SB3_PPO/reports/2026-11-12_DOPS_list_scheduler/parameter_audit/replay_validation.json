@@ -1,0 +1,22 @@
+[
+  {
+    "name": "ppo_bifocal_off",
+    "generated_ms": 138.96964094653808,
+    "independent_replay_ms": 138.96964094653808
+  },
+  {
+    "name": "ppo_bifocal_eta5",
+    "generated_ms": 82.78972526773748,
+    "independent_replay_ms": 82.78972526773748
+  },
+  {
+    "name": "ppo_bifocal_gamma04",
+    "generated_ms": 140.46270323774928,
+    "independent_replay_ms": 140.46270323774928
+  },
+  {
+    "name": "ppo_bifocal_pim_prefill",
+    "generated_ms": 63.52225522069964,
+    "independent_replay_ms": 63.52225522069964
+  }
+]

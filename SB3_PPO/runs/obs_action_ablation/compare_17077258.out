@@ -1,0 +1,80 @@
+Loaded pytorch Singularity image:
+  /lustre/software/pytorch/pytorch_24.12-py3.sif
+Use via: singularity exec --nv $PYTORCH_SIF <command>
+
+Loading pytorch/24.12-py3
+  Loading requirement: singularity/3.11.3
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.6
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 
+{
+  "completed_runs": 12,
+  "expected_runs": 12,
+  "runs": [
+    {
+      "variant": "A",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "A",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "smoke": false
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "B",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "B",
+      "seed": 2,
+      "smoke": false
+    },
+    {
+      "variant": "C",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "smoke": false
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "smoke": false
+    }
+  ],
+  "std": "sample standard deviation (ddof=1); blank for n=1",
+  "budget": "checkpoint at requested budget, before any remaining rollout update",
+  "final": "policy after the last complete rollout update",
+  "loss": "raw SB3 metrics; state and joint-action definitions differ between groups"
+}

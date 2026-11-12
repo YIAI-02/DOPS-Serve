@@ -1,0 +1,362 @@
+[
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 3,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 4,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.025,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.1,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.2,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.4,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.6,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 1.0,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.01,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.05,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.1,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.5,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 1.0,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 4.0,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 1,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 2,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 5,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 8,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 40.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 60.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 100.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 160.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 0.5,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.5,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 2.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 4.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 4
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 16
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 32
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 128
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 256
+  },
+  {
+    "h": 2,
+    "gamma": 0.1,
+    "lambda": 0.01,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.1,
+    "lambda": 1.0,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.4,
+    "lambda": 0.01,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.4,
+    "lambda": 1.0,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 1.0,
+    "lambda": 0.01,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 1.0,
+    "lambda": 1.0,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 3,
+    "gamma": 0.2,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 4,
+    "gamma": 0.2,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  }
+]

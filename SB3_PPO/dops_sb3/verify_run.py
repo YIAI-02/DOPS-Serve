@@ -27,13 +27,18 @@ def verify_run(out):
     final = PPO.load(out / "last_model.zip", device="cpu")
     assert any(not torch.equal(before, after)
                for before, after in zip(initial.policy.parameters(), final.policy.parameters()))
-    env = PlacementEnv(normalization_s=summary["normalization_s"])
+    env = PlacementEnv(normalization_s=summary["normalization_s"], variant=summary.get("variant", "A"))
     restored = evaluate_policy(final, env)
     assert restored == summary["final"]
     assert (out / "figures/reward_latency.png").stat().st_size > 0
     assert (out / "figures/loss.png").stat().st_size > 0
     assert (out / "best/best_model.zip").is_file()
     assert list((out / "checkpoints").glob("*.zip"))
+    for name, path in (("best", out / "best/best_model.zip"),
+                       ("budget", out / "checkpoints" / f"ppo_{summary['requested_timesteps']}_steps.zip")):
+        if summary.get(name) is not None:
+            assert evaluate_policy(PPO.load(path, device="cpu"), env) == summary[name]
+    env.close()
     print(json.dumps({"verified": True, "actual_timesteps": final.num_timesteps,
                       "env_steps_per_s": summary["env_steps_per_s"],
                       "final_reward": restored["reward"],

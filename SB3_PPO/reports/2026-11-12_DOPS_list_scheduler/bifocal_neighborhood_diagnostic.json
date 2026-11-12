@@ -1,0 +1,42 @@
+{
+  "method": "Replay modifications of saved Bifocal plans; no new scoring parameters or scheduler changes. K/V modifications apply to prefill and all decode plans.",
+  "source": "runs/bifocal_selected_20261112/result.json",
+  "results": [
+    {
+      "variant": "original",
+      "total_ms": 64.61565424835646,
+      "prefill_ms": 43.897866790520844,
+      "decode_ms": 20.717787457835627
+    },
+    {
+      "variant": "K_to_PIM",
+      "total_ms": 63.39664734377312,
+      "prefill_ms": 44.26659638565429,
+      "decode_ms": 19.13005095811883
+    },
+    {
+      "variant": "V_to_PIM",
+      "total_ms": 63.74330056061664,
+      "prefill_ms": 44.25998956250008,
+      "decode_ms": 19.483310998116558
+    },
+    {
+      "variant": "KV_to_PIM",
+      "total_ms": 63.55238692173039,
+      "prefill_ms": 44.62818874218757,
+      "decode_ms": 18.92419817954282
+    },
+    {
+      "variant": "all_PIM_mapping_original_order",
+      "total_ms": 63.51781877121468,
+      "prefill_ms": 44.62906137702338,
+      "decode_ms": 18.8887573941913
+    },
+    {
+      "variant": "all_PIM_exact",
+      "total_ms": 63.51781877121468,
+      "prefill_ms": 44.62906137702338,
+      "decode_ms": 18.8887573941913
+    }
+  ]
+}

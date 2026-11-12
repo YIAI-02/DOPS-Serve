@@ -1,0 +1,27 @@
+coarse 1/8: 63.948661 ms; best=63.948661 ms
+coarse 2/8: 63.948661 ms; best=63.948661 ms
+coarse 3/8: 63.517612 ms; best=63.517612 ms
+coarse 4/8: 64.016008 ms; best=63.517612 ms
+coarse 5/8: 63.519725 ms; best=63.517612 ms
+coarse 6/8: 63.952694 ms; best=63.517612 ms
+coarse 7/8: 63.952694 ms; best=63.517612 ms
+coarse 8/8: 63.519725 ms; best=63.517612 ms
+validation 1/4: 63.519725 ms; best=63.517612 ms
+validation 2/4: 63.517612 ms; best=63.517612 ms
+validation 3/4: 63.517612 ms; best=63.517612 ms
+validation 4/4: 63.519725 ms; best=63.517612 ms
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+{"best": {"params": {"h": 3, "gamma": 0.025, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both", "far_estimator": "slack", "far_slack_fraction": 0.75}, "mean_ms": 63.51761173637886, "std_ms": 0.0, "max_ms": 63.51761173637886, "seeds": [{"seed": 0, "total_ms": 63.51761173637886}, {"seed": 2, "total_ms": 63.51761173637886}, {"seed": 1, "total_ms": 63.51761173637886}]}, "validated_candidates": [{"params": {"h": 3, "gamma": 0.025, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both", "far_estimator": "slack", "far_slack_fraction": 0.75}, "mean_ms": 63.51761173637886, "std_ms": 0.0, "max_ms": 63.51761173637886, "seeds": [{"seed": 0, "total_ms": 63.51761173637886}, {"seed": 2, "total_ms": 63.51761173637886}, {"seed": 1, "total_ms": 63.51761173637886}]}, {"params": {"h": 3, "gamma": 0.1, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both", "far_estimator": "slack", "far_slack_fraction": 0.75}, "mean_ms": 63.51972470154302, "std_ms": 0.0, "max_ms": 63.51972470154302, "seeds": [{"seed": 0, "total_ms": 63.51972470154302}, {"seed": 2, "total_ms": 63.51972470154302}, {"seed": 1, "total_ms": 63.51972470154302}]}], "unique_parameter_sets": 8, "search_runs": 12, "wall_s": 116.83579383324832, "all_pim_ms": 63.51781877121468, "ppo_best_ms": 63.41597837637215, "best_plan_replay_ms": 63.51761173637886}

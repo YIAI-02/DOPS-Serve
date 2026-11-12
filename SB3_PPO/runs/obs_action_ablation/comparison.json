@@ -1,0 +1,70 @@
+{
+  "completed_runs": 12,
+  "expected_runs": 12,
+  "runs": [
+    {
+      "variant": "A",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "A",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "smoke": false
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "B",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "B",
+      "seed": 2,
+      "smoke": false
+    },
+    {
+      "variant": "C",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "smoke": false
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "smoke": false
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "smoke": false
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "smoke": false
+    }
+  ],
+  "std": "sample standard deviation (ddof=1); blank for n=1",
+  "budget": "checkpoint at requested budget, before any remaining rollout update",
+  "final": "policy after the last complete rollout update",
+  "loss": "raw SB3 metrics; state and joint-action definitions differ between groups"
+}

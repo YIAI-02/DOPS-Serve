@@ -1,0 +1,251 @@
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+{
+  "params": {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  "seed": 0,
+  "total_ms": 63.51761173637886,
+  "prefill_ms": 44.628854342187566,
+  "decode_ms": 18.8887573941913,
+  "wall_s": 23.904965332709253,
+  "score_calls": {
+    "future_profile_builds": 17,
+    "future_device_profiles": 18088,
+    "lookahead": 90193,
+    "consistency_conflicts": 79364,
+    "reuse_nonzero": 0,
+    "future_prefill_nonzero": 1708,
+    "future_decode_nonzero": 24608
+  },
+  "independent_replay_ms": 63.51761173637886,
+  "generation_audit": {
+    "raw_exports_equal_saved_plans": true,
+    "raw_export_count": 17,
+    "post_generation_placement_changes": 0,
+    "near_methods_inherited": [
+      "schedule",
+      "_earliest_finish_on_device",
+      "_lookahead_window_estimate",
+      "_simulate_chain_finish",
+      "_build_lookahead_chain",
+      "_update_plan_hints",
+      "_update_weight_hint_after_commit"
+    ],
+    "original_backend_matches_downloaded_source": true,
+    "all_main_operators_on_pim": true,
+    "placement_counts": [
+      {
+        "step": 0,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "PIM0": 476,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 1,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 5,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 9,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 13,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 17,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 21,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 25,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 29,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 33,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 37,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 41,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 45,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 49,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 53,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 57,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      },
+      {
+        "step": 61,
+        "main_operators": {
+          "PIM0": 252,
+          "PIM1": 252
+        },
+        "all_nodes": {
+          "Ascend_910B_NPU0": 1,
+          "PIM0": 475,
+          "PIM1": 364
+        }
+      }
+    ]
+  }
+}

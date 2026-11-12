@@ -1,0 +1,19 @@
+{
+  "model_family": "qwen",
+  "model_variant": "1.8b",
+  "dtype": "fp16",
+  "batch": 1,
+  "prefill_len": 64,
+  "decode_len": 64,
+  "tp_qkv": 2,
+  "tp_ffn": 2,
+  "hardware_json": "../backend/src/examples/hardware_1npu_2aim.json",
+  "npu_backend": "fast",
+  "pim_fast_mode": true,
+  "weight_source": "host",
+  "weight_format": "ND",
+  "weight_load_compute_overlap_ratio": 1.0,
+  "pim_weight_load_overlap_ratio": 0.5,
+  "dump_graph": false,
+  "simulation_log_file": "/dev/null"
+}

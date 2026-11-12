@@ -9,6 +9,14 @@ runs/*
 !runs/gpu_benchmark_repeat/
 !runs/*.out
 !runs/source_sync.json
+!runs/obs_action_ablation/
+!runs/bifocal_search_check_20261112/
+!runs/bifocal_search_20261112/
+!runs/bifocal_search_boundary_20261112/
+!runs/bifocal_search_high_reuse_20261112/
+!runs/bifocal_search_joint_20261112/
+!runs/bifocal_selected_20261112/
+!runs/bifocal_far_20261112/
 __pycache__/
 *.pyc
 .pytest_cache/

@@ -1,0 +1,7 @@
+{
+  "variant": "B",
+  "seed": 1,
+  "episode_steps": 153,
+  "requested_requests": 10000.0,
+  "evaluation_requests": 100.0
+}

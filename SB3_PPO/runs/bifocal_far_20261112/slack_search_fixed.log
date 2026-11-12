@@ -1,0 +1,19 @@
+coarse 1/4: 64.794939 ms; best=64.794939 ms
+coarse 2/4: 83.031415 ms; best=64.794939 ms
+coarse 3/4: 64.006454 ms; best=64.006454 ms
+coarse 4/4: 82.242931 ms; best=64.006454 ms
+validation 1/4: 64.794939 ms; best=64.006454 ms
+validation 2/4: 64.794939 ms; best=64.006454 ms
+validation 3/4: 64.006454 ms; best=64.006454 ms
+validation 4/4: 64.006454 ms; best=64.006454 ms
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+{"best": {"params": {"h": 3, "gamma": 0.1, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both", "far_estimator": "slack"}, "mean_ms": 64.00645442065077, "std_ms": 0.0, "max_ms": 64.00645442065077, "seeds": [{"seed": 0, "total_ms": 64.00645442065077}, {"seed": 1, "total_ms": 64.00645442065077}, {"seed": 2, "total_ms": 64.00645442065077}]}, "validated_candidates": [{"params": {"h": 3, "gamma": 0.1, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both", "far_estimator": "slack"}, "mean_ms": 64.00645442065077, "std_ms": 0.0, "max_ms": 64.00645442065077, "seeds": [{"seed": 0, "total_ms": 64.00645442065077}, {"seed": 1, "total_ms": 64.00645442065077}, {"seed": 2, "total_ms": 64.00645442065077}]}, {"params": {"h": 3, "gamma": 0.025, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both", "far_estimator": "slack"}, "mean_ms": 64.79493860987827, "std_ms": 0.0, "max_ms": 64.79493860987827, "seeds": [{"seed": 0, "total_ms": 64.79493860987827}, {"seed": 1, "total_ms": 64.79493860987827}, {"seed": 2, "total_ms": 64.79493860987827}]}], "unique_parameter_sets": 4, "search_runs": 8, "wall_s": 91.3357239998877, "all_pim_ms": 63.51781877121468, "ppo_best_ms": 63.41597837637215, "best_plan_replay_ms": 64.00645442065077}

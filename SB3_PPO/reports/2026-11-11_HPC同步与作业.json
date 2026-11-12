@@ -1,0 +1,598 @@
+{
+  "checked_at": "2026-11-11T09:15:01.227304+08:00",
+  "remote_root": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO",
+  "data_node": "wm2-data01",
+  "mount_mode": "rw",
+  "upload_complete": true,
+  "comparison": "direct byte equality after readback",
+  "uploaded_files": 7,
+  "compared_files": 56,
+  "files": [
+    {
+      "path": "dops_sb3/timing/placement_compiler.py",
+      "bytes": 3550,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "dops_sb3/timing/placement_cost.py",
+      "bytes": 6456,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "dops_sb3/timing/__init__.py",
+      "bytes": 0,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "dops_sb3/timing/placement_evaluator.py",
+      "bytes": 8540,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "dops_sb3/train.py",
+      "bytes": 7702,
+      "equal_to_local": true,
+      "uploaded": true
+    },
+    {
+      "path": "dops_sb3/plot.py",
+      "bytes": 11940,
+      "equal_to_local": true,
+      "uploaded": true
+    },
+    {
+      "path": "dops_sb3/env.py",
+      "bytes": 7387,
+      "equal_to_local": true,
+      "uploaded": true
+    },
+    {
+      "path": "dops_sb3/verify_run.py",
+      "bytes": 2352,
+      "equal_to_local": true,
+      "uploaded": true
+    },
+    {
+      "path": "dops_sb3/__init__.py",
+      "bytes": 0,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "dops_sb3/execution.py",
+      "bytes": 6589,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/comm_primitives.py",
+      "bytes": 7274,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/plan_label.py",
+      "bytes": 1484,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/runtime_mixin.py",
+      "bytes": 24355,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/estimate_mixin.py",
+      "bytes": 26035,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/pim_backends.py",
+      "bytes": 9074,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/cost_model_npu_llmcompass_backend.py",
+      "bytes": 13534,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/npu_backends.py",
+      "bytes": 15654,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/compute_mixin.py",
+      "bytes": 31862,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/__init__.py",
+      "bytes": 49,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/cost_model_npu_ascend_backend.py",
+      "bytes": 32277,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/cost_model_pim_backend.py",
+      "bytes": 44012,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/costmodel_impl/shared.py",
+      "bytes": 14276,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/config.py",
+      "bytes": 9872,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/model_parser.py",
+      "bytes": 17494,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/cost_model.py",
+      "bytes": 1841,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_types.py",
+      "bytes": 498,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_heft.py",
+      "bytes": 24750,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_base.py",
+      "bytes": 97954,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_bifocal.py",
+      "bytes": 46314,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_comm.py",
+      "bytes": 2017,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/__init__.py",
+      "bytes": 476,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_common.py",
+      "bytes": 3651,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/scheduler/scheduler_naive.py",
+      "bytes": 6725,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/dtype_utils.py",
+      "bytes": 2344,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/task_graph.py",
+      "bytes": 11523,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/stats_recorder.py",
+      "bytes": 19367,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/hardware.py",
+      "bytes": 17175,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/mainlib/kv_policy.py",
+      "bytes": 20839,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/mainlib/cli.py",
+      "bytes": 14039,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/mainlib/__init__.py",
+      "bytes": 80,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/mainlib/simulator.py",
+      "bytes": 7671,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/mainlib/graph_utils.py",
+      "bytes": 3925,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/mainlib/shared.py",
+      "bytes": 2636,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/buffer_manager.py",
+      "bytes": 21683,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/examples/hardware_1npu_2aim.json",
+      "bytes": 1697,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/optimizations.py",
+      "bytes": 26980,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/src/model_definition.py",
+      "bytes": 48659,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "backend/configs/qwen_1.8b_shape.json",
+      "bytes": 225,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "configs/ppo.json",
+      "bytes": 417,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "configs/environment.json",
+      "bytes": 477,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "tests/test_environment.py",
+      "bytes": 7624,
+      "equal_to_local": true,
+      "uploaded": true
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 122,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "slurm/run.sh",
+      "bytes": 1453,
+      "equal_to_local": true,
+      "uploaded": true
+    },
+    {
+      "path": "slurm/probe.sh",
+      "bytes": 265,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "slurm/download.sh",
+      "bytes": 609,
+      "equal_to_local": true,
+      "uploaded": false
+    },
+    {
+      "path": "README.md",
+      "bytes": 13297,
+      "equal_to_local": true,
+      "uploaded": true
+    }
+  ],
+  "check_job": {
+    "job_id": "17076922",
+    "name": "obs-check",
+    "output": "runs/obs_action_ablation_hpc_smoke",
+    "log": "runs/obs_action_ablation_check_17076922.out",
+    "state": "COMPLETED",
+    "node": "l01c03n1",
+    "tests": {
+      "passed": 21,
+      "wall_s": 295.21
+    },
+    "exit_code": "0:0",
+    "elapsed": "00:12:47",
+    "verified": true
+  },
+  "training_jobs": [
+    {
+      "variant": "A",
+      "seed": 0,
+      "job_id": "17077230",
+      "name": "obs-A-s0",
+      "output": "runs/obs_action_ablation/A/seed0",
+      "log": "runs/obs_action_ablation/A_seed0_17077230.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l06c41n4",
+      "startup": {
+        "variant": "A",
+        "seed": 0,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "A",
+      "seed": 1,
+      "job_id": "17077231",
+      "name": "obs-A-s1",
+      "output": "runs/obs_action_ablation/A/seed1",
+      "log": "runs/obs_action_ablation/A_seed1_17077231.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l01c03n1",
+      "startup": {
+        "variant": "A",
+        "seed": 1,
+        "complete_requests": 10,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "job_id": "17077232",
+      "name": "obs-A-s2",
+      "output": "runs/obs_action_ablation/A/seed2",
+      "log": "runs/obs_action_ablation/A_seed2_17077232.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l01c03n1",
+      "startup": {
+        "variant": "A",
+        "seed": 2,
+        "complete_requests": 10,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "job_id": "17077233",
+      "name": "obs-B-s0",
+      "output": "runs/obs_action_ablation/B/seed0",
+      "log": "runs/obs_action_ablation/B_seed0_17077233.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l02c11n2",
+      "startup": {
+        "variant": "B",
+        "seed": 0,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "B",
+      "seed": 1,
+      "job_id": "17077234",
+      "name": "obs-B-s1",
+      "output": "runs/obs_action_ablation/B/seed1",
+      "log": "runs/obs_action_ablation/B_seed1_17077234.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l02c11n2",
+      "startup": {
+        "variant": "B",
+        "seed": 1,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "B",
+      "seed": 2,
+      "job_id": "17077235",
+      "name": "obs-B-s2",
+      "output": "runs/obs_action_ablation/B/seed2",
+      "log": "runs/obs_action_ablation/B_seed2_17077235.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c28n2",
+      "startup": {
+        "variant": "B",
+        "seed": 2,
+        "complete_requests": 8,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "C",
+      "seed": 0,
+      "job_id": "17077236",
+      "name": "obs-C-s0",
+      "output": "runs/obs_action_ablation/C/seed0",
+      "log": "runs/obs_action_ablation/C_seed0_17077236.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c28n2",
+      "startup": {
+        "variant": "C",
+        "seed": 0,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "job_id": "17077237",
+      "name": "obs-C-s1",
+      "output": "runs/obs_action_ablation/C/seed1",
+      "log": "runs/obs_action_ablation/C_seed1_17077237.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c25n1",
+      "startup": {
+        "variant": "C",
+        "seed": 1,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "job_id": "17077238",
+      "name": "obs-C-s2",
+      "output": "runs/obs_action_ablation/C/seed2",
+      "log": "runs/obs_action_ablation/C_seed2_17077238.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c25n1",
+      "startup": {
+        "variant": "C",
+        "seed": 2,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "job_id": "17077239",
+      "name": "obs-D-s0",
+      "output": "runs/obs_action_ablation/D/seed0",
+      "log": "runs/obs_action_ablation/D_seed0_17077239.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c25n1",
+      "startup": {
+        "variant": "D",
+        "seed": 0,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "job_id": "17077240",
+      "name": "obs-D-s1",
+      "output": "runs/obs_action_ablation/D/seed1",
+      "log": "runs/obs_action_ablation/D_seed1_17077240.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c25n1",
+      "startup": {
+        "variant": "D",
+        "seed": 1,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "job_id": "17077241",
+      "name": "obs-D-s2",
+      "output": "runs/obs_action_ablation/D/seed2",
+      "log": "runs/obs_action_ablation/D_seed2_17077241.out",
+      "state": "RUNNING",
+      "observed_elapsed": "5:21",
+      "node": "l04c27n4",
+      "startup": {
+        "variant": "D",
+        "seed": 2,
+        "complete_requests": 7,
+        "initial_saved": true,
+        "baselines_saved": true
+      }
+    }
+  ],
+  "comparison_job": {
+    "job_id": "17077258",
+    "name": "obs-compare",
+    "state": "PENDING",
+    "dependency": "afterok:all 12 training jobs",
+    "log": "runs/obs_action_ablation/compare_17077258.out",
+    "reason": "(Dependency)"
+  },
+  "status_observed_at": "2026-11-11T09:40:38.414478+08:00",
+  "resources": {
+    "account": "hpc2006191081",
+    "partition": "C064M0256G",
+    "qos": "high",
+    "tasks_per_job": 1,
+    "cpus_per_task": 2,
+    "training_time_limit": "4-00:00:00"
+  }
+}

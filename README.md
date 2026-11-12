@@ -1,36 +1,39 @@
-# DOPS-Serve：SB3 PPO 算子放置实验
+# DOPS-Serve：PPO 与 Bifocal 算子放置实验
 
-main 保存当前基于 Stable Baselines3 的 PPO 实验：无 BC，固定 prompt 64、decode 64，使用 DOPS 的 NPU/PIM 解析模拟环境。
+使用原生 Stable Baselines3 PPO 与 Bifocal 列表调度器。固定 Qwen 1.8B、28 层、FP16、TP2、batch=1、prefill 64 + 64 次 decode，模拟硬件为 1 NPU + 2 PIM，采用 fast/fast 成本模型。以下均为模拟完整请求耗时，越低越好。
 
-旧 BC、Critic 预训练和自写 PPO 的代码、结果与分析记录集中保存在 [archive/bc-ppo 分支](https://github.com/YIAI-02/DOPS-Serve/tree/archive/bc-ppo)。该分支也保留更早的 serving 实验代码；当前 main 的训练入口为 `SB3_PPO/`。
+## 实验结果（2026-11-12）
+
+PPO 四组各完成 seeds 0/1/2、目标 10,000 请求；表中为均值 ± 样本标准差，单位 ms。Budget 为第 10,000 请求的检查点，Final 为最后完整 rollout 更新后的模型。
+
+| 组别 | 观测 / 决策 | Budget | Final |
+| --- | --- | ---: | ---: |
+| A | 原始 / 逐算子 | 84.709 ± 20.021 | 85.237 ± 19.870 |
+| B | 增强 / 逐算子 | 64.836 ± 0.747 | 64.953 ± 0.949 |
+| C | 原始 / 整段 | 63.523 ± 0.000 | 63.519 ± 0.006 |
+| D | 增强 / 整段 | 63.484 ± 0.059 | 63.484 ± 0.059 |
+
+A/B 存在后期回退；C/D 的确定性结果接近全 PIM。全部 PPO 中最佳周期评估为 **63.415978 ms**，相对全 PIM 改善约 0.16%。确定性评估不代表随机采样同样稳定，详见 [PPO 结果分析](SB3_PPO/reports/2026-11-12_四组PPO实验结果分析.md)。
+
+| 对照方法 | 耗时 / ms |
+| --- | ---: |
+| 全 NPU | 279.856 |
+| Prefill NPU / Decode PIM | 149.054 |
+| 全 PIM | 63.518 |
+| 原 Bifocal 调参最优 | 64.616 |
+| 修改 far focus 后的 Bifocal | 63.518 |
+
+新 Bifocal 在三个 seed 下均为 **63.517612 ms**，由原贪心流程自行生成全 PIM 主算子放置；保留 EFT、短链前瞻和设备一致性机制，使用固定复用窗口估计未来成本，不读取真实剩余输出长度。与全 PIM 持平，尚未超过 PPO best。两者成本与连续计时对齐，但放置和排序自由度不同。详见 [Bifocal 结果](SB3_PPO/reports/2026-11-12_DOPS_list_scheduler/Bifocal_far修改与Qwen1.8B结果.md)。
+
+## 代码与实验工件
 
 | 内容 | 入口 |
 | --- | --- |
-| 实验合同、环境语义、安装与训练命令 | [SB3_PPO/README.md](SB3_PPO/README.md) |
-| 原生 PPO 训练入口 | [dops_sb3/train.py](SB3_PPO/dops_sb3/train.py) |
-| 环境 / PPO 配置 | [environment.json](SB3_PPO/configs/environment.json) / [ppo.json](SB3_PPO/configs/ppo.json) |
-| 正式训练结果报告 | [2026-10-28 正式训练结果](SB3_PPO/reports/2026-10-28_SB3_PPO_正式训练结果.md) |
-| 正式训练完整输出 | [runs/ppo_seed0](SB3_PPO/runs/ppo_seed0) |
-| 初次验收、作业启动、GPU 对比记录 | [reports](SB3_PPO/reports) |
+| 实验合同、环境语义和运行命令 | [SB3_PPO/README.md](SB3_PPO/README.md) |
+| PPO / Bifocal 入口 | [train.py](SB3_PPO/dops_sb3/train.py) / [bifocal_search.py](SB3_PPO/dops_sb3/bifocal_search.py) |
+| 配置 | [configs](SB3_PPO/configs) |
+| 四组完整训练输出、模型、曲线和检查点 | [obs_action_ablation](SB3_PPO/runs/obs_action_ablation) |
+| Bifocal 生成计划、成本表和搜索记录 | [bifocal_far_20261112](SB3_PPO/runs/bifocal_far_20261112) |
+| 详细分析与历史结果 | [reports](SB3_PPO/reports) |
 
-## 已完成实验：seed 0
-
-CPU 作业 16252628 于北京时间 2026-10-28 09:02:51 正常完成，运行 20 小时 55 分 41 秒，完成 1,531,904 个环境步和 10,012 个完整 episode。4 天为申请的运行上限。
-
-| 策略 | Reward（越高越好） | 模拟请求耗时（ms，越低越好） |
-| --- | ---: | ---: |
-| 全 NPU | −1.000000 | 279.856 |
-| 全 PIM | −0.226966 | 63.518 |
-| 初始 PPO | −0.470974 | 131.805 |
-| 最佳周期评估 PPO（737,280 步） | **−0.226603** | **63.416** |
-| 最终 PPO | −0.370898 | 103.798 |
-
-早期 Reward 明显改善，训练中多次回退，约 139 万步后出现持续退化。最佳策略仅比全 PIM 减少 0.16% 耗时，最终策略比最佳策略增加 63.68% 耗时；该实验不能判定为稳定收敛，也没有证明相对全 PIM 的实质性优势。
-
-![Reward 与模拟请求耗时](SB3_PPO/runs/ppo_seed0/figures/reward_latency.png)
-
-[Loss 曲线](SB3_PPO/runs/ppo_seed0/figures/loss.png) · [最佳模型](SB3_PPO/runs/ppo_seed0/best/best_model.zip) · [最终模型](SB3_PPO/runs/ppo_seed0/last_model.zip) · [74 个周期 checkpoint](SB3_PPO/runs/ppo_seed0/checkpoints)
-
-完整结果保留 Monitor CSV、原生 SB3 progress.csv、TensorBoard 事件、评估 NPZ、运行配置与依赖版本、初始/最佳/最终模型和 Slurm 日志。最终模型在本地重载后的确定性评估与 HPC 输出完全一致。
-
-结果来自单 seed、单一固定请求形状的解析模拟，不是真实 NPU/PIM 硬件测量。GPU 对比与已取消的重复测试另见报告，均不作为正式训练结果。
+结果来自单一固定 workload 的解析模拟，尚无跨 workload、真机或全局最优证明。历史 BC、Critic 预训练和自写 PPO 保存在 [archive/bc-ppo](https://github.com/YIAI-02/DOPS-Serve/tree/archive/bc-ppo)，历史单 seed 结果保留于 [ppo_seed0](SB3_PPO/runs/ppo_seed0)。

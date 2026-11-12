@@ -24,10 +24,10 @@ def write_json(path, data):
 def evaluate_policy(model, env):
     obs, _ = env.reset()
     rewards, actions = [], []
-    for _ in range(EPISODE_STEPS):
+    for _ in range(env.unwrapped.episode_steps):
         action, _ = model.predict(obs, deterministic=True)
-        obs, reward, terminated, _, info = env.step(int(action))
-        actions.append(int(action))
+        obs, reward, terminated, _, info = env.step(action)
+        actions.extend(np.asarray(action).reshape(-1).astype(int).tolist())
         rewards.append(reward)
     assert terminated
     return {"reward": float(sum(rewards)), "latency_s": info["latency_s"],
@@ -69,6 +69,9 @@ def train(args):
     out.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(1)
     config = json.loads((ROOT / "configs/ppo.json").read_text())
+    episode_steps = SEGMENTS if args.variant in ("C", "D") else EPISODE_STEPS
+    config.update(seed=args.seed, total_timesteps=10_000 * episode_steps,
+                  eval_freq=100 * episode_steps, checkpoint_freq=100 * episode_steps)
     if args.smoke:
         config.update(total_timesteps=512, n_steps=256, eval_freq=256, checkpoint_freq=256)
     if args.total_timesteps is not None:
@@ -79,11 +82,16 @@ def train(args):
         **{name: version(name) for name in ("stable-baselines3", "gymnasium", "torch", "numpy", "tensorboard")},
     })
     write_json(out / "environment_config.json", json.loads((ROOT / "configs/environment.json").read_text()))
+    write_json(out / "experiment.json", {
+        "variant": args.variant, "seed": args.seed, "episode_steps": episode_steps,
+        "requested_requests": config["total_timesteps"] / episode_steps,
+        "evaluation_requests": config["eval_freq"] / episode_steps,
+    })
     evaluator = make_evaluator()
-    env = PlacementEnv(evaluator)
+    env = PlacementEnv(evaluator, variant=args.variant)
     normalization = env.normalization_s
     write_json(out / "normalization.json", {"C_s": normalization, "source": "cold all_npu full request"})
-    eval_env = Monitor(PlacementEnv(evaluator, normalization), str(out / "eval.monitor.csv"),
+    eval_env = Monitor(PlacementEnv(evaluator, normalization, args.variant), str(out / "eval.monitor.csv"),
                        info_keywords=("latency_s", "speedup"))
     train_env = Monitor(env, str(out / "train.monitor.csv"), info_keywords=("latency_s", "speedup"))
     comparisons = baselines(evaluator, normalization, 2 if args.smoke else 20, config["seed"])
@@ -110,12 +118,23 @@ def train(args):
     final = evaluate_policy(model, eval_env)
     best_path = out / "best/best_model.zip"
     best = evaluate_policy(PPO.load(best_path, device="cpu"), eval_env) if best_path.exists() else None
+    budget_path = out / "checkpoints" / f"ppo_{total_timesteps}_steps.zip"
+    budget = evaluate_policy(PPO.load(budget_path, device="cpu"), eval_env) if budget_path.exists() else None
     write_json(out / "summary.json", {
+        "variant": args.variant, "seed": args.seed,
         "smoke": args.smoke, "requested_timesteps": total_timesteps,
-        "actual_timesteps": model.num_timesteps, "episode_steps": EPISODE_STEPS,
+        "actual_timesteps": model.num_timesteps, "episode_steps": episode_steps,
+        "requested_requests": total_timesteps / episode_steps,
+        "complete_requests": model.num_timesteps // episode_steps,
+        "unfinished_steps": model.num_timesteps % episode_steps,
+        "rollouts": model.num_timesteps // config["n_steps"],
+        "training_epochs": model._n_updates,
+        "optimizer_steps": model._n_updates * int(np.ceil(config["n_steps"] / config["batch_size"])),
+        "policy_parameters": sum(p.numel() for p in model.policy.parameters()),
         "training_wall_s": training_wall_s,
         "env_steps_per_s": model.num_timesteps / training_wall_s,
         "normalization_s": normalization, "initial": initial, "final": final, "best": best,
+        "budget": budget,
     })
     from .plot import plot_run
     plot_run(out)
@@ -127,6 +146,8 @@ def train(args):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--out", type=Path, required=True, help="New output directory")
+    parser.add_argument("--variant", choices=("A", "B", "C", "D"), default="A")
+    parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--smoke", action="store_true", help="512-step integration test; not a learning result")
     parser.add_argument("--total-timesteps", type=int, help="Override formal training budget")
     train(parser.parse_args())

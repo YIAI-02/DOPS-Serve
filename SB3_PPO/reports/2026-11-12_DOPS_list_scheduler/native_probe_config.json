@@ -1,0 +1,29 @@
+{
+  "model_family": "qwen",
+  "model_variant": "1.8b",
+  "dtype": "fp16",
+  "batch": 1,
+  "prefill_len": 64,
+  "decode_len": 64,
+  "tp_qkv": 2,
+  "tp_ffn": 2,
+  "hardware_json": "/Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json",
+  "npu_backend": "fast",
+  "pim_fast_mode": true,
+  "weight_source": "host",
+  "weight_format": "ND",
+  "weight_load_compute_overlap_ratio": 1.0,
+  "pim_weight_load_overlap_ratio": 0.5,
+  "dump_graph": false,
+  "simulation_log_file": "/Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/reports/2026-11-12_DOPS_list_scheduler/native_output/simulation.txt",
+  "algo": [
+    "HEFT",
+    "Bifocal"
+  ],
+  "baselines": [],
+  "decode_sample_stride": 1,
+  "decode_plan_refresh_stride": 4,
+  "decode_amort_enable": false,
+  "scheduler_seed": 0,
+  "result_dir": "/Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/reports/2026-11-12_DOPS_list_scheduler/native_output"
+}

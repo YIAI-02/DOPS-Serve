@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-10T08:46:30.233734+08:00",
+  "remote_root": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO",
+  "data_node": "wm2-data01",
+  "data_mount": "/lustre",
+  "mount_mode": "ro",
+  "upload_complete": false,
+  "formal_jobs_submitted": false,
+  "write_error": "OSError: [Errno 30] Read-only file system",
+  "login_attempts": "wm2-login.pku.edu.cn and resolved address 115.27.162.34: connection timed out",
+  "readback_comparison": [
+    {
+      "path": "README.md",
+      "remote_unchanged": true
+    },
+    {
+      "path": "dops_sb3/env.py",
+      "remote_unchanged": true
+    },
+    {
+      "path": "dops_sb3/plot.py",
+      "remote_unchanged": true
+    },
+    {
+      "path": "dops_sb3/train.py",
+      "remote_unchanged": true
+    },
+    {
+      "path": "dops_sb3/verify_run.py",
+      "remote_unchanged": true
+    },
+    {
+      "path": "slurm/run.sh",
+      "remote_unchanged": true
+    },
+    {
+      "path": "tests/test_environment.py",
+      "remote_unchanged": true
+    }
+  ]
+}

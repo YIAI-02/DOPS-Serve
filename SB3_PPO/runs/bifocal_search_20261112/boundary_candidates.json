@@ -1,0 +1,137 @@
+[
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.1,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.05,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.01,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 20.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 40.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 80.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 160.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 128
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 256
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.5,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 2.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.9,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 1.0,
+    "lambda": 0.25,
+    "plan_hint_max": 3,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  },
+  {
+    "h": 2,
+    "gamma": 0.8,
+    "lambda": 0.25,
+    "plan_hint_max": 8,
+    "eta": 5.0,
+    "amort_alpha": 1.0,
+    "reuse_window": 64
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "h": 2,
+  "gamma": 0.8,
+  "lambda": 0.25,
+  "plan_hint_max": 3,
+  "eta": 80.0,
+  "amort_alpha": 1.0,
+  "reuse_window": 64
+}

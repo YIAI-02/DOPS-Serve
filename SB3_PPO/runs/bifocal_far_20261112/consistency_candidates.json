@@ -1,0 +1,122 @@
+[
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.01,
+    "plan_hint_max": 1,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.01,
+    "plan_hint_max": 3,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.01,
+    "plan_hint_max": 8,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.1,
+    "plan_hint_max": 1,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.1,
+    "plan_hint_max": 3,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 0.1,
+    "plan_hint_max": 8,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 1,
+    "plan_hint_max": 1,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 1,
+    "plan_hint_max": 3,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 1,
+    "plan_hint_max": 8,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 4,
+    "plan_hint_max": 1,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 4,
+    "plan_hint_max": 3,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  },
+  {
+    "h": 3,
+    "gamma": 0.025,
+    "lambda": 4,
+    "plan_hint_max": 8,
+    "eta": 0.0,
+    "amort_alpha": 0.0,
+    "reuse_window": 64,
+    "far_mode": "both"
+  }
+]

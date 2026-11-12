@@ -1,0 +1,15 @@
+coarse 1/4: 81.093915 ms; best=81.093915 ms
+coarse 2/4: 81.096248 ms; best=81.093915 ms
+coarse 3/4: 81.093915 ms; best=81.093915 ms
+coarse 4/4: 81.096248 ms; best=81.093915 ms
+validation 1/2: 81.093566 ms; best=81.093566 ms
+validation 2/2: 81.094142 ms; best=81.093566 ms
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+{"best": {"params": {"h": 4, "gamma": 0.025, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both"}, "mean_ms": 81.09387447288105, "std_ms": 0.00028997686098113025, "max_ms": 81.09414218110011, "seeds": [{"seed": 0, "total_ms": 81.09391479056028}, {"seed": 1, "total_ms": 81.09356644698279}, {"seed": 2, "total_ms": 81.09414218110011}]}, "validated_candidates": [{"params": {"h": 4, "gamma": 0.025, "lambda": 0.25, "plan_hint_max": 3, "eta": 0.0, "amort_alpha": 0.0, "reuse_window": 64, "far_mode": "both"}, "mean_ms": 81.09387447288105, "std_ms": 0.00028997686098113025, "max_ms": 81.09414218110011, "seeds": [{"seed": 0, "total_ms": 81.09391479056028}, {"seed": 1, "total_ms": 81.09356644698279}, {"seed": 2, "total_ms": 81.09414218110011}]}], "unique_parameter_sets": 4, "search_runs": 6, "wall_s": 148.17060870910063, "all_pim_ms": 63.51781877121468, "ppo_best_ms": 63.41597837637215, "best_plan_replay_ms": 81.09391479056028}

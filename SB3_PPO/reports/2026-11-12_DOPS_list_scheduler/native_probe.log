@@ -1,0 +1,12 @@
+[runtime-config] applied {"PIM_WEIGHT_LOAD_OVERLAP_RATIO": 0.5, "WEIGHT_LOAD_COMPUTE_OVERLAP_RATIO": 1.0}
+[evaluate] algos=['HEFT', 'Bifocal'] baselines=[] result_dir=/Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/reports/2026-11-12_DOPS_list_scheduler/native_output/qwen_1.8b_fp16_b1_s4 tag=64x64
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+DEBUG: Loaded hardware config from /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/DOPS-Serve/SB3_PPO/backend/src/examples/hardware_1npu_2aim.json
+[REPORT] Combined comparison saved to: /Users/jiaqiyang/Desktop/Daily_2026/02_Projects/DOPSRT/reports/2026-11-12_DOPS_list_scheduler/native_output/qwen_1.8b_fp16_b1_s4/baseline_compare_64x64.json
+
+=== Strategy/Baseline Comparison ===
+Policy                   PIM        Prefill(s)    Decode(s)     Total(s)
+------------------------------------------------------------------------
+algo:HEFT                pim_by_capacity       0.0437       0.0951       0.1388
+algo:Bifocal             pim_by_capacity       0.0437       0.0951       0.1388

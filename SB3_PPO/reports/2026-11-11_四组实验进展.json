@@ -1,0 +1,1089 @@
+{
+  "observed_beijing": "2026-11-11 22:26:13",
+  "slurm_observed_beijing": "2026-11-11 22:25:00",
+  "slurm_state": "12 training jobs RUNNING; comparison job 17077258 PENDING (Dependency)",
+  "training_start_beijing": "2026-11-11 09:34:04",
+  "regression_evidence": [
+    {
+      "variant": "A",
+      "seed": 1,
+      "recent_evaluations": [
+        {
+          "requests": 4000,
+          "latency_ms": 111.7832661118579
+        },
+        {
+          "requests": 4100,
+          "latency_ms": 115.38276832682995
+        },
+        {
+          "requests": 4200,
+          "latency_ms": 118.98730794188515
+        },
+        {
+          "requests": 4300,
+          "latency_ms": 123.14148387712424
+        },
+        {
+          "requests": 4400,
+          "latency_ms": 142.8648641915843
+        },
+        {
+          "requests": 4500,
+          "latency_ms": 122.81013489387693
+        },
+        {
+          "requests": 4600,
+          "latency_ms": 124.06472737014188
+        },
+        {
+          "requests": 4700,
+          "latency_ms": 127.11935080945302
+        },
+        {
+          "requests": 4800,
+          "latency_ms": 131.03844807414504
+        },
+        {
+          "requests": 4900,
+          "latency_ms": 134.16051670345834
+        },
+        {
+          "requests": 5000,
+          "latency_ms": 131.35216615710132
+        },
+        {
+          "requests": 5100,
+          "latency_ms": 138.00237383354207
+        },
+        {
+          "requests": 5200,
+          "latency_ms": 135.05857319606025
+        },
+        {
+          "requests": 5300,
+          "latency_ms": 152.66372677555503
+        },
+        {
+          "requests": 5400,
+          "latency_ms": 131.84918963197228
+        }
+      ]
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "recent_evaluations": [
+        {
+          "requests": 4100,
+          "latency_ms": 150.43887507216303
+        },
+        {
+          "requests": 4200,
+          "latency_ms": 156.86631772270437
+        },
+        {
+          "requests": 4300,
+          "latency_ms": 154.84883898940214
+        },
+        {
+          "requests": 4400,
+          "latency_ms": 158.14581734382492
+        },
+        {
+          "requests": 4500,
+          "latency_ms": 157.85784597240476
+        },
+        {
+          "requests": 4600,
+          "latency_ms": 154.37728237050712
+        },
+        {
+          "requests": 4700,
+          "latency_ms": 158.43910597088842
+        },
+        {
+          "requests": 4800,
+          "latency_ms": 148.3841755493575
+        },
+        {
+          "requests": 4900,
+          "latency_ms": 144.90892920310318
+        },
+        {
+          "requests": 5000,
+          "latency_ms": 169.38789505161859
+        },
+        {
+          "requests": 5100,
+          "latency_ms": 146.79375640088242
+        },
+        {
+          "requests": 5200,
+          "latency_ms": 149.18036461805565
+        },
+        {
+          "requests": 5300,
+          "latency_ms": 150.85865841242565
+        },
+        {
+          "requests": 5400,
+          "latency_ms": 152.6111139302421
+        },
+        {
+          "requests": 5500,
+          "latency_ms": 150.40949023834463
+        }
+      ]
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "recent_evaluations": [
+        {
+          "requests": 4700,
+          "latency_ms": 63.5395258043939
+        },
+        {
+          "requests": 4800,
+          "latency_ms": 63.5395258043939
+        },
+        {
+          "requests": 4900,
+          "latency_ms": 63.51517837065866
+        },
+        {
+          "requests": 5000,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5100,
+          "latency_ms": 63.49810718148799
+        },
+        {
+          "requests": 5200,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5300,
+          "latency_ms": 67.59379330465049
+        },
+        {
+          "requests": 5400,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5500,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5600,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5700,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5800,
+          "latency_ms": 63.51769707070025
+        },
+        {
+          "requests": 5900,
+          "latency_ms": 267.73305687498885
+        },
+        {
+          "requests": 6000,
+          "latency_ms": 63.61732565012258
+        },
+        {
+          "requests": 6100,
+          "latency_ms": 253.90875191345964
+        }
+      ]
+    }
+  ],
+  "estimates": [
+    {
+      "variant": "A",
+      "seed": 0,
+      "requests": 6200,
+      "percent": 62,
+      "target_requests": 10012.444444444445,
+      "last_request_age_s": 7.976250410079956,
+      "latest_ms": 63.51629779289937,
+      "best_ms": 63.41610950235668,
+      "initial_ms": 131.8048227031375,
+      "latest_eval_requests": 6100,
+      "seconds_per_request": [
+        7.382,
+        7.368
+      ],
+      "eta_early": "2026-11-12 06:14:15",
+      "eta_late": "2026-11-12 06:15:09"
+    },
+    {
+      "variant": "A",
+      "seed": 1,
+      "requests": 5460,
+      "percent": 54.6,
+      "target_requests": 10012.444444444445,
+      "last_request_age_s": 10.128437042236328,
+      "latest_ms": 131.84918963197228,
+      "best_ms": 63.90333803262152,
+      "initial_ms": 205.10564688007418,
+      "latest_eval_requests": 5400,
+      "seconds_per_request": [
+        7.983,
+        8.016
+      ],
+      "eta_early": "2026-11-12 08:31:47",
+      "eta_late": "2026-11-12 08:34:15"
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "requests": 5524,
+      "percent": 55.24,
+      "target_requests": 10012.444444444445,
+      "last_request_age_s": 6.1124444007873535,
+      "latest_ms": 150.40949023834463,
+      "best_ms": 63.69820390701318,
+      "initial_ms": 214.14804944481386,
+      "latest_eval_requests": 5500,
+      "seconds_per_request": [
+        7.93,
+        7.853
+      ],
+      "eta_early": "2026-11-12 08:13:35",
+      "eta_late": "2026-11-12 08:19:20"
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "requests": 6111,
+      "percent": 61.11,
+      "target_requests": 10012.444444444445,
+      "last_request_age_s": 4.999486923217773,
+      "latest_ms": 253.90875191345964,
+      "best_ms": 63.49810718148799,
+      "initial_ms": 280.73441084778966,
+      "latest_eval_requests": 6100,
+      "seconds_per_request": [
+        7.575,
+        7.489
+      ],
+      "eta_early": "2026-11-12 06:33:06",
+      "eta_late": "2026-11-12 06:38:42"
+    },
+    {
+      "variant": "B",
+      "seed": 1,
+      "requests": 6016,
+      "percent": 60.16,
+      "target_requests": 10012.444444444445,
+      "last_request_age_s": 8.574888944625854,
+      "latest_ms": 63.49558848144642,
+      "best_ms": 63.41610950235668,
+      "initial_ms": 278.9786058840769,
+      "latest_eval_requests": 6000,
+      "seconds_per_request": [
+        7.51,
+        7.428
+      ],
+      "eta_early": "2026-11-12 06:40:50",
+      "eta_late": "2026-11-12 06:46:20"
+    },
+    {
+      "variant": "B",
+      "seed": 2,
+      "requests": 6205,
+      "percent": 62.05,
+      "target_requests": 10012.444444444445,
+      "last_request_age_s": 8.02803921699524,
+      "latest_ms": 63.51769707070025,
+      "best_ms": 63.49558848144642,
+      "initial_ms": 266.0601052055544,
+      "latest_eval_requests": 6200,
+      "seconds_per_request": [
+        6.907,
+        6.98
+      ],
+      "eta_early": "2026-11-12 05:44:23",
+      "eta_late": "2026-11-12 05:49:00"
+    },
+    {
+      "variant": "C",
+      "seed": 0,
+      "requests": 6027,
+      "percent": 60.27,
+      "target_requests": 10119.529411764706,
+      "last_request_age_s": 3.5017409324645996,
+      "latest_ms": 63.51237981505692,
+      "best_ms": 63.51237981505692,
+      "initial_ms": 214.81327870819428,
+      "latest_eval_requests": 6000,
+      "seconds_per_request": [
+        6.885,
+        6.967
+      ],
+      "eta_early": "2026-11-12 06:15:45",
+      "eta_late": "2026-11-12 06:21:24"
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "requests": 5966,
+      "percent": 59.66,
+      "target_requests": 10119.529411764706,
+      "last_request_age_s": 9.171579122543335,
+      "latest_ms": 63.51237981505692,
+      "best_ms": 63.51237981505692,
+      "initial_ms": 161.77655804455628,
+      "latest_eval_requests": 5900,
+      "seconds_per_request": [
+        7.769,
+        7.778
+      ],
+      "eta_early": "2026-11-12 07:23:51",
+      "eta_late": "2026-11-12 07:24:30"
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "requests": 5934,
+      "percent": 59.34,
+      "target_requests": 10119.529411764706,
+      "last_request_age_s": 4.6802496910095215,
+      "latest_ms": 63.64055366161711,
+      "best_ms": 63.62320261688625,
+      "initial_ms": 267.1762001855605,
+      "latest_eval_requests": 5900,
+      "seconds_per_request": [
+        7.847,
+        7.873
+      ],
+      "eta_early": "2026-11-12 07:33:30",
+      "eta_late": "2026-11-12 07:35:21"
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "requests": 5940,
+      "percent": 59.4,
+      "target_requests": 10119.529411764706,
+      "last_request_age_s": 3.287109375,
+      "latest_ms": 63.41610950235668,
+      "best_ms": 63.41610950235668,
+      "initial_ms": 229.13733252285178,
+      "latest_eval_requests": 5900,
+      "seconds_per_request": [
+        7.906,
+        7.928
+      ],
+      "eta_early": "2026-11-12 07:36:53",
+      "eta_late": "2026-11-12 07:38:25"
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "requests": 5960,
+      "percent": 59.6,
+      "target_requests": 10119.529411764706,
+      "last_request_age_s": 6.893904685974121,
+      "latest_ms": 63.5227344707834,
+      "best_ms": 63.5227344707834,
+      "initial_ms": 183.89062659053909,
+      "latest_eval_requests": 5900,
+      "seconds_per_request": [
+        7.81,
+        7.837
+      ],
+      "eta_early": "2026-11-12 07:27:30",
+      "eta_late": "2026-11-12 07:29:26"
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "requests": 5744,
+      "percent": 57.44,
+      "target_requests": 10119.529411764706,
+      "last_request_age_s": 4.636236190795898,
+      "latest_ms": 63.5227344707834,
+      "best_ms": 63.51237981505692,
+      "initial_ms": 233.34283702347184,
+      "latest_eval_requests": 5700,
+      "seconds_per_request": [
+        7.296,
+        7.3
+      ],
+      "eta_early": "2026-11-12 07:18:13",
+      "eta_late": "2026-11-12 07:18:30"
+    }
+  ],
+  "evidence": {
+    "observed_unix": 1794407173.68845,
+    "runs": [
+      {
+        "variant": "A",
+        "seed": 0,
+        "job_id": "17077230",
+        "episode_steps": 153,
+        "requested_requests": 10000,
+        "requested_timesteps": 1530000,
+        "n_steps": 2048,
+        "complete_requests": 6200,
+        "monitor_start_unix": 1794360898.6870308,
+        "last_request_t": 46267.025169,
+        "monitor_mtime": 1794407165,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 365.1808769999989
+          },
+          {
+            "window": 200,
+            "seconds": 1476.4193119999982
+          },
+          {
+            "window": 500,
+            "seconds": 3683.995611999999
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 948224,
+          "time/time_elapsed": 46042,
+          "train/n_updates": 4620,
+          "train/loss": -0.0005370175349526107,
+          "train/policy_gradient_loss": -0.0014097717110416852,
+          "train/value_loss": 1.326020041547693e-7,
+          "train/explained_variance": 0.9999626874923706,
+          "train/approx_kl": 0.0014310634,
+          "train/clip_fraction": 0.00947265625,
+          "train/entropy_loss": -0.02886171839636518
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 61,
+        "initial": {
+          "reward": -0.470974464901369,
+          "latency_s": 0.13180482270313748
+        },
+        "latest_evaluation": {
+          "steps": 933300,
+          "reward": -0.226961
+        },
+        "best_evaluation": {
+          "steps": 719100,
+          "reward": -0.226603
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "A",
+        "seed": 1,
+        "job_id": "17077231",
+        "episode_steps": 153,
+        "requested_requests": 10000,
+        "requested_timesteps": 1530000,
+        "n_steps": 2048,
+        "complete_requests": 5460,
+        "monitor_start_unix": 1794360855.7395952,
+        "last_request_t": 46307.820418,
+        "monitor_mtime": 1794407163,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 403.5632010000045
+          },
+          {
+            "window": 200,
+            "seconds": 1596.6626870000036
+          },
+          {
+            "window": 500,
+            "seconds": 4008.0013370000015
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 833536,
+          "time/time_elapsed": 45998,
+          "train/n_updates": 4060,
+          "train/loss": -0.008551643230021,
+          "train/policy_gradient_loss": -0.0021297830287949184,
+          "train/value_loss": 0.000031982367249838714,
+          "train/explained_variance": 0.9977754354476929,
+          "train/approx_kl": 0.0021188515,
+          "train/clip_fraction": 0.028662109375,
+          "train/entropy_loss": -0.18299681269563733
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 54,
+        "initial": {
+          "reward": -0.7328982377614672,
+          "latency_s": 0.20510564688007418
+        },
+        "latest_evaluation": {
+          "steps": 826200,
+          "reward": -0.471133
+        },
+        "best_evaluation": {
+          "steps": 15300,
+          "reward": -0.228344
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "A",
+        "seed": 2,
+        "job_id": "17077232",
+        "episode_steps": 153,
+        "requested_requests": 10000,
+        "requested_timesteps": 1530000,
+        "n_steps": 2048,
+        "complete_requests": 5524,
+        "monitor_start_unix": 1794360855.6978087,
+        "last_request_t": 46311.878197,
+        "monitor_mtime": 1794407167,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 405.499109999997
+          },
+          {
+            "window": 200,
+            "seconds": 1585.974755999996
+          },
+          {
+            "window": 500,
+            "seconds": 3926.529097999999
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 843776,
+          "time/time_elapsed": 46025,
+          "train/n_updates": 4110,
+          "train/loss": -0.006007854826748371,
+          "train/policy_gradient_loss": -0.00041848719120025636,
+          "train/value_loss": 0.000012038985394724477,
+          "train/explained_variance": 0.9985734224319458,
+          "train/approx_kl": 0.0016891568,
+          "train/clip_fraction": 0.028955078125,
+          "train/entropy_loss": -0.13408669976051896
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 55,
+        "initial": {
+          "reward": -0.765209200456231,
+          "latency_s": 0.21414804944481386
+        },
+        "latest_evaluation": {
+          "steps": 841500,
+          "reward": -0.537454
+        },
+        "best_evaluation": {
+          "steps": 91800,
+          "reward": -0.227611
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "B",
+        "seed": 0,
+        "job_id": "17077233",
+        "episode_steps": 153,
+        "requested_requests": 10000,
+        "requested_timesteps": 1530000,
+        "n_steps": 2048,
+        "complete_requests": 6111,
+        "monitor_start_unix": 1794360899.0437822,
+        "last_request_t": 46269.645181,
+        "monitor_mtime": 1794407168,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 386.6324420000019
+          },
+          {
+            "window": 200,
+            "seconds": 1515.0170389999985
+          },
+          {
+            "window": 500,
+            "seconds": 3744.483887000002
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 933888,
+          "time/time_elapsed": 46009,
+          "train/n_updates": 4550,
+          "train/loss": -0.012030140496790409,
+          "train/policy_gradient_loss": -0.006866084897774271,
+          "train/value_loss": 0.0018398458772935556,
+          "train/explained_variance": 0.9405192136764526,
+          "train/approx_kl": 0.0044934824,
+          "train/clip_fraction": 0.04775390625,
+          "train/entropy_loss": -0.27411415413953366
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 61,
+        "initial": {
+          "reward": -1.0031403723840484,
+          "latency_s": 0.28073441084778966
+        },
+        "latest_evaluation": {
+          "steps": 933300,
+          "reward": -0.907285
+        },
+        "best_evaluation": {
+          "steps": 780300,
+          "reward": -0.226896
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "B",
+        "seed": 1,
+        "job_id": "17077234",
+        "episode_steps": 153,
+        "requested_requests": 10000,
+        "requested_timesteps": 1530000,
+        "n_steps": 2048,
+        "complete_requests": 6016,
+        "monitor_start_unix": 1794360899.0008492,
+        "last_request_t": 46266.112712,
+        "monitor_mtime": 1794407165,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 373.0760420000006
+          },
+          {
+            "window": 200,
+            "seconds": 1502.087649000001
+          },
+          {
+            "window": 500,
+            "seconds": 3714.0245310000028
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 919552,
+          "time/time_elapsed": 46017,
+          "train/n_updates": 4480,
+          "train/loss": -0.0002324843080714345,
+          "train/policy_gradient_loss": -0.000658884689619299,
+          "train/value_loss": 0.0000012108426172829923,
+          "train/explained_variance": 0.9994529485702515,
+          "train/approx_kl": 0.00042301934,
+          "train/clip_fraction": 0.007275390625,
+          "train/entropy_loss": -0.019811153922637458
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 60,
+        "initial": {
+          "reward": -0.9968664039032571,
+          "latency_s": 0.2789786058840769
+        },
+        "latest_evaluation": {
+          "steps": 918000,
+          "reward": -0.226887
+        },
+        "best_evaluation": {
+          "steps": 168300,
+          "reward": -0.226603
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "B",
+        "seed": 2,
+        "job_id": "17077235",
+        "episode_steps": 153,
+        "requested_requests": 10000,
+        "requested_timesteps": 1530000,
+        "n_steps": 2048,
+        "complete_requests": 6205,
+        "monitor_start_unix": 1794360898.6285598,
+        "last_request_t": 46267.031851,
+        "monitor_mtime": 1794407165,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 348.57138100000157
+          },
+          {
+            "window": 200,
+            "seconds": 1381.411365
+          },
+          {
+            "window": 500,
+            "seconds": 3489.8409299999985
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 948600,
+          "time/time_elapsed": 46003,
+          "train/n_updates": 4630,
+          "train/loss": 0.0054994612000882626,
+          "train/policy_gradient_loss": -0.001052886347315507,
+          "train/value_loss": 0.0000019955922814673956,
+          "train/explained_variance": 0.9991023540496826,
+          "train/approx_kl": 0.02744879,
+          "train/clip_fraction": 0.00458984375,
+          "train/entropy_loss": -0.007342758824643169
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 62,
+        "initial": {
+          "reward": -0.9507050888647423,
+          "latency_s": 0.2660601052055544
+        },
+        "latest_evaluation": {
+          "steps": 948600,
+          "reward": -0.226966
+        },
+        "best_evaluation": {
+          "steps": 780300,
+          "reward": -0.226887
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "C",
+        "seed": 0,
+        "job_id": "17077236",
+        "episode_steps": 17,
+        "requested_requests": 10000,
+        "requested_timesteps": 170000,
+        "n_steps": 2048,
+        "complete_requests": 6027,
+        "monitor_start_unix": 1794360898.6570172,
+        "last_request_t": 46271.529692,
+        "monitor_mtime": 1794407170,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 347.7567049999998
+          },
+          {
+            "window": 200,
+            "seconds": 1376.9141359999994
+          },
+          {
+            "window": 500,
+            "seconds": 3483.7163819999987
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 102400,
+          "time/time_elapsed": 46041,
+          "train/n_updates": 490,
+          "train/loss": -0.010022210888564587,
+          "train/policy_gradient_loss": -0.003566450991638703,
+          "train/value_loss": 4.424244610001793e-7,
+          "train/explained_variance": 0.9997475147247314,
+          "train/approx_kl": 0.0024918595,
+          "train/clip_fraction": 0.0134765625,
+          "train/entropy_loss": -0.4178138432092965
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 60,
+        "initial": {
+          "reward": -0.7675862454681801,
+          "latency_s": 0.21481327870819428
+        },
+        "latest_evaluation": {
+          "steps": 102000,
+          "reward": -0.226947
+        },
+        "best_evaluation": {
+          "steps": 93500,
+          "reward": -0.226947
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "C",
+        "seed": 1,
+        "job_id": "17077237",
+        "episode_steps": 17,
+        "requested_requests": 10000,
+        "requested_timesteps": 170000,
+        "n_steps": 2048,
+        "complete_requests": 5966,
+        "monitor_start_unix": 1794360898.638865,
+        "last_request_t": 46265.878006,
+        "monitor_mtime": 1794407164,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 385.43821500000195
+          },
+          {
+            "window": 200,
+            "seconds": 1553.7374259999997
+          },
+          {
+            "window": 500,
+            "seconds": 3889.0289090000006
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 100352,
+          "time/time_elapsed": 45573,
+          "train/n_updates": 480,
+          "train/loss": -0.006809290964156389,
+          "train/policy_gradient_loss": -0.004968547959288116,
+          "train/value_loss": 2.2433659686571515e-7,
+          "train/explained_variance": 0.9998937249183655,
+          "train/approx_kl": 0.004730342,
+          "train/clip_fraction": 0.065380859375,
+          "train/entropy_loss": -0.519729087408632
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 59,
+        "initial": {
+          "reward": -0.5780716236023318,
+          "latency_s": 0.1617765580445563
+        },
+        "latest_evaluation": {
+          "steps": 100300,
+          "reward": -0.226947
+        },
+        "best_evaluation": {
+          "steps": 76500,
+          "reward": -0.226947
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "C",
+        "seed": 2,
+        "job_id": "17077238",
+        "episode_steps": 17,
+        "requested_requests": 10000,
+        "requested_timesteps": 170000,
+        "n_steps": 2048,
+        "complete_requests": 5934,
+        "monitor_start_unix": 1794360898.6790264,
+        "last_request_t": 46270.329174,
+        "monitor_mtime": 1794407169,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 397.7656829999978
+          },
+          {
+            "window": 200,
+            "seconds": 1569.303003000001
+          },
+          {
+            "window": 500,
+            "seconds": 3936.499585999998
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 100352,
+          "time/time_elapsed": 45822,
+          "train/n_updates": 480,
+          "train/loss": 0.0723290890455246,
+          "train/policy_gradient_loss": -0.0015026093038613907,
+          "train/value_loss": 2.5454264541702186e-7,
+          "train/explained_variance": 0.9995586276054382,
+          "train/approx_kl": 0.0086853085,
+          "train/clip_fraction": 0.066259765625,
+          "train/entropy_loss": -0.57061937302351
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 59,
+        "initial": {
+          "reward": -0.9546931996577092,
+          "latency_s": 0.2671762001855605
+        },
+        "latest_evaluation": {
+          "steps": 100300,
+          "reward": -0.227405
+        },
+        "best_evaluation": {
+          "steps": 86700,
+          "reward": -0.227343
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "D",
+        "seed": 0,
+        "job_id": "17077239",
+        "episode_steps": 17,
+        "requested_requests": 10000,
+        "requested_timesteps": 170000,
+        "n_steps": 2048,
+        "complete_requests": 5940,
+        "monitor_start_unix": 1794360898.7029908,
+        "last_request_t": 46271.69835,
+        "monitor_mtime": 1794407170,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 401.1073570000008
+          },
+          {
+            "window": 200,
+            "seconds": 1581.196054
+          },
+          {
+            "window": 500,
+            "seconds": 3963.926370000001
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 100352,
+          "time/time_elapsed": 45775,
+          "train/n_updates": 480,
+          "train/loss": 0.0029266453348100185,
+          "train/policy_gradient_loss": -0.0033928047072549817,
+          "train/value_loss": 0.00006732879987083606,
+          "train/explained_variance": 0.9856719970703125,
+          "train/approx_kl": 0.0029897166,
+          "train/clip_fraction": 0.040283203125,
+          "train/entropy_loss": -1.0730510976165533
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 59,
+        "initial": {
+          "reward": -0.8187699839856338,
+          "latency_s": 0.2291373325228518
+        },
+        "latest_evaluation": {
+          "steps": 100300,
+          "reward": -0.226603
+        },
+        "best_evaluation": {
+          "steps": 96900,
+          "reward": -0.226603
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "D",
+        "seed": 1,
+        "job_id": "17077240",
+        "episode_steps": 17,
+        "requested_requests": 10000,
+        "requested_timesteps": 170000,
+        "n_steps": 2048,
+        "complete_requests": 5960,
+        "monitor_start_unix": 1794360898.6366515,
+        "last_request_t": 46268.157894,
+        "monitor_mtime": 1794407166,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 386.9187340000062
+          },
+          {
+            "window": 200,
+            "seconds": 1561.9088610000035
+          },
+          {
+            "window": 500,
+            "seconds": 3918.6569240000026
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 100352,
+          "time/time_elapsed": 45620,
+          "train/n_updates": 480,
+          "train/loss": -0.014489141292870045,
+          "train/policy_gradient_loss": -0.008842075242864667,
+          "train/value_loss": 0.00000456812776619131,
+          "train/explained_variance": 0.9987779855728149,
+          "train/approx_kl": 0.007134653,
+          "train/clip_fraction": 0.09052734375,
+          "train/entropy_loss": -1.0872504368424416
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 59,
+        "initial": {
+          "reward": -0.6570912026028239,
+          "latency_s": 0.1838906265905391
+        },
+        "latest_evaluation": {
+          "steps": 100300,
+          "reward": -0.226984
+        },
+        "best_evaluation": {
+          "steps": 98600,
+          "reward": -0.226984
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      },
+      {
+        "variant": "D",
+        "seed": 2,
+        "job_id": "17077241",
+        "episode_steps": 17,
+        "requested_requests": 10000,
+        "requested_timesteps": 170000,
+        "n_steps": 2048,
+        "complete_requests": 5744,
+        "monitor_start_unix": 1794360899.509312,
+        "last_request_t": 46269.542902,
+        "monitor_mtime": 1794407169,
+        "recent_windows": [
+          {
+            "window": 50,
+            "seconds": 387.7177539999975
+          },
+          {
+            "window": 200,
+            "seconds": 1459.248209999998
+          },
+          {
+            "window": 500,
+            "seconds": 3649.989431000002
+          }
+        ],
+        "metrics": {
+          "time/total_timesteps": 96900,
+          "time/time_elapsed": 45439,
+          "train/n_updates": 470,
+          "train/loss": -0.007114258129149675,
+          "train/policy_gradient_loss": -0.005900294587627286,
+          "train/value_loss": 0.00004800477674749004,
+          "train/explained_variance": 0.9854482412338257,
+          "train/approx_kl": 0.003726472,
+          "train/clip_fraction": 0.047802734375,
+          "train/entropy_loss": -0.6735859028995037
+        },
+        "nonfinite_metrics": [],
+        "evaluation_count": 57,
+        "initial": {
+          "reward": -0.8337973949042835,
+          "latency_s": 0.23334283702347183
+        },
+        "latest_evaluation": {
+          "steps": 96900,
+          "reward": -0.226984
+        },
+        "best_evaluation": {
+          "steps": 66300,
+          "reward": -0.226947
+        },
+        "normalization_s": 0.2798555601750934,
+        "summary": null
+      }
+    ]
+  }
+}
