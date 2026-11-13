@@ -5,26 +5,46 @@
 
 当前支持下述 A/B/C/D 观测与决策粒度对照。原始实验合同描述 A 组；历史 `runs/ppo_seed0` 保留不覆盖。
 
-## Bifocal 评分参数搜索
+四组训练方案、实际预算、结果与曲线见[仓库首页](../README.md)。
 
-`dops_sb3.bifocal_search` 使用与 PPO 相同的硬件、fast 成本、KV ledger 和连续计时；Bifocal 保留逐节点放置及自由拓扑序。原评分配置为 `configs/bifocal.json`，修改后的 far focus 配置为 `configs/bifocal_far.json`。两者均使用固定复用窗口，不读取真实剩余输出长度。
+## 四组观测与决策粒度实验
 
-| 配置 | 三 seed 完整请求耗时 / ms |
-| --- | ---: |
-| 原 Bifocal 调参最优 | 64.615654 |
-| 新 far focus | 63.517612 |
-| 全 PIM 固定基线 | 63.517819 |
+| 组别 | 观测 | 动作 | 每请求步数 |
+| --- | --- | --- | ---: |
+| A | 原始 15 维 | Discrete(2)，逐算子选择 | 153 |
+| B | 增强 23 维 | Discrete(2)，逐算子选择 | 153 |
+| C | 原始信息范围 6 维：设备时间、阶段、decode 进度 | MultiBinary(9)，整段放置 | 17 |
+| D | 增强 15 维 | MultiBinary(9)，整段放置 | 17 |
 
-新 far focus 直接继承原 EFT、短链前瞻、ready 选择和一致性机制，以未来 decode 的设备成本差替换旧权重复用收益与摊销，自行生成全 PIM 主算子放置。与全 PIM 持平，尚未超过 PPO best 的 63.415978 ms。实现与完整结果见 [Bifocal 报告](reports/2026-11-12_DOPS_list_scheduler/Bifocal_far修改与Qwen1.8B结果.md)；原评分的 211 组参数搜索见 [搜索记录](reports/2026-11-12_DOPS_list_scheduler/Bifocal评分开启与参数搜索结果.md)。
+B/D 的共同输入依次为：`log1p(当前已写 KV token 数)`（1）、段开始 NPU 权重驻留（7）、段开始 PIM 权重驻留（7）。权重类别顺序为 Q、K、V、O、FFN_W1、FFN_W3、FFN_W2；驻留标记取 0/1，允许两边同时驻留。增强观测不使用最终生成长度、完成百分比或绝对设备时钟。
+
+B 再附加 Q、K、V、QK、SV、O、FFN_W1、FFN_W3 的三值前缀（8）：−1 未选、0 NPU、1 PIM。首个未选位置确定当前算子；八项全选时当前为 FFN_W2，因此无需算子 one-hot 或额外 mask。
+
+驻留标记描述整类权重在段开始时是否全有/全无，并在段内冻结。两个 PIM 各保存自己的 shard；仅在完整段边界合并标记。当前固定大容量配置下使用这一压缩；若出现部分层驻留或 PIM 分片不对称，环境明确报错，不能将其当作未驻留继续训练。后端身份、格式、容量与执行算法均沿用原实现。
+
+四组共同使用原生 PPO：n_steps=2048、batch_size=64、n_epochs=10、learning_rate=3e-4、gamma=1、gae_lambda=0.95，其他参数沿用 `configs/ppo.json`。Actor/Critic 保持各两层 64 单元，CPU 单环境。C/D 为原生条件独立 Bernoulli 输出，不使用 512 类输出头或自回归策略。
+
+四组共 12 次正式训练已完成。Budget 的三 seed 耗时分别为 A 84.709±20.021、B 64.836±0.747、C 63.523±0.000、D 63.484±0.059 ms；完整结果和训练稳定性分析见 [实验报告](reports/2026-11-12_四组PPO实验结果分析.md)。
+
+每组 seed 0、1、2，目标各 10,000 个请求。原生 PPO 完成整个 rollout 后退出，因此 A/B 实际为 1,531,904 步（10,012 完整请求＋68 步），C/D 为 172,032 步（10,119 完整请求＋9 步）。相同请求预算下两种粒度的优化次数不同，按实际值记录，不单独归因于 reward 结算。
+
+每 100 个请求评估并存档：A/B 间隔 15,300 步，C/D 间隔 1,700 步。第 10,000 请求处的 `budget` 检查点独立回放；`final` 是最后一次完整 rollout 更新后的策略，二者不混用。
 
 ```bash
-PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --check --out runs/new_bifocal_check
-PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --out runs/new_bifocal_search --workers 4 --coarse 96 --refine 48 --top 5
-PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --params configs/bifocal.json --seed 0 --out runs/new_bifocal_legacy
-PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --params configs/bifocal_far.json --seed 0 --out runs/new_bifocal_far
+.venv/bin/python -m pytest tests -q
+.venv/bin/python -m dops_sb3.train --smoke --variant D --seed 0 --out runs/new_d_smoke
+.venv/bin/python -m dops_sb3.verify_run runs/new_d_smoke
+.venv/bin/python -m dops_sb3.train --variant B --seed 1 --out runs/obs_action_ablation/B/seed1
+.venv/bin/python -m dops_sb3.plot --compare runs/obs_action_ablation
 ```
 
-输出包含候选、逐次结果、多 seed 汇总和节点计划；单次复现与最佳计划都会独立回放核对。`far_mode` 支持 `legacy`、`prefill`、`both`。指定候选集可使用 `--candidates path/to/candidates.json --refine 0`。输出目录必须不存在；原生 DOPS CLI 不会自动加载本入口的配置。结果仅代表当前 workload 下已搜索集合中的最优值。
+HPC 复用 `slurm/run.sh`，例如 `slurm/run.sh train runs/obs_action_ablation/D/seed2 --variant D --seed 2`。训练后自动执行结果核对。先本地修改和验证，再通过 data 节点上传并逐文件比较；只能在计算节点运行测试和训练。
+
+12 次训练全部成功后，可通过依赖它们的 Slurm 汇总作业执行 `slurm/run.sh compare runs/obs_action_ablation`，自动生成四组 CSV 和图表。
+
+每次运行新增 `experiment.json` 记录组别、seed、episode 长度及请求预算；其余沿用现有配置、Monitor/progress、TensorBoard、模型和图表工件。`summary.json` 记录实际完整请求/尾部、rollout、训练 epoch、优化次数、参数量及 initial/budget/best/final。四种策略结果的 actions 均为按段展开的153位，重排为17×9即可比较。
+
+对照入口汇总已完成目录：`comparison.csv`（每个 seed 的策略结果）、`summary_statistics.csv`（组内均值与样本标准差）、`evaluation_statistics.csv`（共同评估点统计）、`loss_statistics.csv`（共同训练 epoch 的原生 loss 统计）、`placements.csv`（完整放置）和 `comparison.json`（覆盖数量/口径）。不足三个 seed 时明确 n，单个 seed 的标准差留空。图表输出到根目录 `figures/`，保留各 seed 曲线及组内均值±标准差；Loss 展示原始日志，不判定性能成败或策略优劣。短测图明确标为 SMOKE。
 
 ## 实验合同
 
@@ -156,41 +176,23 @@ PPO total loss 是原生最后 minibatch 的值，不是整轮平均值；value/
 
 历史 BC / Critic / 自写 PPO 的源码与工件位于 [archive/bc-ppo](https://github.com/YIAI-02/DOPS-Serve/tree/archive/bc-ppo)。
 
-## 四组观测与决策粒度实验
+## Bifocal 评分参数搜索
 
-| 组别 | 观测 | 动作 | 每请求步数 |
-| --- | --- | --- | ---: |
-| A | 原始 15 维 | Discrete(2)，逐算子选择 | 153 |
-| B | 增强 23 维 | Discrete(2)，逐算子选择 | 153 |
-| C | 原始信息范围 6 维：设备时间、阶段、decode 进度 | MultiBinary(9)，整段放置 | 17 |
-| D | 增强 15 维 | MultiBinary(9)，整段放置 | 17 |
+`dops_sb3.bifocal_search` 使用与 PPO 相同的硬件、fast 成本、KV ledger 和连续计时；Bifocal 保留逐节点放置及自由拓扑序。原评分配置为 `configs/bifocal.json`，修改后的 far focus 配置为 `configs/bifocal_far.json`。两者均使用固定复用窗口，不读取真实剩余输出长度。
 
-B/D 的共同输入依次为：`log1p(当前已写 KV token 数)`（1）、段开始 NPU 权重驻留（7）、段开始 PIM 权重驻留（7）。权重类别顺序为 Q、K、V、O、FFN_W1、FFN_W3、FFN_W2；驻留标记取 0/1，允许两边同时驻留。增强观测不使用最终生成长度、完成百分比或绝对设备时钟。
+| 配置 | 三 seed 完整请求耗时 / ms |
+| --- | ---: |
+| 原 Bifocal 调参最优 | 64.615654 |
+| 新 far focus | 63.517612 |
+| 全 PIM 固定基线 | 63.517819 |
 
-B 再附加 Q、K、V、QK、SV、O、FFN_W1、FFN_W3 的三值前缀（8）：−1 未选、0 NPU、1 PIM。首个未选位置确定当前算子；八项全选时当前为 FFN_W2，因此无需算子 one-hot 或额外 mask。
-
-驻留标记描述整类权重在段开始时是否全有/全无，并在段内冻结。两个 PIM 各保存自己的 shard；仅在完整段边界合并标记。当前固定大容量配置下使用这一压缩；若出现部分层驻留或 PIM 分片不对称，环境明确报错，不能将其当作未驻留继续训练。后端身份、格式、容量与执行算法均沿用原实现。
-
-四组共同使用原生 PPO：n_steps=2048、batch_size=64、n_epochs=10、learning_rate=3e-4、gamma=1、gae_lambda=0.95，其他参数沿用 `configs/ppo.json`。Actor/Critic 保持各两层 64 单元，CPU 单环境。C/D 为原生条件独立 Bernoulli 输出，不使用 512 类输出头或自回归策略。
-
-四组共 12 次正式训练已完成。Budget 的三 seed 耗时分别为 A 84.709±20.021、B 64.836±0.747、C 63.523±0.000、D 63.484±0.059 ms；完整结果和训练稳定性分析见 [实验报告](reports/2026-11-12_四组PPO实验结果分析.md)。
-
-每组 seed 0、1、2，目标各 10,000 个请求。原生 PPO 完成整个 rollout 后退出，因此 A/B 实际为 1,531,904 步（10,012 完整请求＋68 步），C/D 为 172,032 步（10,119 完整请求＋9 步）。相同请求预算下两种粒度的优化次数不同，按实际值记录，不单独归因于 reward 结算。
-
-每 100 个请求评估并存档：A/B 间隔 15,300 步，C/D 间隔 1,700 步。第 10,000 请求处的 `budget` 检查点独立回放；`final` 是最后一次完整 rollout 更新后的策略，二者不混用。
+新 far focus 直接继承原 EFT、短链前瞻、ready 选择和一致性机制，以未来 decode 的设备成本差替换旧权重复用收益与摊销，自行生成全 PIM 主算子放置。与全 PIM 持平，尚未超过 PPO best 的 63.415978 ms。实现与完整结果见 [Bifocal 报告](reports/2026-11-12_DOPS_list_scheduler/Bifocal_far修改与Qwen1.8B结果.md)；原评分的 211 组参数搜索见 [搜索记录](reports/2026-11-12_DOPS_list_scheduler/Bifocal评分开启与参数搜索结果.md)。
 
 ```bash
-.venv/bin/python -m pytest tests -q
-.venv/bin/python -m dops_sb3.train --smoke --variant D --seed 0 --out runs/new_d_smoke
-.venv/bin/python -m dops_sb3.verify_run runs/new_d_smoke
-.venv/bin/python -m dops_sb3.train --variant B --seed 1 --out runs/obs_action_ablation/B/seed1
-.venv/bin/python -m dops_sb3.plot --compare runs/obs_action_ablation
+PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --check --out runs/new_bifocal_check
+PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --out runs/new_bifocal_search --workers 4 --coarse 96 --refine 48 --top 5
+PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --params configs/bifocal.json --seed 0 --out runs/new_bifocal_legacy
+PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --params configs/bifocal_far.json --seed 0 --out runs/new_bifocal_far
 ```
 
-HPC 复用 `slurm/run.sh`，例如 `slurm/run.sh train runs/obs_action_ablation/D/seed2 --variant D --seed 2`。训练后自动执行结果核对。先本地修改和验证，再通过 data 节点上传并逐文件比较；只能在计算节点运行测试和训练。
-
-12 次训练全部成功后，可通过依赖它们的 Slurm 汇总作业执行 `slurm/run.sh compare runs/obs_action_ablation`，自动生成四组 CSV 和图表。
-
-每次运行新增 `experiment.json` 记录组别、seed、episode 长度及请求预算；其余沿用现有配置、Monitor/progress、TensorBoard、模型和图表工件。`summary.json` 记录实际完整请求/尾部、rollout、训练 epoch、优化次数、参数量及 initial/budget/best/final。四种策略结果的 actions 均为按段展开的153位，重排为17×9即可比较。
-
-对照入口汇总已完成目录：`comparison.csv`（每个 seed 的策略结果）、`summary_statistics.csv`（组内均值与样本标准差）、`evaluation_statistics.csv`（共同评估点统计）、`loss_statistics.csv`（共同训练 epoch 的原生 loss 统计）、`placements.csv`（完整放置）和 `comparison.json`（覆盖数量/口径）。不足三个 seed 时明确 n，单个 seed 的标准差留空。图表输出到根目录 `figures/`，保留各 seed 曲线及组内均值±标准差；Loss 展示原始日志，不判定性能成败或策略优劣。短测图明确标为 SMOKE。
+输出包含候选、逐次结果、多 seed 汇总和节点计划；单次复现与最佳计划都会独立回放核对。`far_mode` 支持 `legacy`、`prefill`、`both`。指定候选集可使用 `--candidates path/to/candidates.json --refine 0`。输出目录必须不存在；原生 DOPS CLI 不会自动加载本入口的配置。结果仅代表当前 workload 下已搜索集合中的最优值。
