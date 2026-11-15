@@ -1,6 +1,6 @@
 # DOPS-Serve：四组 PPO 训练实验
 
-SB3 PPO，从头训练，每组 3 个 seed。各工况的模拟批次耗时除以该工况的全 NPU 耗时，再取等权平均，越低越好。
+四组策略均用 SB3 PPO 从头训练，每组 3 个 seed。归一化耗时为各工况的模拟批次耗时与该工况全 NPU 耗时之比，再对工况取等权平均。全 NPU 的归一化耗时为 1。
 
 ## 1. 四组训练方案
 
@@ -30,15 +30,13 @@ Qwen 1.8B，28 层，FP16，1 NPU + 2 PIM，冷缓存。层间共享放置，每
 | 训练 epochs | 7,480 | 840 |
 | Optimizer steps | 239,360 | 26,880 |
 
-相同批次预算下，A/B 的优化步数是 C/D 的 **8.90 倍**。
-
 可变 decode 取 64、128、512、1024，与上述 prefill 和 batch 组成 36 种等概率训练工况。A/B 每个 seed 训练 1,530,000 个目标环境步，C/D 为 170,000，每 20% 评估一次。泛化使用相同的 9 组 prefill 和 batch，decode 取 256、796，共 18 种。
 
 Actor/Critic 各 2×64；rollout=2048，batch=64，每轮 10 epochs；lr=3e−4，γ=1，GAE λ=0.95，clip=0.2，ent_coef=0，未设 target_kl。
 
 ## 3. 四组结果与固定基线
 
-以下为固定 decode=64 的 9 种训练工况，每组 3 个 seed 的均值 ± 样本标准差。Best 为周期评估最优，第 10,000 批为同预算检查点，Final 为最后一轮更新后。
+下表给出固定 decode=64 时，9 种训练工况的归一化耗时。每组报告 3 个 seed 的均值 ± 样本标准差。Best 取各 seed 历次周期评估的最低值，第 10,000 批取该批次的检查点，Final 取最后一轮 PPO 更新后的模型。
 
 | 方案 | Best | 第 10,000 批 | Final | Final − Best |
 | --- | ---: | ---: | ---: | ---: |
@@ -54,7 +52,7 @@ Actor/Critic 各 2×64；rollout=2048，batch=64，每轮 10 epochs；lr=3e−4�
 | Prefill NPU / Decode PIM | 0.6722 |
 | 逐工况取最快固定策略 | 0.5648 |
 
-按 9 种训练工况的 Final 选出 **B / seed 2**，归一化耗时 **0.4988**，4 种未见工况为 **0.5682**。
+在 4 种未见工况上，A、B、C、D 的 Final 归一化耗时分别为 0.6457、0.5741、0.6073、0.6198（3 个 seed 的均值）。归档模型 B / seed 2 在 9 种训练工况和 4 种未见工况上的数值分别为 0.4988 和 0.5682。
 
 可变 decode 实验截至 11 月 15 日已完成初始评估。36 种训练工况上，A/B/C/D 的 Initial 分别为 1.0728、0.7717、0.9120、0.8539（3 个 seed 均值），Final 和 18 种未见工况结果待训练结束后评估。[逐工况 Initial](SB3_PPO/runs/mixed_decode_20261115/initial.csv) · [固定基线](SB3_PPO/runs/mixed_decode_accept_20261115_r2/fixed_baselines.json)
 

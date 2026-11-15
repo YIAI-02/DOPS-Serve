@@ -32,7 +32,7 @@ B 再附加 Q、K、V、QK、SV、O、FFN_W1、FFN_W3 的三值前缀（8）：�
 
 四组共 12 次正式训练已完成。Budget 的三 seed 耗时分别为 A 84.709±20.021、B 64.836±0.747、C 63.523±0.000、D 63.484±0.059 ms；完整结果和训练稳定性分析见 [实验报告](reports/2026-11-12_四组PPO实验结果分析.md)。
 
-每组 seed 0、1、2，目标各 10,000 个请求。原生 PPO 完成整个 rollout 后退出，因此 A/B 实际为 1,531,904 步（10,012 完整请求＋68 步），C/D 为 172,032 步（10,119 完整请求＋9 步）。相同请求预算下两种粒度的优化次数不同，按实际值记录，不单独归因于 reward 结算。
+每组 seed 0、1、2，目标各 10,000 个请求。原生 PPO 完成整个 rollout 后退出，因此 A/B 实际为 1,531,904 步（10,012 完整请求＋68 步），C/D 为 172,032 步（10,119 完整请求＋9 步）。
 
 每 100 个请求评估并存档：A/B 间隔 15,300 步，C/D 间隔 1,700 步。第 10,000 请求处的 `budget` 检查点独立回放；`final` 是最后一次完整 rollout 更新后的策略，二者不混用。
 
@@ -50,7 +50,7 @@ HPC 复用 `slurm/run.sh`，例如 `slurm/run.sh train runs/obs_action_ablation/
 
 每次运行新增 `experiment.json` 记录组别、seed、episode 长度及请求预算；其余沿用现有配置、Monitor/progress、TensorBoard、模型和图表工件。`summary.json` 记录实际完整请求/尾部、rollout、训练 epoch、优化次数、参数量及 initial/budget/best/final。四种策略结果的 actions 均为按段展开的153位，重排为17×9即可比较。
 
-对照入口汇总已完成目录：`comparison.csv`（每个 seed 的策略结果）、`summary_statistics.csv`（组内均值与样本标准差）、`evaluation_statistics.csv`（共同评估点统计）、`loss_statistics.csv`（共同训练 epoch 的原生 loss 统计）、`placements.csv`（完整放置）和 `comparison.json`（覆盖数量/口径）。不足三个 seed 时明确 n，单个 seed 的标准差留空。图表输出到根目录 `figures/`，保留各 seed 曲线及组内均值±标准差；Loss 展示原始日志，不判定性能成败或策略优劣。短测图明确标为 SMOKE。
+对照入口汇总已完成目录：`comparison.csv`（每个 seed 的策略结果）、`summary_statistics.csv`（组内均值与样本标准差）、`evaluation_statistics.csv`（共同评估点统计）、`loss_statistics.csv`（共同训练 epoch 的原生 loss 统计）、`placements.csv`（完整放置）和 `comparison.json`（覆盖数量/口径）。不足三个 seed 时明确 n，单个 seed 的标准差留空。图表输出到根目录 `figures/`，保留各 seed 曲线及组内均值±标准差。Loss 图展示原始日志。短测图明确标为 SMOKE。
 
 ## 实验合同
 
@@ -80,7 +80,7 @@ PIM collective 的代表设备取 PIM0，但输出在全部参与设备可用。
 
 奖励为 `r_t = -(M_{t+1} - M_t) / C`。M 包括所有已提交任务、设备和链路预留的最大结束时间；初始自动执行部分也计入第一步。
 C 固定为冷启动全主算子 NPU 基线的完整请求耗时。`gamma=1`，所以总 reward 精确对应 `-总耗时/C`，全 NPU 基线为 -1。
-并行工作未延长 M 时 reward 可以为 0；第九步承担剩余层和 tokens 的时间，因此可能较大。reward 越接近 0 越好。
+并行工作未延长 M 时，该步 reward 为 0。第九步的 reward 包含剩余层和 token 的耗时增量。
 
 ## 代码来源与入口
 
@@ -157,7 +157,6 @@ sbatch -A hpc2006191081 -q high -p C064M0256G -N 1 -n 1 -c 2 -t 4-00:00:00 \
 Reward/latency 横轴用训练请求数；Loss 横轴用原生 `train/n_updates`（训练 epoch 计数），避免 SB3 延迟 dump 导致两个 loss 点落在相同 env step 上。
 PPO total loss 是原生最后 minibatch 的值，不是整轮平均值；value/policy loss 的口径沿用 SB3。
 周期评估在采样期间触发，因此最后一次梯度更新后的 final 策略另行保存、评估和标注；best 指周期评估最优。
-先看确定性评估 reward/latency 相对初始、随机和固定策略是否改善，再结合 loss、KL 等诊断；不以 loss 下降或短 smoke 结果宣称学会调度。
 
 ## 已归档的运行结果
 
@@ -168,12 +167,12 @@ PPO total loss 是原生最后 minibatch 的值，不是整轮平均值；value/
 | [runs/ppo_seed0](runs/ppo_seed0) | 正式 CPU 训练，1,531,904 steps，已完成；含 74 个周期 checkpoint、初始/最佳/最终模型、配置、全部指标和曲线 |
 | [runs/obs_action_ablation](runs/obs_action_ablation) | A/B/C/D 各三个 seed 的完整训练输出、模型、检查点和汇总分析 |
 | [runs/bifocal_far_20261112](runs/bifocal_far_20261112) | 新 far 评分的候选、生成计划、成本表、参数搜索及验证记录 |
-| [runs/hpc_smoke](runs/hpc_smoke)、[runs/local_smoke](runs/local_smoke) | HPC / 本地 512-step 链路验收，不用于判断学习效果 |
-| [runs/gpu_benchmark](runs/gpu_benchmark) | 同一 A800 节点 CPU/CUDA 各 4096-step 对比，已完成，未观察到可靠 CUDA 加速 |
-| [runs/gpu_benchmark_repeat](runs/gpu_benchmark_repeat) | 用户要求停止的 A100 复测，仅有部分输出，不能作完整对比 |
+| [runs/hpc_smoke](runs/hpc_smoke)、[runs/local_smoke](runs/local_smoke) | HPC / 本地 512-step 训练和模型重载记录 |
+| [runs/gpu_benchmark](runs/gpu_benchmark) | 同一 A800 节点各训练 4,096 步，CPU 为 19.794 steps/s，CUDA 为 19.475 steps/s |
+| [runs/gpu_benchmark_repeat](runs/gpu_benchmark_repeat) | A100 复测中断前的输出 |
 | [reports](reports) | 首次验收、正式提交、GPU 测速、最终结果报告 |
 
-正式训练最佳模拟请求耗时为 63.416 ms，最终为 103.798 ms；全 PIM 基线为 63.518 ms。训练中存在回退，约 139 万步后持续退化，不能判定为稳定收敛。详见 [正式训练结果](reports/2026-10-28_SB3_PPO_正式训练结果.md)。
+单工况 seed 0 的模拟请求耗时分别为 Best 63.416 ms、Final 103.798 ms、全 PIM 基线 63.518 ms。详见 [正式训练结果](reports/2026-10-28_SB3_PPO_正式训练结果.md)。
 
 ```bash
 .venv/bin/python -m dops_sb3.verify_run runs/ppo_seed0
@@ -192,7 +191,7 @@ PPO total loss 是原生最后 minibatch 的值，不是整轮平均值；value/
 | 新 far focus | 63.517612 |
 | 全 PIM 固定基线 | 63.517819 |
 
-新 far focus 直接继承原 EFT、短链前瞻、ready 选择和一致性机制，以未来 decode 的设备成本差替换旧权重复用收益与摊销，自行生成全 PIM 主算子放置。与全 PIM 持平，尚未超过 PPO best 的 63.415978 ms。实现与完整结果见 [Bifocal 报告](reports/2026-11-12_DOPS_list_scheduler/Bifocal_far修改与Qwen1.8B结果.md)；原评分的 211 组参数搜索见 [搜索记录](reports/2026-11-12_DOPS_list_scheduler/Bifocal评分开启与参数搜索结果.md)。
+新 far focus 直接继承原 EFT、短链前瞻、ready 选择和一致性机制，以未来 decode 的设备成本差替换旧权重复用收益与摊销，自行生成全 PIM 主算子放置。同一工况的 PPO Best 为 63.415978 ms。实现与完整结果见 [Bifocal 报告](reports/2026-11-12_DOPS_list_scheduler/Bifocal_far修改与Qwen1.8B结果.md)；原评分的 211 组参数搜索见 [搜索记录](reports/2026-11-12_DOPS_list_scheduler/Bifocal评分开启与参数搜索结果.md)。
 
 ```bash
 PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --check --out runs/new_bifocal_check
