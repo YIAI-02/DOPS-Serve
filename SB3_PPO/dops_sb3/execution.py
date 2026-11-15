@@ -9,7 +9,19 @@ REQUEST_ID = "single_request"
 PROMPT_LENGTH = 64
 DECODE_LENGTH = 64
 REFRESH_TOKENS = 4
-SEGMENTS = 1 + DECODE_LENGTH // REFRESH_TOKENS
+
+
+def segment_count(decode_length):
+    return 1 + (decode_length + REFRESH_TOKENS - 1) // REFRESH_TOKENS
+
+
+def segment_tokens(segment, decode_length):
+    if segment == 0:
+        return 1
+    return min(REFRESH_TOKENS, decode_length - (segment - 1) * REFRESH_TOKENS)
+
+
+SEGMENTS = segment_count(DECODE_LENGTH)
 EPISODE_STEPS = SEGMENTS * len(OPERATORS)
 
 
@@ -17,16 +29,23 @@ def make_evaluator():
     return FixedPlacementEvaluator(ROOT / "backend", ROOT / "configs/environment.json", {}, 0)
 
 
-def cold_snapshot(evaluator):
+def workload_key(workload):
+    key = f"p{workload['prefill_len']}_b{workload['batch']}"
+    return f"{key}_d{workload['decode_len']}" if "decode_len" in workload else key
+
+
+def cold_snapshot(evaluator, prompt_length=PROMPT_LENGTH, batch=1, decode_length=DECODE_LENGTH):
     # 不能只 reset_state：设备/链路时钟、权重缓存和 KV 都必须回到未执行过的状态。
     snapshot = evaluator.initial.clone()
-    evaluator.reserve(snapshot, REQUEST_ID, PROMPT_LENGTH, DECODE_LENGTH)
+    for index in range(batch):
+        request_id = REQUEST_ID if batch == 1 else f"request_{index}"
+        evaluator.reserve(snapshot, request_id, prompt_length, decode_length)
     return snapshot
 
 
-def request_shape(snapshot, phase):
-    return (RequestShape(REQUEST_ID, PROMPT_LENGTH if phase == "prefill" else 1,
-                         snapshot.kv_written_tokens[REQUEST_ID]),)
+def request_shape(snapshot, phase, prompt_length=PROMPT_LENGTH):
+    return tuple(RequestShape(request_id, prompt_length if phase == "prefill" else 1, kv_len)
+                 for request_id, kv_len in snapshot.kv_written_tokens.items())
 
 
 class SharedPlacement:
@@ -75,16 +94,16 @@ class SharedPlacement:
 class PrefixExecution:
     """与 schedule_with_plan 使用同一单节点内核，不在动作之间重置时钟。"""
 
-    def __init__(self, evaluator, snapshot, phase):
+    def __init__(self, evaluator, snapshot, phase, prompt_length=PROMPT_LENGTH):
         self.evaluator, self.snapshot, self.phase = evaluator, snapshot, phase
         self.graph, self.order = evaluator.compiler.dag, evaluator.compiler.order
         self.cursor = 0
         self.schedule = []
-        self.shapes = request_shape(snapshot, phase)
+        self.shapes = request_shape(snapshot, phase, prompt_length)
         scheduler = snapshot.scheduler
         scheduler.cost.configure_requests(phase, self.shapes)
-        scheduler.batch = 1
-        scheduler.seq_len = self.shapes[0].query_len + self.shapes[0].kv_len
+        scheduler.batch = len(self.shapes)
+        scheduler.seq_len = max(r.query_len + r.kv_len for r in self.shapes)
         scheduler.stats.reset()
         scheduler.stats.set_phase(phase)
         scheduler.peak_runtime_bytes = {}
@@ -134,20 +153,22 @@ class PrefixExecution:
         horizon = self.horizon()
         if self.done:
             self.snapshot.now = horizon
-            self.snapshot.kv_written_tokens[REQUEST_ID] += self.shapes[0].query_len
+            for request in self.shapes:
+                self.snapshot.kv_written_tokens[request.request_id] += request.query_len
             scheduler.reset_state(clear_caches=False)
         return horizon
 
 
-def full_replay(evaluator, segment_actions):
+def full_replay(evaluator, segment_actions, prompt_length=PROMPT_LENGTH, batch=1, decode_length=DECODE_LENGTH):
     """原完整执行路径：作为增量执行的参照，也用于固定基线。"""
-    if len(segment_actions) != SEGMENTS:
-        raise ValueError(f"Expected {SEGMENTS} segment plans")
-    snapshot = cold_snapshot(evaluator)
+    segments = segment_count(decode_length)
+    if len(segment_actions) != segments:
+        raise ValueError(f"Expected {segments} segment plans")
+    snapshot = cold_snapshot(evaluator, prompt_length, batch, decode_length)
     placement = SharedPlacement(evaluator)
     for segment, actions in enumerate(segment_actions):
         phase = "prefill" if segment == 0 else "decode"
         plan = placement.plan(actions)
-        for _ in range(1 if segment == 0 else REFRESH_TOKENS):
-            evaluator.evaluate(snapshot, plan, phase, request_shape(snapshot, phase), inplace=True)
+        for _ in range(segment_tokens(segment, decode_length)):
+            evaluator.evaluate(snapshot, plan, phase, request_shape(snapshot, phase, prompt_length), inplace=True)
     return snapshot

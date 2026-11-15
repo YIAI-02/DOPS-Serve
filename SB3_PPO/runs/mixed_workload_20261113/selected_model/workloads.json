@@ -1,0 +1,61 @@
+{
+  "train": [
+    {
+      "prefill_len": 64,
+      "batch": 1
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16
+    }
+  ],
+  "heldout": [
+    {
+      "prefill_len": 128,
+      "batch": 2
+    },
+    {
+      "prefill_len": 128,
+      "batch": 8
+    },
+    {
+      "prefill_len": 512,
+      "batch": 2
+    },
+    {
+      "prefill_len": 512,
+      "batch": 8
+    }
+  ],
+  "decode_len": 64,
+  "training_episodes": 10000,
+  "evaluation_episodes": 500
+}

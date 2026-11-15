@@ -1,0 +1,8 @@
+{
+  "variant": "B",
+  "seed": 2,
+  "episode_steps": 153,
+  "episode_unit": "synchronous batch",
+  "requested_episodes": 10000.0,
+  "evaluation_episodes": 500.0
+}

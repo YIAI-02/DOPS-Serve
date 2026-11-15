@@ -1,0 +1,1213 @@
+{
+  "environment": {
+    "model_family": "qwen",
+    "model_variant": "1.8b",
+    "dtype": "fp16",
+    "batch": 1,
+    "prefill_len": 64,
+    "decode_len": 64,
+    "tp_qkv": 2,
+    "tp_ffn": 2,
+    "hardware_json": "../backend/src/examples/hardware_1npu_2aim.json",
+    "npu_backend": "fast",
+    "pim_fast_mode": true,
+    "weight_source": "host",
+    "weight_format": "ND",
+    "weight_load_compute_overlap_ratio": 1.0,
+    "pim_weight_load_overlap_ratio": 0.5,
+    "dump_graph": false,
+    "simulation_log_file": "/dev/null"
+  },
+  "workloads": [
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 796
+    }
+  ],
+  "baselines": {
+    "p64_b1_d64": {
+      "all_npu": {
+        "latency_s": 0.2798555601750934,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.06351781877121468,
+        "reward": -0.22696643486902443,
+        "speedup": 4.405937823260388
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.14905363628671126,
+        "reward": -0.532609165218854,
+        "speedup": 1.877549365094179
+      }
+    },
+    "p64_b1_d128": {
+      "all_npu": {
+        "latency_s": 0.47505136052328023,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.08247957328544889,
+        "reward": -0.17362243357138415,
+        "speedup": 5.759624372439487
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.16801539080119327,
+        "reward": -0.3536783698843013,
+        "speedup": 2.827427643729329
+      }
+    },
+    "p64_b1_d512": {
+      "all_npu": {
+        "latency_s": 1.6872592531016857,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.1979536270917657,
+        "reward": -0.1173225908987418,
+        "speedup": 8.523507641107884
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.28348944460715103,
+        "reward": -0.1680177151709276,
+        "speedup": 5.951753355190441
+      }
+    },
+    "p64_b1_d1024": {
+      "all_npu": {
+        "latency_s": 3.413027457834944,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.3565312100847727,
+        "reward": -0.10446186398715304,
+        "speedup": 9.572871494261124
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.4420670275986352,
+        "reward": -0.12952343134064928,
+        "speedup": 7.720610777906118
+      }
+    },
+    "p64_b4_d64": {
+      "all_npu": {
+        "latency_s": 0.2903833376730161,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.1259683333109902,
+        "reward": -0.4338001426680888,
+        "speedup": 2.3052090159525944
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.19975328136401774,
+        "reward": -0.6878951215477397,
+        "speedup": 1.4537099750759033
+      }
+    },
+    "p64_b4_d128": {
+      "all_npu": {
+        "latency_s": 0.5013885703354284,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.1960674623150975,
+        "reward": -0.3910489267514187,
+        "speedup": 2.5572247654720663
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.2698524103682089,
+        "reward": -0.5382101354797098,
+        "speedup": 1.8580103459194321
+      }
+    },
+    "p64_b4_d512": {
+      "all_npu": {
+        "latency_s": 1.9316564882607958,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.6235805032221942,
+        "reward": -0.32282163366616334,
+        "speedup": 3.097685829302633
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.6973654512758461,
+        "reward": -0.36101939217139617,
+        "speedup": 2.7699343073660816
+      }
+    },
+    "p64_b4_d1024": {
+      "all_npu": {
+        "latency_s": 4.276644437362512,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.2124444827765462,
+        "reward": -0.28350369092743277,
+        "speedup": 3.527290938360184
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.2862294308291606,
+        "reward": -0.3007566912956652,
+        "speedup": 3.3249468056453946
+      }
+    },
+    "p64_b16_d64": {
+      "all_npu": {
+        "latency_s": 0.3324770876647341,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.4748678244390847,
+        "reward": -1.428272329303894,
+        "speedup": 0.7001465893324254
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.3814166136594276,
+        "reward": -1.1471966875625532,
+        "speedup": 0.8716901040960101
+      }
+    },
+    "p64_b16_d128": {
+      "all_npu": {
+        "latency_s": 0.6067374095841699,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.7280255877176858,
+        "reward": -1.1999022579086416,
+        "speedup": 0.8334012153147712
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.6345743769379243,
+        "reward": -1.0458797610202288,
+        "speedup": 0.9561328531919632
+      }
+    },
+    "p64_b16_d512": {
+      "all_npu": {
+        "latency_s": 2.9092454289013943,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 2.275185214913624,
+        "reward": -0.7820533779347699,
+        "speedup": 1.2786850977369077
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 2.1817340041331095,
+        "reward": -0.7499312304348926,
+        "speedup": 1.3334556015490782
+      }
+    },
+    "p64_b16_d1024": {
+      "all_npu": {
+        "latency_s": 7.731112355459499,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 4.413163291227629,
+        "reward": -0.5708316071892519,
+        "speedup": 1.751830114880907
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 4.3197120804497615,
+        "reward": -0.5587439273727925,
+        "speedup": 1.7897286234536602
+      }
+    },
+    "p256_b1_d64": {
+      "all_npu": {
+        "latency_s": 0.2863771070011054,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.07573835933831916,
+        "reward": -0.2644707188065379,
+        "speedup": 3.7811369232580594
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.14993940089037663,
+        "reward": -0.5235732788158862,
+        "speedup": 1.909952322741911
+      }
+    },
+    "p256_b1_d128": {
+      "all_npu": {
+        "latency_s": 0.48742981741903013,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.09493851481259416,
+        "reward": -0.19477371186543171,
+        "speedup": 5.134163077874161
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.16913955636484893,
+        "reward": -0.3470028921506135,
+        "speedup": 2.881820361214624
+      }
+    },
+    "p256_b1_d512": {
+      "all_npu": {
+        "latency_s": 1.734831250414765,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.2118950543792053,
+        "reward": -0.12214159407639519,
+        "speedup": 8.1872191660978
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.28609609593058644,
+        "reward": -0.16491292502494773,
+        "speedup": 6.063806095542371
+      }
+    },
+    "p256_b1_d1024": {
+      "all_npu": {
+        "latency_s": 3.5075241757083946,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.37244928505163827,
+        "reward": -0.10618580696636733,
+        "speedup": 9.41745444677681
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.4466503266019594,
+        "reward": -0.12734062667201773,
+        "speedup": 7.852953343598893
+      }
+    },
+    "p256_b4_d64": {
+      "all_npu": {
+        "latency_s": 0.31643480497705156,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.2952503364546674,
+        "reward": -0.9330526598554149,
+        "speedup": 1.0717508700473126
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.20333379257889092,
+        "reward": -0.6425772051011805,
+        "speedup": 1.5562332309041986
+      }
+    },
+    "p256_b4_d128": {
+      "all_npu": {
+        "latency_s": 0.5509023979181087,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.3663377892992132,
+        "reward": -0.6649776633458565,
+        "speedup": 1.5038099098975262
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.2744212454231624,
+        "reward": -0.4981304246636351,
+        "speedup": 2.007506368789368
+      }
+    },
+    "p256_b4_d512": {
+      "all_npu": {
+        "latency_s": 2.1219444775155027,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.7998650532471195,
+        "reward": -0.3769490963230332,
+        "speedup": 2.6528780935000102
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.7079485093707435,
+        "reward": -0.33363196675138795,
+        "speedup": 2.997314704993987
+      }
+    },
+    "p256_b4_d1024": {
+      "all_npu": {
+        "latency_s": 4.654631308843395,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.3967395035183447,
+        "reward": -0.3000752177438117,
+        "speedup": 3.332497790116567
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.3048229596436518,
+        "reward": -0.2803278870153693,
+        "speedup": 3.5672512308601454
+      }
+    },
+    "p256_b16_d64": {
+      "all_npu": {
+        "latency_s": 0.43701607531959247,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.1516596234001266,
+        "reward": -2.6352797721637837,
+        "speedup": 0.3794663513767712
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.39613449695743735,
+        "reward": -0.906452918620309,
+        "speedup": 1.1032012578458867
+      }
+    },
+    "p256_b16_d128": {
+      "all_npu": {
+        "latency_s": 0.805125838353622,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.4088539820392212,
+        "reward": -1.7498556311646203,
+        "speedup": 0.5714757161620515
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.6533288555959813,
+        "reward": -0.8114617920249015,
+        "speedup": 1.2323439129581504
+      }
+    },
+    "p256_b16_d512": {
+      "all_npu": {
+        "latency_s": 3.6707305043569995,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 2.9801518413993517,
+        "reward": -0.811868874018956,
+        "speedup": 1.2317259991133143
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 2.224626714950793,
+        "reward": -0.606044685740415,
+        "speedup": 1.6500433442103086
+      }
+    },
+    "p256_b16_d1024": {
+      "all_npu": {
+        "latency_s": 9.243392959836298,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 5.150320760576652,
+        "reward": -0.5571894198326786,
+        "speedup": 1.7947218026865899
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 4.394795634145965,
+        "reward": -0.47545264528316644,
+        "speedup": 2.103258883762078
+      }
+    },
+    "p1024_b1_d64": {
+      "all_npu": {
+        "latency_s": 0.313558182440819,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.250016256642797,
+        "reward": -0.7973520406854159,
+        "speedup": 1.2541511766125097
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.15464643989150578,
+        "reward": -0.4931985467184986,
+        "speedup": 2.0275809948214767
+      }
+    },
+    "p1024_b1_d128": {
+      "all_npu": {
+        "latency_s": 0.538073253137325,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.27020473595676425,
+        "reward": -0.5021709114535816,
+        "speedup": 1.9913538940465598
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.17483491920602195,
+        "reward": -0.3249277271944258,
+        "speedup": 3.077607468696058
+      }
+    },
+    "p1024_b1_d512": {
+      "all_npu": {
+        "latency_s": 1.9262488478057593,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.39309121856045265,
+        "reward": -0.2040708390342365,
+        "speedup": 4.900259168495075
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.2977214018119316,
+        "reward": -0.1545601972201431,
+        "speedup": 6.469971040316936
+      }
+    },
+    "p1024_b1_d1024": {
+      "all_npu": {
+        "latency_s": 3.8866406553250528,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.5615520399517866,
+        "reward": -0.14448262387787483,
+        "speedup": 6.921247504788247
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.4661822232036494,
+        "reward": -0.11994477095919252,
+        "speedup": 8.337170449391403
+      }
+    },
+    "p1024_b4_d64": {
+      "all_npu": {
+        "latency_s": 0.42549222517464225,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.992248965825259,
+        "reward": -2.3320025775276925,
+        "speedup": 0.4288159925878663
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.22255778702189036,
+        "reward": -0.5230595857081574,
+        "speedup": 1.9118280733659148
+      }
+    },
+    "p1024_b4_d128": {
+      "all_npu": {
+        "latency_s": 0.7538092592303242,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.0673524340290044,
+        "reward": -1.4159449767422903,
+        "speedup": 0.7062421325867704
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.29766125522626385,
+        "reward": -0.3948760930983926,
+        "speedup": 2.5324399665563613
+      }
+    },
+    "p1024_b4_d512": {
+      "all_npu": {
+        "latency_s": 2.887947985513859,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.52505909012993,
+        "reward": -0.5280770629456377,
+        "speedup": 1.8936630089971238
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.7553679113340406,
+        "reward": -0.2615586967365814,
+        "speedup": 3.823233608657681
+      }
+    },
+    "p1024_b4_d1024": {
+      "all_npu": {
+        "latency_s": 6.171430345756518,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 2.1540616632723055,
+        "reward": -0.34903766916099777,
+        "speedup": 2.865020278194495
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.384370484486455,
+        "reward": -0.22431922697439982,
+        "speedup": 4.457932623466663
+      }
+    },
+    "p1024_b16_d64": {
+      "all_npu": {
+        "latency_s": 0.9827899468555117,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 3.9403373058639866,
+        "reward": -4.009338229874353,
+        "speedup": 0.24941771999897813
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.5826373854752193,
+        "reward": -0.5928401967677817,
+        "speedup": 1.6867952029098066
+      }
+    },
+    "p1024_b16_d128": {
+      "all_npu": {
+        "latency_s": 1.7262974743474084,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 4.2136163059390395,
+        "reward": -2.4408402193439525,
+        "speedup": 0.40969498620797856
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.8559163855537321,
+        "reward": -0.4958104835768782,
+        "speedup": 2.0168996685705305
+      }
+    },
+    "p1024_b16_d512": {
+      "all_npu": {
+        "latency_s": 6.84428872709762,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 5.8814661139065,
+        "reward": -0.8593246644637954,
+        "speedup": 1.163704524440694
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 2.523766193550726,
+        "reward": -0.3687404629145373,
+        "speedup": 2.7119345463092537
+      }
+    },
+    "p1024_b16_d1024": {
+      "all_npu": {
+        "latency_s": 15.4201332982574,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 8.179901667406982,
+        "reward": -0.530468933646078,
+        "speedup": 1.8851245314719733
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 4.8222017470825875,
+        "reward": -0.3127211453890308,
+        "speedup": 3.1977370726113894
+      }
+    },
+    "p64_b1_d256": {
+      "all_npu": {
+        "latency_s": 0.8712998712899345,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.12064148327395655,
+        "reward": -0.13846149557597237,
+        "speedup": 7.222224459155221
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.20617730079014757,
+        "reward": -0.23663185039257265,
+        "speedup": 4.225973799980849
+      }
+    },
+    "p64_b1_d796": {
+      "all_npu": {
+        "latency_s": 2.6290660528273846,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.28526283348893805,
+        "reward": -0.10850348669717026,
+        "speedup": 9.216293691934231
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.37079865100280057,
+        "reward": -0.14103816471405556,
+        "speedup": 7.0902794433508545
+      }
+    },
+    "p64_b4_d256": {
+      "all_npu": {
+        "latency_s": 0.9468613959390233,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.33725404416376875,
+        "reward": -0.35618100559407273,
+        "speedup": 2.8075612800635015
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.4110389922171586,
+        "reward": -0.43410682279376506,
+        "speedup": 2.3035804725766282
+      }
+    },
+    "p64_b4_d796": {
+      "all_npu": {
+        "latency_s": 3.1705746259354317,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.9475661861405227,
+        "reward": -0.29886260313489926,
+        "speedup": 3.346019172390814
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.0213511341939532,
+        "reward": -0.32213439350686107,
+        "speedup": 3.1042944192132693
+      }
+    },
+    "p64_b16_d256": {
+      "all_npu": {
+        "latency_s": 1.249107494537559,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.238376729635341,
+        "reward": -0.9914092542482176,
+        "speedup": 1.0086651861630007
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.1449255188553409,
+        "reward": -0.9165948678253762,
+        "speedup": 1.0909945441572269
+      }
+    },
+    "p64_b16_d796": {
+      "all_npu": {
+        "latency_s": 5.336603598352501,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 3.4504771288105354,
+        "reward": -0.6465680025167609,
+        "speedup": 1.5466277268709676
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 3.357025918030021,
+        "reward": -0.6290566380209298,
+        "speedup": 1.5896819770411963
+      }
+    },
+    "p256_b1_d256": {
+      "all_npu": {
+        "latency_s": 0.895409508324714,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.1335945867212105,
+        "reward": -0.14919942828300115,
+        "speedup": 6.702438551595534
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.20779562827377465,
+        "reward": -0.23206770348301797,
+        "speedup": 4.309087326635164
+      }
+    },
+    "p256_b1_d796": {
+      "all_npu": {
+        "latency_s": 2.7026702460773437,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.30030432253584854,
+        "reward": -0.11111393370009172,
+        "speedup": 8.999771376100373
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.3745053640861697,
+        "reward": -0.13856864877604913,
+        "speedup": 7.21663961388678
+      }
+    },
+    "p256_b4_d256": {
+      "all_npu": {
+        "latency_s": 1.0432999440790482,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.5095010188282417,
+        "reward": -0.48835526323927236,
+        "speedup": 2.04768961302265
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.41758447495220297,
+        "reward": -0.40025351992213243,
+        "speedup": 2.498416504106062
+      }
+    },
+    "p256_b4_d796": {
+      "all_npu": {
+        "latency_s": 3.4649768389258755,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.1283403032034054,
+        "reward": -0.325641513827026,
+        "speedup": 3.070861538038357
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.0364237593287124,
+        "reward": -0.2991141954212884,
+        "speedup": 3.3432047535943474
+      }
+    },
+    "p256_b16_d256": {
+      "all_npu": {
+        "latency_s": 1.6351948055359369,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.9272371546774165,
+        "reward": -1.1785978943626612,
+        "speedup": 0.8484657954872388
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.171712028233583,
+        "reward": -0.7165580665170673,
+        "speedup": 1.3955603135704586
+      }
+    },
+    "p256_b16_d796": {
+      "all_npu": {
+        "latency_s": 6.5145455687540545,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 4.17330598345247,
+        "reward": -0.6406135223720048,
+        "speedup": 1.5610035771603636
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 3.4177808570084385,
+        "reward": -0.5246384142895956,
+        "speedup": 1.9060746845121586
+      }
+    },
+    "p1024_b1_d256": {
+      "all_npu": {
+        "latency_s": 0.9929776646005458,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.31083745554448255,
+        "reward": -0.31303569720223867,
+        "speedup": 3.194523848038787
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.2154676387950339,
+        "reward": -0.21699142536273666,
+        "speedup": 4.608477032345109
+      }
+    },
+    "p1024_b1_d796": {
+      "all_npu": {
+        "latency_s": 2.9982020672037066,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 0.48588617375618565,
+        "reward": -0.16205918175800293,
+        "speedup": 6.170585271084877
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.39051635700766457,
+        "reward": -0.13025017935895236,
+        "speedup": 7.6775326139408335
+      }
+    },
+    "p1024_b4_d256": {
+      "all_npu": {
+        "latency_s": 1.433905687619807,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.2185476942756512,
+        "reward": -0.8498102105295108,
+        "speedup": 1.176733331289238
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 0.4488565154752817,
+        "reward": -0.31303071000461347,
+        "speedup": 3.1945747431146994
+      }
+    },
+    "p1024_b4_d796": {
+      "all_npu": {
+        "latency_s": 4.647437241867207,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 1.8713554082434545,
+        "reward": -0.4026639437720729,
+        "speedup": 2.4834605021552365
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.1016642294514716,
+        "reward": -0.23704768286636496,
+        "speedup": 4.218560535619104
+      }
+    },
+    "p1024_b16_d256": {
+      "all_npu": {
+        "latency_s": 3.30716197044503,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 4.76421188144745,
+        "reward": -1.4405741007013186,
+        "speedup": 0.6941676929448942
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 1.4065119610717793,
+        "reward": -0.42529273547570196,
+        "speedup": 2.3513216111755866
+      }
+    },
+    "p1024_b16_d796": {
+      "all_npu": {
+        "latency_s": 11.353931371286851,
+        "reward": -1.0,
+        "speedup": 1.0
+      },
+      "all_pim": {
+        "latency_s": 7.146072108574325,
+        "reward": -0.6293918709642853,
+        "speedup": 1.5888352648532138
+      },
+      "prefill_npu_decode_pim": {
+        "latency_s": 3.788372188248392,
+        "reward": -0.3336617127904146,
+        "speedup": 2.9970474935136995
+      }
+    }
+  }
+}

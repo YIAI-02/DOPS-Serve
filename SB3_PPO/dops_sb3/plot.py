@@ -17,6 +17,11 @@ def read_csv(path, skip_comments=False):
 
 def plot_run(out):
     out = Path(out)
+    if (out / "workloads.json").exists():
+        from .mixed_results import plot_mixed_run
+        plot_mixed_run(out)
+        plot_loss(out)
+        return
     figures = out / "figures"
     figures.mkdir(exist_ok=True)
     monitor = read_csv(out / "train.monitor.csv", skip_comments=True)
@@ -54,6 +59,11 @@ def plot_run(out):
     fig.savefig(figures / "reward_latency.png", dpi=160)
     plt.close(fig)
 
+    plot_loss(out)
+
+
+def plot_loss(out):
+    figures = out / "figures"
     # PPO total loss 是最后一个 minibatch 的原生日志值；不能解释为逐 episode loss。
     rows = read_csv(out / "progress.csv")
     fig, axes = plt.subplots(3, 1, figsize=(9, 8), sharex=True)
@@ -72,9 +82,12 @@ def plot_run(out):
 
 
 def write_csv(path, rows):
+    rows = iter(rows)
+    first = next(rows)
     with path.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(f, fieldnames=list(first))
         writer.writeheader()
+        writer.writerow(first)
         writer.writerows(rows)
 
 
@@ -87,6 +100,9 @@ def compare_runs(root):
             for p in sorted(root.glob("[ABCD]/seed[012]/summary.json"))]
     if not runs:
         raise ValueError(f"No completed runs under {root}")
+    if "normalization_by_workload_s" in runs[0][1]:
+        from .mixed_results import compare_mixed_runs
+        return compare_mixed_runs(root, runs)
     figures = root / "figures"
     figures.mkdir(exist_ok=True)
     results, placements, stats, eval_rows, loss_rows = [], [], [], [], []

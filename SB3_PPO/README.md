@@ -1,4 +1,4 @@
-# 固定 64+64 的 SB3 PPO 实验
+# SB3 PPO：固定与混合工况实验
 
 只训练算子放置策略，使用 `stable_baselines3.PPO`，不含 BC、旧策略/critic 权重或自写 PPO。
 这是 DOPS fast/fast 解析模拟环境，不是 NPU/PIM 真机测量，也不执行真实模型生成。
@@ -6,6 +6,12 @@
 当前支持下述 A/B/C/D 观测与决策粒度对照。原始实验合同描述 A 组；历史 `runs/ppo_seed0` 保留不覆盖。
 
 四组训练方案、实际预算、结果与曲线见[仓库首页](../README.md)。
+
+固定 decode=64 的混合实验用 9 种 prefill 和 batch 组合训练，另用 4 种组合测泛化。B / seed 2 的 Final 归一化耗时分别为 0.4988 和 0.5682。[实验配置](configs/mixed_workloads.json) · [各组结果](runs/mixed_workload_20261113/report.md)
+
+可变 decode 实验在原 9 组上加入长度 64、128、512、1024，泛化长度为 256、796。A/B/C/D 各训练 3 个 seed，每消耗 20% 环境步预算评估一次。训练入口接受 `--workloads configs/mixed_decode_workloads.json`。[实验配置](configs/mixed_decode_workloads.json) · [逐工况初始评估](runs/mixed_decode_20261115/initial.csv)
+
+下文记录固定 prefill=64、batch=1、decode=64 的实验。
 
 ## 四组观测与决策粒度实验
 

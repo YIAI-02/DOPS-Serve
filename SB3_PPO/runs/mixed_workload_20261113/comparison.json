@@ -1,0 +1,14 @@
+{
+  "completed_runs": 12,
+  "expected_runs": 12,
+  "threshold": null,
+  "metric": "equal-weight mean T / all-NPU T over the 9 training workloads",
+  "generalization": "4 held-out workloads, final models only; excluded from selection",
+  "selected": {
+    "variant": "B",
+    "seed": 2,
+    "source": "B/seed2",
+    "stage": "final",
+    "normalized_latency": 0.4987970225882628
+  }
+}
