@@ -1,0 +1,283 @@
+{
+  "train": [
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 1024
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 64
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 128
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 512
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 1024
+    }
+  ],
+  "heldout": [
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 64,
+      "batch": 1,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 64,
+      "batch": 4,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 64,
+      "batch": 16,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 256,
+      "batch": 1,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 256,
+      "batch": 4,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 256,
+      "batch": 16,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 1,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 4,
+      "decode_len": 796
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 256
+    },
+    {
+      "prefill_len": 1024,
+      "batch": 16,
+      "decode_len": 796
+    }
+  ],
+  "training_timesteps": {
+    "A": 1530000,
+    "B": 1530000,
+    "C": 170000,
+    "D": 170000
+  },
+  "periodic_evaluations": 5
+}

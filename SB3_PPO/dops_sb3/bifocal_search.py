@@ -165,7 +165,8 @@ def key(params):
     return tuple(sorted(params.items()))
 
 
-def run_trial(params, seed, save_plans=False, *, prompt_length=PROMPT_LENGTH, batch=1):
+def run_trial(params, seed, save_plans=False, *, prompt_length=PROMPT_LENGTH, batch=1,
+              decode_length=DECODE_LENGTH, save_profiles=True):
     begin = time.perf_counter()
     far_mode = params.get("far_mode", "legacy")
     if far_mode not in ("legacy", "prefill", "both"):
@@ -187,13 +188,13 @@ def run_trial(params, seed, save_plans=False, *, prompt_length=PROMPT_LENGTH, ba
     scheduler.reset_state()
     scheduler.set_storage_format_map(dict(base.storage_fmt_map))
     evaluator.initial.scheduler = scheduler
-    snapshot = cold_snapshot(evaluator, prompt_length, batch)
+    snapshot = cold_snapshot(evaluator, prompt_length, batch, decode_length)
     scheduler = snapshot.scheduler
     graph = evaluator.compiler.dag
     phases, plans = [], []
     future_profiles = []
     plan = None
-    for step in range(1 + DECODE_LENGTH):
+    for step in range(1 + decode_length):
         phase, token = ("prefill", -1) if step == 0 else ("decode", step - 1)
         shapes = request_shape(snapshot, phase, prompt_length)
         scheduler.cost.configure_requests(phase, shapes)
@@ -220,7 +221,7 @@ def run_trial(params, seed, save_plans=False, *, prompt_length=PROMPT_LENGTH, ba
                     window = params.get("prefill_reuse_window", window)
                 scheduler.prepare_far_focus(graph, phase, mode=far_mode,
                                             reuse_window=window)
-                if save_plans:
+                if save_plans and save_profiles:
                     future_profiles.append({"step": step, "costs": copy.deepcopy(scheduler.future_costs)})
             schedule = scheduler.schedule(graph, phase)
             plan = scheduler.export_fixed_plan(schedule)
@@ -236,23 +237,25 @@ def run_trial(params, seed, save_plans=False, *, prompt_length=PROMPT_LENGTH, ba
         for request in shapes:
             snapshot.kv_written_tokens[request.request_id] += request.query_len
         scheduler.reset_state(clear_caches=False)
-    result = {"prompt_length": prompt_length, "batch": batch, "params": dict(params), "seed": seed, "total_ms": snapshot.now * 1000,
+    result = {"prompt_length": prompt_length, "batch": batch, "decode_length": decode_length,
+              "params": dict(params), "seed": seed, "total_ms": snapshot.now * 1000,
               "prefill_ms": phases[0], "decode_ms": sum(phases[1:]),
               "wall_s": time.perf_counter() - begin,
               "score_calls": dict(scheduler.score_calls)}
     if save_plans:
         result.update(phases_ms=phases, plans=plans)
-        if far_mode != "legacy":
+        if far_mode != "legacy" and save_profiles:
             result["future_profiles"] = future_profiles
     return result
 
 
 def verify_replay(result):
     prompt_length, batch = result.get("prompt_length", PROMPT_LENGTH), result.get("batch", 1)
+    decode_length = result.get("decode_length", DECODE_LENGTH)
     evaluator = make_evaluator()
-    snapshot = cold_snapshot(evaluator, prompt_length, batch)
+    snapshot = cold_snapshot(evaluator, prompt_length, batch, decode_length)
     plans = {entry["step"]: entry["plan"] for entry in result["plans"]}
-    for step in range(1 + DECODE_LENGTH):
+    for step in range(1 + decode_length):
         if step in plans:
             plan = plans[step]
         execution = PrefixExecution(evaluator, snapshot, "prefill" if step == 0 else "decode", prompt_length)
@@ -323,6 +326,7 @@ def main():
     parser.add_argument("--params", type=Path)
     parser.add_argument("--prompt-length", type=int, default=PROMPT_LENGTH, help="单组参数实验的输入长度")
     parser.add_argument("--batch", type=int, default=1, help="单组参数实验的同步请求数")
+    parser.add_argument("--decode-length", type=int, default=DECODE_LENGTH, help="单组参数实验的 decode token 数")
     parser.add_argument("--candidates", type=Path, help="使用已保存的参数列表继续搜索边界。")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--workers", type=int, default=4)
@@ -332,7 +336,7 @@ def main():
     args = parser.parse_args()
     if os.environ.get("PYTHONHASHSEED") != "0":
         parser.error("请使用 PYTHONHASHSEED=0，以固定 ready 集合的遍历顺序。")
-    if (args.prompt_length, args.batch) != (PROMPT_LENGTH, 1) and (not args.params or args.check):
+    if (args.prompt_length, args.batch, args.decode_length) != (PROMPT_LENGTH, 1, DECODE_LENGTH) and (not args.params or args.check):
         parser.error("多工况单次回放请使用 --params")
     args.out.mkdir(parents=True, exist_ok=False)
     if args.check:
@@ -358,7 +362,8 @@ def main():
         return
     if args.params:
         params = json.loads(args.params.read_text())
-        result = run_trial(params, args.seed, save_plans=True, prompt_length=args.prompt_length, batch=args.batch)
+        result = run_trial(params, args.seed, save_plans=True, prompt_length=args.prompt_length,
+                           batch=args.batch, decode_length=args.decode_length)
         result["independent_replay_ms"] = verify_replay(result)
         (args.out / "result.json").write_text(json.dumps(result, indent=2))
         print(json.dumps({k: v for k, v in result.items() if k not in ("plans", "phases_ms", "future_profiles")}))
