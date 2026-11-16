@@ -163,9 +163,6 @@ def compare_mixed_runs(root, runs):
             values = np.stack([y[np.searchsorted(x, common)] for x, y, _ in curves])
             mean = values.mean(axis=0)
             ax.plot(common, mean, color=color, label=f"{variant}, n={len(group)}")
-            if len(group) > 1:
-                sd = values.std(axis=0, ddof=1)
-                ax.fill_between(common, mean - sd, mean + sd, color=color, alpha=0.12)
             for workload_ax, key in zip(workload_axes.flat, keys):
                 times = np.stack([[h[i]["workloads"][key]["latency_s"] * 1000
                                    for i in np.searchsorted(x, common)] for x, _, h in curves])
@@ -194,7 +191,7 @@ def compare_mixed_runs(root, runs):
     ax.legend()
     ax.grid(alpha=0.2)
     note = "SMOKE: integration only. " if any(s["smoke"] for _, s in runs) else ""
-    fig.suptitle(note + f"Equal weight across {len(keys)} workloads; mean ± sample SD")
+    fig.suptitle(note + f"Equal weight across {len(keys)} workloads; bold: seed mean, thin: individual seeds")
     fig.tight_layout()
     fig.savefig(figures / "comparison_reward_latency.png", dpi=160)
     plt.close(fig)

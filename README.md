@@ -17,9 +17,13 @@
 
 ## 2. 共同设置与实际训练预算
 
-Qwen 1.8B，28 层，FP16，1 NPU + 2 PIM，冷缓存。层间共享放置，每 4 个 decode token 更新一次。prefill 取 64、256、1024，batch 取 1、4、16。
+Qwen 1.8B，28 层，FP16，1 NPU + 2 PIM，冷缓存。层间共享放置，每 4 个 decode token 更新一次。
 
-decode 取 64、128、512、1024，与 prefill 和 batch 组成 36 种训练工况。每个批次等概率采样一个三元组。下表为各方案的实际训练预算。
+prefill 是每个请求的输入长度，取 64、256、1024 token。每种输入长度都分别搭配推理 batch size 1、4、16，得到 3 × 3 = 9 组。每组再分别搭配 decode 长度 64、128、512、1024 token，得到 9 × 4 = 36 种训练工况。每个 episode 开始时从这 36 种组合中等概率抽取一种。
+
+- **一个推理批次（episode）**覆盖一批同长请求从 prefill 到 decode 结束的全过程。例如 prefill=256、batch size=4、decode=512 表示同时处理 4 个请求，每个请求输入 256 token、输出 512 token。这一批共 129 个决策段，A/B 需要 1,161 个环境步，C/D 需要 129 个环境步。
+- **一次 rollout** 连续采集 2,048 个环境步，供一轮 PPO 训练使用。一次 rollout 可以跨过多个推理批次，也可以在某一批中途结束。
+- **一个 epoch** 把这 2,048 个样本打乱并遍历一遍。每 64 个样本组成一个**训练小批次（mini-batch）**，更新一次参数。每个 epoch 有 32 个小批次，同一份 rollout 数据训练 10 个 epoch，共更新 320 次。
 
 | 每个 seed | A / B | C / D |
 | --- | ---: | ---: |
@@ -32,7 +36,7 @@ decode 取 64、128、512、1024，与 prefill 和 batch 组成 36 种训练工�
 
 每使用 20% 的目标环境步数，在全部 36 种训练工况上评估一次并保存检查点。泛化评估使用相同的 9 组 prefill 和 batch，decode 取 256、796，共 18 种工况。
 
-Actor/Critic 各 2×64；rollout=2048，batch=64，每轮 10 epochs；lr=3e−4，γ=1，GAE λ=0.95，clip=0.2，ent_coef=0，未设 target_kl。
+Actor/Critic 各 2×64，lr=3e−4，γ=1，GAE λ=0.95，clip=0.2，ent_coef=0，未设 target_kl。
 
 ## 3. 四组结果与固定基线
 
@@ -54,7 +58,15 @@ Actor/Critic 各 2×64；rollout=2048，batch=64，每轮 10 epochs；lr=3e−4�
 
 在 18 种未见工况上，A、B、C、D 的 Final 归一化耗时分别为 0.3441、0.4321、0.3203、0.3168（3 个 seed 的均值）。按 36 种训练工况的 Final 归一化耗时选取的模型为 C / seed 2，在训练和未见工况上分别为 0.3994 和 0.3094，对应的平均绝对批次耗时为 790.603 ms 和 920.715 ms。
 
-Bifocal 在相同的 54 种工况上测试了 16 组参数（seed 0）。按 36 种训练工况的平均绝对批次耗时选取共用参数 `prefill16_a6_g0`，训练和未见工况分别为 747.937 ms 和 864.833 ms。逐工况在 16 组参数中取最低值，两组分别为 700.707 ms 和 821.411 ms。[逐工况绝对耗时](SB3_PPO/runs/bifocal_mixed_decode_20261116/latency_summary_ms.csv) · [共用参数](SB3_PPO/runs/bifocal_mixed_decode_20261116/best_shared_params.json) · [搜索与回放代码](SB3_PPO/dops_sb3/bifocal_search.py)
+Bifocal 在相同的 54 种工况上测试了 16 组参数（seed 0）。下表与 PPO 使用相同的归一化口径，每个工况的批次耗时先除以该工况的全 NPU 批次耗时，再等权平均。两种共用参数的选择都只使用 36 种训练工况。
+
+| Bifocal 选参方式 | 36 种训练工况 | 18 种未见工况 |
+| --- | ---: | ---: |
+| 按平均归一化耗时选共用参数（`h2_g0.5_p64_d512`、`h2_g0.5_p64_d1024` 并列） | 0.3744 | 0.3117 |
+| 按平均绝对耗时选共用参数（`prefill16_a6_g0`） | 0.4274 | 0.3108 |
+| 逐工况在 16 组参数中取最低值 | 0.3512 | 0.2798 |
+
+两组并列参数在 54 种工况上的逐项耗时相同。最后一行的未见工况数值使用该工况自身的结果选参。[逐工况归一化耗时](SB3_PPO/runs/bifocal_mixed_decode_20261116/normalized_latency.csv) · [逐工况绝对耗时（按毫秒选参）](SB3_PPO/runs/bifocal_mixed_decode_20261116/latency_summary_ms.csv) · [16 组参数](SB3_PPO/runs/bifocal_mixed_decode_20261116/candidates.json) · [搜索与回放代码](SB3_PPO/dops_sb3/bifocal_search.py)
 
 <details>
 <summary>全部 seed 的训练结果</summary>
@@ -78,7 +90,7 @@ Bifocal 在相同的 54 种工况上测试了 16 组参数（seed 0）。按 36 
 
 ## 4. 四组实验耗时曲线
 
-每完成 20% 的目标环境步数评估一次。横轴为目标环境步数的完成比例，纵轴为 36 种训练工况的平均归一化耗时。
+每完成 20% 的目标环境步数评估一次。横轴为目标环境步数的完成比例，纵轴为 36 种训练工况的平均归一化耗时。同色细线分别表示该方案的 3 个 seed，粗线表示它们在各评估点的均值。
 
 ![四组实验耗时曲线](SB3_PPO/runs/mixed_decode_20261115/figures/comparison_reward_latency.png)
 
