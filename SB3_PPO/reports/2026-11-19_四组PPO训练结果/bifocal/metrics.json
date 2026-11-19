@@ -1,0 +1,136 @@
+{
+  "workloads": 196,
+  "candidates": 16,
+  "trials": 3136,
+  "seed": 0,
+  "max_refresh_interval": 256,
+  "selected_plans_independently_replayed": 447,
+  "best_shared_normalized": {
+    "candidate": "h2_g0.5_p64_d512",
+    "normalized_latency": 0.2708697654102034,
+    "mean_batch_ms": 6708.05643024999
+  },
+  "best_shared_absolute": {
+    "candidate": "prefill16_a6_g0",
+    "normalized_latency": 0.2769854907772786,
+    "mean_batch_ms": 6338.175372110028
+  },
+  "per_workload_candidate_minimum": {
+    "normalized_latency": 0.23908372246933393,
+    "mean_batch_ms": 5653.476214431448
+  },
+  "ranking": [
+    {
+      "candidate": "h2_g0.5_p64_d512",
+      "normalized_latency": 0.2708697654102034,
+      "mean_batch_ms": 6708.05643024999
+    },
+    {
+      "candidate": "h2_g0.5_p64_d1024",
+      "normalized_latency": 0.2708697654102034,
+      "mean_batch_ms": 6708.05643024999
+    },
+    {
+      "candidate": "h3_g0.025_p64_d1024",
+      "normalized_latency": 0.2719859595861674,
+      "mean_batch_ms": 6713.35431932854
+    },
+    {
+      "candidate": "h2_g0.5_p16_d256",
+      "normalized_latency": 0.2728360317831491,
+      "mean_batch_ms": 6712.265794137816
+    },
+    {
+      "candidate": "h2_g0.5_p256_d1024",
+      "normalized_latency": 0.2735850987422244,
+      "mean_batch_ms": 6710.065447249893
+    },
+    {
+      "candidate": "h3_g0.25_p64_d512",
+      "normalized_latency": 0.27529318933184194,
+      "mean_batch_ms": 6756.888607350614
+    },
+    {
+      "candidate": "h3_g0.25_p16_d256",
+      "normalized_latency": 0.27685668236575167,
+      "mean_batch_ms": 6765.166847206379
+    },
+    {
+      "candidate": "prefill16_a6_g0",
+      "normalized_latency": 0.2769854907772786,
+      "mean_batch_ms": 6338.175372110028
+    },
+    {
+      "candidate": "h3_g0_p80_d192",
+      "normalized_latency": 0.28943158251121326,
+      "mean_batch_ms": 7487.833885072041
+    },
+    {
+      "candidate": "h3_g0_p96_d256",
+      "normalized_latency": 0.2894524610153449,
+      "mean_batch_ms": 7492.165613815814
+    },
+    {
+      "candidate": "h3_g0_p64_d1024",
+      "normalized_latency": 0.28963495254418403,
+      "mean_batch_ms": 7494.1832420848
+    },
+    {
+      "candidate": "h3_g0_p256_d1024",
+      "normalized_latency": 0.2926052208724868,
+      "mean_batch_ms": 7497.1458261927555
+    },
+    {
+      "candidate": "prior",
+      "normalized_latency": 0.3079129260418173,
+      "mean_batch_ms": 7520.515915682261
+    },
+    {
+      "candidate": "r64_g0",
+      "normalized_latency": 0.32831485967325286,
+      "mean_batch_ms": 8228.84938087582
+    },
+    {
+      "candidate": "r1_g0",
+      "normalized_latency": 0.4223517358724039,
+      "mean_batch_ms": 9326.106551217925
+    },
+    {
+      "candidate": "legacy_tuned",
+      "normalized_latency": 0.6692120119254817,
+      "mean_batch_ms": 9666.662800113289
+    }
+  ],
+  "scope": "196 synthetic training workloads; best among these candidates, not a global optimum; no BurstGPT sampling",
+  "best_shared_normalized_ties": [
+    "h2_g0.5_p64_d512",
+    "h2_g0.5_p64_d1024"
+  ],
+  "tied_shared_candidates_identical_for_all_workloads": true,
+  "ppo540_comparison": {
+    "A": {
+      "normalized_mean": 0.2538847193579137,
+      "normalized_sample_sd": 0.004075325484146897,
+      "mean_batch_ms": 6292.083749496476,
+      "sample_sd_batch_ms": 118.6264194295112,
+      "bifocal_shared_relative_time_change_percent": 6.690062361864757,
+      "bifocal_individual_relative_time_change_percent": -5.829810051590412
+    },
+    "B": {
+      "normalized_mean": 0.28457675383965664,
+      "normalized_sample_sd": 0.012004225035499748,
+      "mean_batch_ms": 6702.287334225797,
+      "sample_sd_batch_ms": 330.5596100018739,
+      "bifocal_shared_relative_time_change_percent": -4.81662266664844,
+      "bifocal_individual_relative_time_change_percent": -15.986207853068535
+    }
+  },
+  "fixed_baselines": {
+    "all_npu": 1.0,
+    "all_pim": 0.708945224515239,
+    "prefill_npu_decode_pim": 0.2786216774011689,
+    "best_fixed_per_workload": 0.27017236125415844
+  },
+  "search_completed_at": "2026-11-19T08:26:02+08:00",
+  "independent_replay_completed_at": "2026-11-19T09:06:34+08:00"
+}

@@ -1,0 +1,33 @@
+{
+  "scope": "196 synthetic-workload simulator evaluation; not hardware measurement",
+  "completed_models": 12,
+  "variants": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "workloads_per_model": 196,
+  "checkpoint_stages_independently_reloaded": [
+    "Final",
+    "Best",
+    "Budget"
+  ],
+  "all_reload_checks_passed": true,
+  "all_recorded_losses_finite": true,
+  "actual_active_environment_steps": 9953280,
+  "all_training_completed_at": "2026-11-19T12:04:57+08:00",
+  "CD_and_native_comparison_artifact_files_byte_compared": 179,
+  "AB540_core_files_byte_compared": 54,
+  "selected_model": {
+    "policy": "env64_A_seed1",
+    "normalized_latency": 0.2509206792303672
+  },
+  "selection_metric": "Final equal-weight mean of per-workload cold all-NPU normalized latency; BurstGPT excluded",
+  "standard_deviation": "sample standard deviation across three seeds"
+}
