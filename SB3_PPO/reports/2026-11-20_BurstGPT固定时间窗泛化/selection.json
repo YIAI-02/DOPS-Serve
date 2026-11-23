@@ -1,0 +1,120 @@
+{
+  "rule": "lowest Final mean normalized latency on 196 synthetic workloads; ties use lower seed",
+  "training_root": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116",
+  "candidates": [
+    {
+      "variant": "A",
+      "seed": 0,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/A/seed0",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.2585320399435107
+    },
+    {
+      "variant": "A",
+      "seed": 1,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/A/seed1",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.2509206792303672
+    },
+    {
+      "variant": "A",
+      "seed": 2,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/A/seed2",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.2522014388998632
+    },
+    {
+      "variant": "B",
+      "seed": 0,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/B/seed0",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.296734900561274
+    },
+    {
+      "variant": "B",
+      "seed": 1,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/B/seed1",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.27273261153523265
+    },
+    {
+      "variant": "B",
+      "seed": 2,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/B/seed2",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.2842627494224632
+    },
+    {
+      "variant": "C",
+      "seed": 0,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/C/seed0",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.2473876362686609
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/C/seed1",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.24811376004750535
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/C/seed2",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.248654937292174
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/D/seed0",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.26318266109548927
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/D/seed1",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.26731319741219445
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/D/seed2",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.27117558996542857
+    }
+  ],
+  "selected": {
+    "A": {
+      "variant": "A",
+      "seed": 1,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/A/seed1",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.2509206792303672
+    },
+    "B": {
+      "variant": "B",
+      "seed": 1,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/B/seed1",
+      "actual_timesteps": 1244160,
+      "normalized_latency": 0.27273261153523265
+    },
+    "C": {
+      "variant": "C",
+      "seed": 0,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/C/seed0",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.2473876362686609
+    },
+    "D": {
+      "variant": "D",
+      "seed": 0,
+      "source": "/lustre/home/2501111916/workspace/DOPSRT_SB3_PPO/runs/grid196_burstgpt_20261116/env64/D/seed0",
+      "actual_timesteps": 1002240,
+      "normalized_latency": 0.26318266109548927
+    }
+  }
+}

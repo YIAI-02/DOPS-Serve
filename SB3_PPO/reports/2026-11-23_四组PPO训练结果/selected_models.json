@@ -1,0 +1,18 @@
+{
+  "A": {
+    "seed": 1,
+    "normalized_latency": 0.2509206792303672
+  },
+  "B": {
+    "seed": 1,
+    "normalized_latency": 0.27273261153523265
+  },
+  "C": {
+    "seed": 0,
+    "normalized_latency": 0.2473876362686609
+  },
+  "D": {
+    "seed": 0,
+    "normalized_latency": 0.26318266109548927
+  }
+}

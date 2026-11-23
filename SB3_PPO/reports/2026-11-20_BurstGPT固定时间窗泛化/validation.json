@@ -1,0 +1,39 @@
+{
+  "verified_at": "2026-11-23T14:45:28.542886+08:00",
+  "passed": true,
+  "simulation_only": true,
+  "all_nine_profile_and_report_jobs_completed_exit_0": true,
+  "all_training_completed_at": "2026-11-23T10:04:45+08:00",
+  "report_job_completed_at": "2026-11-23T12:16:05+08:00",
+  "source_records": 1404294,
+  "excluded_input_over_8192": 105,
+  "source_request_pairs_verified": 8192,
+  "nonoverlapping_windows": 16,
+  "requests_per_window": 512,
+  "batches_per_rate": {
+    "1": 4169,
+    "10": 1001,
+    "20": 792,
+    "50": 652
+  },
+  "profiles_verified": 37128,
+  "unique_shapes": 4641,
+  "bifocal_plans_with_recorded_native_replay_and_phase_sums_verified": 4641,
+  "native_simulation_rerun_during_report_audit": false,
+  "frozen_models_and_configs_byte_compared": 28,
+  "parameters_unchanged": true,
+  "selected_seeds": {
+    "A": 1,
+    "B": 1,
+    "C": 0,
+    "D": 0
+  },
+  "all_request_rows_verified": 262144,
+  "all_batch_rows_verified": 52912,
+  "aggregate_metric_rows_recomputed": 32,
+  "window_metric_rows_recomputed": 512,
+  "breakdown_metric_rows_recomputed": 920,
+  "verification_implementation": "Independent local pandas/NumPy calculations; did not call burstgpt_generalization.service_rows or metrics.",
+  "job_logs_checked": 9,
+  "job_log_error_matches": 0
+}

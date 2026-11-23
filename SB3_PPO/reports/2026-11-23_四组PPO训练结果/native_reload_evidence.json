@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-11-23T10:05:25.956417+08:00",
+  "source_record": "Local/HPC reports/2026-11-23_1005_CD百万步巡检.json",
+  "models": [
+    {
+      "variant": "C",
+      "seed": 0,
+      "job": "17406115_0",
+      "native_reload_verified_in_log": true,
+      "errors": [],
+      "finite_losses": true,
+      "complete_batches": 51972,
+      "complete_requests": 377970,
+      "workloads_completed": 196
+    },
+    {
+      "variant": "C",
+      "seed": 1,
+      "job": "17406115_1",
+      "native_reload_verified_in_log": true,
+      "errors": [],
+      "finite_losses": true,
+      "complete_batches": 51966,
+      "complete_requests": 377879,
+      "workloads_completed": 196
+    },
+    {
+      "variant": "C",
+      "seed": 2,
+      "job": "17406115_2",
+      "native_reload_verified_in_log": true,
+      "errors": [],
+      "finite_losses": true,
+      "complete_batches": 51977,
+      "complete_requests": 377687,
+      "workloads_completed": 196
+    },
+    {
+      "variant": "D",
+      "seed": 0,
+      "job": "17406116_0",
+      "native_reload_verified_in_log": true,
+      "errors": [],
+      "finite_losses": true,
+      "complete_batches": 51972,
+      "complete_requests": 377970,
+      "workloads_completed": 196
+    },
+    {
+      "variant": "D",
+      "seed": 1,
+      "job": "17406116_1",
+      "native_reload_verified_in_log": true,
+      "errors": [],
+      "finite_losses": true,
+      "complete_batches": 51966,
+      "complete_requests": 377879,
+      "workloads_completed": 196
+    },
+    {
+      "variant": "D",
+      "seed": 2,
+      "job": "17406116_2",
+      "native_reload_verified_in_log": true,
+      "errors": [],
+      "finite_losses": true,
+      "complete_batches": 51977,
+      "complete_requests": 377687,
+      "workloads_completed": 196
+    }
+  ]
+}

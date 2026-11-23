@@ -1,0 +1,34 @@
+{
+  "completed_models": 12,
+  "all_final_and_best_native_reload_checks_passed": true,
+  "AB_native_reload_evidence": "../2026-11-19_四组PPO训练结果/validation.json",
+  "CD_native_reload_evidence": "native_reload_evidence.json",
+  "all_recorded_training_values_finite": true,
+  "all_196_workload_stage_means_recomputed": true,
+  "periodic_best_recomputed": true,
+  "AB_periodic_evaluations": 15,
+  "CD_periodic_evaluations": 12,
+  "CD_budget_checkpoint": null,
+  "CD_budget_note": "No evaluation/checkpoint at 1002240 because evaluation interval is 82944; Final is saved after the last PPO update.",
+  "active_environment_steps": 13478400,
+  "all_training_completed_at": "2026-11-23T10:04:45+08:00",
+  "selected_by_variant": {
+    "A": {
+      "seed": 1,
+      "normalized_latency": 0.2509206792303672
+    },
+    "B": {
+      "seed": 1,
+      "normalized_latency": 0.27273261153523265
+    },
+    "C": {
+      "seed": 0,
+      "normalized_latency": 0.2473876362686609
+    },
+    "D": {
+      "seed": 0,
+      "normalized_latency": 0.26318266109548927
+    }
+  },
+  "selection_uses_BurstGPT": false
+}

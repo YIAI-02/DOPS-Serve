@@ -1,11 +1,19 @@
 # SB3 PPO：固定与混合工况实验
 
-只训练算子放置策略，使用 `stable_baselines3.PPO`，不含 BC、旧策略/critic 权重或自写 PPO。
+只训练算子放置策略，使用原生 `stable_baselines3.PPO`。从头训练不加载其他实验的策略或 Critic；追加训练保留自身 Final 权重和优化器状态。
 这是 DOPS fast/fast 解析模拟环境，不是 NPU/PIM 真机测量，也不执行真实模型生成。
 
 当前支持下述 A/B/C/D 观测与决策粒度对照。原始实验合同描述 A 组；历史 `runs/ppo_seed0` 保留不覆盖。
 
 四组训练方案、实际预算、结果与曲线见[仓库首页](../README.md)。
+
+## 最新结果（2026-11-23）
+
+A/B 各 seed 已完成 1,244,160 环境步、540 轮；C/D 各 seed 已完成 1,002,240 环境步、435 轮，12 个模型均通过原生重载验收。196 工况 Final 三 seed 均值 ± 样本标准差依次为 A 0.2539 ± 0.0041、B 0.2846 ± 0.0120、C 0.2481 ± 0.0006、D 0.2672 ± 0.0040；C/D 的 180→435 轮比较、完整曲线与 Loss 见[最新训练报告](reports/2026-11-23_四组PPO训练结果/README.md)。
+
+新版 BurstGPT 固定 1 秒窗泛化已于 2026-11-23 12:16:05（北京时间）完成：16×512 条新请求，batch 上限 16，原速/10×/20×/50×。测试前按 196 工况 Final 分别选定 A1、B1、C0、D0，固定 Bifocal 参数；这些是单 seed 泛化结果。主指标为相对 PD 的总模拟服务耗时降幅，原速 C0 最好（12.95%），其余三档 A1 最好（13.06%/16.40%/17.21%）。B1 原速比 PD 慢 5.41%。[完整泛化结果、CSV 与验收](reports/2026-11-20_BurstGPT固定时间窗泛化/README.md)。
+
+以下保留原有实验说明与历史配置；最新训练预算及泛化合同以上述报告为准。
 
 固定 decode=64 的混合实验用 9 种 prefill 和 batch 组合训练，另用 4 种组合测泛化。B / seed 2 的 Final 归一化耗时分别为 0.4988 和 0.5682。[实验配置](configs/mixed_workloads.json) · [各组结果](runs/mixed_workload_20261113/report.md)
 
@@ -201,3 +209,4 @@ PYTHONHASHSEED=0 .venv/bin/python -m dops_sb3.bifocal_search --params configs/bi
 ```
 
 输出包含候选、逐次结果、多 seed 汇总和节点计划；单次复现与最佳计划都会独立回放核对。`far_mode` 支持 `legacy`、`prefill`、`both`。指定候选集可使用 `--candidates path/to/candidates.json --refine 0`。输出目录必须不存在；原生 DOPS CLI 不会自动加载本入口的配置。结果仅代表当前 workload 下已搜索集合中的最优值。
+

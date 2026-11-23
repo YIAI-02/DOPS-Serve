@@ -1,0 +1,15 @@
+{
+  "files_byte_compared": 9,
+  "error_matches": [],
+  "files": [
+    "runs/burstgpt_window1s_20261120/logs/burst_C_17460191.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_bifocal_17460188.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_pd_17460187.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_D_17460192.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_all_pim_17460186.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_report_17460193.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_A_17460189.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_B_17460190.out",
+    "runs/burstgpt_window1s_20261120/logs/burst_all_npu_17460185.out"
+  ]
+}
